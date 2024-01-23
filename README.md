@@ -1,4 +1,4 @@
-<h1>Hi, I'm Samba! <br/><a href="https://github.com/joshmadakor1">Programmer</a>, <a href="https://www.youtube.com/c/joshmadakor"></a></h1>
+<h1>Hi, I'm Samba! <br/><a href="https://github.com/joshmadakor1">Programmer, Agency Owner , Student</a>, <a href="https://www.youtube.com/c/joshmadakor"></a></h1>
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
