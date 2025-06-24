@@ -9,4 +9,4 @@
 <h2> 🤳 Connect with me:</h2>
 
 
-<h3>[linkedin]: https://www.linkedin.com/in/samba-balde-a29607317/</h3>
+-[linkedin]:(https://www.linkedin.com/in/samba-balde-a29607317/)
