@@ -3,7 +3,7 @@
 <h2>👨‍💻 Software Development Projects:</h2>
 
 - <b>Python</b>
-  - [Email generator for social media marketing agencies]https://github.com/Kengokuhebun/Email-generator-final)
+  - [Email generator for social media marketing agencies](https://github.com/Kengokuhebun/Email-generator-final)
 
 
 <h2> 🤳 Connect with me:</h2>
