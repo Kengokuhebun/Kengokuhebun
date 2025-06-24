@@ -3,7 +3,7 @@
 <h2>👨‍💻 Software Development Projects:</h2>
 
 - <b>Python</b>
-  - [Email generator for social media marketing agencies](https://github.com/joshmadakor1/Package-Delivery-Pathfinding-Algorithm)
+  - [Email generator for social media marketing agencies])
 
 
 <h2> 🤳 Connect with me:</h2>
