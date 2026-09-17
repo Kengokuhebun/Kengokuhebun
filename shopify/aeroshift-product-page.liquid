@@ -10,16 +10,26 @@
   (i.e. an actual product template), or the price/variant/image code below
   will have nothing to render.
 
+  IMPORTANT — SHIPPING PROTECTION VARIANT ID:
+  This page adds a "Shipping Protection" line item to the cart via a
+  hardcoded variant ID (see PROTECTION_VARIANT_ID near the top of the
+  <script> block). That product already exists on the AeroShift store
+  (Product: "Shipping Protection", $2.98, tagged hidden/no-index so it
+  never appears in nav, search, or collections — it's only ever added
+  through this cart toggle). If that product is ever deleted and
+  recreated, update PROTECTION_VARIANT_ID to the new variant's numeric ID.
+
   BEFORE YOU PUBLISH — edit these:
   1. Variant titles: this assumes your product has 2 variants, e.g.
      "1 Device" and "2 Devices (Buy 1 Get 1)". Whatever you name them in
      Shopify admin is what shows on the pack buttons automatically.
   2. Bullets, accordion copy, and testimonial text below (marked TODO).
   3. Colors: edit the CSS variables at the top of the <style> block.
-  4. Star rating block is static placeholder — swap for your reviews
-     app's snippet (Judge.me / Loox / Shopify Reviews) once installed.
-  5. "Save $20" badge assumes a compare-at price is set on the 2nd
-     variant. Remove the badge markup if you don't use compare-at pricing.
+  4. Star rating block and the "1,200+ nurses" trust line are static
+     placeholders — swap for your reviews app's snippet (Judge.me / Loox /
+     Shopify Reviews) once installed, and for a real customer count.
+  5. Announcement bar claims (top): edit the 4 items to match reality
+     before launch — don't publish a claim you can't back up.
 
   This ships its own floating cart icon + slide-out cart drawer, wired to
   Shopify's native AJAX Cart API — it does not depend on your theme's
@@ -38,6 +48,7 @@
     --asx-accent: #0F6E5D;
     --asx-accent-dark: #0B5347;
     --asx-accent-contrast: #FFFFFF;
+    --asx-accent-tint: #E7F2EF;
     --asx-save: #C1443A;
     --asx-radius: 10px;
     --asx-max-width: 1120px;
@@ -57,10 +68,35 @@
   /* ---------- Layout shell ---------- */
   .asx-section { max-width: var(--asx-max-width); margin: 0 auto; padding: 0 20px; }
 
+  /* ---------- Announcement bar ---------- */
+  .asx-announce {
+    background: var(--asx-accent);
+    color: var(--asx-accent-contrast);
+    padding: 10px 20px;
+  }
+  .asx-announce-row {
+    max-width: var(--asx-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 28px;
+  }
+  .asx-announce-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .asx-announce-item svg { width: 15px; height: 15px; flex-shrink: 0; }
+
   /* ---------- Floating cart icon ---------- */
   .asx-cart-toggle {
     position: fixed;
-    top: 18px;
+    top: 64px;
     right: 18px;
     z-index: 60;
     width: 48px;
@@ -150,6 +186,36 @@
     background: none; border: none; color: var(--asx-muted); font-size: 16px;
   }
 
+  /* ---------- Cart offer stack (shown when BOGO pack is in cart) ---------- */
+  .asx-cart-offer-stack {
+    display: none;
+    margin: 4px 20px 0;
+    padding: 12px 14px;
+    background: var(--asx-accent-tint);
+    border: 1px solid var(--asx-accent);
+    border-radius: var(--asx-radius);
+  }
+  .asx-cart-offer-stack.is-visible { display: block; }
+  .asx-cart-offer-stack ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .asx-cart-offer-stack li { display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; color: var(--asx-accent-dark); }
+  .asx-cart-offer-stack svg { width: 14px; height: 14px; flex-shrink: 0; stroke: var(--asx-accent-dark); }
+
+  /* ---------- Shipping protection upsell ---------- */
+  .asx-cart-protection {
+    display: none;
+    margin: 12px 20px 0;
+    padding: 12px 14px;
+    border: 1px dashed var(--asx-border);
+    border-radius: var(--asx-radius);
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .asx-cart-protection.is-visible { display: flex; }
+  .asx-cart-protection input[type="checkbox"] { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--asx-accent); flex-shrink: 0; }
+  .asx-cart-protection label { font-size: 12.5px; cursor: pointer; }
+  .asx-cart-protection label strong { display: block; font-size: 13px; margin-bottom: 2px; }
+  .asx-cart-protection label span { color: var(--asx-muted); }
+
   .asx-cart-footer { padding: 18px 20px 22px; border-top: 1px solid var(--asx-border); }
   .asx-cart-subtotal-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 14px; }
   .asx-cart-subtotal-row strong { font-size: 16px; }
@@ -167,10 +233,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
-    padding: 48px 0 32px;
+    padding: 32px 0 32px;
   }
   @media (max-width: 860px) {
-    .asx-hero { grid-template-columns: 1fr; gap: 24px; padding: 24px 0 16px; }
+    .asx-hero { grid-template-columns: 1fr; gap: 24px; padding: 20px 0 16px; }
   }
 
   .asx-main-image { position: relative; border-radius: var(--asx-radius); overflow: hidden; background: var(--asx-surface); border: 1px solid var(--asx-border); }
@@ -190,13 +256,36 @@
   .asx-thumb img { width: 100%; height: 100%; object-fit: cover; }
   .asx-thumb.is-active { opacity: 1; border-color: var(--asx-accent); }
 
+  /* ---------- Social proof header ---------- */
+  .asx-trust-line {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 12px; font-size: 12.5px; color: var(--asx-muted);
+  }
+  .asx-avatar-stack { display: flex; }
+  .asx-avatar-stack span {
+    width: 24px; height: 24px; border-radius: 50%;
+    border: 2px solid var(--asx-bg);
+    margin-left: -8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 700; color: #fff;
+  }
+  .asx-avatar-stack span:first-child { margin-left: 0; }
+  .asx-badge-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .asx-bestseller-pill {
+    display: inline-block;
+    background: var(--asx-accent-tint);
+    color: var(--asx-accent-dark);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
+    padding: 4px 10px; border-radius: 20px;
+  }
+
   .asx-kicker {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
     color: var(--asx-accent);
-    margin: 0 0 10px;
+    margin: 0;
   }
   .asx-title { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; }
   @media (max-width: 480px) { .asx-title { font-size: 24px; } }
@@ -277,6 +366,7 @@
 
   /* ---------- Testimonials ---------- */
   .asx-testimonials { padding: 12px 0 56px; }
+  .asx-testimonials-heading { font-size: 20px; font-weight: 700; margin: 0 0 16px; text-align: center; }
   .asx-testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   @media (max-width: 780px) { .asx-testimonials-grid { grid-template-columns: 1fr; } }
   .asx-testimonial {
@@ -318,6 +408,28 @@
 {%- assign v1 = product.variants[0] -%}
 {%- assign v2 = product.variants[1] -%}
 
+<!-- Announcement bar -->
+<div class="asx-announce">
+  <div class="asx-announce-row">
+    <span class="asx-announce-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      <!-- TODO: verify this figure before launch -->Trusted by 1,200+ Night-Shift Nurses
+    </span>
+    <span class="asx-announce-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      60-Day Money-Back Guarantee
+    </span>
+    <span class="asx-announce-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h13v13H3z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="6.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      Ships Within 24 Hours
+    </span>
+    <span class="asx-announce-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Safe &amp; Secure Checkout
+    </span>
+  </div>
+</div>
+
 <!-- Cart icon -->
 <button id="asx-cart-toggle" class="asx-cart-toggle" aria-label="Open cart">
   <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -338,6 +450,34 @@
   <div id="asx-cart-items" class="asx-cart-items">
     <p class="asx-cart-empty">Your cart is empty.</p>
   </div>
+
+  <!-- Offer stack: only shown when the BOGO pack is in the cart -->
+  <div id="asx-cart-offer-stack" class="asx-cart-offer-stack">
+    <ul>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        60-day money-back guarantee
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h13v13H3z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="6.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        Fast US shipping — out within 24 hours
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <span id="asx-cart-savings">You're saving $0.00 today</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Shipping protection upsell: cart-only, hidden product, $2.98 flat -->
+  <div id="asx-cart-protection" class="asx-cart-protection">
+    <input type="checkbox" id="asx-protection-checkbox">
+    <label for="asx-protection-checkbox">
+      <strong>Protect my order — $2.98</strong>
+      <span>Free reshipment or refund if your package is lost, stolen, or damaged in transit.</span>
+    </label>
+  </div>
+
   <div class="asx-cart-footer">
     <div class="asx-cart-subtotal-row">
       <span>Subtotal</span>
@@ -373,8 +513,16 @@
     </div>
 
     <div class="asx-info">
-      <p class="asx-kicker">Hospital-Grade Ozone Technology</p>
-      <h1 class="asx-title">{{ product.title }}</h1>
+      <div class="asx-trust-line">
+        <span class="asx-avatar-stack">
+          <span style="background:#0F6E5D;">RN</span>
+          <span style="background:#C1443A;">JK</span>
+          <span style="background:#B08B2E;">MT</span>
+          <span style="background:#3C6E8F;">AS</span>
+        </span>
+        <!-- TODO: verify this figure before launch -->
+        <span>Trusted by 1,200+ night-shift nurses</span>
+      </div>
 
       <div class="asx-rating">
         <span class="asx-stars">
@@ -386,6 +534,13 @@
         </span>
         <span><!-- TODO: replace with your reviews app snippet -->4.8 (312 reviews)</span>
       </div>
+
+      <div class="asx-badge-row">
+        <span class="asx-bestseller-pill">Bestseller</span>
+        <p class="asx-kicker">Hospital-Grade Ozone Technology</p>
+      </div>
+
+      <h1 class="asx-title">{{ product.title }}</h1>
 
       <div class="asx-price-row">
         <span id="asx-price" class="asx-price">{{ product.selected_or_first_available_variant.price | money }}</span>
@@ -489,6 +644,7 @@
 <!-- Testimonials -->
 <div class="asx-section">
   <div class="asx-testimonials">
+    <h2 class="asx-testimonials-heading">What Nurses Are Saying</h2>
     <div class="asx-testimonials-grid">
       <div class="asx-testimonial">
         <span class="asx-stars">★★★★★</span>
@@ -504,6 +660,16 @@
         <span class="asx-stars">★★★★★</span>
         <p><!-- TODO: real testimonial -->"Runs while I sleep, shoes are ready by morning. Wish I'd found this years ago."</p>
         <cite>— verified buyer</cite>
+      </div>
+      <div class="asx-testimonial">
+        <span class="asx-stars">★★★★★</span>
+        <p><!-- TODO: real testimonial -->"I ruined a pair of Danskos with bleach trying to fix this. Wish I'd had this instead — no smell, no damage to the leather."</p>
+        <cite>— verified buyer</cite>
+      </div>
+      <div class="asx-testimonial">
+        <span class="asx-stars">★★★★★</span>
+        <p><!-- TODO: real testimonial -->"Got the two-pack — one lives at my locker, one's at home. Haven't touched a can of Lysol since."</p>
+        <cite>— ER nurse, verified buyer</cite>
       </div>
     </div>
   </div>
@@ -522,6 +688,11 @@
 (function () {
   var root = document.getElementById('asx-product');
   if (!root) return;
+
+  // Numeric variant ID for the "Shipping Protection" product ($2.98, hidden
+  // from nav/search, tags: hidden, no-index, cart-upsell). See the comment
+  // block at the top of this file if that product is ever recreated.
+  var PROTECTION_VARIANT_ID = '57279801655674';
 
   var variants = window.ASX_VARIANTS || [];
 
@@ -544,6 +715,10 @@
   var cartCountEl = root.querySelector('#asx-cart-count');
   var cartItemsEl = root.querySelector('#asx-cart-items');
   var cartSubtotalEl = root.querySelector('#asx-cart-subtotal');
+  var offerStackEl = root.querySelector('#asx-cart-offer-stack');
+  var cartSavingsEl = root.querySelector('#asx-cart-savings');
+  var protectionRowEl = root.querySelector('#asx-cart-protection');
+  var protectionCheckbox = root.querySelector('#asx-protection-checkbox');
 
   var stickyBar = root.querySelector('#asx-sticky-bar');
   var stickyAddBtn = root.querySelector('#asx-sticky-add-btn');
@@ -627,13 +802,22 @@
     cartCountEl.textContent = cart.item_count;
     cartSubtotalEl.textContent = formatMoney(cart.total_price);
 
-    if (cart.item_count === 0) {
+    // Keep the protection line item out of the main list — it's represented
+    // solely by the checkbox below, never as a removable cart row.
+    var regularItems = cart.items.filter(function (item) {
+      return String(item.variant_id) !== PROTECTION_VARIANT_ID;
+    });
+
+    if (regularItems.length === 0) {
       cartItemsEl.innerHTML = '<p class="asx-cart-empty">Your cart is empty.</p>';
+      offerStackEl.classList.remove('is-visible');
+      protectionRowEl.classList.remove('is-visible');
+      if (protectionCheckbox) protectionCheckbox.checked = false;
       return;
     }
 
     var html = '';
-    cart.items.forEach(function (item) {
+    regularItems.forEach(function (item) {
       html +=
         '<div class="asx-cart-item">' +
           '<img src="' + item.image + '&width=160" alt="">' +
@@ -661,6 +845,31 @@
     cartItemsEl.querySelectorAll('.asx-cart-item-remove').forEach(function (b) {
       b.addEventListener('click', function () { changeLineQty(b.getAttribute('data-key'), 0, true); });
     });
+
+    // Offer stack: sum compare-at savings across every regular line, using
+    // the product's own variant data (ASX_VARIANTS) rather than relying on
+    // cart.js to carry compare-at pricing per line.
+    var totalSavingsCents = 0;
+    regularItems.forEach(function (item) {
+      var v = findVariant(item.variant_id);
+      if (v && v.compare_at_price && v.compare_at_price > v.price) {
+        totalSavingsCents += (v.compare_at_price - v.price) * item.quantity;
+      }
+    });
+    if (totalSavingsCents > 0) {
+      cartSavingsEl.textContent = "You're saving " + formatMoney(totalSavingsCents) + ' today';
+      offerStackEl.classList.add('is-visible');
+    } else {
+      offerStackEl.classList.remove('is-visible');
+    }
+
+    // Shipping protection upsell: only offered once there's something real
+    // in the cart, and its checkbox reflects whether it's already in there.
+    protectionRowEl.classList.add('is-visible');
+    var hasProtection = cart.items.some(function (item) {
+      return String(item.variant_id) === PROTECTION_VARIANT_ID;
+    });
+    if (protectionCheckbox) protectionCheckbox.checked = hasProtection;
   }
 
   function refreshCart() {
@@ -707,6 +916,34 @@
         addBtn.disabled = false;
         addBtn.textContent = originalText;
       });
+  }
+
+  if (protectionCheckbox) {
+    protectionCheckbox.addEventListener('change', function () {
+      var checked = protectionCheckbox.checked;
+      fetch('/cart.js').then(function (r) { return r.json(); }).then(function (cart) {
+        var existing = null;
+        for (var i = 0; i < cart.items.length; i++) {
+          if (String(cart.items[i].variant_id) === PROTECTION_VARIANT_ID) { existing = cart.items[i]; break; }
+        }
+        if (checked && !existing) {
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: PROTECTION_VARIANT_ID, quantity: 1 })
+          }).then(function (r) { return r.json(); })
+            .then(function () { return fetch('/cart.js'); })
+            .then(function (r) { return r.json(); })
+            .then(renderCart);
+        } else if (!checked && existing) {
+          fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: existing.key, quantity: 0 })
+          }).then(function (r) { return r.json(); }).then(renderCart);
+        }
+      });
+    });
   }
 
   form.addEventListener('submit', function (e) {
