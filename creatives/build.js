@@ -94,11 +94,14 @@ function confessHTML(p, ratio){
       const name=`${set}-${p.key}-${r}`; fs.writeFileSync(`html/${name}.html`, fn(p,r)); jobs.push([name,...SIZES[r]]);
     }
   fs.mkdirSync('png',{recursive:true});
+  const ANG={'ritual-upgrade':'Angle1_Ritual-Upgrade','temple-rescue':'Angle2_Temple-Rescue','not-a-pill':'Angle3_Not-A-Pill','regrowth-companion':'Angle4_Regrowth-Companion','root-cause':'Angle5_Root-Cause'};
+  const RAT={'1x1':'1x1-square','9x16':'9x16-story','191':'1.91x1-landscape'};
+  const pngPath=n=>{const m=n.match(/^(reddit|confessional)-[rc]\d-(.+)-(1x1|9x16|191)$/);const d='png/'+ANG[m[2]];fs.mkdirSync(d,{recursive:true});return `${d}/${ANG[m[2]]}__${m[1]==='reddit'?'Reddit-Post':'Confessional-Text'}__${RAT[m[3]]}.png`;};
   const b=await chromium.launch();
   for(const [n,w,h] of jobs){
     const pg=await b.newPage({viewport:{width:w,height:h}});
     await pg.goto('file://'+path.resolve(`html/${n}.html`));
-    await pg.screenshot({path:`png/${n}.png`});
+    await pg.screenshot({path:pngPath(n)});
     // overflow check
     const ov=await pg.evaluate(()=>document.documentElement.scrollHeight>innerHeight+1||document.documentElement.scrollWidth>innerWidth+1);
     console.log(n,w+'x'+h,ov?'OVERFLOW':'ok'); await pg.close();
