@@ -134,10 +134,11 @@
 .ninu-ba-scroller::-webkit-scrollbar{display:none}
 @media(min-width:900px){.ninu-ba-scroller{grid-auto-columns:1fr;grid-auto-flow:column;overflow:visible}}
 .ninu-ba-card{scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.ninu-ba-imgs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
-.ninu-ba-imgs figure{position:relative;margin:0;aspect-ratio:1/1;background:var(--card);overflow:hidden}
-.ninu-ba-imgs img{width:100%;height:100%;object-fit:cover;display:block}
-.ninu-ba-imgs figcaption{position:absolute;top:10px;left:10px;background:rgba(20,12,8,.78);color:#F0E6D8;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:4px}
+.ninu-ba-split{position:relative;aspect-ratio:2/1;background:var(--card);overflow:hidden}
+.ninu-ba-split img{width:100%;height:100%;object-fit:cover;display:block}
+.ninu-ba-tag{position:absolute;top:10px;background:rgba(20,12,8,.78);color:#F0E6D8;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:4px}
+.ninu-ba-tag.left{left:10px}
+.ninu-ba-tag.right{right:10px}
 .ninu-ba-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
 .ninu-ba-stars{color:var(--gold);letter-spacing:2px;font-size:15px}
 .ninu-ba-card blockquote{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.35;color:#2F231A;font-style:italic;font-weight:500}
@@ -255,9 +256,10 @@
 
       <div class="ninu-ba-scroller">
         <article class="ninu-ba-card">
-          <div class="ninu-ba-imgs">
-            <figure><img src="BA1_BEFORE_URL" alt="Before — month 2 postpartum, thinning at the temples"><figcaption>Month 2</figcaption></figure>
-            <figure><img src="BA1_AFTER_URL"  alt="After — month 5 postpartum, hairline filling in"><figcaption>Month 5</figcaption></figure>
+          <div class="ninu-ba-split">
+            <img src="BA1_SPLIT_URL" alt="Rachel M. — split image showing temple hairline at month 2 next to month 5">
+            <span class="ninu-ba-tag left">Month 2</span>
+            <span class="ninu-ba-tag right">Month 5</span>
           </div>
           <div class="ninu-ba-body">
             <div class="ninu-ba-stars">★★★★★</div>
@@ -267,9 +269,10 @@
         </article>
 
         <article class="ninu-ba-card">
-          <div class="ninu-ba-imgs">
-            <figure><img src="BA2_BEFORE_URL" alt="Before — crown showing thinning at the part"><figcaption>Week 1</figcaption></figure>
-            <figure><img src="BA2_AFTER_URL"  alt="After — crown with denser coverage along the part"><figcaption>Month 4</figcaption></figure>
+          <div class="ninu-ba-split">
+            <img src="BA2_SPLIT_URL" alt="Amara T. — split image showing crown at week 1 next to month 4">
+            <span class="ninu-ba-tag left">Week 1</span>
+            <span class="ninu-ba-tag right">Month 4</span>
           </div>
           <div class="ninu-ba-body">
             <div class="ninu-ba-stars">★★★★★</div>
@@ -279,9 +282,10 @@
         </article>
 
         <article class="ninu-ba-card">
-          <div class="ninu-ba-imgs">
-            <figure><img src="BA3_BEFORE_URL" alt="Before — flyaway baby hairs along the hairline"><figcaption>Month 3</figcaption></figure>
-            <figure><img src="BA3_AFTER_URL"  alt="After — baby hairs blended into a fuller hairline"><figcaption>Month 6</figcaption></figure>
+          <div class="ninu-ba-split">
+            <img src="BA3_SPLIT_URL" alt="Jenna K. — split image showing hairline at month 3 next to month 6">
+            <span class="ninu-ba-tag left">Month 3</span>
+            <span class="ninu-ba-tag right">Month 6</span>
           </div>
           <div class="ninu-ba-body">
             <div class="ninu-ba-stars">★★★★★</div>
