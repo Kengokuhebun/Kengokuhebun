@@ -122,6 +122,29 @@
 .ninu-checkout:hover{background:var(--acc-2)}
 .ninu-checkout:disabled{opacity:.5;cursor:not-allowed}
 .ninu-sc-note{text-align:center;font-size:11px;color:var(--muted);margin-top:10px;line-height:1.5}
+
+/* Before/after testimonial section */
+.ninu-ba{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}
+.ninu-ba-inner{max-width:1240px;margin:0 auto;padding:0 28px}
+@media(max-width:900px){.ninu-ba{padding:44px 0}.ninu-ba-inner{padding:0 16px}}
+.ninu-ba-eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);text-align:center;font-weight:600;margin-bottom:14px}
+.ninu-ba-h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:500;line-height:1.05;letter-spacing:-.5px;text-align:center;margin:0 0 12px}
+.ninu-ba-sub{font-size:15px;color:var(--muted);text-align:center;max-width:560px;margin:0 auto 36px;line-height:1.55}
+.ninu-ba-scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,1fr);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.ninu-ba-scroller::-webkit-scrollbar{display:none}
+@media(min-width:900px){.ninu-ba-scroller{grid-auto-columns:1fr;grid-auto-flow:column;overflow:visible}}
+.ninu-ba-card{scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ninu-ba-imgs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+.ninu-ba-imgs figure{position:relative;margin:0;aspect-ratio:1/1;background:var(--card);overflow:hidden}
+.ninu-ba-imgs img{width:100%;height:100%;object-fit:cover;display:block}
+.ninu-ba-imgs figcaption{position:absolute;top:10px;left:10px;background:rgba(20,12,8,.78);color:#F0E6D8;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:4px}
+.ninu-ba-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.ninu-ba-stars{color:var(--gold);letter-spacing:2px;font-size:15px}
+.ninu-ba-card blockquote{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.35;color:#2F231A;font-style:italic;font-weight:500}
+.ninu-ba-attrib{font-size:12px;color:var(--muted);margin-top:auto;letter-spacing:.02em}
+.ninu-ba-dots{display:flex;gap:6px;justify-content:center;margin-top:18px}
+.ninu-ba-dots span{width:6px;height:6px;border-radius:99px;background:var(--line)}
+@media(min-width:900px){.ninu-ba-dots{display:none}}
 </style>
 
 <div class="ninu-wrap">
@@ -222,6 +245,55 @@
       </div>
     </div>
   </div>
+
+  <!-- BEFORE / AFTER TESTIMONIALS -->
+  <section class="ninu-ba">
+    <div class="ninu-ba-inner">
+      <div class="ninu-ba-eyebrow">— Real results, month by month —</div>
+      <h2 class="ninu-ba-h2">The receipts</h2>
+      <p class="ninu-ba-sub">Postpartum moms, first-person crown-and-hairline shots, no filters, no glamour lighting. Their words, not ours.</p>
+
+      <div class="ninu-ba-scroller">
+        <article class="ninu-ba-card">
+          <div class="ninu-ba-imgs">
+            <figure><img src="BA1_BEFORE_URL" alt="Before — month 2 postpartum, thinning at the temples"><figcaption>Month 2</figcaption></figure>
+            <figure><img src="BA1_AFTER_URL"  alt="After — month 5 postpartum, hairline filling in"><figcaption>Month 5</figcaption></figure>
+          </div>
+          <div class="ninu-ba-body">
+            <div class="ninu-ba-stars">★★★★★</div>
+            <blockquote>"I stopped hiding my temples. Three months in, the fuzz is finally turning into actual hair."</blockquote>
+            <div class="ninu-ba-attrib">Rachel M. · 5 months postpartum · verified buyer</div>
+          </div>
+        </article>
+
+        <article class="ninu-ba-card">
+          <div class="ninu-ba-imgs">
+            <figure><img src="BA2_BEFORE_URL" alt="Before — crown showing thinning at the part"><figcaption>Week 1</figcaption></figure>
+            <figure><img src="BA2_AFTER_URL"  alt="After — crown with denser coverage along the part"><figcaption>Month 4</figcaption></figure>
+          </div>
+          <div class="ninu-ba-body">
+            <div class="ninu-ba-stars">★★★★★</div>
+            <blockquote>"The applicator actually gets oil to my scalp instead of my pillow. Life changer for how tired I am at night."</blockquote>
+            <div class="ninu-ba-attrib">Amara T. · 6 months postpartum · verified buyer</div>
+          </div>
+        </article>
+
+        <article class="ninu-ba-card">
+          <div class="ninu-ba-imgs">
+            <figure><img src="BA3_BEFORE_URL" alt="Before — flyaway baby hairs along the hairline"><figcaption>Month 3</figcaption></figure>
+            <figure><img src="BA3_AFTER_URL"  alt="After — baby hairs blended into a fuller hairline"><figcaption>Month 6</figcaption></figure>
+          </div>
+          <div class="ninu-ba-body">
+            <div class="ninu-ba-stars">★★★★★</div>
+            <blockquote>"Six months in and my baby hairs finally look like part of my hair, not a halo of chaos around it."</blockquote>
+            <div class="ninu-ba-attrib">Jenna K. · 8 months postpartum · verified buyer</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="ninu-ba-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+  </section>
 
   <!-- SIDE CART -->
   <div class="ninu-scrim" id="ninu-scrim" onclick="ninuCloseCart()"></div>
