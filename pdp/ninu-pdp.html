@@ -238,7 +238,7 @@
       <div class="ninu-upsell" id="ninu-upsell" style="display:none">
         <div class="ninu-upsell-h">Never run out</div>
         <div class="ninu-upsell-t">Add monthly oil refill</div>
-        <div class="ninu-upsell-d">60ml, delivered every 30 days. Save $16 vs one-time ($32.99). Skip, pause or cancel any time.</div>
+        <div class="ninu-upsell-d">60ml, delivered monthly. Save $16 vs one-time ($32.99). Skip, pause or cancel any time.</div>
         <div class="ninu-upsell-row">
           <div class="ninu-upsell-price">$16.99<small> /month</small></div>
           <button class="ninu-upsell-add" id="ninu-upsell-btn" onclick="ninuToggleRefill()">Add to cart</button>
@@ -390,7 +390,7 @@
     checkout.disabled = false;
 
     linesEl.innerHTML = cart.items.map(function(item, i){
-      var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · every 30 days' : 'One-time · Qty ' + item.quantity;
+      var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · monthly' : 'One-time · Qty ' + item.quantity;
       return '<div class="ninu-line">' +
         '<div class="ninu-line-img"><img src="' + (item.image || '') + '" alt=""></div>' +
         '<div class="ninu-line-info">' +
@@ -431,7 +431,7 @@
     totals.style.display = 'block';
     document.getElementById('ninu-subtotal').textContent = MONEY_FORMAT(cart.items_subtotal_price);
     document.getElementById('ninu-total').textContent = MONEY_FORMAT(cart.total_price);
-    scNote.innerHTML = hasRefill ? 'Refills auto-ship every 30 days at $19.99. Skip, pause or cancel any time.' : 'Free US shipping · 30-day money-back guarantee.';
+    scNote.innerHTML = hasRefill ? 'Refills auto-ship monthly at $16.99. Skip, pause or cancel any time.' : 'Free US shipping · 30-day money-back guarantee.';
   }
 
   // Initial cart sync (in case items were added before this page loaded)
