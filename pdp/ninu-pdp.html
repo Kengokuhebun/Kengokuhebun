@@ -1,10 +1,14 @@
-<!-- ============================================================
-     NINU — Product Page (paste into a Shopify Custom Liquid /
-     HTML section). Everything is scoped under .ninu- so nothing
-     leaks into the theme. Replace image src urls with your own
-     Shopify CDN uploads. Replace add-to-cart POST variant ids
-     with your real variant ids from Shopify admin.
-     ============================================================ -->
+<!-- =====================================================================
+     NINU — Product Page (paste into a Shopify Custom Liquid or HTML block)
+     Everything is scoped under .ninu- so nothing leaks into the theme.
+
+     BEFORE GOING LIVE, replace these placeholders (search for THREE-CAP words):
+       KIT_VARIANT_ID         → variant id of "Kit" product
+       DISPENSER_VARIANT_ID   → variant id of "Dispenser" product
+       REFILL_VARIANT_ID      → variant id of "Refill Oil" product
+       REFILL_SELLING_PLAN_ID → selling plan id from your subscription app
+       CDN_URL_1..5           → uploaded gallery image URLs
+     ===================================================================== -->
 <style>
 .ninu-wrap{--bg:#F5EFE6;--card:#FBF7F0;--ink:#241812;--muted:#7A6A5C;--line:#E4D9CB;--acc:#B85A3E;--acc-2:#8E3F27;--gold:#C79A5A;--sage:#5C7A55;--white:#fff;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);box-sizing:border-box;line-height:1.5}
 .ninu-wrap *,.ninu-wrap *::before,.ninu-wrap *::after{box-sizing:border-box}
@@ -28,9 +32,7 @@
 .ninu-info{padding-top:6px}
 .ninu-pill{display:inline-block;background:var(--sage);color:#fff;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:16px}
 .ninu-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;line-height:1.05;letter-spacing:-.5px;font-weight:500;margin:0 0 8px}
-.ninu-sub{font-size:16px;color:var(--muted);margin:0 0 18px;font-style:italic;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px}
-.ninu-stars{display:flex;align-items:center;gap:10px;margin-bottom:22px;font-size:13px;color:var(--muted)}
-.ninu-stars .s{color:var(--gold);letter-spacing:2px;font-size:16px}
+.ninu-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:var(--muted);margin:0 0 20px;font-style:italic}
 .ninu-desc{font-size:15.5px;line-height:1.65;color:#3B2C22;margin:0 0 26px}
 
 /* Mechanism 3-step */
@@ -43,7 +45,7 @@
 /* Tiers */
 .ninu-tiers-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-weight:600}
 .ninu-tiers{display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
-.ninu-tier{position:relative;border:2px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--white);cursor:pointer;transition:all .18s}
+.ninu-tier{position:relative;border:2px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--white);cursor:pointer;transition:all .18s;display:block}
 .ninu-tier:hover{border-color:var(--muted)}
 .ninu-tier.selected{border-color:var(--acc);background:linear-gradient(180deg,#FEFAF3,#FBF3E8)}
 .ninu-tier input{position:absolute;opacity:0;pointer-events:none}
@@ -58,27 +60,18 @@
 .ninu-tier-sub{font-size:13px;color:var(--muted);margin-bottom:10px}
 .ninu-price-row{display:flex;align-items:baseline;gap:10px}
 .ninu-price{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;color:var(--ink);line-height:1}
-.ninu-was{font-size:15px;color:var(--muted);text-decoration:line-through}
-.ninu-save{font-size:12px;color:var(--sage);font-weight:700;letter-spacing:.06em}
 .ninu-tier-perks{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:none;font-size:13px;color:#3B2C22;line-height:1.6}
 .ninu-tier.selected .ninu-tier-perks{display:block}
-.ninu-tier-perks li{list-style:none;padding-left:22px;position:relative;margin-bottom:4px}
+.ninu-tier-perks ul{margin:0;padding:0;list-style:none}
+.ninu-tier-perks li{padding-left:22px;position:relative;margin-bottom:4px}
 .ninu-tier-perks li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:700}
 
 /* CTA */
 .ninu-atc{width:100%;background:var(--ink);color:#F0E6D8;border:none;padding:20px;font-size:14px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border-radius:10px;cursor:pointer;transition:transform .12s;font-family:inherit}
 .ninu-atc:hover{transform:translateY(-1px);background:var(--acc-2)}
+.ninu-atc:disabled{opacity:.6;cursor:wait}
 .ninu-guar{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:16px;font-size:12px;color:var(--muted)}
 .ninu-guar span::before{content:'✓ ';color:var(--sage);font-weight:700}
-
-/* Social proof strip */
-.ninu-social{margin-top:36px;padding:24px;background:var(--card);border-radius:10px;border:1px solid var(--line)}
-.ninu-social-h{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:16px;font-weight:600}
-.ninu-quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:600px){.ninu-quotes{grid-template-columns:1fr}}
-.ninu-quote{font-size:13.5px;line-height:1.55;color:#3B2C22}
-.ninu-quote .st{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:6px;display:block}
-.ninu-quote .au{font-size:11.5px;color:var(--muted);margin-top:6px;font-style:italic}
 
 /* Side cart */
 .ninu-scrim{position:fixed;inset:0;background:rgba(20,12,8,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:9998}
@@ -89,32 +82,50 @@
 .ninu-sc-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;letter-spacing:.02em}
 .ninu-sc-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink);line-height:1}
 .ninu-sc-body{flex:1;overflow-y:auto;padding:22px 26px}
+.ninu-empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
 .ninu-line{display:flex;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:20px}
 .ninu-line-img{width:76px;height:92px;background:var(--card);border-radius:6px;flex-shrink:0;overflow:hidden}
 .ninu-line-img img{width:100%;height:100%;object-fit:cover}
-.ninu-line-info{flex:1;font-size:14px}
+.ninu-line-info{flex:1;font-size:14px;min-width:0}
 .ninu-line-title{font-weight:600;margin-bottom:2px}
 .ninu-line-tier{font-size:12px;color:var(--muted);margin-bottom:8px}
 .ninu-line-price{font-weight:700}
-.ninu-stack{background:var(--card);border:1px dashed var(--gold);border-radius:8px;padding:16px;margin-bottom:16px}
-.ninu-stack-h{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-2);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.ninu-stack-h::before{content:'★';color:var(--gold)}
-.ninu-stack ul{list-style:none;padding:0;margin:0;font-size:13.5px;line-height:1.7}
-.ninu-stack ul li{display:flex;justify-content:space-between;gap:10px;padding:4px 0}
-.ninu-stack ul li .k::before{content:'+ ';color:var(--sage);font-weight:700}
-.ninu-stack ul li .v{color:var(--sage);font-weight:700;text-decoration:line-through;font-size:12.5px}
-.ninu-stack ul li .v.free{color:var(--sage);text-decoration:none}
+.ninu-line-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:11px;text-decoration:underline;padding:0;margin-top:4px}
+
+/* Upsell card */
+.ninu-upsell{background:linear-gradient(180deg,#FEF9F0,#FBEEDD);border:1.5px dashed var(--gold);border-radius:10px;padding:16px 18px;margin-bottom:18px;position:relative}
+.ninu-upsell-h{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc-2);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.ninu-upsell-h::before{content:'★';color:var(--gold)}
+.ninu-upsell-t{font-size:14.5px;font-weight:700;margin-bottom:4px}
+.ninu-upsell-d{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:12px}
+.ninu-upsell-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ninu-upsell-price{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600}
+.ninu-upsell-price small{font-size:12px;color:var(--muted);font-family:inherit;font-weight:400}
+.ninu-upsell-add{background:var(--sage);color:#fff;border:none;padding:10px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border-radius:6px;cursor:pointer;font-family:inherit}
+.ninu-upsell-add:hover{background:#4A6544}
+.ninu-upsell.added{background:#EEF3EA;border-style:solid;border-color:var(--sage)}
+.ninu-upsell.added .ninu-upsell-add{background:var(--muted)}
+
+/* Offer stack */
+.ninu-stack{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+.ninu-stack-h{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}
+.ninu-stack ul{list-style:none;padding:0;margin:0;font-size:13px;line-height:1.7}
+.ninu-stack ul li{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.ninu-stack ul li .k::before{content:'✓ ';color:var(--sage);font-weight:700}
+.ninu-stack ul li .v{color:var(--sage);font-weight:700}
+
 .ninu-totals{padding:14px 0;border-top:1px solid var(--line);font-size:14px}
 .ninu-totals-row{display:flex;justify-content:space-between;margin-bottom:6px}
 .ninu-totals-row.big{font-size:20px;font-weight:700;margin-top:8px}
 .ninu-sc-foot{padding:20px 26px;border-top:1px solid var(--line);background:var(--card)}
 .ninu-checkout{width:100%;background:var(--acc);color:#fff;border:none;padding:18px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;border-radius:10px;cursor:pointer;font-family:inherit}
 .ninu-checkout:hover{background:var(--acc-2)}
-.ninu-sc-note{text-align:center;font-size:11px;color:var(--muted);margin-top:10px}
+.ninu-checkout:disabled{opacity:.5;cursor:not-allowed}
+.ninu-sc-note{text-align:center;font-size:11px;color:var(--muted);margin-top:10px;line-height:1.5}
 </style>
 
 <div class="ninu-wrap">
-  <div class="ninu-topbar">FREE SHIPPING · 30-DAY MONEY-BACK GUARANTEE · FREE SATIN BONNET</div>
+  <div class="ninu-topbar">FREE US SHIPPING · 30-DAY MONEY-BACK GUARANTEE · SATIN BONNET INCLUDED WITH KIT</div>
 
   <nav class="ninu-nav">
     <div class="ninu-logo">N I N U</div>
@@ -127,174 +138,304 @@
   <div class="ninu-pdp">
     <!-- GALLERY -->
     <div class="ninu-gallery">
-      <div class="ninu-thumbs" id="ninu-thumbs">
-        <div class="ninu-thumb active" onclick="ninuSwap(this,'https://cdn.shopify.com/s/files/YOUR-STORE/hero-01.jpg')"><img src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-01.jpg" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuSwap(this,'https://cdn.shopify.com/s/files/YOUR-STORE/hero-02.jpg')"><img src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-02.jpg" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuSwap(this,'https://cdn.shopify.com/s/files/YOUR-STORE/hero-03.jpg')"><img src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-03.jpg" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuSwap(this,'https://cdn.shopify.com/s/files/YOUR-STORE/hero-04.jpg')"><img src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-04.jpg" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuSwap(this,'https://cdn.shopify.com/s/files/YOUR-STORE/hero-05.jpg')"><img src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-05.jpg" alt=""></div>
+      <div class="ninu-thumbs">
+        <div class="ninu-thumb active" onclick="ninuSwap(this,'CDN_URL_1')"><img src="CDN_URL_1" alt=""></div>
+        <div class="ninu-thumb" onclick="ninuSwap(this,'CDN_URL_2')"><img src="CDN_URL_2" alt=""></div>
+        <div class="ninu-thumb" onclick="ninuSwap(this,'CDN_URL_3')"><img src="CDN_URL_3" alt=""></div>
+        <div class="ninu-thumb" onclick="ninuSwap(this,'CDN_URL_4')"><img src="CDN_URL_4" alt=""></div>
+        <div class="ninu-thumb" onclick="ninuSwap(this,'CDN_URL_5')"><img src="CDN_URL_5" alt=""></div>
       </div>
       <div class="ninu-main-img">
-        <img id="ninu-hero" src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-01.jpg" alt="Ninu Scalp Ritual Dispenser">
+        <img id="ninu-hero" src="CDN_URL_1" alt="Ninu scalp oil dispenser">
       </div>
     </div>
 
     <!-- INFO -->
     <div class="ninu-info">
-      <span class="ninu-pill">Postpartum Approved</span>
+      <span class="ninu-pill">Made for postpartum hair</span>
       <h1 class="ninu-h1">The Ninu Scalp Ritual</h1>
       <p class="ninu-sub">Oil that actually reaches your scalp.</p>
-      <div class="ninu-stars"><span class="s">★★★★★</span> <span>4.9 · 2,847 reviews</span></div>
 
-      <p class="ninu-desc">A bristle-tip dispenser that delivers nourishing oil directly to your roots — not your towel. Made for the woman getting her hair, and herself, back.</p>
+      <p class="ninu-desc">A precision applicator with hollow silicone tips that deliver nourishing oil directly to your roots — not your towel, not your pillow, not your fingertips.</p>
 
       <!-- MECHANISM -->
       <div class="ninu-mech">
-        <div class="m"><div class="n">1</div><div class="t">Press</div><div class="d">Bristle tip meets scalp</div></div>
-        <div class="m"><div class="n">2</div><div class="t">Glide</div><div class="d">Oil flows through bristles, exfoliates buildup</div></div>
-        <div class="m"><div class="n">3</div><div class="t">Absorb</div><div class="d">Follicles get 100% of the oil, not your pillow</div></div>
+        <div class="m"><div class="n">1</div><div class="t">Press</div><div class="d">Silicone tips meet scalp</div></div>
+        <div class="m"><div class="n">2</div><div class="t">Glide</div><div class="d">Oil flows through hollow prongs, along the part line</div></div>
+        <div class="m"><div class="n">3</div><div class="t">Absorb</div><div class="d">Every drop goes where it's meant to — the roots</div></div>
       </div>
 
       <!-- TIERS -->
       <div class="ninu-tiers-label">Choose your kit</div>
-      <div class="ninu-tiers" id="ninu-tiers">
-        <label class="ninu-tier selected" data-tier="sub" data-price="34.99" onclick="ninuPick(this)">
+      <div class="ninu-tiers">
+        <label class="ninu-tier selected" data-tier="kit" data-price="49.99" onclick="ninuPick(this)">
           <input type="radio" name="tier" checked>
           <div class="ninu-tier-head">
             <div class="ninu-radio"></div>
             <div class="ninu-tier-body">
-              <div class="ninu-tier-title">Subscribe & Save <span class="ninu-badge">50% off first kit</span> <span class="ninu-badge gold">Most Popular</span></div>
-              <div class="ninu-tier-sub">First dispenser + oil, then $19.99 refill every 30 days. Skip or cancel anytime.</div>
+              <div class="ninu-tier-title">The Ninu Kit <span class="ninu-badge gold">Most Popular</span></div>
+              <div class="ninu-tier-sub">Dispenser + 60ml scalp oil + satin bonnet</div>
               <div class="ninu-price-row">
-                <span class="ninu-price">$34.99</span>
-                <span class="ninu-was">$49.99</span>
-                <span class="ninu-save">SAVE $15</span>
+                <span class="ninu-price">$49.99</span>
               </div>
-              <ul class="ninu-tier-perks">
-                <li>Free Satin Bonnet ($24 value)</li>
-                <li>Free shipping, every delivery</li>
-                <li>30-day money-back guarantee</li>
-                <li>Refills auto-ship at $19.99 — pause any time</li>
-              </ul>
+              <div class="ninu-tier-perks">
+                <ul>
+                  <li>Ninu precision applicator dispenser</li>
+                  <li>60ml scalp oil (30-day supply)</li>
+                  <li>Satin sleep bonnet</li>
+                  <li>Free US shipping</li>
+                  <li>30-day money-back guarantee</li>
+                </ul>
+              </div>
             </div>
           </div>
         </label>
 
-        <label class="ninu-tier" data-tier="once" data-price="49.99" onclick="ninuPick(this)">
+        <label class="ninu-tier" data-tier="dispenser" data-price="34.99" onclick="ninuPick(this)">
           <input type="radio" name="tier">
           <div class="ninu-tier-head">
             <div class="ninu-radio"></div>
             <div class="ninu-tier-body">
-              <div class="ninu-tier-title">One-time Purchase</div>
-              <div class="ninu-tier-sub">Full kit, no subscription.</div>
+              <div class="ninu-tier-title">Dispenser Only</div>
+              <div class="ninu-tier-sub">Ninu applicator + satin bonnet. Bring your own oil.</div>
               <div class="ninu-price-row">
-                <span class="ninu-price">$49.99</span>
+                <span class="ninu-price">$34.99</span>
               </div>
-              <ul class="ninu-tier-perks">
-                <li>Free shipping</li>
-                <li>30-day money-back guarantee</li>
-              </ul>
+              <div class="ninu-tier-perks">
+                <ul>
+                  <li>Ninu precision applicator dispenser</li>
+                  <li>Satin sleep bonnet</li>
+                  <li>Free US shipping</li>
+                  <li>30-day money-back guarantee</li>
+                </ul>
+              </div>
             </div>
           </div>
         </label>
       </div>
 
-      <button class="ninu-atc" onclick="ninuAdd()">Add to Cart — <span id="ninu-atc-price">$34.99</span></button>
+      <button class="ninu-atc" id="ninu-atc" onclick="ninuAdd()">Add to Cart — <span id="ninu-atc-price">$49.99</span></button>
       <div class="ninu-guar">
-        <span>Free shipping</span>
+        <span>Free US shipping</span>
         <span>30-day guarantee</span>
-        <span>Ships in 24 hrs</span>
-      </div>
-
-      <!-- SOCIAL PROOF -->
-      <div class="ninu-social">
-        <div class="ninu-social-h">— What mamas are saying —</div>
-        <div class="ninu-quotes">
-          <div class="ninu-quote">
-            <span class="st">★★★★★</span>
-            "6 months postpartum and finally seeing baby hairs fill in. Wish I'd found this at month 2."
-            <div class="au">— Rachel M., verified buyer</div>
-          </div>
-          <div class="ninu-quote">
-            <span class="st">★★★★★</span>
-            "The bristles feel amazing on my scalp. My oil actually goes where it's supposed to go now."
-            <div class="au">— Amara T., verified buyer</div>
-          </div>
-        </div>
+        <span>Cancel refills any time</span>
       </div>
     </div>
   </div>
 
   <!-- SIDE CART -->
   <div class="ninu-scrim" id="ninu-scrim" onclick="ninuCloseCart()"></div>
-  <aside class="ninu-sidecart" id="ninu-sidecart">
+  <aside class="ninu-sidecart" id="ninu-sidecart" aria-hidden="true">
     <div class="ninu-sc-head">
       <div class="ninu-sc-title">Your Ritual</div>
-      <button class="ninu-sc-close" onclick="ninuCloseCart()">✕</button>
+      <button class="ninu-sc-close" onclick="ninuCloseCart()" aria-label="Close">✕</button>
     </div>
-    <div class="ninu-sc-body">
-      <div class="ninu-line" id="ninu-line">
-        <div class="ninu-line-img"><img src="https://cdn.shopify.com/s/files/YOUR-STORE/hero-01.jpg" alt=""></div>
-        <div class="ninu-line-info">
-          <div class="ninu-line-title">Ninu Scalp Ritual Kit</div>
-          <div class="ninu-line-tier" id="ninu-line-tier">Subscribe & Save · Qty 1</div>
-          <div class="ninu-line-price" id="ninu-line-price">$34.99</div>
+    <div class="ninu-sc-body" id="ninu-sc-body">
+      <div class="ninu-empty" id="ninu-empty">Your cart is empty.</div>
+      <div id="ninu-lines"></div>
+
+      <!-- Refill upsell -->
+      <div class="ninu-upsell" id="ninu-upsell" style="display:none">
+        <div class="ninu-upsell-h">Never run out</div>
+        <div class="ninu-upsell-t">Add monthly oil refill</div>
+        <div class="ninu-upsell-d">60ml, delivered every 30 days. Save $13 vs one-time ($32.99). Skip, pause or cancel any time.</div>
+        <div class="ninu-upsell-row">
+          <div class="ninu-upsell-price">$19.99<small> /month</small></div>
+          <button class="ninu-upsell-add" id="ninu-upsell-btn" onclick="ninuToggleRefill()">Add to cart</button>
         </div>
       </div>
 
-      <div class="ninu-stack">
-        <div class="ninu-stack-h">Your Offer Stack</div>
-        <ul>
-          <li><span class="k">Ninu Dispenser + First Oil</span> <span class="v free">Included</span></li>
-          <li><span class="k">Satin Bonnet Bonus</span> <span class="v">$24</span></li>
-          <li><span class="k">Free Priority Shipping</span> <span class="v">$8</span></li>
-          <li><span class="k">30-Day Money-Back Guarantee</span> <span class="v free">Included</span></li>
-          <li id="ninu-sub-perk"><span class="k">50% Off First Kit (Subscriber)</span> <span class="v free">Applied</span></li>
-        </ul>
+      <!-- Offer stack (only shows when there's a line item) -->
+      <div class="ninu-stack" id="ninu-stack" style="display:none">
+        <div class="ninu-stack-h">What's included</div>
+        <ul id="ninu-stack-list"></ul>
       </div>
 
-      <div class="ninu-totals">
-        <div class="ninu-totals-row"><span>Subtotal</span><span id="ninu-subtotal">$34.99</span></div>
-        <div class="ninu-totals-row"><span>Bonuses</span><span style="color:var(--sage);font-weight:700">FREE</span></div>
+      <div class="ninu-totals" id="ninu-totals" style="display:none">
+        <div class="ninu-totals-row"><span>Subtotal</span><span id="ninu-subtotal">$0.00</span></div>
         <div class="ninu-totals-row"><span>Shipping</span><span style="color:var(--sage);font-weight:700">FREE</span></div>
-        <div class="ninu-totals-row big"><span>Total today</span><span id="ninu-total">$34.99</span></div>
+        <div class="ninu-totals-row big"><span>Total today</span><span id="ninu-total">$0.00</span></div>
       </div>
     </div>
     <div class="ninu-sc-foot">
-      <button class="ninu-checkout" onclick="ninuCheckout()">Secure Checkout →</button>
-      <div class="ninu-sc-note">Refill auto-ships at $19.99/mo. Cancel any time.</div>
+      <button class="ninu-checkout" id="ninu-checkout" onclick="ninuCheckout()" disabled>Secure Checkout →</button>
+      <div class="ninu-sc-note" id="ninu-sc-note">Your cart is empty.</div>
     </div>
   </aside>
 </div>
 
 <script>
 (function(){
-  var VARIANTS={sub:'REPLACE_SUB_VARIANT_ID',once:'REPLACE_ONETIME_VARIANT_ID'};
-  var state={tier:'sub',price:34.99,count:0};
-  window.ninuPick=function(el){
-    document.querySelectorAll('.ninu-tier').forEach(function(t){t.classList.remove('selected');t.querySelector('input').checked=false;});
-    el.classList.add('selected');el.querySelector('input').checked=true;
-    state.tier=el.dataset.tier;state.price=parseFloat(el.dataset.price);
-    document.getElementById('ninu-atc-price').textContent='$'+state.price.toFixed(2);
-    document.getElementById('ninu-line-price').textContent='$'+state.price.toFixed(2);
-    document.getElementById('ninu-subtotal').textContent='$'+state.price.toFixed(2);
-    document.getElementById('ninu-total').textContent='$'+state.price.toFixed(2);
-    document.getElementById('ninu-line-tier').textContent=(state.tier==='sub'?'Subscribe & Save':'One-time Purchase')+' · Qty 1';
-    document.getElementById('ninu-sub-perk').style.display=state.tier==='sub'?'flex':'none';
+  // === REPLACE THESE FIVE VALUES ===================================
+  var KIT_VARIANT_ID = 'KIT_VARIANT_ID';
+  var DISPENSER_VARIANT_ID = 'DISPENSER_VARIANT_ID';
+  var REFILL_VARIANT_ID = 'REFILL_VARIANT_ID';
+  var REFILL_SELLING_PLAN_ID = 'REFILL_SELLING_PLAN_ID';
+  var MONEY_FORMAT = function(cents){ return '$' + (cents/100).toFixed(2); };
+  // =================================================================
+
+  var TIER = {
+    kit:       { title: 'The Ninu Kit',   price: 4999, variant: KIT_VARIANT_ID,
+                 includes: ['Ninu applicator dispenser','60ml scalp oil','Satin sleep bonnet','Free US shipping','30-day guarantee'] },
+    dispenser: { title: 'Ninu Dispenser', price: 3499, variant: DISPENSER_VARIANT_ID,
+                 includes: ['Ninu applicator dispenser','Satin sleep bonnet','Free US shipping','30-day guarantee'] }
   };
-  window.ninuSwap=function(el,src){
-    document.querySelectorAll('.ninu-thumb').forEach(function(t){t.classList.remove('active');});
-    el.classList.add('active');document.getElementById('ninu-hero').src=src;
+  var state = { tier: 'kit' };
+
+  window.ninuPick = function(el){
+    document.querySelectorAll('.ninu-tier').forEach(function(t){ t.classList.remove('selected'); t.querySelector('input').checked = false; });
+    el.classList.add('selected'); el.querySelector('input').checked = true;
+    state.tier = el.dataset.tier;
+    document.getElementById('ninu-atc-price').textContent = MONEY_FORMAT(TIER[state.tier].price);
   };
-  window.ninuOpenCart=function(){document.getElementById('ninu-sidecart').classList.add('open');document.getElementById('ninu-scrim').classList.add('open');};
-  window.ninuCloseCart=function(){document.getElementById('ninu-sidecart').classList.remove('open');document.getElementById('ninu-scrim').classList.remove('open');};
-  window.ninuAdd=function(){
-    state.count++;document.getElementById('ninu-count').textContent=state.count;
-    // Real Shopify add-to-cart:
-    // fetch('/cart/add.js',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:VARIANTS[state.tier],quantity:1})}).then(function(){ninuOpenCart();});
-    ninuOpenCart();
+
+  window.ninuSwap = function(el, src){
+    document.querySelectorAll('.ninu-thumb').forEach(function(t){ t.classList.remove('active'); });
+    el.classList.add('active');
+    document.getElementById('ninu-hero').src = src;
   };
-  window.ninuCheckout=function(){window.location.href='/checkout';};
+
+  window.ninuOpenCart = function(){
+    document.getElementById('ninu-sidecart').classList.add('open');
+    document.getElementById('ninu-sidecart').setAttribute('aria-hidden','false');
+    document.getElementById('ninu-scrim').classList.add('open');
+  };
+  window.ninuCloseCart = function(){
+    document.getElementById('ninu-sidecart').classList.remove('open');
+    document.getElementById('ninu-sidecart').setAttribute('aria-hidden','true');
+    document.getElementById('ninu-scrim').classList.remove('open');
+  };
+
+  // --- Shopify cart wiring -----------------------------------------
+  function ajaxAdd(items){
+    return fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({ items: items })
+    }).then(function(r){ if(!r.ok) throw new Error('add failed'); return r.json(); });
+  }
+  function ajaxGetCart(){
+    return fetch('/cart.js', {headers:{'Accept':'application/json'}}).then(function(r){ return r.json(); });
+  }
+  function ajaxChange(line, quantity){
+    return fetch('/cart/change.js', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({ line: line, quantity: quantity })
+    }).then(function(r){ return r.json(); });
+  }
+
+  window.ninuAdd = function(){
+    var btn = document.getElementById('ninu-atc');
+    btn.disabled = true;
+    var t = TIER[state.tier];
+    ajaxAdd([{ id: t.variant, quantity: 1 }])
+      .then(refreshCart)
+      .then(function(){ ninuOpenCart(); })
+      .catch(function(e){ alert('Sorry, something went wrong. Please refresh and try again.'); console.error(e); })
+      .finally(function(){ btn.disabled = false; });
+  };
+
+  window.ninuToggleRefill = function(){
+    var upsell = document.getElementById('ninu-upsell');
+    var btn = document.getElementById('ninu-upsell-btn');
+    btn.disabled = true;
+    if(upsell.classList.contains('added')){
+      // Remove refill line
+      ajaxGetCart().then(function(cart){
+        var idx = cart.items.findIndex(function(i){ return String(i.variant_id) === String(REFILL_VARIANT_ID); });
+        if(idx >= 0) return ajaxChange(idx + 1, 0);
+      }).then(refreshCart).finally(function(){ btn.disabled = false; });
+    } else {
+      ajaxAdd([{ id: REFILL_VARIANT_ID, quantity: 1, selling_plan: REFILL_SELLING_PLAN_ID }])
+        .then(refreshCart)
+        .catch(function(e){ alert('Could not add refill. Check subscription setup.'); console.error(e); })
+        .finally(function(){ btn.disabled = false; });
+    }
+  };
+
+  window.ninuRemoveLine = function(lineIdx){
+    ajaxChange(lineIdx + 1, 0).then(refreshCart);
+  };
+
+  window.ninuCheckout = function(){ window.location.href = '/checkout'; };
+
+  function refreshCart(){
+    return ajaxGetCart().then(renderCart);
+  }
+
+  function renderCart(cart){
+    document.getElementById('ninu-count').textContent = cart.item_count;
+    var linesEl = document.getElementById('ninu-lines');
+    var empty = document.getElementById('ninu-empty');
+    var stack = document.getElementById('ninu-stack');
+    var totals = document.getElementById('ninu-totals');
+    var upsell = document.getElementById('ninu-upsell');
+    var upsellBtn = document.getElementById('ninu-upsell-btn');
+    var checkout = document.getElementById('ninu-checkout');
+    var scNote = document.getElementById('ninu-sc-note');
+
+    if(!cart.items.length){
+      linesEl.innerHTML = '';
+      empty.style.display = 'block';
+      stack.style.display = 'none';
+      totals.style.display = 'none';
+      upsell.style.display = 'none';
+      checkout.disabled = true;
+      scNote.textContent = 'Add a kit to see your order.';
+      return;
+    }
+
+    empty.style.display = 'none';
+    checkout.disabled = false;
+
+    linesEl.innerHTML = cart.items.map(function(item, i){
+      var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · every 30 days' : 'One-time · Qty ' + item.quantity;
+      return '<div class="ninu-line">' +
+        '<div class="ninu-line-img"><img src="' + (item.image || '') + '" alt=""></div>' +
+        '<div class="ninu-line-info">' +
+          '<div class="ninu-line-title">' + item.product_title + '</div>' +
+          '<div class="ninu-line-tier">' + tierLabel + '</div>' +
+          '<div class="ninu-line-price">' + MONEY_FORMAT(item.final_line_price) + '</div>' +
+          '<button class="ninu-line-remove" onclick="ninuRemoveLine(' + i + ')">Remove</button>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    // Offer stack — inferred from first kit/dispenser line
+    var kitLine = cart.items.find(function(i){ return String(i.variant_id) === String(KIT_VARIANT_ID) || String(i.variant_id) === String(DISPENSER_VARIANT_ID); });
+    if(kitLine){
+      var t = String(kitLine.variant_id) === String(KIT_VARIANT_ID) ? TIER.kit : TIER.dispenser;
+      document.getElementById('ninu-stack-list').innerHTML = t.includes.map(function(x){ return '<li><span class="k">' + x + '</span><span class="v">Included</span></li>'; }).join('');
+      stack.style.display = 'block';
+    } else {
+      stack.style.display = 'none';
+    }
+
+    // Refill upsell — show when kit/dispenser is in cart and refill isn't
+    var hasKit = !!kitLine;
+    var hasRefill = cart.items.some(function(i){ return String(i.variant_id) === String(REFILL_VARIANT_ID); });
+    if(hasKit){
+      upsell.style.display = 'block';
+      if(hasRefill){
+        upsell.classList.add('added');
+        upsellBtn.textContent = 'Remove';
+      } else {
+        upsell.classList.remove('added');
+        upsellBtn.textContent = 'Add to cart';
+      }
+    } else {
+      upsell.style.display = 'none';
+    }
+
+    totals.style.display = 'block';
+    document.getElementById('ninu-subtotal').textContent = MONEY_FORMAT(cart.items_subtotal_price);
+    document.getElementById('ninu-total').textContent = MONEY_FORMAT(cart.total_price);
+    scNote.innerHTML = hasRefill ? 'Refills auto-ship every 30 days at $19.99. Skip, pause or cancel any time.' : 'Free US shipping · 30-day money-back guarantee.';
+  }
+
+  // Initial cart sync (in case items were added before this page loaded)
+  document.addEventListener('DOMContentLoaded', function(){ refreshCart().catch(function(){}); });
 })();
 </script>
 <!-- END NINU PDP -->
