@@ -312,7 +312,17 @@
       method: 'POST',
       headers: {'Content-Type':'application/json','Accept':'application/json'},
       body: JSON.stringify({ items: items })
-    }).then(function(r){ if(!r.ok) throw new Error('add failed'); return r.json(); });
+    }).then(function(r){
+      return r.text().then(function(body){
+        if(!r.ok){
+          console.error('[Ninu] /cart/add.js failed', r.status, body);
+          var msg;
+          try { msg = JSON.parse(body).description || JSON.parse(body).message; } catch(e){ msg = body.slice(0,200); }
+          throw new Error('[' + r.status + '] ' + msg);
+        }
+        return JSON.parse(body);
+      });
+    });
   }
   function ajaxGetCart(){
     return fetch('/cart.js', {headers:{'Accept':'application/json'}}).then(function(r){ return r.json(); });
@@ -332,7 +342,7 @@
     ajaxAdd([{ id: t.variant, quantity: 1 }])
       .then(refreshCart)
       .then(function(){ ninuOpenCart(); })
-      .catch(function(e){ alert('Sorry, something went wrong. Please refresh and try again.'); console.error(e); })
+      .catch(function(e){ console.error('[Ninu] add-to-cart error', e); alert('Add to cart failed: ' + (e.message || e)); })
       .finally(function(){ btn.disabled = false; });
   };
 
