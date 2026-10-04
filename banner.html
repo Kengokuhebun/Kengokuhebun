@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Creative Strategy – Banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0b0b0c;
+    --charcoal: #111113;
+    --white: #ffffff;
+    --ink: #0b0b0c;
+    --gray-dark: #a1a1a6;
+    --gray-light: #5c5c61;
+    --line-dark: rgba(255, 255, 255, 0.18);
+    --line-light: rgba(11, 11, 12, 0.14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #2a2a2d;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 0;
+  }
+
+  .slide {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    padding: 72px 88px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* ---------- Slide 1 : dark ---------- */
+  .slide--dark {
+    background: var(--charcoal);
+    color: var(--white);
+  }
+
+  .slide--dark .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    padding-bottom: 32px;
+  }
+
+  .slide--dark h1 {
+    font-size: 90px;
+    line-height: 0.98;
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    max-width: 1020px;
+  }
+
+  .slide--dark .sub {
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 400;
+    color: var(--gray-dark);
+    max-width: 780px;
+  }
+
+  .slide--dark footer {
+    border-top: 1px solid var(--line-dark);
+    padding-top: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  /* ---------- Slide 2 : light ---------- */
+  .slide--light {
+    background: var(--white);
+    color: var(--ink);
+    padding-bottom: 56px;
+  }
+
+  .slide--light h2 {
+    font-size: 76px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    margin-bottom: 32px;
+  }
+
+  .columns {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 72px;
+    border-top: 1px solid var(--line-light);
+    padding-top: 26px;
+    min-height: 0;
+  }
+
+  .block + .block { margin-top: 26px; }
+
+  h3 {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .block p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--gray-light);
+    max-width: 500px;
+  }
+
+  .deliver ul {
+    list-style: none;
+    margin-top: 6px;
+  }
+
+  .deliver li {
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line-light);
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--gray-light);
+  }
+
+  .deliver li:first-child { padding-top: 4px; }
+  .deliver li:last-child { border-bottom: 0; }
+
+  .deliver li strong {
+    display: block;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .cta {
+    margin-top: 24px;
+    background: var(--black);
+    color: var(--white);
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .cta .cta-main {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .cta .cta-sub {
+    font-size: 17px;
+    color: var(--gray-dark);
+    text-align: right;
+    max-width: 380px;
+    line-height: 1.45;
+  }
+
+  /* ---------- Print ---------- */
+  @page {
+    size: 1280px 720px;
+    margin: 0;
+  }
+
+  @media print {
+    html, body {
+      width: 1280px;
+      margin: 0;
+      padding: 0;
+      background: none;
+      display: block;
+      gap: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .slide {
+      margin: 0;
+      box-shadow: none;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .slide--dark {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .slide--light {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- SLIDE 1 : THE HOOK -->
+  <section class="slide slide--dark">
+    <div class="main">
+      <h1>Stop burning budget on single UGC videos that flop.</h1>
+      <p class="sub">Traditional creators take weeks and cost £150+ per clip. I engineer psychology-backed AI video ads and Meta hook variations designed to lower your CAC, beat ad fatigue, and scale your ROAS.</p>
+    </div>
+    <footer>AI Creative Strategy &amp; Media Buying Support &nbsp;•&nbsp; Trusted by Lumen &amp; Velmir</footer>
+  </section>
+
+  <!-- SLIDE 2 : MECHANISM & OUTCOME -->
+  <section class="slide slide--light">
+    <h2>Test faster. Scale cheaper.</h2>
+
+    <div class="columns">
+      <div class="left">
+        <div class="block">
+          <h3>The Problem</h3>
+          <p>Your best products are stalling because your creative is fatiguing, and you lack the assets to run proper Dynamic Creative Testing (DCT).</p>
+        </div>
+        <div class="block">
+          <h3>The Solution</h3>
+          <p>I build Meta-ready DCT ad bundles using advanced AI workflows. You get multiple scroll-stopping hooks and emotionally driven scripts for the cost of one traditional video.</p>
+        </div>
+      </div>
+
+      <div class="deliver">
+        <h3>What You Get Delivered</h3>
+        <ul>
+          <li><strong>3–6 Testable Ad Variations</strong>Multiple 0–3s hook tests</li>
+          <li><strong>Pre-Approved Digital Avatars</strong>Consistent framing</li>
+          <li><strong>Conversion-Focused Scripts</strong>Rooted in buyer psychology</li>
+          <li><strong>48-Hour Turnaround</strong>Keep your ad account fresh</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="cta-main">Ready to unlock new audiences?</div>
+      <div class="cta-sub">Send your product link for a free 3-point creative audit.</div>
+    </div>
+  </section>
+
+</body>
+</html>
