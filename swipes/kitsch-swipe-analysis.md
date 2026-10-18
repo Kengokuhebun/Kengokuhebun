@@ -106,6 +106,57 @@ All three call out "moms," not "your thinning hair," to stay inside Meta's perso
 
 ## 7. What I still need
 
-- Performance on both Kitsch ads (spend, run time, any metrics), so we know how hard to weight them.
+- ~~Performance on both Kitsch ads~~ Partly answered: see section 8 (spy-tool screenshots). Spend/reach is missing on two of the three ads.
 - Whether you want a UGC-style **video** variant later. These two winners are videos, while the approved test is 3 static native formats. I haven't changed the approved structure.
 - Sign-off on the three hook entries (A/B/C) before I write the full shared body.
+
+## 8. Spy-tool data: three more Kitsch ads (screenshots)
+
+These three ads are different creatives from the two UGC videos in sections 1-2. The tool shows a branded 12s motion-graphic video (ads 1 and 2) and a 31s hands-and-bottle video (ad 3). I can't tell whether the two UGC videos are among the ads tracked here, so I'm treating these as additional swipes.
+
+| | Ad 1 | Ad 2 | Ad 3 |
+|---|---|---|---|
+| Creative | "IT SOLD OUT 5 TIMES / Your Bald Spot's Worst Nightmare." (12s) | Same creative as Ad 1 (creative reuse: 2) | "this 4-step routine for hair growth" (31s) |
+| Running | Aug 18 to today, 61 days | Aug 11 to today, 68 days, US | Aug 22 to today, 57 days, Germany + 46 other countries |
+| Tool's ad rank | #47 of 3,635 (top 2%) | #36 of 3,635 (top 1%) | #132 of 3,635 (top 4%) |
+| Spend/reach | not shown ("—") | not shown ("—") | $2,463 total, now $3.25/day |
+| Landing page | product page (`/products/scalp-oil-a...`) | same | `/products/hair-growth...` |
+| Headline | "Healthy hair starts at the scalp" | same | "Award-winning self-care must-haves" |
+
+**Reading it:**
+- **Ads 1 and 2 are the real swipes.** They have been running about two months, rank in the top 1-2% by the tool's ranking (I don't know exactly how the tool computes it), and send traffic to a product page, not an advertorial. That matches our plan. Spend is not shown, so I can't confirm how much money is behind them.
+- **Ad 3 is not a swipe.** Its chart shows daily spend peaking around $82-$95 from late August to about September 20, then dropping to $6.86 and about $3/day by October. Kitsch scaled it, then cut it. It also runs across Europe with generic "self-care essentials" copy and a different landing page.
+- **291 of Kitsch's 3,721 tracked ads (8%) point at the scalp oil product page.** That tells us how much they're investing in this product. It also means the desire is crowded.
+
+### What Ads 1 and 2 add to the pattern
+
+**1. The winning hook is a fear of thinning, not only ease.** "Your Bald Spot's Worst Nightmare" names the pain directly, and the proof pill ("It sold out 5 times") supports it. The three benefit bullets then sell the same delivery desire as the UGC videos:
+- Precise, mess-free application, no oil dripping down your forehead
+- Quick and effortless routine
+- Targets your scalp, not your hair, for less waste and better application
+
+So the proven formula is a fear-of-thinning hook plus three delivery/ease bullets. That supports both our **Ad A (temple panic) as the hook** and the **delivery mechanism as the shared body**.
+
+**2. Primary text is short, with an emoji bullet list.** Ad 2's copy is one hook line and four short benefit lines. It is not longform.
+
+**3. Kitsch leans on trust proofs we don't have.** "Sold out 5 times," "award-winning," "everyone is raving," and a 90-day return policy are all trust signals. This is the same trust gap behind Velmir's ATC → purchase drop. We can swipe the desire, not their credibility.
+
+### What not to copy
+
+- **"Your bald spot."** It tells the viewer something about her body, which Meta's personal-attributes policy can reject, even though Kitsch is running it. Use the same "X's worst nightmare" frame on the problem: "Your messy oil routine's worst nightmare."
+- **"Sold out 5 times," "award-winning," "everyone is raving."** We have no basis for these.
+- **"Improve scalp health," "reduce frizz & breakage."** These are claims we don't make.
+- **Their bullets word for word.** Rewrite them for our product.
+
+### Updated body spine (replaces section 4's six points with three bullets)
+
+Same body on all 3 ads, using the proven bullets reworded for what our product does:
+- **Precise.** The hollow tips press to the scalp along the part and release the oil there, not down your neck.
+- **Easy.** One hand, a few minutes, less to clean up afterward.
+- **Less waste.** The clear chamber has 1-4ml markings, so you can see exactly how much you use.
+
+Then the offer, the 30-day guarantee and free US shipping, so the long form can be cut to this short form.
+
+### Decision for you and your mentor
+
+Kitsch offers a 90-day return window. Ours is 30 days. Given the trust-gap diagnosis, it may be worth deciding whether a longer guarantee is affordable for the test.
