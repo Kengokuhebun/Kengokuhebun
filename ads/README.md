@@ -4,7 +4,8 @@
 
 | File | What it is |
 |---|---|
-| `ninu-r1-test-ads.md` | The three ads: full primary text, headline, creative direction, and where each Kitsch swipe element is used |
+| `ninu-r1-test-ads.md` | Short-form primary text (use for the ABO import), headline, creative direction, Kitsch swipe mapping |
+| `ninu-r1-long-form.md` | Long-form primary text (300–500 words each) built on BTA × Great Leads × Master Doc native structure |
 | `ninu-r1-validation.csv` | Bulk import for Ads Manager: 1 campaign, 1 ad set, 3 ads, all PAUSED, image slots blank |
 
 The earlier 5-ad-set CBO file was removed because it didn't match the approved structure.
