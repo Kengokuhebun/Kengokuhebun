@@ -15,7 +15,12 @@ Short-form versions (for the ABO import) are in `ninu-r1-test-ads.md`.
 **CTA button:** Shop Now
 **Link description:** Free US shipping · 30-day guarantee
 
+> **Hook (thumb-stopper, what shows above "See more"):**
+> *Month five postpartum. Before I check my phone, before I check the baby monitor, I'm at the bathroom mirror pressing my hair back to check my temples.*
+
 ---
+
+### Primary text (paste into Ads Manager)
 
 Month five postpartum. Before I check my phone, before I check the baby monitor, I'm at the bathroom mirror pressing my hair back to check my temples.
 
@@ -55,7 +60,12 @@ Try the Ninu Kit risk-free for 30 days.
 **CTA button:** Shop Now
 **Link description:** Free US shipping · 30-day guarantee
 
+> **Hook (thumb-stopper, what shows above "See more"):**
+> *Genuinely so tired of being told to just take more biotin.*
+
 ---
+
+### Primary text (paste into Ads Manager)
 
 Genuinely so tired of being told to just take more biotin.
 
@@ -93,7 +103,12 @@ Not another pill. A better oil routine. Try it risk-free for 30 days.
 **CTA button:** Shop Now
 **Link description:** Free US shipping · 30-day guarantee
 
+> **Hook (thumb-stopper, what shows above "See more"):**
+> *I actually do my scalp oil every night now. That wasn't true six months ago.*
+
 ---
+
+### Primary text (paste into Ads Manager)
 
 I actually do my scalp oil every night now. That wasn't true six months ago.
 
