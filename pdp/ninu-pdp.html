@@ -146,6 +146,24 @@
 .ninu-ba-dots{display:flex;gap:6px;justify-content:center;margin-top:18px}
 .ninu-ba-dots span{width:6px;height:6px;border-radius:99px;background:var(--line)}
 @media(min-width:900px){.ninu-ba-dots{display:none}}
+
+/* Shipping protection */
+.ninu-protect{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:none;align-items:center;gap:12px;cursor:pointer;transition:border-color .18s,background .18s}
+.ninu-protect.visible{display:flex}
+.ninu-protect:hover{border-color:var(--muted)}
+.ninu-protect.checked{border-color:var(--sage);background:#F3F6F0}
+.ninu-protect-icon{flex-shrink:0;width:36px;height:36px;border-radius:8px;background:#EEF3EA;color:var(--sage);display:flex;align-items:center;justify-content:center}
+.ninu-protect-icon svg{width:22px;height:22px;display:block}
+.ninu-protect-text{flex:1;min-width:0}
+.ninu-protect-t{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:1px}
+.ninu-protect-d{font-size:11.5px;color:var(--muted);line-height:1.4}
+.ninu-protect-side{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.ninu-protect-side input{position:absolute;opacity:0;pointer-events:none}
+.ninu-protect-check{width:20px;height:20px;border-radius:5px;border:2px solid var(--muted);background:var(--white);position:relative;transition:all .18s;flex-shrink:0}
+.ninu-protect-check::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);opacity:0;transition:opacity .18s}
+.ninu-protect.checked .ninu-protect-check{border-color:var(--sage);background:var(--sage)}
+.ninu-protect.checked .ninu-protect-check::after{opacity:1}
+.ninu-protect-price{font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap}
 </style>
 
 <div class="ninu-wrap">
@@ -321,6 +339,22 @@
         </div>
       </div>
 
+      <!-- Shipping protection -->
+      <label class="ninu-protect" id="ninu-protect">
+        <span class="ninu-protect-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3zm-1 15-3-3 1.4-1.4L11 14.2l4.6-4.6L17 11l-6 6z"/></svg>
+        </span>
+        <div class="ninu-protect-text">
+          <div class="ninu-protect-t">Shipping protection</div>
+          <div class="ninu-protect-d">Covered against loss, theft or damage in transit.</div>
+        </div>
+        <div class="ninu-protect-side">
+          <input type="checkbox" id="ninu-protect-input" onchange="ninuToggleProtection(this.checked)">
+          <span class="ninu-protect-price" id="ninu-protect-price">—</span>
+          <span class="ninu-protect-check" aria-hidden="true"></span>
+        </div>
+      </label>
+
       <!-- Offer stack (only shows when there's a line item) -->
       <div class="ninu-stack" id="ninu-stack" style="display:none">
         <div class="ninu-stack-h">What's included</div>
@@ -347,6 +381,7 @@
   var DISPENSER_VARIANT_ID = '63751699595594';     // Ninu Applicator + Satin Bonnet
   var REFILL_VARIANT_ID = '63751894630730';        // Rosemary Essential Oil Refill
   var REFILL_SELLING_PLAN_ID = '693367669066';    // Monthly Refill · every 4 weeks · 48% off
+  var SHIPPING_PROTECTION_VARIANT_ID = '16128329580874'; // Shipping protection add-on
   var MONEY_FORMAT = function(cents){ return '$' + (cents/100).toFixed(2); };
   // =================================================================
 
@@ -440,6 +475,33 @@
     }
   };
 
+  window.ninuToggleProtection = function(checked){
+    var input = document.getElementById('ninu-protect-input');
+    input.disabled = true;
+    if(checked){
+      ajaxAdd([{ id: SHIPPING_PROTECTION_VARIANT_ID, quantity: 1 }])
+        .then(refreshCart)
+        .catch(function(e){ input.checked = false; alert('Could not add shipping protection: ' + (e.message || e)); console.error(e); })
+        .finally(function(){ input.disabled = false; });
+    } else {
+      ajaxGetCart().then(function(cart){
+        var idx = cart.items.findIndex(function(i){ return String(i.variant_id) === String(SHIPPING_PROTECTION_VARIANT_ID); });
+        if(idx >= 0) return ajaxChange(idx + 1, 0);
+      }).then(refreshCart).finally(function(){ input.disabled = false; });
+    }
+  };
+
+  function initProtectionPrice(){
+    fetch('/variants/' + SHIPPING_PROTECTION_VARIANT_ID + '.js', {headers:{'Accept':'application/json'}})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(v){
+        if(v && typeof v.price === 'number'){
+          document.getElementById('ninu-protect-price').textContent = '+ ' + MONEY_FORMAT(v.price);
+        }
+      })
+      .catch(function(){});
+  }
+
   window.ninuRemoveLine = function(lineIdx){
     ajaxChange(lineIdx + 1, 0).then(refreshCart);
   };
@@ -514,6 +576,19 @@
       upsell.style.display = 'none';
     }
 
+    // Shipping protection — show when kit/dispenser is in cart
+    var hasProtect = cart.items.some(function(i){ return String(i.variant_id) === String(SHIPPING_PROTECTION_VARIANT_ID); });
+    var protectEl = document.getElementById('ninu-protect');
+    var protectInput = document.getElementById('ninu-protect-input');
+    if(hasKit){
+      protectEl.classList.add('visible');
+      protectInput.checked = hasProtect;
+      protectEl.classList.toggle('checked', hasProtect);
+    } else {
+      protectEl.classList.remove('visible','checked');
+      protectInput.checked = false;
+    }
+
     totals.style.display = 'block';
     document.getElementById('ninu-subtotal').textContent = MONEY_FORMAT(cart.items_subtotal_price);
     document.getElementById('ninu-total').textContent = MONEY_FORMAT(cart.total_price);
@@ -521,7 +596,7 @@
   }
 
   // Initial cart sync (in case items were added before this page loaded)
-  document.addEventListener('DOMContentLoaded', function(){ refreshCart().catch(function(){}); });
+  document.addEventListener('DOMContentLoaded', function(){ refreshCart().catch(function(){}); initProtectionPrice(); });
 })();
 </script>
 <!-- END NINU PDP -->
