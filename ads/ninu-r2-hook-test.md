@@ -26,47 +26,76 @@ The 5 new hooks below enter this same angle from 5 different emotional doors. Ev
 
 ## 2. The six ads (control + 5 variants)
 
+Each hook + lead ends on a line that cleanly hands off to the shared body ("I'd been doing the scalp oil routine..."). None of the leads below redundantly describe her routine (castor oil, 30 minutes on the tub, never skipped) because the body opens with exactly that.
+
 ### Hook A — CONTROL (R1-A winner)
 *Entry: specific moment in a private ritual.*
 
+**Hook:**
 > Month five postpartum. Before I check my phone, before I check the baby monitor, I'm at the bathroom mirror pressing my hair back to check my temples.
->
+
+**Lead:**
 > Not checking like I was admiring myself. Checking like I was scared of what I'd see.
 
 ### Hook B — Confession
 *Entry: shame-forward self-indictment. Great Leads: proclamation.*
 
+**Hook:**
 > I spent two months oiling my scalp every single night postpartum. The only thing that changed was my pillowcase.
+
+**Lead:**
+> I threw out the first pillowcase before my husband could ask what was on it. Switched to a dark one so nobody could ask again. That's how long I went before I let myself say out loud that something was wrong.
 >
-> Not a joke. Not the setup for one. Just the quiet result of doing the work every night and seeing nothing.
+> The obvious conclusion was that I wasn't being consistent enough. Or I was using the wrong oil. Or my body was just broken.
 
 ### Hook C — Direct address + filter
 *Entry: hard filter so the only clicks are the exact avatar. AARREIGN rule 1 applied literally.*
 
+**Hook:**
 > If you're four months postpartum, oiling your scalp every night, and still can't see a change — read this before you buy another bottle of anything.
+
+**Lead:**
+> This isn't a list of supplements. Not another ingredient. Not a new oil. I'm not going to tell you to be more patient either.
 >
-> I was you two months ago. I thought I was doing it right. Here's what nobody told me.
+> I'm going to tell you the thing I wish someone had told me at month three. Because by month four I'd given up twice and started again out of panic.
 
 ### Hook D — Evidence / timestamp
 *Entry: hard data as the thumb-stopper. Phase 5: "the evidence no one else sees."*
 
+**Hook:**
 > 62 nights of castor oil. About $84 spent. Zero change at my temples.
+
+**Lead:**
+> I kept a note on my phone. Partly to make sure I wasn't skipping. Partly because I needed something I could point to when I started doubting whether I'd been doing the work at all.
 >
-> Not a dramatic failure. A quiet one. The kind where you keep going because you're sure you'll see it eventually.
+> The note said yes. The mirror said no. That gap is where this whole thing starts.
 
 ### Hook E — Worst-part reframe
 *Entry: name the hidden emotional cost. Master Doc "worst part isn't X, it's Y" move.*
 
+**Hook:**
 > The hardest part of postpartum hair loss isn't the shedding.
 >
 > It's being consistent for two months, doing everything right every single night, and watching nothing happen.
 
+**Lead:**
+> The shedding, you can almost rationalize. Hormones. Cycles. The forums all say it stops. You can talk yourself through it.
+>
+> What nobody prepares you for is the quiet part after. The weeks where you keep doing the work and the mirror keeps giving you the same answer. That's where the guilt moves in.
+
 ### Hook F — Dialogue (per AARREIGN: dialogue not reported speech)
 *Entry: in-scene conversation. Lets the reader hear the problem, not be told about it.*
+*Note: trimmed from the previous version so the hook doesn't duplicate what the body opens with.*
 
+**Hook:**
 > "You've been in there forty minutes."
 >
-> My husband at the bathroom door, 10pm. I had been. Castor oil, rosemary, scalp massage. Every single night since the shedding started. He didn't understand why nothing was changing.
+> My husband at the bathroom door, 10pm. I came out five minutes later with wet hands and the same tired expression I'd had for two months.
+
+**Lead:**
+> He didn't ask what I was doing. He knew. He'd been watching me do the same thing every night for weeks. What he was really asking was why I was still doing it when nothing had changed.
+>
+> I didn't have an answer for him. I had one for myself: eventually it would start working. It hadn't yet.
 
 ---
 
