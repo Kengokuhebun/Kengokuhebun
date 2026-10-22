@@ -4,9 +4,11 @@
 
 | File | What it is |
 |---|---|
-| `ninu-r1-test-ads.md` | Short-form primary text (use for the ABO import), headline, creative direction, Kitsch swipe mapping |
-| `ninu-r1-long-form.md` | Long-form primary text (300–500 words each) built on BTA × Great Leads × Master Doc native structure |
-| `ninu-r1-validation.csv` | Bulk import for Ads Manager: 1 campaign, 1 ad set, 3 ads, all PAUSED, image slots blank |
+| `ninu-r1-test-ads.md` | R1 short-form primary text, headline, creative direction, Kitsch swipe mapping |
+| `ninu-r1-long-form.md` | R1 long-form primary text (chiefed against AARREIGN protocol) |
+| `ninu-r1-validation.csv` | R1 bulk import: 1 campaign, 1 ad set, 3 ads (A short, B short, C short), all PAUSED |
+| `ninu-r2-hook-test.md` | R2 hook isolation test: angle + desire extraction, 6 hooks (control + 5 variants), shared body, kill rules, next-phase roadmap |
+| `ninu-r2-hook-test.csv` | R2 bulk import: same campaign, new ad set, 6 ads @ $150/day, all PAUSED |
 
 The earlier 5-ad-set CBO file was removed because it didn't match the approved structure.
 
