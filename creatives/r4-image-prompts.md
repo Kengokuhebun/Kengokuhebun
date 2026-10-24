@@ -5,37 +5,61 @@ and three Phase 5 natives (raw, documentary, POV, no visible product in 2 of 3).
 
 ---
 
-## Ad 1 — Swipe reproduction: "Where It Actually Goes"
+## Ad 1 — Swipe reproduction: "Your messy oil routine's worst nightmare"
 
-**What it is:** Kitsch's ad was a 12s video with an oil-drip animation over product shots and
-a generic bullet-list primary text. We're reproducing the single most scroll-stopping frame
-— the macro drip — as a static, with our product and our brand palette, and replacing the
-copy entirely.
+**What it is:** reproducing the actual Kitsch static ad (coral background, "/kitsch/"
+wordmark, "IT SOLD OUT 5 TIMES" badge, "Your Bald Spot's Worst Nightmare" headline, 3
+checkmark bullets, black SHOP NOW button, a diagonal product render dripping oil in the
+bottom right) — not the earlier video frames. The graphic shell (wordmark, badge, headline,
+bullets, button, warm sunburst background) is already built and rendered via HTML/CSS —
+see `creatives/build-r4-swipe-shell.js` and
+`creatives/png/R4-Ad1-Swipe-Reproduction/Ad1-Swipe-Reproduction__9x16.png`. That part needed
+no AI image generation; it's pure layout and typography, reproduced pixel-precise.
 
-**Why this frame:** the drip itself *is* the mechanism demonstration — oil landing exactly
-where it should, which is the same "oil goes on your towel, not your scalp" insight that's
-driven every ad in this campaign. The visual argument and the copy argument are now the
-same argument.
+**What's left:** the one thing that does need generation — an isolated product render of
+the Ninu dispenser, posed diagonally like the reference, dripping oil, on a transparent or
+easily-croppable background so it can be composited into the bottom-right "product zone"
+of the shell.
 
-### Primary prompt (macro drip hero — recommended as the static ad)
+**What changed from the reference, and why (per your brief: replace the product, refine
+the colors to our brand, refine the copy):**
+
+| Kitsch original | Ninu reproduction | Why |
+|---|---|---|
+| "/kitsch/" wordmark | Ninu's own wordmark (wide-tracked serif, established on the PDP) | Their specific mark is their IP; "refine to my brand" means our own identity, not a copy of theirs |
+| "IT SOLD OUT 5 TIMES" badge | "30-DAY GUARANTEE" | We have no sales-history claim to make; this is a true, already-planned proof pill (see `swipes/kitsch-swipe-analysis.md`) |
+| "Your Bald Spot's Worst Nightmare." | "Your messy oil routine's worst nightmare." | The body-attribute phrasing risks Meta's personal-attributes policy and was already flagged; the problem-focused version is the one already running across this campaign |
+| Coral/pink background | Terracotta-to-espresso gradient with a warm gold sunburst | Matches Ninu's actual brand tokens instead of a competitor's color |
+| Metallic/chrome applicator tips | Clear/frosted silicone tips | Our copy says "hollow silicone tips" everywhere — the product shot needs to match what the copy claims, not Kitsch's metal-tip design |
+| Generic bullet copy (minoxidil, "quick and effortless") | Our actual mechanism claims, no em-dashes, AARREIGN-chiefed | Matches our product and our established voice |
+
+### Product-shot prompt (transparent/isolated, diagonal drip pose)
 
 ```
-A macro product photograph, shot like a luxury beauty campaign still. Close-up on the base of a cream-colored dome-capped scalp oil dispenser: a clear glass/acrylic chamber filled with warm golden oil, with five hollow glass applicator tips extending downward from the base, catching soft warm light. The center tip has a single amber drop of oil suspended mid-drip, caught at the exact moment of release, with a thin trailing thread connecting it to the tip — sharp focus on the droplet, the surface tension and internal highlight clearly visible.
+A photorealistic, isolated product render on a transparent or seamless white background, suitable for compositing into an ad graphic. A scalp oil dispenser posed at a dramatic diagonal angle, roughly 35-40 degrees off-vertical, as if hand-held and tilted toward camera. The body is a clear glass/acrylic cylindrical chamber filled with warm golden-amber oil, with a cream-colored dome cap at the top of the visible portion. Printed vertically along the side of the chamber in small white lettering: ml markings reading 1ml, 2ml, 3ml, 4ml.
 
-Background: warm cream (#F5EFE6) softly out of focus, with a faint dried palm or eucalyptus leaf shadow cast diagonally across the frame from natural window light, same apothecary mood as the rest of the Ninu product photography. Warm golden-hour directional light from the upper left, soft shadows, shallow depth of field (f/1.8-2.8 look) so only the drop and the nearest tip are tack-sharp, the rest of the chamber and tips fall into a soft glow.
+At the base of the chamber, five hollow, clear/frosted silicone applicator tips extend downward and slightly outward, each with a soft frosted sheen (not metallic, not chrome) — translucent silicone, catching warm light with a soft glow rather than a hard metal glint. Oil drips visibly from two or three of the tips: one tip has a large amber droplet caught mid-fall with a thin connecting thread, another has a bead just forming, a third has a thin rivulet running down its length.
 
-No visible branding or text. No hands. No background clutter beyond the soft leaf-shadow texture. Photorealistic, high-end product photography, the kind of single frame a beauty brand would use as the hero image of a paid social ad. Square 1:1, also generate 4:5 and 9:16 crops keeping the drop centered in the upper two-thirds of frame so there's room for primary text below it when used as a feed/story ad.
+A thin, narrow handle or rod extends up and out of frame from the top of the dome cap, implying the dispenser is being held, continuing the diagonal line established by the body (matching a hand-held sprayer/dispenser pose, same compositional energy as a cosmetics ad product shot, but no hand visible).
+
+Lighting: warm, directional, golden-hour style light from the upper left, creating soft highlights along the glass and a warm amber glow through the oil, with soft shadow falloff. Shallow depth of field optional but keep the dripping tips and chamber in sharp focus throughout, since this will be cropped tightly in the final composite.
+
+No background elements, no surface, no hands, no text, no logo — isolated product only, either on pure transparent (PNG with alpha) or plain white/light grey seamless, so it can be cleanly extracted and placed into a separate graphic design. High-end commercial product photography quality, sharp detail on the glass, the ml markings, and the oil droplets. Portrait-oriented crop, roughly 1000x1400, with the dripping tips positioned in the lower third of the frame and the rod extending toward the upper third.
 ```
 
-### Secondary prompt (full product context, optional second creative or carousel card)
+**After you generate it:** send the image back and I'll composite it into the shell
+(swap the placeholder dashed box for the real render) and re-export the final static at
+9:16.
+
+### Fallback prompt (if transparent/isolated generation doesn't come out clean)
+
+Some models handle "transparent background" requests inconsistently. If the output keeps
+adding a background despite the prompt, fall back to this version and we'll crop/key it
+out in post:
 
 ```
-A warm, softly lit product photograph of a cream-colored dome-capped scalp oil dispenser standing upright on a light stone or sand-toned surface. The clear chamber is filled with warm golden oil, visible ml markings (1ml, 2ml, 3ml, 4ml) printed vertically along the side in white. Five hollow glass applicator tips extend from the base, each with a small bead of oil at the tip. Beside the dispenser, its matching cream ceramic cap lid sits open on the surface.
-
-Background: warm cream to soft sand gradient, a dried palm frond casting a soft diagonal shadow across the upper right of the frame, warm golden-hour side light. Photorealistic, shallow depth of field, luxury apothecary product photography — same visual family as Aesop, Necessaire, Then I Met You. No text, no hands, no logo. Square 1:1, 2048x2048.
+Same product render as above, but on a solid, seamless, pure white (#FFFFFF) background with soft, minimal drop shadow directly beneath the dispenser only — no gradient, no texture, no props. Studio product photography on white, ready for background removal.
 ```
-
-**Brand color note:** if either generation leans toward Kitsch's taupe/warm-beige cast, nudge it toward Ninu's exact tokens — cream `#F5EFE6` background, deep espresso `#241812` for any dark accent, terracotta `#B85A3E` only if a colored accent is needed (keep it minimal, this shot should read mostly neutral/warm-light like the reference).
 
 ---
 
