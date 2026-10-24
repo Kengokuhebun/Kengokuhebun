@@ -98,22 +98,32 @@ Aspect ratio: 9:16 vertical, 1080x1920. Also generate 1:1 and 1.91:1 crops keepi
 **The sentence that drives the shot:** *"My husband picked our daughter up out of her crib
 and came out holding a handful of my hair. Oily hair."*
 
+**Refined staging:** one arm is visibly occupied holding the baby (implied through a sliver
+of swaddle blanket at the frame edge, not the baby itself), which is *why* the other hand
+is held open and away from his body, palm up, confused by what's stuck to it. The open
+palm with a scrunched, matted handful of hair reads more viscerally than fingers pinching
+a few strands — it looks like something he picked up without meaning to, not something he
+deliberately plucked off to inspect.
+
 ```
-A raw, unposed amateur smartphone photo, close-up and hand-focused, no faces in frame. A man's hand and forearm, out of a soft-focus nursery background, holding a few strands of hair between his thumb and fingers, the hair visibly damp and slightly oily with a faint sheen catching the light. His hand is positioned near a white crib rail, which is in the foreground at the bottom edge of the frame, slightly out of focus.
+A raw, unposed amateur smartphone photo, close-up and hand-focused, no faces in frame. A man's right hand, palm open and facing up toward the camera, held slightly away from his body at chest height. In his open palm: a scrunched, bunched-up clump of hair strands, matted together and visibly greasy, with a faint oily sheen catching the light and a couple of individual strands stuck flat against his skin. The hair looks like it was picked up by accident, not neatly held.
 
-Background: a muted, softly blurred nursery — pale sage or cream walls, the warm glow of a small nightlight, the edge of a changing table or dresser barely readable in the blur. Shallow depth of field, the hand and the strands of hair are the only sharp element in the frame.
+His other arm is out of frame or just barely visible at the edge of the shot, cradled close to his body, with a soft out-of-focus edge of a cream or pale sage swaddle blanket draped over it, implying his other arm is occupied holding the baby. No baby visible, no second hand, no face.
 
-Lighting: soft, warm, low-level nursery nightlight glow, slightly underexposed, no harsh shadows, no flash. The mood is quiet confusion, not alarm — like someone just noticed something odd mid-task and paused.
+Background: a muted, softly blurred nursery — pale sage or cream walls, the warm glow of a small nightlight, the edge of a crib rail or changing table barely readable in the blur behind his hand. Shallow depth of field, the open palm and the hair are the only sharp element in the frame.
 
-Shot style: phone camera quality, slight grain, no filter, no staged studio lighting, no visible product anywhere in frame. This should look like a photo someone took one-handed, fast, to show someone else later, not a composed shot.
+Lighting: soft, warm, low-level nursery nightlight glow, slightly underexposed, no harsh shadows, no flash. The mood is quiet confusion, not alarm — like someone just noticed something odd stuck to their hand and paused mid-motion to look at it.
 
-Aspect ratio: 9:16 vertical, 1080x1920. Also generate 1:1 and 1.91:1 crops keeping the hand and hair strands centered and sharp.
+Shot style: phone camera quality, slight grain, no filter, no staged studio lighting, no visible product anywhere in frame. This should look like a photo someone took one-handed and fast, holding the phone in the hand that isn't full of baby or hair, to show someone else later — not a composed shot.
+
+Aspect ratio: 9:16 vertical, 1080x1920. Also generate 1:1 and 1.91:1 crops keeping the open palm and the hair centered and sharp.
 ```
 
 **What NOT to let the model do:**
 - No faces — the brief and Phase 5 both call for this
 - No visible product
-- No baby visible in frame (keep it to the hand, the hair, the crib rail — implying the baby was just lifted out, without showing the baby, keeps this from reading as alarming/unsafe)
+- No baby visible in frame — only the implication via the blanket edge at the frame border. Showing the infant directly is the one thing in this concept with real downside (reads as a safety/cleanliness concern rather than relatable-funny); keep it strictly implied
+- Don't let the hand read as deliberately posed or presenting the hair for the camera — it should look like he's looking at his own palm, caught off guard, not showing it off
 
 ---
 
