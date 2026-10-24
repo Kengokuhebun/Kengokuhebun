@@ -9,6 +9,7 @@
 | `ninu-r1-validation.csv` | R1 bulk import: 1 campaign, 1 ad set, 3 ads (A short, B short, C short), all PAUSED |
 | `ninu-r2-hook-test.md` | R2 hook isolation test: angle + desire extraction, 6 hooks (control + 5 variants), shared body, kill rules, next-phase roadmap |
 | `ninu-r2-hook-test.csv` | R2 bulk import: same campaign, new ad set, 6 ads @ $150/day, all PAUSED |
+| `ninu-r3-cpm-refinement.md` | R3: color-test ad set (orange/purple/green, larger text) + advertorial-destination test, no new copy |
 
 The earlier 5-ad-set CBO file was removed because it didn't match the approved structure.
 
