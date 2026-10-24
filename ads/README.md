@@ -10,6 +10,7 @@
 | `ninu-r2-hook-test.md` | R2 hook isolation test: angle + desire extraction, 6 hooks (control + 5 variants), shared body, kill rules, next-phase roadmap |
 | `ninu-r2-hook-test.csv` | R2 bulk import: same campaign, new ad set, 6 ads @ $150/day, all PAUSED |
 | `ninu-r3-cpm-refinement.md` | R3: color-test ad set (orange/purple/green, larger text) + advertorial-destination test, no new copy |
+| `ninu-r4-new-creative-set.md` | R4: new ad set, 4 ads — 1 Kitsch swipe reproduction + 3 original natives, same proven DNA, full copy + image prompts |
 
 The earlier 5-ad-set CBO file was removed because it didn't match the approved structure.
 
