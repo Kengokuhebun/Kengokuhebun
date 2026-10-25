@@ -179,16 +179,25 @@ testimonial unless it is one. (Same caveat flagged on every prior round.)
   running simultaneously as the direct comparison, but at only £9.02 / 1 link click it's
   too early to call text size LOCKED either way.
 - **Hook/Lead wording — PARTIALLY TESTED, not locked.** An isolated hook test ran this
-  hook as control against 4 alternatives (Confession, Direct-Address, Timestamp-Evidence,
-  Worst-Part-Reframe), body/mechanism/close held identical. Results (2026-10-25, GBP):
+  hook as control against 4 alternatives, body/mechanism/close held identical. Results
+  (2026-10-25, GBP):
 
-  | Ad | Spend | CPM | Link clicks | Link CPC | Purchases | CAC |
-  |---|---|---|---|---|---|---|
-  | Control (this hook) | £88.62 | £136.55 | 21 | £4.22 | 1 | £88.62 |
-  | HookB Confession | £32.39 | £47.15 | 18 | £1.80 | 0 | — |
-  | HookC Direct-Address | £2.24 | £29.47 | 3 | £0.75 | 0 | — |
-  | HookD Timestamp | £37.41 | £22.58 | 44 | £0.85 | 0 | — |
-  | HookE Worst-Part | £12.89 | £80.06 | 8 | £1.61 | 0 | — |
+  | Ad | Hook concept (confirmed via screenshot where noted) | Spend | CPM | Link clicks | Link CPC | Purchases | CAC |
+  |---|---|---|---|---|---|---|---|
+  | Control (this hook) | — | £88.62 | £136.55 | 21 | £4.22 | 1 | £88.62 |
+  | HookB | Shelf-Confession *(inferred from naming, not screenshot-confirmed)* | £32.39 | £47.15 | 18 | £1.80 | 0 | — |
+  | HookC | Habit-Death-Moment *(inferred, not screenshot-confirmed)* | £2.24 | £29.47 | 3 | £0.75 | 0 | — |
+  | HookD | **Social-Compare** — "every mom in my fb group did her nightly oil for 6 months straight... I made it eleven nights" *(CONFIRMED directly from the ad preview screenshot)* | £37.41 | £22.58 | 44 | £0.85 | 0 | — |
+  | HookE | Dialogue-Sister *(inferred, not screenshot-confirmed)* | £12.89 | £80.06 | 8 | £1.61 | 0 | — |
+
+  **Correction note:** an earlier pass through this file mislabeled HookD as the
+  "Timestamp-Evidence" hook from a different, earlier hook test (built for Ad A's
+  temple-check angle, saved in `ninu-r2-hook-test.md`). The ad names collided on the same
+  B/C/D/E letters across two separate hook sets built at different points. HookD's content
+  is now confirmed directly from the live ad preview as Social-Compare, from the later
+  Ad-C-angle set (`creatives/build-r2-adC-variants.js`). B/C/E are relabeled here by the
+  same naming pattern but not yet confirmed by screenshot text — verify before relying on
+  them.
 
   **What's actually proven:** this hook can still convert (PROVEN — it's a direct sale).
   **What's NOT proven, and contradicted by the data:** that it's the most efficient hook.
@@ -198,11 +207,11 @@ testimonial unless it is one. (Same caveat flagged on every prior round.)
   signal (this exact hook has run across R1, the original R2 test, every R3 color variant,
   and this round) at least as plausibly as it's a persuasiveness signal. None of the four
   challengers reached spend remotely comparable to the control's before the set was turned
-  off, so "0 purchases" on them isn't meaningful yet either — HookD in particular (cheapest
-  CPM, most volume by far, no sale on £37.41) never got a fair shot at its own first
-  conversion. **Status: hook content proven to convert; hook efficiency and whether any
-  challenger would also convert remain open. Not safe to call this "locked" and stop
-  testing hooks — the fatigue read argues the opposite.**
+  off, so "0 purchases" on them isn't meaningful yet either — HookD/Social-Compare in
+  particular (cheapest CPM, most volume by far, no sale on £37.41) never got a fair shot at
+  its own first conversion. **Status: hook content proven to convert; hook efficiency and
+  whether any challenger would also convert remain open. Not safe to call this "locked" and
+  stop testing hooks — the fatigue read argues the opposite.**
 - **Destination (PDP vs advertorial)** — ASSUMED, actively being tested right now (Copy
   3-OG). Unresolved.
 
