@@ -165,8 +165,6 @@ testimonial unless it is one. (Same caveat flagged on every prior round.)
 ## 9. Fixed vs swappable
 
 **FIXED — proven across every converting execution so far:**
-- The hook (P1) — now proven in an isolated test against 5 alternative hooks (R2), on top
-  of winning in R1 and across the R3 color variants. Third independent proof point.
 - The close line verbatim (P9) — identical in the control, Orange, and Purple
 - The mechanism paragraph (P6) — identical across all three
 - The offer paragraph (P10) — identical across all three
@@ -180,13 +178,31 @@ testimonial unless it is one. (Same caveat flagged on every prior round.)
 - **Text size** — ASSUMED, not cleanly isolated yet. The small-text control (Copy 2-OG) is
   running simultaneously as the direct comparison, but at only £9.02 / 1 link click it's
   too early to call text size LOCKED either way.
-- **Hook/Lead wording — LOCKED.** An isolated hook test (R2: this hook as control against
-  5 alternative hooks — Confession, Direct-Address, Timestamp-Evidence, Worst-Part-Reframe,
-  Dialogue) ran with the body/mechanism/close held identical across all six. The original
-  hook (P1, "I actually do my scalp oil every night now...") converted again, beating all
-  five alternatives. This is now a third independent proof point for this exact hook, on
-  top of the R1 win and the R3 color-variant wins. Not swappable without evidence it still
-  wins — treat it as fixed going forward, not a variable to keep testing.
+- **Hook/Lead wording — PARTIALLY TESTED, not locked.** An isolated hook test ran this
+  hook as control against 4 alternatives (Confession, Direct-Address, Timestamp-Evidence,
+  Worst-Part-Reframe), body/mechanism/close held identical. Results (2026-10-25, GBP):
+
+  | Ad | Spend | CPM | Link clicks | Link CPC | Purchases | CAC |
+  |---|---|---|---|---|---|---|
+  | Control (this hook) | £88.62 | £136.55 | 21 | £4.22 | 1 | £88.62 |
+  | HookB Confession | £32.39 | £47.15 | 18 | £1.80 | 0 | — |
+  | HookC Direct-Address | £2.24 | £29.47 | 3 | £0.75 | 0 | — |
+  | HookD Timestamp | £37.41 | £22.58 | 44 | £0.85 | 0 | — |
+  | HookE Worst-Part | £12.89 | £80.06 | 8 | £1.61 | 0 | — |
+
+  **What's actually proven:** this hook can still convert (PROVEN — it's a direct sale).
+  **What's NOT proven, and contradicted by the data:** that it's the most efficient hook.
+  Every challenger delivered at 2-6x lower CPM and CPC. CAC on the one sale (£88.62) is
+  well above break-even (£26.72). A single creative costing dramatically more to deliver
+  than every alternative in the same ad set, same audience, same auction is a fatigue
+  signal (this exact hook has run across R1, the original R2 test, every R3 color variant,
+  and this round) at least as plausibly as it's a persuasiveness signal. None of the four
+  challengers reached spend remotely comparable to the control's before the set was turned
+  off, so "0 purchases" on them isn't meaningful yet either — HookD in particular (cheapest
+  CPM, most volume by far, no sale on £37.41) never got a fair shot at its own first
+  conversion. **Status: hook content proven to convert; hook efficiency and whether any
+  challenger would also convert remain open. Not safe to call this "locked" and stop
+  testing hooks — the fatigue read argues the opposite.**
 - **Destination (PDP vs advertorial)** — ASSUMED, actively being tested right now (Copy
   3-OG). Unresolved.
 

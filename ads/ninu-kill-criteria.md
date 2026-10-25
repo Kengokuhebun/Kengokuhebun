@@ -164,3 +164,28 @@ still unattributed — check against R4's ads next, or other sources.
 - **Leave the control running as-is.** Its low spend isn't a problem to fix — it's Meta
   telling you something. Don't force extra budget into it; let the natural delivery
   split keep being a data point.
+
+---
+
+## 9. Day 1 log — Hook isolation test (ad set now off, 2026-10-25)
+
+Control = the original converting hook ("I actually do my scalp oil every night now...").
+4 challenger hooks (Confession, Direct-Address, Timestamp-Evidence, Worst-Part-Reframe),
+body/mechanism/close held identical. Ad set has since been turned off.
+
+| Ad | Spend | Impr. | CPM | Link clicks | Link CPC | Purchases | CAC |
+|---|---|---|---|---|---|---|---|
+| Control | £88.62 | 649 | £136.55 | 21 | £4.22 | 1 | £88.62 |
+| HookB Confession | £32.39 | 687 | £47.15 | 18 | £1.80 | 0 | — |
+| HookC Direct-Address | £2.24 | 76 | £29.47 | 3 | £0.75 | 0 | — |
+| HookD Timestamp | £37.41 | 1,657 | £22.58 | 44 | £0.85 | 0 | — |
+| HookE Worst-Part | £12.89 | 161 | £80.06 | 8 | £1.61 | 0 | — |
+
+**Read:** the control "won" the only sale, but at a CAC (£88.62) more than 3x break-even,
+and at a CPM/CPC 2-6x worse than every challenger. That's a fatigue signal at least as much
+as a persuasiveness signal — this hook has now run across R1, R2, every R3 color variant,
+and this round. No challenger reached comparable spend before the set was turned off, so
+their 0-purchase reads aren't meaningful yet. HookD stands out: cheapest CPM, by far the
+most volume (44 link clicks on £37.41), no sale yet but never given a comparable chance.
+**Don't treat this as "the hook is settled, stop testing hooks."** See the corrected Fixed
+vs Swappable section in `ninu-dissect-winner-adC.md`.
