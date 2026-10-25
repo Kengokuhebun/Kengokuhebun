@@ -106,3 +106,40 @@ on Meta's attribution to catch up.
 1. Check Shopify order sources for today's 4 orders — settles the attribution question directly
 2. Check A1_Swipe's delivery diagnostics for a policy/quality flag
 3. Nothing here has cleanly hit a kill checkpoint with reliable data yet — hold spend as is pending #1
+
+---
+
+## 7. LPV mystery — solved
+
+R3 color-test data (below) shows real purchases, with real CAC, on ads that still read
+0 Landing Page Views. That settles it: **LPV at the ad level is unreliable here, not
+broken tracking.** Almost certainly Purchase is landing via Shopify's server-side
+Conversions API (robust, hard to block) while LPV depends on the client-side browser
+pixel, which a meaningful share of traffic blocks (ad blockers, Safari ITP, iOS tracking
+restrictions). Trust Purchase and CAC numbers at the ad level. Ignore LPV reading 0 —
+it doesn't mean the ad isn't converting.
+
+## 8. Day 1 log — R3 color test (2026-10-25)
+
+| Ad | Spend | Impr. | CPM | Link clicks | Link CTR | Link CPC | Purchases | CAC |
+|---|---|---|---|---|---|---|---|---|
+| Orange_Textincrease | £31.41 | 100 | £314.10 | 4 | 4.00% | £7.85 | 1 | £31.41 (above £26.72 break-even) |
+| Purple_Textincrease | £27.70 | 216 | £128.24 | 5 | 2.31% | £5.54 | 1 | £27.70 (just above break-even) |
+| Green_Textincrease | £17.56 | 143 | £122.80 | 3 | 2.10% | £5.85 | 0 | too early |
+| "Copy 2-OG" (stray, not part of the intended test) | £9.02 | 96 | £93.96 | 1 | 1.04% | £9.02 | 0 | — |
+
+**This accounts for 2 of today's 4 Shopify orders** (Orange, Purple). The other 2 are
+still unattributed — check against R4's ads next, or other sources.
+
+**Reads:**
+- Orange and Purple each converted once. 1 purchase is not enough to judge CAC against
+  break-even (see section 4's minimum-purchases rule) — hold, don't kill, watch whether
+  the next sale pulls the average up or down.
+- Both show very high CPM on very low impression volume, same pattern as A1_Swipe in the
+  R4 set. Increasingly looks like a general early-delivery-phase CPM spike (small
+  accounts/new edits often see expensive early impressions before the algorithm settles)
+  rather than a specific flag on one creative — but still worth a glance at delivery
+  diagnostics if it doesn't settle down after more spend.
+- **"Copy 2-OG" is not part of the deliberate color-test structure.** It reads like a
+  leftover duplicate from building the variants. Check what it's actually running and
+  pause it if it's unintentional — it's not telling you anything new and it's spending.
