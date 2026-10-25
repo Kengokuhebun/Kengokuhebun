@@ -165,6 +165,8 @@ testimonial unless it is one. (Same caveat flagged on every prior round.)
 ## 9. Fixed vs swappable
 
 **FIXED — proven across every converting execution so far:**
+- The hook (P1) — now proven in an isolated test against 5 alternative hooks (R2), on top
+  of winning in R1 and across the R3 color variants. Third independent proof point.
 - The close line verbatim (P9) — identical in the control, Orange, and Purple
 - The mechanism paragraph (P6) — identical across all three
 - The offer paragraph (P10) — identical across all three
@@ -178,8 +180,13 @@ testimonial unless it is one. (Same caveat flagged on every prior round.)
 - **Text size** — ASSUMED, not cleanly isolated yet. The small-text control (Copy 2-OG) is
   running simultaneously as the direct comparison, but at only £9.02 / 1 link click it's
   too early to call text size LOCKED either way.
-- **Hook/Lead wording** — ASSUMED. Never isolated in this ad — every current test varies
-  color, text size, or destination, not the opening lines.
+- **Hook/Lead wording — LOCKED.** An isolated hook test (R2: this hook as control against
+  5 alternative hooks — Confession, Direct-Address, Timestamp-Evidence, Worst-Part-Reframe,
+  Dialogue) ran with the body/mechanism/close held identical across all six. The original
+  hook (P1, "I actually do my scalp oil every night now...") converted again, beating all
+  five alternatives. This is now a third independent proof point for this exact hook, on
+  top of the R1 win and the R3 color-variant wins. Not swappable without evidence it still
+  wins — treat it as fixed going forward, not a variable to keep testing.
 - **Destination (PDP vs advertorial)** — ASSUMED, actively being tested right now (Copy
   3-OG). Unresolved.
 
