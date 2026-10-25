@@ -121,25 +121,46 @@ it doesn't mean the ad isn't converting.
 
 ## 8. Day 1 log — R3 color test (2026-10-25)
 
-| Ad | Spend | Impr. | CPM | Link clicks | Link CTR | Link CPC | Purchases | CAC |
-|---|---|---|---|---|---|---|---|---|
-| Orange_Textincrease | £31.41 | 100 | £314.10 | 4 | 4.00% | £7.85 | 1 | £31.41 (above £26.72 break-even) |
-| Purple_Textincrease | £27.70 | 216 | £128.24 | 5 | 2.31% | £5.54 | 1 | £27.70 (just above break-even) |
-| Green_Textincrease | £17.56 | 143 | £122.80 | 3 | 2.10% | £5.85 | 0 | too early |
-| "Copy 2-OG" (stray, not part of the intended test) | £9.02 | 96 | £93.96 | 1 | 1.04% | £9.02 | 0 | — |
+Ad set holds the three large-text color refinements plus the **original R1-winning ad as
+a control** (the "no before baseline" gap flagged when this test was built), plus a
+separate advertorial-destination test on the orange creative.
+
+| Ad | Role | Spend | Impr. | CPM | Link clicks | Link CTR | Link CPC | Purchases | CAC |
+|---|---|---|---|---|---|---|---|---|---|
+| **Copy 2-OG** | Control — original R1 winner, small text, PDP direct | £9.02 | 96 | £93.96 | 1 | 1.04% | £9.02 | 0 | — |
+| **Orange_Textincrease** | Refined — large text, orange, PDP direct | £31.41 | 100 | £314.10 | 4 | 4.00% | £7.85 | 1 | £31.41 (above £26.72 break-even) |
+| **Purple_Textincrease** | Refined — large text, purple, PDP direct | £27.70 | 216 | £128.24 | 5 | 2.31% | £5.54 | 1 | £27.70 (just above break-even) |
+| **Green_Textincrease** | Refined — large text, green, PDP direct | £17.56 | 143 | £122.80 | 3 | 2.10% | £5.85 | 0 | too early |
+| **Copy 3-OG** | Refined — large text, orange, points to the **advertorial** instead of PDP | £30.34 | 188 | £161.38 | 11 | 5.85% | £2.76 | 0 | too early |
 
 **This accounts for 2 of today's 4 Shopify orders** (Orange, Purple). The other 2 are
 still unattributed — check against R4's ads next, or other sources.
 
 **Reads:**
-- Orange and Purple each converted once. 1 purchase is not enough to judge CAC against
+
+- **Meta's own delivery is already voting for the large-text refinement.** All four
+  refined/advertorial variants combined pulled £106.99 in spend; the original small-text
+  control pulled £9.02 — roughly an 11:1 ratio, in the same ad set, same audience, same
+  auction. Meta's algorithm predicts the refined versions perform better and is spending
+  accordingly, before you've even looked at conversion data. That's a real signal in
+  favor of the text-size change, independent of the sales so far.
+- **Control also has the worst link CTR of the group by a wide margin** (1.04% vs 2.10–5.85%
+  on the refined versions) — consistent with "bigger text, better thumb-stop," though its
+  sample (1 link click) is too small to lean on heavily yet.
+- Orange and Purple each converted once. 1 purchase isn't enough to judge CAC against
   break-even (see section 4's minimum-purchases rule) — hold, don't kill, watch whether
   the next sale pulls the average up or down.
-- Both show very high CPM on very low impression volume, same pattern as A1_Swipe in the
-  R4 set. Increasingly looks like a general early-delivery-phase CPM spike (small
-  accounts/new edits often see expensive early impressions before the algorithm settles)
-  rather than a specific flag on one creative — but still worth a glance at delivery
-  diagnostics if it doesn't settle down after more spend.
-- **"Copy 2-OG" is not part of the deliberate color-test structure.** It reads like a
-  leftover duplicate from building the variants. Check what it's actually running and
-  pause it if it's unintentional — it's not telling you anything new and it's spending.
+- **Advertorial (Copy 3-OG) vs PDP-direct (Orange_Textincrease), same creative:** the
+  advertorial got nearly double the impressions for similar spend, half the CPM, a better
+  CTR, and link clicks at a third of the cost. No purchases yet, but 11 clicks is too few
+  to read a conversion rate off. Worth comparing cost-per-purchase between these two once
+  Copy 3-OG gets its first sale — the advertorial trades a cheaper click for an extra hop
+  before checkout, which can cut either way.
+- Both Orange ads (PDP-direct and advertorial) show a high CPM on low impression volume,
+  same pattern as A1_Swipe in the R4 set — increasingly looks like a general
+  early-delivery-phase spike across the account rather than a flag on one specific
+  creative, but still worth a glance at delivery diagnostics if it doesn't settle as
+  spend increases.
+- **Leave the control running as-is.** Its low spend isn't a problem to fix — it's Meta
+  telling you something. Don't force extra budget into it; let the natural delivery
+  split keep being a data point.
