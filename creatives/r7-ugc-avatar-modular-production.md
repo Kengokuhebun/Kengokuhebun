@@ -391,17 +391,96 @@ assumption:
 - Generated media is deleted after 14 days — download and archive results promptly (into the
   Ninu UGC resources Drive folder).
 
-### Hook 1 — video generation prompt
+### Hook 1 — Control — video generation prompt
 
 `duration: 5`, `resolution: 720P`, `aspect_ratio: Auto`
 
-> 0-5s, HOOK: Begin exactly on @first_frame — woman in selfie framing, mid-sentence, neutral
-> conversational expression, mouth moving naturally as if speaking casually **in English
-> (American English)** to camera, no specific words, general relaxed talking motion. Slight
-> natural handheld camera sway, hair settling naturally, hands low/out of frame throughout.
-> Transition smoothly by the end into @last_frame — a small wry half-smile, head tilted
-> slightly, as if just finishing a rueful sentence. Same woman, same wardrobe, same bedroom
-> setting throughout — no identity drift, no change in appearance or background.
+**Attach:** `hook1-first-frame.png` as `first_frame_url`, `hook1-last-frame.png` as `last_frame_url`
+
+> 0-5s, HOOK CONTROL: Begin exactly on @first_frame — adult woman in selfie framing, early-to-mid
+> 30s, postpartum mom aesthetic, soft warm skin tone, slightly tired makeup-free face, wearing an
+> oversized soft grey oatmeal sweater, dark-to-medium brown hair worn loose. Ordinary bedroom
+> background, natural window light. Handheld selfie framing with slight natural camera sway.
+>
+> She speaks the following line to camera in a natural, slightly dry, conversational register —
+> adult female American English (General American accent), early-to-mid 30s voice, warm but
+> slightly tired, natural brisk conversational pace around 180 words per minute, mid-pitched
+> around 200 Hz with slight vocal fry on phrase endings, moderately expressive but not
+> performative, no announcer energy. Mouth movement must shape the English words naturally —
+> English visemes only, do not speak Chinese or any other language.
+>
+> Spoken line (verbatim, English): "I actually do my scalp oil every night now. That wasn't
+> true six months ago."
+>
+> Delivery direction: conversational, with a small wry half-smile landing on "that wasn't true
+> six months ago." Short natural pause between the two sentences. Hands stay low or out of frame
+> throughout. Transition smoothly by the end into @last_frame — the small wry half-smile, head
+> tilted slightly, as if just finishing a rueful sentence.
+>
+> Same woman, same wardrobe, same bedroom setting throughout — no identity drift, no change in
+> appearance or background.
+
+### Hook 2 — Social-Compare — video generation prompt
+
+`duration: 5`, `resolution: 720P`, `aspect_ratio: Auto`
+
+**Attach:** `hook2-first-frame.png` as `first_frame_url`, `hook2-last-frame.png` as `last_frame_url`
+
+> 0-5s, HOOK SOCIAL-COMPARE: Begin exactly on @first_frame — adult woman in selfie framing,
+> early-to-mid 30s, postpartum mom aesthetic, soft warm skin tone, slightly tired makeup-free
+> face, wearing an oversized soft grey oatmeal sweater, dark-to-medium brown hair worn loose.
+> Ordinary bedroom background, natural window light. Handheld selfie framing with slight natural
+> camera sway.
+>
+> She speaks the following line to camera in a natural, self-deprecating, conversational
+> register — adult female American English (General American accent), early-to-mid 30s voice,
+> warm but slightly tired, natural brisk conversational pace around 180 words per minute,
+> mid-pitched around 200 Hz with slight vocal fry on phrase endings, moderately expressive but
+> not performative, no announcer energy. Mouth movement must shape the English words naturally —
+> English visemes only, do not speak Chinese or any other language.
+>
+> Spoken line (verbatim, English): "Every mom in my postpartum group did her nightly oil for six
+> months straight. I made it eleven nights."
+>
+> Delivery direction: self-deprecating, a small laugh or sigh landing right before "eleven
+> nights" — she's a little embarrassed, not triumphant. Small natural pause between the two
+> sentences. Hands stay low or out of frame throughout. Transition smoothly by the end into
+> @last_frame — the small self-deprecating eye-roll or shrug with slight smile, as if just
+> admitted something a little embarrassing about herself.
+>
+> Same woman, same wardrobe, same bedroom setting throughout — no identity drift.
+
+### Hook 3 — Cost-Complaint — video generation prompt
+
+`duration: 5`, `resolution: 720P`, `aspect_ratio: Auto`
+
+**Attach:** `hook3-first-frame.png` as `first_frame_url`, `hook3-last-frame.png` as `last_frame_url`
+
+> 0-5s, HOOK COST-COMPLAINT: Begin exactly on @first_frame — adult woman in selfie framing,
+> early-to-mid 30s, postpartum mom aesthetic, soft warm skin tone, slightly tired makeup-free
+> face, wearing an oversized soft grey oatmeal sweater, dark-to-medium brown hair worn loose.
+> Ordinary bedroom background, natural window light. Handheld selfie framing with slight
+> natural camera sway. She is holding a plain glass dropper bottle of amber oil in one hand,
+> raised into frame at shoulder height.
+>
+> She speaks the following line to camera in a mildly exasperated, deadpan conversational
+> register — adult female American English (General American accent), early-to-mid 30s voice,
+> warm but slightly tired, natural brisk conversational pace around 180 words per minute,
+> mid-pitched around 200 Hz with slight vocal fry on phrase endings, moderately expressive but
+> not performative, no announcer energy. Mouth movement must shape the English words naturally —
+> English visemes only, do not speak Chinese or any other language.
+>
+> Spoken line (verbatim, English): "I don't even want to think about how much I've spent on
+> scalp oil that just sat there doing nothing."
+>
+> Delivery direction: mildly exasperated and deadpan, not dramatic. The dropper bottle is a
+> visible proof-prop — she presents it near her face while speaking. Small natural emphasis on
+> "just sat there doing nothing" with a slight resigned shrug. Transition smoothly by the end
+> into @last_frame — the dropper bottle held up clearly in frame near shoulder height, still
+> visible to camera, resigned/unimpressed expression as if presenting proof of something that
+> didn't work.
+>
+> Same woman, same wardrobe, same bedroom setting throughout — no identity drift.
 
 ### Body A — video generation prompt
 
@@ -417,8 +496,9 @@ assumption:
 > oil on her neck or soaking into a towel edge at her shoulder, resigned expression. Same
 > woman, same wardrobe, same bedroom setting throughout — no identity drift.
 
-Hook 2/3 and Body B/C prompts will follow this same timestamped `@first_frame`/`@last_frame`
-format once the sample round confirms the approach works.
+Body B and Body C will follow the same enhanced format (visual direction + spoken line +
+voice spec + delivery) once the hook round is done, so the full script from section 6 ends up
+baked into every clip's prompt rather than left on the side.
 
 ### Sample round result (2026-10-26): Hook 1 + Body A — both succeeded on the 2nd attempt
 
