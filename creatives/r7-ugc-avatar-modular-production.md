@@ -1,0 +1,276 @@
+# R7 — Modular UGC avatar production: 3 hooks, 1 shared body, ~30s
+
+Builds on `ads/kitsch-ugc-teardown-and-reproduction.md` (structure/pacing reference) and
+`creatives/r6-ugc-avatar-validation-script.md` (avatar persona, originally single-hook).
+This version is production-structured for your actual ask: generate the body once, generate
+3 hook variants separately, stitch each hook onto the same shared body footage. That gives you
+3 finished videos from 4 total generation passes (1 body + 3 hooks), and it's a clean
+single-variable test — identical footage after the cut, only the hook differs.
+
+**No Google Flow connector available in this session** (checked — only Google Drive is
+connected here), so I can't generate inside it directly. Workflow stays: I give you the
+scripts and first/last-frame prompts below, you run them in Flow, send me the output and I'll
+check it against the script before you cut anything together — same loop as the Grok test.
+
+**On the 30s target:** trimmed the shared body hard to get there. Kitsch's own video got to
+40s by dropping price/CTA/guarantee entirely — I'm not recommending that here (changes two
+variables at once: format AND removing a FIXED beat you've never tested dropping). Instead the
+offer is compressed to a 3-second tag at the end rather than removed. Total lands around
+30-33s depending on delivery pace, hook included.
+
+**On exact clip-length limits:** I don't know Google Flow's per-generation cap for your account,
+so segments below are split by content/beat, not forced into assumed second-counts. If your tool
+caps shorter than a given segment, split it further at a natural sentence break and use the same
+first-frame/last-frame continuity principle (section 4) to keep the join clean.
+
+---
+
+## 1. Avatar persona (lock this across every segment and every hook variant)
+
+Same identity used in `r6-ugc-avatar-validation-script.md` — don't introduce a different look
+per hook, or you've changed two variables at once.
+
+- Early-to-mid 30s, postpartum mom aesthetic, soft warm skin tone, minimal/no makeup, slightly
+  tired but not styled
+- Dark-to-medium brown hair, worn down, slightly undone
+- Oversized soft grey or oatmeal sweater/robe — Ninu's own established wardrobe register, not
+  Kitsch's fitted tank top. Keep what's already consistent across R4/R5/R6 rather than copying
+  the competitor's incidental wardrobe choice.
+- Ordinary bedroom, natural window light, lived-in not styled — same environment register as
+  every native creative in this account
+- Handheld selfie framing, front-camera distortion, slight natural handheld movement — matches
+  the authenticity read from the Kitsch teardown
+
+**Persona reference frame (generate once, use as the visual anchor for every other prompt below):**
+
+```
+A photorealistic, high-detail portrait of a woman in her early-to-mid 30s, postpartum mom
+aesthetic, soft warm skin tone, slightly tired but makeup-free, dark-to-medium brown hair worn
+down and slightly undone, wearing an oversized soft grey or oatmeal sweater or robe. Seated on
+the edge of a bed, natural window light from one side, ordinary bedroom background, lived-in
+not styled. Handheld selfie framing, front-camera perspective, slight natural distortion.
+Natural, unposed expression, not smiling for the camera. This frame locks her exact appearance,
+skin tone, and hair for every other shot in this sequence — do not redesign her between clips.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+---
+
+## 2. Three hook variants (swappable, each generated separately, same avatar)
+
+**Hook 1 — Control.** The only hook with actual purchases behind it (3 converting
+executions), though it's also your least efficient hook historically (CAC £88.62, 2-6x worse
+CPM/CPC than challengers). Baseline worth carrying into this format.
+
+> "I actually do my scalp oil every night now. That wasn't true six months ago."
+
+Delivery: straight to camera, conversational, a small wry half-smile on "that wasn't true six
+months ago." No prop yet. ~4-5 seconds.
+
+**Hook 2 — Social-Compare.** Confirmed (via screenshot) the actual content of HookD from your
+live hook test — cheapest CPM, most volume of any challenger, never got a fair shot at its own
+conversion before that test ended. Good candidate to see if format changes its luck.
+
+> "Every mom in my postpartum group did her nightly oil for six months straight. I made it eleven nights."
+
+Delivery: straight to camera, self-deprecating, small eye-roll or shrug on "eleven nights." No
+prop. ~5-6 seconds.
+
+**Hook 3 — New, borrowed device.** Not previously tested. Adapts the Kitsch teardown's
+cost-complaint + simultaneous-demo device (section 4 of that doc) into your own angle — still a
+habit/mess complaint, no hair-outcome claim.
+
+> "I don't even want to think about how much I've spent on scalp oil that just sat there doing nothing."
+
+Delivery: holds up a plain oil dropper bottle while speaking, mirrors Kitsch's "show the failed
+tool while complaining about it" choreography. ~5-6 seconds.
+
+---
+
+## 3. Shared body (generate once, reuse under all three hooks)
+
+### Body-A — Lead + Failed Solutions (condensed)
+
+> "I had the castor oil, I had the rosemary, I believed in the whole routine, I just couldn't keep it up. It'd end up on my hands, down my neck, soaked into a towel — easier to just skip it."
+
+Delivery: dropper bottle near hairline/neck, a visible drip, slightly resigned expression.
+~9-10 seconds at natural pace.
+
+### Body-B — Discovery + Mechanism demo
+
+> "Then I found this. Hollow tips, right onto your scalp, and the oil goes straight there — not on your hands."
+
+Delivery: reveal the Ninu dispenser, part hair with one hand, press tips to scalp with the
+other — same demo choreography as the Kitsch mechanism beat. ~7-8 seconds.
+
+### Body-C — Close + Offer (compressed)
+
+> "The habit was always there. The routine just needed to be easier than the reason to quit. Ninu Kit — forty-nine ninety-nine, thirty-day guarantee."
+
+Delivery: back to straight-to-camera for the close line (Rule of One, FIXED, unchanged), hold
+the product once more for the offer tag. ~7-8 seconds.
+
+**Total shared body: ~24-26 seconds. Plus a hook: ~30-32 seconds total.**
+
+---
+
+## 4. First-frame / last-frame prompts
+
+For each segment, generate a first frame and a last frame, then let your video tool
+interpolate the motion between them. Each prompt below assumes the persona reference frame
+(section 1) as the visual anchor — attach it to every generation call the same way the
+product-lock reference worked in `r5-yap-video-prompts.md`.
+
+**Continuity note:** the three hooks don't need to land on an identical last-frame pose before
+cutting to Body-A — a hard jump cut between hook and body is fine and matches the authentic,
+slightly rough-edged read of real UGC (the Kitsch video itself isn't a single unbroken motion,
+it has natural micro-discontinuities). Don't over-engineer a seamless blend here.
+
+### Hook 1 — first/last frame
+
+**First frame:**
+```
+Using the exact woman shown in the attached persona reference image — same face, hair, skin
+tone, wardrobe, do not redesign her. She is mid-sentence, looking directly at the camera in
+selfie framing, mouth slightly open as if beginning to speak, neutral conversational
+expression, hands not yet visible or resting low out of frame. Same bedroom setting, same
+natural window light.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+**Last frame:**
+```
+Same woman, same setting, same wardrobe. A small wry half-smile, head tilted slightly, as if
+just finishing a rueful sentence. Hands still low/out of frame or resting naturally, not
+holding anything.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+### Hook 2 — first/last frame
+
+**First frame:**
+```
+Using the exact woman shown in the attached persona reference image — same face, hair, skin
+tone, wardrobe, do not redesign her. Mid-sentence, selfie framing, direct to camera, neutral
+start-of-sentence expression. Same bedroom setting, same light.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+**Last frame:**
+```
+Same woman, same setting, same wardrobe. A small self-deprecating eye-roll or shrug, slight
+smile, as if just admitted something a little embarrassing about herself.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+### Hook 3 — first/last frame
+
+**First frame:**
+```
+Using the exact woman shown in the attached persona reference image — same face, hair, skin
+tone, wardrobe, do not redesign her. Selfie framing, one hand beginning to raise a plain glass
+dropper bottle of amber oil into frame, mouth open starting to speak, slightly exasperated
+expression.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+**Last frame:**
+```
+Same woman, same setting, same wardrobe. The dropper bottle now held up clearly in frame near
+shoulder height, still visible to camera, resigned/unimpressed expression, as if presenting
+proof of something that didn't work.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+### Body-A — first/last frame
+
+**First frame:**
+```
+Using the exact woman shown in the attached persona reference image — same face, hair, skin
+tone, wardrobe, do not redesign her. Selfie framing, holding a plain glass dropper bottle near
+her hairline, mid-sentence, slightly frustrated expression. Same bedroom setting, same light.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+**Last frame:**
+```
+Same woman, same setting, same wardrobe. The dropper bottle now lower, near her neck/shoulder,
+a visible drip of amber oil caught on her neck or soaking into a visible towel edge at her
+shoulder. Resigned expression, as if this is a familiar annoyance.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+### Body-B — first/last frame
+
+**First frame:**
+```
+Using the exact woman shown in the attached persona reference image — same face, hair, skin
+tone, wardrobe, do not redesign her. Selfie framing, now holding the real Ninu dispenser
+(clear cylindrical chamber, cream dome cap, five hollow clear tips in a cluster, ml markings —
+match the reference renders in `r5-yap-video-prompts.md` section 0.5 exactly, do not redesign
+the product), just revealed into frame near chest height.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+**Last frame:**
+```
+Same woman, same setting, same wardrobe, same exact dispenser (five tips, cream cap, clear
+chamber — unchanged). One hand parting her hair at the part, the dispenser's tip cluster
+pressed flat against her scalp, visible contact point, calm focused expression.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+### Body-C — first/last frame
+
+**First frame:**
+```
+Using the exact woman shown in the attached persona reference image — same face, hair, skin
+tone, wardrobe, do not redesign her. Back to straight-to-camera selfie framing, calm and
+genuine expression, hands down or resting naturally, mid-sentence beginning the closing line.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+**Last frame:**
+```
+Same woman, same setting, same wardrobe. Holding the same exact Ninu dispenser up once more
+near chest height, small genuine smile, as if wrapping up naturally — not a hard sales smile,
+just a settled, satisfied expression.
+
+Aspect ratio: 9:16 vertical, 1080x1920.
+```
+
+---
+
+## 5. Assembly
+
+Three finished videos, each = one Hook clip + Body-A + Body-B + Body-C, same footage for the
+body across all three:
+
+- **Video 1:** Hook 1 (Control) → Body-A → Body-B → Body-C
+- **Video 2:** Hook 2 (Social-Compare) → Body-A → Body-B → Body-C
+- **Video 3:** Hook 3 (New, cost-complaint) → Body-A → Body-B → Body-C
+
+Hard cuts between every segment — don't force a seamless blend, jump cuts read as authentic
+here, same as the native read established across every creative in this account.
+
+---
+
+## 6. Test setup
+
+Single-variable test (hook only, per the Master Doc's Variation Winners rule) — launch all
+three as separate ads in one new ad set, small test budget, same checkpoint structure as
+everything else in this account: £10.77 (0 link clicks) / £21.54 (0 ATC) / £32.31 (0 IC) /
+£53.85 (0 purchases, hard stop), per ad. Keep this test budget separate from the £85 proven
+pool and the HookD retest.
