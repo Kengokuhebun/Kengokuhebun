@@ -358,12 +358,12 @@ assumption:
 `duration: 5`, `resolution: 720P`, `aspect_ratio: Auto`
 
 > 0-5s, HOOK: Begin exactly on @first_frame — woman in selfie framing, mid-sentence, neutral
-> conversational expression, mouth moving naturally as if speaking casually to camera, no
-> specific words, general relaxed talking motion. Slight natural handheld camera sway, hair
-> settling naturally, hands low/out of frame throughout. Transition smoothly by the end into
-> @last_frame — a small wry half-smile, head tilted slightly, as if just finishing a rueful
-> sentence. Same woman, same wardrobe, same bedroom setting throughout — no identity drift, no
-> change in appearance or background.
+> conversational expression, mouth moving naturally as if speaking casually **in English
+> (American English)** to camera, no specific words, general relaxed talking motion. Slight
+> natural handheld camera sway, hair settling naturally, hands low/out of frame throughout.
+> Transition smoothly by the end into @last_frame — a small wry half-smile, head tilted
+> slightly, as if just finishing a rueful sentence. Same woman, same wardrobe, same bedroom
+> setting throughout — no identity drift, no change in appearance or background.
 
 ### Body A — video generation prompt
 
@@ -371,13 +371,13 @@ assumption:
 
 > 0-10s, FAILED SOLUTIONS: Begin exactly on @first_frame — woman in selfie framing, holding a
 > plain glass dropper bottle near her hairline, mid-sentence, slightly frustrated expression,
-> mouth moving naturally as if speaking casually. Handheld camera, slight natural sway. Over
-> the course of the clip she slowly lowers the dropper bottle from her hairline down toward
-> her neck and shoulder, continuous natural hand motion, expression gradually shifting toward
-> mild resignation. Transition smoothly by the end into @last_frame — the dropper bottle now
-> lower near her neck/shoulder, a visible drip of amber oil on her neck or soaking into a towel
-> edge at her shoulder, resigned expression. Same woman, same wardrobe, same bedroom setting
-> throughout — no identity drift.
+> mouth moving naturally as if speaking casually **in English (American English)**. Handheld
+> camera, slight natural sway. Over the course of the clip she slowly lowers the dropper bottle
+> from her hairline down toward her neck and shoulder, continuous natural hand motion,
+> expression gradually shifting toward mild resignation. Transition smoothly by the end into
+> @last_frame — the dropper bottle now lower near her neck/shoulder, a visible drip of amber
+> oil on her neck or soaking into a towel edge at her shoulder, resigned expression. Same
+> woman, same wardrobe, same bedroom setting throughout — no identity drift.
 
 Hook 2/3 and Body B/C prompts will follow this same timestamped `@first_frame`/`@last_frame`
 format once the sample round confirms the approach works.
@@ -424,6 +424,19 @@ before the custom VO (section 6) goes on; there's no lip-sync between the two.
 Drive upload tool only accepts inline base64 content as a tool parameter with no file-path
 option, which isn't practical for multi-MB video. Clips need to be manually dragged into the
 Ninu UGC resources Drive folder.
+
+**Second bug found and fixed on this round: wrong spoken language.** Neither prompt specified
+a language for the "speaking naturally" instruction, and Kling (a Kuaishou/Chinese model)
+defaulted to Mandarin for its native generated audio. This isn't just a muted-track cosmetic
+issue — the mouth shapes/visemes the video generates are shaped by whatever language it thinks
+is being spoken, so Mandarin-shaped mouth movement would mismatch an English VO worse than
+English-shaped movement would. **Fix: every prompt must explicitly state "speaking casually in
+English (American English)"** — now added to both prompts above. Verified the fix actually
+worked by running the regenerated audio through Whisper's language detector (both now read
+`en`), not just trusting the clip looked right. Both segments regenerated: same cost again
+($0.71 + $1.43 = $2.14), same quality/identity/landing-frame accuracy as the first pass.
+**Apply this language lock to the Hook 2/3 and Body B/C prompts before generating them —
+don't repeat this on the next 4 segments.**
 
 ## 8. Test setup
 
