@@ -11,7 +11,7 @@ Clips you've already received from me in chat:
 | Hook 3 — Cost-Complaint | `h3.mp4` | 5s | ready | "I don't even want to think about how much I've spent on scalp oil that just sat there doing nothing." |
 | Body A — Failed Solutions | `bodyA_final.mp4` | 10s | ready (audio tail faded) | "I had the castor oil, I had the rosemary, I believed in the whole routine, I just couldn't keep it up. It'd end up on my hands, down my neck, soaked into a towel. Easier to just skip it." |
 | Body B — Discovery + Mechanism | `bodyB_v4_final.mp4` | 10s | ready (forehead drip + cheek wet inpainted out, audio tail faded) | "Then I found this. Hollow tips, right onto your scalp, and the oil goes straight there. Not on your hands." |
-| Body C — Close + Offer | — | — | **not generated yet** | "The habit was always there. The routine just needed to be easier than the reason to quit. Ninu Kit. Forty-nine ninety-nine, thirty-day guarantee." |
+| Body C — Close + Offer | `bodyC_final.mp4` | 10s | ready (audio tail faded; Kling pronounced "Ninu" as "Nine new" — regenerable with pronunciation hint if desired) | "The habit was always there. The routine just needed to be easier than the reason to quit. Ninu Kit. Forty-nine ninety-nine, thirty-day guarantee." |
 
 ---
 
@@ -19,9 +19,9 @@ Clips you've already received from me in chat:
 
 Inside your `Ninu UGC resources` folder, three subfolders are now ready for drag-and-drop:
 
-- **Final Video 1 - Hook 1 Control** — drop in: `h1.mp4`, `bodyA_final.mp4`, `bodyB_v4_final.mp4`, (Body C when ready)
-- **Final Video 2 - Hook 2 Social-Compare** — drop in: `h2_fixed.mp4`, `bodyA_final.mp4`, `bodyB_v4_final.mp4`, (Body C when ready)
-- **Final Video 3 - Hook 3 Cost-Complaint** — drop in: `h3.mp4`, `bodyA_final.mp4`, `bodyB_v4_final.mp4`, (Body C when ready)
+- **Final Video 1 - Hook 1 Control** — drop in: `h1.mp4`, `bodyA_final.mp4`, `bodyB_v4_final.mp4`, `bodyC_final.mp4`
+- **Final Video 2 - Hook 2 Social-Compare** — drop in: `h2_fixed.mp4`, `bodyA_final.mp4`, `bodyB_v4_final.mp4`, `bodyC_final.mp4`
+- **Final Video 3 - Hook 3 Cost-Complaint** — drop in: `h3.mp4`, `bodyA_final.mp4`, `bodyB_v4_final.mp4`, `bodyC_final.mp4`
 
 Body A / Body B / Body C are shared across all three videos — same files go in each folder.
 
@@ -30,7 +30,7 @@ Body A / Body B / Body C are shared across all three videos — same files go in
 ## Stitching order (same for all 3 videos)
 
 ```
-<Hook X>  →  bodyA_final.mp4  →  bodyB_v4_final.mp4  →  <bodyC when ready>
+<Hook X>  →  bodyA_final.mp4  →  bodyB_v4_final.mp4  →  bodyC_final.mp4
 ```
 
 - **Hard cuts between every clip** — no crossfades, no transitions, no wipes. Jump cuts are part of the native read, same as every other creative in this account.
