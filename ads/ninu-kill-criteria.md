@@ -203,3 +203,27 @@ existing **A1_C_HookD ad untouched** (same copy, same image — no need to rebui
 set ad set daily budget to **£15/day**. Checkpoints scaled from section 3: £10.77 (0 link
 clicks) / £21.54 (0 ATC) / £32.31 (0 IC) / £53.85 (0 purchases, hard stop, ~3.6 days at
 £15/day). Ceiling: ~4-5 days / £60-75 total before a final call either way.
+
+## 11. Mid-day log — advertorial (Copy 3-OG) killed (2026-10-26)
+
+| Ad | Spend | Impr. | CPM | Reach | Freq. | Link clicks | Link CTR | Link CPC | Purchases |
+|---|---|---|---|---|---|---|---|---|---|
+| A1_C_Messyroutine – Copy 3-OG (advertorial) | £58.48 | 298 | £196.24 | 272 | 1.10 | 19 | 6.38% | £3.08 | 0 |
+
+**Hard stop breached:** spend (£58.48) has passed the £53.85 checkpoint (2.5× target CAC, 0
+purchases) from section 3. Trust this read — it's a Purchase count, not an LPV number, and
+section 7 already established Purchase/CAC is reliable at the ad level in this account.
+**Decision: kill this ad.**
+
+CTR is genuinely good (7.05% all / 6.38% link) — the creative isn't the problem. The CPM
+(£196.24) is the problem, and it got worse as spend increased (was £161.38 at £30.34 spend in
+section 8, now £196.24 at £58.48), so this isn't an early-delivery blip settling out — it's a
+consistently expensive lane, most likely a thin/expensive audience-placement combo for this
+specific ad, not a creative-quality signal from Meta.
+
+Same creative as PDP-direct (**Orange_Textincrease**, section 8) already converted once at
+£31.41. Not a clean paired test yet, but directionally this favors PDP-direct over the
+advertorial hop for this creative — the extra page isn't earning its keep so far.
+
+**Action:** turn this ad off, let the freed budget flow to the HookD retest (section 10) or
+back toward Orange/Purple, which have both already proven they can convert.
