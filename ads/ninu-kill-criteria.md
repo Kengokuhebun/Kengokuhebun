@@ -227,3 +227,35 @@ advertorial hop for this creative — the extra page isn't earning its keep so f
 
 **Action:** turn this ad off, let the freed budget flow to the HookD retest (section 10) or
 back toward Orange/Purple, which have both already proven they can convert.
+
+## 12. Mid-day log — R3 color set, Purple scales, Green paused (2026-10-26)
+
+| Ad | Spend | Impr. | CPM | Reach | Freq. | Link clicks | Link CTR | Link CPC | Purchases | CAC |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **Purple_Textincrease** | £41.81 | 363 | £115.18 | 319 | 1.14 | 16 | 4.41% | £2.61 | 2 | **£20.91** |
+| **Orange_Textincrease** | £52.42 | 214 | £244.95 | 175 | 1.22 | 7 | 3.27% | £7.49 | 2 | £26.21 |
+| **Green_Textincrease** | £31.85 | 256 | £124.41 | 180 | 1.42 | 6 | 2.34% | £5.31 | 0 | — |
+| Copy 2-OG (control) | low (historic, see section 8) | — | — | — | — | — | — | — | 0 | — |
+
+**Purple clears target CAC (£21.38) with 2 purchases — this is now the clean scale signal in
+this ad set.** Meta's own delivery already agrees: 363 impressions vs Orange's 214 on
+comparable spend, same ad set, same auction — the algorithm is already favoring Purple before
+we touch anything.
+
+**Orange sits between target (£21.38) and break-even (£26.72) — watch, don't push extra
+budget at it specifically.** Its link CPC (£7.49) is ~3x Purple's (£2.61) for the same 2
+purchases — it's converting, just working harder and costing more to get there. Both CAC
+numbers are still noisy on an n of 2, so not a kill, just not the one to chase.
+
+**Green: no checkpoint technically breached (£31.85 spent, hard stop is £53.85), but it's the
+weakest ad in the set on every comparable metric** — worst link CTR (2.34% vs 4.41%/3.27%),
+second-worst CPC, zero purchases. With budget thin, no case for continuing to fund the set's
+laggard just to let it reach its own checkpoint on principle.
+
+**Decision:**
+1. Pause Green now.
+2. Leave Copy 2-OG running as is — already starved of spend by Meta's own allocation, costs
+   nothing to leave alone.
+3. Raise the ad set's daily budget by 20% (safe increment, won't reset learning phase) —
+   sequenced *after* pausing Green, so the increase flows into a cleaner pool (mostly Purple,
+   some Orange) rather than also re-funding the proven laggard.
