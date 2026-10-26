@@ -267,7 +267,65 @@ here, same as the native read established across every creative in this account.
 
 ---
 
-## 6. Test setup
+## 6. Voice/audio script (for a separate audio generator, not Kling's default voice)
+
+Six clips, matching the six video segments exactly — same wording as sections 2 and 3, no
+drift. Generate each as its own audio file, labeled to match, so pairing with the video
+segments is unambiguous: `hook1.mp3`, `hook2.mp3`, `hook3.mp3`, `bodyA.mp3`, `bodyB.mp3`,
+`bodyC.mp3`.
+
+**Voice brief (for picking/describing the voice in your generator):** woman, early-to-mid 30s,
+warm and natural, slightly tired register — not a polished announcer read, not an ASMR
+whisper. Neutral American accent (or whatever matches your target audience), conversational
+pace, talking to a phone propped up or held at arm's length, not performing for a microphone.
+Small natural pauses at commas, not metronomic. If your tool supports an emotional/style
+descriptor, something like "casual, slightly dry, a little wry" fits the delivery notes below
+better than "upbeat" or "enthusiastic."
+
+**Hook 1 — Control (~4-5s spoken)**
+> "I actually do my scalp oil every night now. That wasn't true six months ago."
+
+Delivery: conversational, small wry half-smile landing on "that wasn't true six months ago."
+
+**Hook 2 — Social-Compare (~5-6s spoken)**
+> "Every mom in my postpartum group did her nightly oil for six months straight. I made it eleven nights."
+
+Delivery: self-deprecating, a small laugh or sigh right before "eleven nights," not a
+triumphant delivery — she's a little embarrassed.
+
+**Hook 3 — New, cost-complaint (~5-6s spoken)**
+> "I don't even want to think about how much I've spent on scalp oil that just sat there doing nothing."
+
+Delivery: mildly exasperated, deadpan rather than dramatic.
+
+**Body-A — Lead + Failed Solutions (~9-10s spoken)**
+> "I had the castor oil, I had the rosemary, I believed in the whole routine, I just couldn't keep it up. It'd end up on my hands, down my neck, soaked into a towel — easier to just skip it."
+
+Delivery: resigned, a little tired, the list of oils said quickly/flatly like reciting
+something familiar, slowing down on "easier to just skip it."
+
+**Body-B — Discovery + Mechanism (~7-8s spoken)**
+> "Then I found this. Hollow tips, right onto your scalp, and the oil goes straight there — not on your hands."
+
+Delivery: a genuine shift in energy here, mild relief/satisfaction, slightly slower and more
+deliberate than Body-A.
+
+**Body-C — Close + Offer (~7-8s spoken)**
+> "The habit was always there. The routine just needed to be easier than the reason to quit. Ninu Kit — forty-nine ninety-nine, thirty-day guarantee."
+
+Delivery: the first sentence (Rule of One) said plainly and sincerely, almost like a thought
+rather than a tagline. The offer tag at the end picks up pace slightly — quick, matter-of-fact,
+not a hard sell.
+
+**On timing:** these are natural-pace estimates, not hard targets. Once you have the audio
+back, check each clip's actual length against its paired video segment's generated duration —
+small mismatches (a second or two) are normal and fixable by slightly trimming silence at the
+start/end; a large mismatch means the video generation's duration should be adjusted to match
+before pairing them.
+
+---
+
+## 7. Test setup
 
 Single-variable test (hook only, per the Master Doc's Variation Winners rule) — launch all
 three as separate ads in one new ad set, small test budget, same checkpoint structure as
