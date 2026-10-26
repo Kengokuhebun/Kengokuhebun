@@ -382,6 +382,49 @@ assumption:
 Hook 2/3 and Body B/C prompts will follow this same timestamped `@first_frame`/`@last_frame`
 format once the sample round confirms the approach works.
 
+### Sample round result (2026-10-26): Hook 1 + Body A — both succeeded on the 2nd attempt
+
+**Real issue hit and fixed:** the images as pasted into chat come through as `.webp`. Kling
+4.0 keyframe-to-video rejects this outright: `"Unsupported file format. Images must be JPG or
+PNG."` — both first-attempt jobs failed cleanly at `creditsConsumed: 0.0`, no money lost, but
+this needs fixing before every future round, not just worked around once: **convert every
+image to PNG or JPG before uploading**, regardless of source format.
+
+**Image hosting:** kie.ai needs a real public URL for `first_frame_url`/`last_frame_url` — the
+Artifact asset store and a Drive share link both turned out to require auth a third-party
+server can't provide. The working path is kie.ai's own upload endpoint:
+`POST https://kieai.redpandaai.co/api/file-base64-upload` with
+`{"base64Data": "data:image/png;base64,<...>", "uploadPath": "...", "fileName": "..."}` →
+returns `data.downloadUrl`, confirmed publicly fetchable. (Note the host —
+`kieai.redpandaai.co`, not `api.kie.ai`; the latter 404s for uploads, the jobs API stays on
+`api.kie.ai`.)
+
+**Image-to-prompt mapping was not upload order.** The 5 pasted images had to be matched to
+their intended role by content (expression, prop position), not by the sequence they arrived
+in — confirmed by checking which frame matched each prompt's described expression/prop state
+before spending anything. Worth double-checking this every round, not assuming a fixed order.
+
+**Results:**
+
+| Segment | Duration | Credits | Cost | State |
+|---|---|---|---|---|
+| Hook 1 | 5s | 142.5 | $0.71 | success |
+| Body A | 10s | 285 | $1.43 | success |
+
+**QA (frame-sampled, not just trusted on "success"):** both clips land cleanly on their
+intended last frame — Hook 1 ends on the wry half-smile, Body A ends with the dropper lowered
+and oil visibly dripping onto the towel. Consistent identity and wardrobe throughout, no
+visible warping or product/prop distortion, natural handheld camera motion.
+
+**Confirmed limitation:** both clips came back with their own AAC audio track — Kling
+generates native audio/dialogue even with no audio input supplied. This needs to be muted
+before the custom VO (section 6) goes on; there's no lip-sync between the two.
+
+**Delivery:** sent directly to the user as files rather than pushed into Drive — the available
+Drive upload tool only accepts inline base64 content as a tool parameter with no file-path
+option, which isn't practical for multi-MB video. Clips need to be manually dragged into the
+Ninu UGC resources Drive folder.
+
 ## 8. Test setup
 
 Single-variable test (hook only, per the Master Doc's Variation Winners rule) — launch all
