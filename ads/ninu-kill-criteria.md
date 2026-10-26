@@ -259,3 +259,32 @@ laggard just to let it reach its own checkpoint on principle.
 3. Raise the ad set's daily budget by 20% (safe increment, won't reset learning phase) —
    sequenced *after* pausing Green, so the increase flows into a cleaner pool (mostly Purple,
    some Orange) rather than also re-funding the proven laggard.
+
+## 13. Mid-day log — R4 new creative set, A3_CribHair killed (2026-10-26)
+
+| Ad | Spend | Impr. | CPM | Link clicks | Link CTR | Link CPC | Clicks (all) | Purchases |
+|---|---|---|---|---|---|---|---|---|
+| A2_Pillow | £19.74 | 939 | £21.02 | 28 | 2.98% | £0.71 | 122 | 0 |
+| A3_CribHair | £63.48 | 4,826 | £13.15 | 104 | 2.15% | £0.61 | 1,588 | 0 |
+| A4_The Scarf | £8.04 | 74 | £108.65 | 3 | 4.05% | £2.68 | 6 | 0 |
+| A1_Swipe | not reported this round | — | — | — | — | — | — | — |
+
+**A3_CribHair — hard stop breached and killed.** £63.48 spent, past the £53.85 checkpoint
+(2.5× target CAC), 0 purchases. Notably this ad has the best CPM of the set by far (£13.15,
+improved from £20.70 at the section 6 check) and the most volume, but none of that cheap
+traffic has converted. Flag worth a quick look, not a blocker to the kill: "Clicks (all)" is
+1,588 against only 104 link clicks — most engagement on this post isn't clicking through at
+all. Worth a scroll through the comments to rule out people reacting to the "husband finds hair
+near the crib" framing rather than genuinely curious about the product (this was already flagged
+as the one risk in this creative's pre-launch check in `creatives/r4-image-prompts.md`), but the
+spend decision doesn't wait on that — kill it now regardless.
+
+**A2_Pillow is the strongest performer in this set right now, sale or not.** Cheapest CPM with
+a meaningful sample (£21.02), solid link CTR (2.98%), link clicks at £0.71 — nowhere near any
+checkpoint. No action, let it keep running.
+
+**A4_The Scarf** — too little spend (£8.04) to read anything yet. Watch.
+
+**A1_Swipe** — missing from this check-in. Last known reading (section 6) had its CPM at
+£319.23, 15-20x its siblings on very little delivery — flagged then as a possible delivery
+restriction or quality flag. Get current numbers on this one next.
