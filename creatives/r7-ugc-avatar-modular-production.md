@@ -325,7 +325,64 @@ before pairing them.
 
 ---
 
-## 7. Test setup
+## 7. kie.ai / Kling 4.0 keyframe-to-video — confirmed API shape
+
+Confirmed directly from the kie.ai Playground UI (2026-10-26), correcting an earlier
+assumption:
+
+- `first_frame_url` and `last_frame_url` are **separate, single-image fields** —
+  `keyframe_urls` is only for up to 8 *additional middle* frames beyond the first/last pair.
+  We don't need `keyframe_urls` at all for simple first+last interpolation.
+- `prompt` (required, up to 8000 chars) expects a **detailed, timestamped shot description**
+  referencing `@first_frame` and `@last_frame` directly in the prose (e.g. "0-3s, PICKUP:
+  Begin exactly on @first_frame..."), not a short one-line description.
+- `duration`: numeric seconds, 3-30 range.
+- `resolution`: `720P` or `1080P` — using 720P per the cost-efficiency reasoning above.
+- `aspect_ratio`: defaults to `Auto` — should infer 9:16 correctly from our source images,
+  which are already generated at 1080x1920.
+- No audio input field exists anywhere in the schema. **This means Kling generates its own
+  mouth movement/talking motion with no way to lip-sync to a separately-produced custom
+  voiceover.** Swapping in your own VO (section 6) will not be word-perfect synced to the
+  generated mouth movement. Worth treating the Hook 1 + Body A sample specifically as a check
+  on how noticeable that mismatch is before committing further spend to this format — a raw
+  handheld-selfie read tolerates looseness better than a polished talking-head shot would, but
+  it's a real limitation, not a solved one.
+- Error handling: kie.ai returns errors as **HTTP 200 with an error `code` in the body**, not
+  a 4xx status — check `code`, not just the HTTP status.
+- Status polling: `GET /api/v1/jobs/recordInfo?taskId=...`.
+- Generated media is deleted after 14 days — download and archive results promptly (into the
+  Ninu UGC resources Drive folder).
+
+### Hook 1 — video generation prompt
+
+`duration: 5`, `resolution: 720P`, `aspect_ratio: Auto`
+
+> 0-5s, HOOK: Begin exactly on @first_frame — woman in selfie framing, mid-sentence, neutral
+> conversational expression, mouth moving naturally as if speaking casually to camera, no
+> specific words, general relaxed talking motion. Slight natural handheld camera sway, hair
+> settling naturally, hands low/out of frame throughout. Transition smoothly by the end into
+> @last_frame — a small wry half-smile, head tilted slightly, as if just finishing a rueful
+> sentence. Same woman, same wardrobe, same bedroom setting throughout — no identity drift, no
+> change in appearance or background.
+
+### Body A — video generation prompt
+
+`duration: 10`, `resolution: 720P`, `aspect_ratio: Auto`
+
+> 0-10s, FAILED SOLUTIONS: Begin exactly on @first_frame — woman in selfie framing, holding a
+> plain glass dropper bottle near her hairline, mid-sentence, slightly frustrated expression,
+> mouth moving naturally as if speaking casually. Handheld camera, slight natural sway. Over
+> the course of the clip she slowly lowers the dropper bottle from her hairline down toward
+> her neck and shoulder, continuous natural hand motion, expression gradually shifting toward
+> mild resignation. Transition smoothly by the end into @last_frame — the dropper bottle now
+> lower near her neck/shoulder, a visible drip of amber oil on her neck or soaking into a towel
+> edge at her shoulder, resigned expression. Same woman, same wardrobe, same bedroom setting
+> throughout — no identity drift.
+
+Hook 2/3 and Body B/C prompts will follow this same timestamped `@first_frame`/`@last_frame`
+format once the sample round confirms the approach works.
+
+## 8. Test setup
 
 Single-variable test (hook only, per the Master Doc's Variation Winners rule) — launch all
 three as separate ads in one new ad set, small test budget, same checkpoint structure as
