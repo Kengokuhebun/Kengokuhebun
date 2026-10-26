@@ -280,6 +280,17 @@ going forward: check whether Purple's CAC holds near £20.91 as the extra budget
 creeps toward break-even (£26.72) — a post-increase CAC rise is a common pattern and doesn't
 mean the ad broke, just that the auction got a little more expensive to fill the extra budget.
 
+**Follow-up — Copy 2-OG (control) also turned off (2026-10-26).** Lifetime: £29.15 spent, 181
+impressions, CPM £161.05, 2 link clicks, £14.58 link CPC, 0 purchases. This is **not** a
+checkpoint-breach kill — spend is still well under the £53.85 hard stop, and the CPC/CPM
+numbers are built on only 2 clicks, too small a sample to call proven on their own. It's a
+different kind of decision: this control's job was to answer "does the original small-text
+creative still hold up against the refined variants," and that question is already answered —
+Meta's own delivery has favored the refined versions ~11:1 since section 8, CTR has lost every
+comparison, and now CPM has flipped against it too. With Green just paused and the ad set
+budget raised to £85, there's no reason to keep a 3-way split alive when the extra budget
+should concentrate fully into Purple and Orange, the two ads with actual purchase proof.
+
 ## 13. Mid-day log — R4 new creative set, A3_CribHair killed (2026-10-26)
 
 | Ad | Spend | Impr. | CPM | Link clicks | Link CTR | Link CPC | Clicks (all) | Purchases |
