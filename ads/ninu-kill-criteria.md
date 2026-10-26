@@ -275,6 +275,11 @@ laggard just to let it reach its own checkpoint on principle.
    sequenced *after* pausing Green, so the increase flows into a cleaner pool (mostly Purple,
    some Orange) rather than also re-funding the proven laggard.
 
+**Executed (2026-10-26):** Green paused, ad set budget raised £70 → £85 (+21%). Watch item
+going forward: check whether Purple's CAC holds near £20.91 as the extra budget lands, or
+creeps toward break-even (£26.72) — a post-increase CAC rise is a common pattern and doesn't
+mean the ad broke, just that the auction got a little more expensive to fill the extra budget.
+
 ## 13. Mid-day log — R4 new creative set, A3_CribHair killed (2026-10-26)
 
 | Ad | Spend | Impr. | CPM | Link clicks | Link CTR | Link CPC | Clicks (all) | Purchases |
