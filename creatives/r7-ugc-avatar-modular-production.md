@@ -267,6 +267,44 @@ here, same as the native read established across every creative in this account.
 
 ---
 
+## 6a. Voice characteristics (locked, from user's audio sample 2026-10-26)
+
+Measured directly from the user-generated ElevenLabs reference sample
+(`voice_sample.mp3`, 18.9s, "I actually do my scalp oil every night now...").
+These numbers are the voice spec; use them verbatim in every Kling prompt from here on
+so the generated throwaway audio approximates the real reference, and the mouth
+motion feels natural at the real pace.
+
+- **Gender/age register:** adult female, early-to-mid 30s, American English (General American)
+- **Median pitch (f0):** 197 Hz (middle of the natural adult female range)
+- **Pitch range (10th-90th percentile):** 72-245 Hz — wide bottom end indicates
+  intermittent vocal fry on phrase endings, characteristic of millennial-register
+  conversational American English
+- **Pacing:** ~184 words per minute — natural brisk-but-not-rushed conversation,
+  not read-aloud slow, not performative
+- **Dynamic range:** moderate (RMS std/mean 0.70) — expressive but not theatrical,
+  not monotone, no stage projection
+- **Phrase pauses:** natural, 400-600ms between sentences, no long dramatic beats
+- **Register:** warm, slightly tired/resigned on reflection beats, dry-sincere on the
+  Rule of One close line, zero announcer energy
+
+**Compact voice description for Kling prompts (paste into every generation):**
+
+> She speaks in an adult female American English voice, early-to-mid 30s, warm and
+> slightly tired, natural brisk conversational pace around 180 words per minute, mid-pitched
+> around 200 Hz with slight vocal fry on phrase endings, moderately expressive but not
+> performative, no announcer energy.
+
+**Important caveat — what this actually does:** Kling 4.0 keyframe-to-video has no audio
+input field (confirmed from the API schema, section 7 above). The voice description in the
+video-generation prompt mainly shapes Kling's own auto-generated throwaway audio, which still
+gets muted and replaced with the user's real ElevenLabs VO (section 6 below). It can
+subtly influence mouth motion naturalness/timing but does not produce lip-sync to the
+ElevenLabs voice. The final deliverable's actual spoken audio always comes from the
+separately-generated ElevenLabs track, not from Kling.
+
+---
+
 ## 6. Voice/audio script (for a separate audio generator, not Kling's default voice)
 
 Six clips, matching the six video segments exactly — same wording as sections 2 and 3, no
