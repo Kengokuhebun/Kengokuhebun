@@ -295,13 +295,13 @@ motion feels natural at the real pace.
 > around 200 Hz with slight vocal fry on phrase endings, moderately expressive but not
 > performative, no announcer energy.
 
-**Important caveat — what this actually does:** Kling 4.0 keyframe-to-video has no audio
-input field (confirmed from the API schema, section 7 above). The voice description in the
-video-generation prompt mainly shapes Kling's own auto-generated throwaway audio, which still
-gets muted and replaced with the user's real ElevenLabs VO (section 6 below). It can
-subtly influence mouth motion naturalness/timing but does not produce lip-sync to the
-ElevenLabs voice. The final deliverable's actual spoken audio always comes from the
-separately-generated ElevenLabs track, not from Kling.
+**Workflow decision (2026-10-26, confirmed on hook round):** the ElevenLabs VO replacement
+plan is dropped. Putting the verbatim script into Kling's prompt alongside this voice
+description got Kling to actually speak the real lines in English on all three hooks —
+verified via Whisper language detection and transcript (hooks 1-3 all read `en`, all with the
+exact script lines). Kling's generated audio IS the final audio from here on. This voice
+description + verbatim script approach stays in every Kling prompt — section 6 below (the
+separate ElevenLabs VO script) becomes a reference artifact only, not something generated.
 
 ---
 
