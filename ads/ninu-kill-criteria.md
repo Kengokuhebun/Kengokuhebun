@@ -204,6 +204,21 @@ set ad set daily budget to **£15/day**. Checkpoints scaled from section 3: £10
 clicks) / £21.54 (0 ATC) / £32.31 (0 IC) / £53.85 (0 purchases, hard stop, ~3.6 days at
 £15/day). Ceiling: ~4-5 days / £60-75 total before a final call either way.
 
+**Important — these checkpoints track *retest* spend, not lifetime ad spend.** This ad
+(A1_C_HookD) existed before the retest, from the original hook isolation test (section 9,
+£37.41 spent then). Ads Manager's "Maximum" view shows lifetime spend across both periods;
+only the "Today"-style view since reactivation is the real checkpoint number. Don't read the
+lifetime total against these thresholds — subtract the pre-retest spend first.
+
+**Day 1 of retest (2026-10-26):** £10.81 spent (today's number, confirmed against lifetime
+£48.22 minus the £37.41 pre-retest baseline). 11 link clicks, 2.82% CTR, £0.98 link CPC, CPM
+£27.72, 0 purchases. Cleared checkpoint A (0 link clicks, £10.77) with room to spare; nowhere
+near checkpoints B/C/D. Healthy but too early to read purchases either way — this is still
+just day 1 of a planned 4-5 day test. **Don't increase this ad set's budget yet** — it has no
+purchase proof to justify it. Freed budget from today's kills (Copy 3-OG, A3_CribHair, Green)
+should go to Purple_Textincrease instead (section 12), which already has 2 purchases under
+target CAC.
+
 ## 11. Mid-day log — advertorial (Copy 3-OG) killed (2026-10-26)
 
 | Ad | Spend | Impr. | CPM | Reach | Freq. | Link clicks | Link CTR | Link CPC | Purchases |
