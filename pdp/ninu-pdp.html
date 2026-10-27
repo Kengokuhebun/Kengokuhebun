@@ -289,11 +289,11 @@ DELIVERY_MAX_BUSINESS_DAYS + ' business days)';
   // =================================================================
 
   var TIER = {
-    single:    { title: 'Ninu Kit — 1',                 price: 4999,  variant: KIT_SINGLE_VARIANT_ID,
+    single:    { title: 'Ninu Kit — 1',                 price: 4999,  variant: KIT_SINGLE_VARIANT_ID, kits: 1,
                  includes: ['1 Ninu Kit (dispenser + 60ml oil + bonnet)','Free US shipping','30-day guarantee'] },
-    bogo:      { title: 'Ninu Kit — Buy 2, Get 1 Free', price: 9998,  variant: KIT_3PACK_VARIANT_ID,
+    bogo:      { title: 'Ninu Kit — Buy 2, Get 1 Free', price: 9998,  variant: KIT_3PACK_VARIANT_ID, kits: 3,
                  includes: ['3 Ninu Kits (dispenser + oil + bonnet each)','Free US shipping','30-day guarantee','You save $49.99'] },
-    bulk:      { title: 'Ninu Kit — Buy 3, Get 2 Free', price: 14997, variant: KIT_5PACK_VARIANT_ID,
+    bulk:      { title: 'Ninu Kit — Buy 3, Get 2 Free', price: 14997, variant: KIT_5PACK_VARIANT_ID, kits: 5,
                  includes: ['5 Ninu Kits (dispenser + oil + bonnet each)','Free US shipping','30-day guarantee','You save $99.98'] },
     dispenser: { title: 'Ninu Dispenser',                price: 3499,  variant: DISPENSER_VARIANT_ID,
                  includes: ['Ninu applicator dispenser','Satin sleep bonnet','Free US shipping','30-day guarantee'] }
@@ -455,8 +455,13 @@ DELIVERY_MAX_BUSINESS_DAYS + ' business days)';
     empty.style.display = 'none';
     checkout.disabled = false;
 
+    var TIER_BY_VARIANT = {};
+    Object.keys(TIER).forEach(function(k){ TIER_BY_VARIANT[String(TIER[k].variant)] = k; });
+
     linesEl.innerHTML = cart.items.map(function(item, i){
-      var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · monthly' : 'One-time · Qty ' + item.quantity;
+      var t = TIER[TIER_BY_VARIANT[String(item.variant_id)]];
+      var qtyLabel = (t && t.kits > 1) ? (t.kits * item.quantity) + ' Kits' : 'Qty ' + item.quantity;
+      var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · monthly' : 'One-time · ' + qtyLabel;
       return '<div class="ninu-line">' +
         '<div class="ninu-line-img"><img src="' + (item.image || '') + '" alt=""></div>' +
         '<div class="ninu-line-info">' +
@@ -469,8 +474,6 @@ DELIVERY_MAX_BUSINESS_DAYS + ' business days)';
     }).join('');
 
     // Offer stack — inferred from first kit/dispenser line
-    var TIER_BY_VARIANT = {};
-    Object.keys(TIER).forEach(function(k){ TIER_BY_VARIANT[String(TIER[k].variant)] = k; });
     var kitLine = cart.items.find(function(i){ return !!TIER_BY_VARIANT[String(i.variant_id)]; });
     if(kitLine){
       var t = TIER[TIER_BY_VARIANT[String(kitLine.variant_id)]];
