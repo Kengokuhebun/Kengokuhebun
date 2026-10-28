@@ -30,37 +30,28 @@
     
     <div class="ninu-info">
       <span class="ninu-pill">Made for postpartum hair</span>
-      <h1 class="ninu-h1">The Ninu Scalp Ritual</h1>
+      <h1 class="ninu-h1">Ninu Scalp Oil Dispenser</h1>
       <p class="ninu-sub">Oil that actually reaches your scalp.</p>
+
+      <div class="ninu-tiers-label">Choose your option</div>
+      <div class="ninu-tiers">
+        <label class="ninu-tier selected" data-tier="kit" onclick="ninuPick(this)"><input type="radio" name="tier" checked><div class="ninu-tier-head"><div class="ninu-radio"></div><div class="ninu-tier-body"><div class="ninu-tier-title">The Ninu Kit <span class="ninu-badge">Most Popular</span></div><div class="ninu-tier-sub">Dispenser + 60ml scalp oil + satin bonnet + free ebook</div><div class="ninu-price-row"><span class="ninu-price">$49.99</span></div><div class="ninu-tier-perks">+ Free US shipping · Free "Scalp Routine That Sticks" ebook</div></div></div></label>
+
+        <label class="ninu-tier" data-tier="dispenser" onclick="ninuPick(this)"><input type="radio" name="tier"><div class="ninu-tier-head"><div class="ninu-radio"></div><div class="ninu-tier-body"><div class="ninu-tier-title">Dispenser Only</div><div class="ninu-tier-sub">Dispenser + satin bonnet. Bring your own oil.</div><div class="ninu-price-row"><span class="ninu-price">$39.99</span></div></div></div></label>
+      </div>
+
+      <button class="ninu-atc" id="ninu-atc" onclick="ninuAdd()">Add to Cart — <span id="ninu-atc-price">$49.99</span></button>
+      <div class="ninu-guar">
+        <span>Free US shipping</span>
+        <span>30-day guarantee</span>
+      </div>
 
       <p class="ninu-desc">A precision applicator with hollow silicone tips that deliver nourishing oil directly to your roots — not your towel, not your pillow, not your fingertips.</p>
 
-      
       <div class="ninu-mech">
         <div class="m"><div class="n">1</div><div class="t">Press</div><div class="d">Silicone tips meet scalp</div></div>
         <div class="m"><div class="n">2</div><div class="t">Glide</div><div class="d">Oil flows through hollow prongs, along the part line</div></div>
         <div class="m"><div class="n">3</div><div class="t">Absorb</div><div class="d">Every drop goes where it's meant to — the roots</div></div>
-      </div>
-
-      
-      <div class="ninu-launch-tag"><span>Early Black Friday</span></div>
-      <div class="ninu-tiers-label">Choose your kit</div>
-      <div class="ninu-tiers-note">Each Ninu Kit includes the applicator dispenser, 60ml scalp oil &amp; satin bonnet.</div>
-      <div class="ninu-tiers">
-        <label class="ninu-tier" data-tier="single" onclick="ninuPick(this)"><input type="radio" name="tier"><div class="ninu-tier-head"><div class="ninu-radio"></div><div class="ninu-tier-body"><div class="ninu-tier-title">1 Kit</div><div class="ninu-tier-sub">30-day supply</div><div class="ninu-price-row"><span class="ninu-price">$49.99</span></div></div></div></label>
-
-        <label class="ninu-tier selected" data-tier="bogo" onclick="ninuPick(this)"><input type="radio" name="tier" checked><div class="ninu-tier-head"><div class="ninu-radio"></div><div class="ninu-tier-body"><div class="ninu-tier-title">Buy 2, Get 1 Free <span class="ninu-badge">Best Seller</span></div><div class="ninu-tier-sub">3 kits &middot; 90-day supply</div><div class="ninu-price-row"><span class="ninu-tier-strike">$149.97</span><span class="ninu-price">$99.98</span></div><div class="ninu-tier-perks">You save $49.99</div></div></div></label>
-
-        <label class="ninu-tier" data-tier="bulk" onclick="ninuPick(this)"><input type="radio" name="tier"><div class="ninu-tier-head"><div class="ninu-radio"></div><div class="ninu-tier-body"><div class="ninu-tier-title">Buy 3, Get 2 Free <span class="ninu-badge sage">Best Value</span></div><div class="ninu-tier-sub">5 kits &middot; 150-day supply</div><div class="ninu-price-row"><span class="ninu-tier-strike">$249.95</span><span class="ninu-price">$149.97</span></div><div class="ninu-tier-perks">You save $99.98</div></div></div></label>
-
-      </div>
-
-      <button class="ninu-atc" id="ninu-atc" onclick="ninuAdd()">Add to Cart — <span id="ninu-atc-price">$99.98</span></button>
-      <div class="ninu-dispenser-link">Just need the dispenser? <a href="#" onclick="ninuAddDispenser(event)">$34.99 — add instead &rarr;</a></div>
-      <div class="ninu-guar">
-        <span>Free US shipping</span>
-        <span>30-day guarantee</span>
-        <span>Cancel refills any time</span>
       </div>
 
       <section class="ninu-tb" aria-label="Shipping, guarantee and trust information">
@@ -278,10 +269,8 @@ DELIVERY_MAX_BUSINESS_DAYS + ' business days)';
 <script>
 (function(){
   // === REPLACE THESE VALUES =========================================
-  var KIT_SINGLE_VARIANT_ID = '63751529824586';     // The Ninu Kit — 1
-  var KIT_3PACK_VARIANT_ID = '64120512545098';      // Bundle Size: 3-Pack — $99.98, compare-at $149.97
-  var KIT_5PACK_VARIANT_ID = '64120512577866';      // Bundle Size: 5-Pack — $149.97, compare-at $249.95
-  var DISPENSER_VARIANT_ID = '63751699595594';      // Ninu Applicator + Satin Bonnet
+  var KIT_VARIANT_ID = '63751529824586';            // The Ninu Kit — $49.99
+  var DISPENSER_VARIANT_ID = '63751699595594';      // Ninu Applicator + Satin Bonnet — $39.99
   var REFILL_VARIANT_ID = '63751894630730';         // Rosemary Essential Oil Refill
   var REFILL_SELLING_PLAN_ID = '693367669066';      // Monthly Refill · every 4 weeks · 48% off
   var SHIPPING_PROTECTION_VARIANT_ID = '64051862405450'; // Shipping protection add-on
@@ -289,16 +278,12 @@ DELIVERY_MAX_BUSINESS_DAYS + ' business days)';
   // =================================================================
 
   var TIER = {
-    single:    { title: 'Ninu Kit — 1',                 price: 4999,  variant: KIT_SINGLE_VARIANT_ID, kits: 1,
-                 includes: ['1 Ninu Kit (dispenser + 60ml oil + bonnet)','Free US shipping','30-day guarantee'] },
-    bogo:      { title: 'Ninu Kit — Buy 2, Get 1 Free', price: 9998,  variant: KIT_3PACK_VARIANT_ID, kits: 3,
-                 includes: ['3 Ninu Kits (dispenser + oil + bonnet each)','Free US shipping','30-day guarantee','You save $49.99'] },
-    bulk:      { title: 'Ninu Kit — Buy 3, Get 2 Free', price: 14997, variant: KIT_5PACK_VARIANT_ID, kits: 5,
-                 includes: ['5 Ninu Kits (dispenser + oil + bonnet each)','Free US shipping','30-day guarantee','You save $99.98'] },
-    dispenser: { title: 'Ninu Dispenser',                price: 3499,  variant: DISPENSER_VARIANT_ID,
-                 includes: ['Ninu applicator dispenser','Satin sleep bonnet','Free US shipping','30-day guarantee'] }
+    kit:       { title: 'The Ninu Kit',   price: 4999, variant: KIT_VARIANT_ID,
+                 includes: ['Ninu applicator dispenser','60ml scalp oil (30-day supply)','Satin sleep bonnet','Free "Scalp Routine That Sticks" ebook','Free US shipping','30-day money-back guarantee'] },
+    dispenser: { title: 'Ninu Dispenser', price: 3999, variant: DISPENSER_VARIANT_ID,
+                 includes: ['Ninu applicator dispenser','Satin sleep bonnet','Free US shipping','30-day money-back guarantee'] }
   };
-  var state = { tier: 'bogo' };
+  var state = { tier: 'kit' };
 
   window.ninuPick = function(el){
     document.querySelectorAll('.ninu-tier').forEach(function(t){ t.classList.remove('selected'); t.querySelector('input').checked = false; });
@@ -358,17 +343,6 @@ DELIVERY_MAX_BUSINESS_DAYS + ' business days)';
     btn.disabled = true;
     var t = TIER[state.tier];
     ajaxAdd([{ id: t.variant, quantity: 1 }])
-      .then(refreshCart)
-      .then(function(){ ninuOpenCart(); })
-      .catch(function(e){ console.error('[Ninu] add-to-cart error', e); alert('Add to cart failed: ' + (e.message || e)); })
-      .finally(function(){ btn.disabled = false; });
-  };
-
-  window.ninuAddDispenser = function(e){
-    e.preventDefault();
-    var btn = document.getElementById('ninu-atc');
-    btn.disabled = true;
-    ajaxAdd([{ id: DISPENSER_VARIANT_ID, quantity: 1 }])
       .then(refreshCart)
       .then(function(){ ninuOpenCart(); })
       .catch(function(e){ console.error('[Ninu] add-to-cart error', e); alert('Add to cart failed: ' + (e.message || e)); })
