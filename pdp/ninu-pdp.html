@@ -15,20 +15,8 @@
   <div class="ninu-pdp">
     
     <div class="ninu-gallery">
-      <div class="ninu-thumbs">
-        <div class="ninu-thumb active" onclick="ninuGo(0)"><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPTImageSep29_2026_06_35_40PM.png?v=1790765272" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuGo(1)"><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPTImageSep29_2026_06_29_08PM_9feee96c-484c-4b93-8d81-085adbc285ce.png?v=1790765194" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuGo(2)"><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_29_2026_06_31_25_PM.png?v=1790770810" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuGo(3)"><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_29_2026_06_39_21_PM.png?v=1790770823" alt=""></div>
-        <div class="ninu-thumb" onclick="ninuGo(4)"><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_29_2026_06_37_41_PM.png?v=1790770875" alt=""></div>
-      </div>
-      <div class="ninu-main-img" id="ninu-scroller" onscroll="ninuSync()">
-        <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPTImageSep29_2026_06_35_40PM.png?v=1790765272" alt="The Ninu Kit">
-        <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPTImageSep29_2026_06_29_08PM_9feee96c-484c-4b93-8d81-085adbc285ce.png?v=1790765194" alt="">
-        <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_29_2026_06_31_25_PM.png?v=1790770810" alt="">
-        <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_29_2026_06_39_21_PM.png?v=1790770823" alt="">
-        <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_29_2026_06_37_41_PM.png?v=1790770875" alt="">
-      </div>
+      <div class="ninu-thumbs" id="ninu-thumbs"></div>
+      <div class="ninu-main-img" id="ninu-scroller" onscroll="ninuSync()"></div>
     </div>
 
     
@@ -368,7 +356,7 @@
     btns.forEach(function(b){ b.disabled = true; });
     var t = TIER[state.tier];
     ajaxAdd([{ id: t.variant, quantity: qty }])
-      .then(refreshCart)
+      .then(function(){ try{window.Shopify.analytics.publish('product_added_to_cart',{cartLine:{merchandise:{id:t.variant},quantity:qty}});}catch(e){} return refreshCart(); })
       .then(function(){ ninuOpenCart(); })
       .catch(function(e){ console.error('[Ninu] add-to-cart error', e); alert('Add to cart failed: ' + (e.message || e)); })
       .finally(function(){ btns.forEach(function(b){ b.disabled = false; }); });
@@ -517,7 +505,18 @@
     scNote.innerHTML = hasRefill ? 'Refills auto-ship monthly at $16.99. Skip, pause or cancel any time.' : 'Free US shipping · 30-day money-back guarantee.';
   }
 
-  // Initial cart sync (in case items were added before this page loaded)
+  // Build gallery from 12-image list
+  var _P='https://cdn.shopify.com/s/files/1/1084/3894/6122/files/';
+  var _G=['Ecommerce_hero_image_layout_9f70bb03_2K.jpg','Woman_holding_Ninu_dispenser_2d3f6016.jpg','Creating_informational_product_c__5fbff81a_2K.jpg','Create_dispenser_informational_l__1f1f8699.jpg','Create_FAQ_card_design_e8d84f7e.jpg','Creating_hair_care_routine_layout_6be65eed.jpg','Silicone_scalp_oil_dispenser_pho__dc19d7af.jpg','Dispenser_on_bathroom_vanity_c33b87a7.jpg','Flat_lay_of_scalp_kit_5cb4b3bf.jpg','Comparing_dropper_and_dispenser___f55499b2.jpg','Comparison_card_for_oil_dispensers_030258f3.jpg','Change_capacity_and_shipping_terms_745ff0e8.jpg'];
+  var _si='',_ti='';
+  _G.forEach(function(u,i){
+    _si+='<img src="'+_P+u+'" alt="">';
+    _ti+='<div class="ninu-thumb'+(i?'':' active')+'" onclick="ninuGo('+i+')"><img src="'+_P+u+'" alt=""></div>';
+  });
+  document.getElementById('ninu-scroller').innerHTML=_si;
+  document.getElementById('ninu-thumbs').innerHTML=_ti;
+
+  // Initial cart sync
   document.addEventListener('DOMContentLoaded', function(){ refreshCart().catch(function(){}); initProtectionPrice(); });
 })();
 </script>
