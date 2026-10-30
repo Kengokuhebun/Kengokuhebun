@@ -54,14 +54,14 @@ Word timestamps are the generated song's (take 0 minus a 1.5s lead-in), 154 word
 | 29.9-32.1 | It was the dropper. | P2: a dropper bulb in a spotlight, the drop falls and slides off a strand |
 | 32.1-34.35 | Hair doesn't drink oil. Skin does. | P3: oil beads slide off hair, one lands on skin and is absorbed |
 | 34.35-37.3 | So meet the one with hollow silicone tips. | C1 (reused): she opens the box, room warms to amber |
-| 37.3-43.2 | Press them to your scalp, and I release right there, directly on the skin. | D1, D2, D3 (reused) |
+| 37.3-43.2 | Press them to your scalp, and I release right there, directly on the skin. | D1, D2 (reused), D3c (retake: the v1 take held the dispenser tilted on its side at 0:42, the retake keeps it upright) |
 | 43.2-53.0 | The first night, mama, I felt it. Oh. This is what it's supposed to feel like. | E1, E2 (reused), "oh" lands on the relief at about 47.7s |
 | 53.0-58.4 | Not doing anything? I was never getting there. | M1: hook callback, warm mirror shot, Maya in the bonnet, the bottle shrugs |
 | 58.4-61.8 | Now Sunday can stay on the calendar. | K1: gold ticks across a week, the bottle waves goodbye |
 | 61.8-68.8 | The Nee-noo Kit. Free U.S. shipping. Thirty days to love it or send it back. | G2: dispenser and bonnet, offer card |
 | 68.8-74.1 | Make tonight the easy one. | F2 (reused): Maya settled in bed, bonnet, dispenser in hand |
 
-Cost: the song 13 credits, 15 new shots plus 4 retakes, 571 credits in all, about $2.86. Credits left: 503.7.
+Cost: the song 13 credits, 15 new shots plus 4 retakes, 571 credits, then two D3 retakes 66 credits: 637 in all, about $3.19. Credits left: 438.1.
 
 ## 3. Same measurements as R10 section 3
 

@@ -34,7 +34,7 @@ CUT = [
     ("clips", "C1.mp4", 34.35, 37.30, 0.0),    # meet the one with hollow silicone tips
     ("clips", "D1.mp4", 37.30, 39.20, 0.0),    # press them to your scalp
     ("clips", "D2.mp4", 39.20, 41.30, 0.0),    # I release right there
-    ("clips", "D3.mp4", 41.30, 43.20, 0.0),    # directly on the skin
+    ("clips2", "D3c.mp4", 41.30, 43.20, 0.0),  # directly on the skin (retake, dispenser upright)
     ("clips", "E1.mp4", 43.20, 45.20, 0.0),    # the first night
     ("clips", "E2.mp4", 45.20, 53.00, 2.0),    # "oh" lands on the relief at about 2.5s into this cut
     ("clips2", "M1.mp4", 53.00, 58.40, 0.0, 4.7),   # hook callback: not doing anything? I was never getting there
