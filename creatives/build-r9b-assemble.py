@@ -61,9 +61,10 @@ def captions():
     words = [w for w in words if w["w"]]
     chunks, cur = [], []
     for w in words:
+        if cur and (len(cur) >= 3 or len(" ".join(x["w"] for x in cur + [w]).rstrip(".,:;")) > 16):
+            chunks.append(cur); cur = []
         cur.append(w)
-        ends = w["w"].endswith((".", ",", ":", "?", "!"))
-        if ends or len(cur) >= 3:
+        if w["w"].endswith((".", ",", ":", "?", "!")):
             chunks.append(cur); cur = []
     if cur:
         chunks.append(cur)
@@ -84,14 +85,14 @@ def ass():
 ScriptType: v4.00+
 PlayResX: {W}
 PlayResY: {H}
-WrapStyle: 2
+WrapStyle: 0
 
 [V4+ Styles]
 Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
-Style: Cap,DejaVu Sans,66,&H001FD2FF,&H001FD2FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,40,40,330,1
-Style: Brand,DejaVu Serif,74,&H00121824,&H00121824,&H00F5EFE6,&H00000000,-1,0,0,0,100,100,14,0,1,0,0,8,40,40,150,1
-Style: Offer,DejaVu Sans,40,&H00121824,&H00121824,&H00F5EFE6,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,40,40,255,1
-Style: Site,DejaVu Sans,34,&H0032729A,&H0032729A,&H00F5EFE6,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,40,40,330,1
+Style: Cap,DejaVu Sans,60,&H001FD2FF,&H001FD2FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,40,40,420,1
+Style: Brand,DejaVu Serif,74,&H00121824,&H00121824,&H00F5EFE6,&H00000000,-1,0,0,0,100,100,14,0,1,0,0,8,40,40,95,1
+Style: Offer,DejaVu Sans,38,&H00121824,&H00121824,&H00F5EFE6,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,40,40,195,1
+Style: Site,DejaVu Sans,34,&H0032729A,&H0032729A,&H00F5EFE6,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,40,40,350,1
 
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
@@ -99,7 +100,7 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
     ev = captions()
     card = 77.9
     ev.append(f"Dialogue: 1,{ass_time(card)},{ass_time(85)},Brand,,0,0,0,,{{\\fad(500,0)}}N I N U")
-    ev.append(f"Dialogue: 1,{ass_time(card + 0.3)},{ass_time(85)},Offer,,0,0,0,,{{\\fad(500,0)}}The Ninu Kit  ·  $49.99\\NFree US shipping  ·  30-day money-back guarantee")
+    ev.append(f"Dialogue: 1,{ass_time(card + 0.3)},{ass_time(85)},Offer,,0,0,0,,{{\\fad(500,0)}}The Ninu Kit  ·  $49.99\\NFree US shipping\\N30-day money-back guarantee")
     ev.append(f"Dialogue: 1,{ass_time(card + 0.6)},{ass_time(85)},Site,,0,0,0,,{{\\fad(500,0)}}tryninu.store")
     open(f"{WORK}/captions.ass", "w", encoding="utf-8").write(head + "\n".join(ev) + "\n")
 

@@ -63,10 +63,13 @@ SHOTS = [
         "reference image 2 without looking, as automatically as reaching for a toothbrush. The camera slowly pulls back to reveal Maya in a tan robe and caramel "
         "satin bonnet already settled on the cream bed with a faint contented smile. Peaceful, resolved mood. Slow pull-back from a close shot of the nightstand "
         "to a medium-wide shot." + DISP)),
-    dict(id="G1", at=(77.6, 85.0), dur=8, res="720p", refs=["product"], prompt=(
-        "On a clean cream seamless background with a thin gold horizontal line, three items float in and settle gently into a neat arrangement: the small oil "
-        "dispenser from the reference image in the center, a 60ml amber glass oil bottle with a plain blank cream label on the left, and a folded caramel satin sleep "
-        "bonnet on the right. A soft warm light sweeps slowly across them. Slow push-in, calm premium look, no text." + DISP)),
+    dict(id="G1", at=(77.6, 85.0), dur=8, res="720p", refs=["product", "bonnet"], prompt=(
+        "On a clean cream seamless background with a thin gold horizontal line, three items glide in and rest on a soft cream surface, arranged neatly side by side "
+        "with clear space between them: on the left a 60ml amber glass oil bottle with a black screw cap and a plain blank cream label (not a dropper); in the center the "
+        "small oil dispenser from reference image 1; on the right a caramel satin HAIR bonnet made of the same glossy gathered satin with a ruffled elastic edge as in reference "
+        "image 2, lying on its own as a soft round puffy cap shape (a hair bonnet, NOT an eye mask, NOT a nightcap, no pointed tail, no head, no hair, no face). "
+        "A soft warm light sweeps slowly across them. Slow push-in, calm premium look, no text. The dispenser must look exactly like reference image 1: cream scalloped dome "
+        "cap on top, clear cylinder of golden oil with fine 1-4ml measurement marks, and a cluster of hollow translucent silicone tips at the base.")),
 ]
 
 
