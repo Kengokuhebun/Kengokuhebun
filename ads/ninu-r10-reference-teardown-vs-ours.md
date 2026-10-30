@@ -9,8 +9,8 @@ follow that rule. Part 2 and parts 4-7 are my interpretation and are labelled as
 
 ## 0. Limits, read first
 
-- **No performance data.** The file has no spend, views or sales. I take "doing well" from you. Part 2 lists what the
-  creative does, not proof of why it wins.
+- **Performance data is Atria's impression rank only** (section 0b). It shows delivery, not sales or ROAS. Part 2 lists
+  what the creative does, not proof of why it wins.
 - **Captions were read by OCR plus frame checks.** The yellow captions were recovered with timestamps. Where OCR was
   unclear I checked frames directly. One caption is censored on screen ("GIVE A F*CK"). Audio was not transcribed, so
   whether the lines are sung or spoken is Not determinable from the file; the captions are phrase-timed like lyrics.
@@ -20,6 +20,36 @@ follow that rule. Part 2 and parts 4-7 are my interpretation and are labelled as
   `ninu-dissect-winner-adC.md` (avatar as portrayed). If you have an avatar profile elsewhere, paste it and I'll redo
   section 6 against it.
 - **Tempo is an estimate** from audio autocorrelation.
+
+## 0b. Performance evidence (Atria screenshot you sent)
+
+| Field | Value |
+|---|---|
+| Ad ID | 1813490263163818 (matches the clip's filename) |
+| Status / start / running time | Active, started Oct 03, 2026, 28 days |
+| Current impression rank | Top 1%, #16 of 2.3K ads |
+| Peak impression rank | Top 1%, #16 of 2.4K ads (same as current) |
+| Rank trend (weekly best rank) | #371 (week of Sep 28) → rising (week of Oct 5) → at the top by the week of Oct 12 → flat through Oct 26 |
+| Platforms | Facebook, Instagram |
+| Format / category / reuse | Video, Health & Wellness Website, "Unique" |
+
+**What it shows:** the ad has held a Top 1% impression rank for roughly two weeks and is still running at day 28.
+Weekly buckets start on Mondays, so the first point (week of Sep 28) contains only the launch days (Oct 3-4). Read that
+way, it went from launch to the top of the ranking in about 10 days, then plateaued.
+
+**What it does not show:** impression rank measures how much delivery the ad gets, not sales, CAC or ROAS, and I can't
+see how Atria defines the 2.3K comparison set. The strongest evidence of profitability is behavioural: the advertiser
+kept funding it for 28 days at top-1% volume. That is a strong signal that it works for them, not proof of why.
+
+**What it means for us (interpretation):**
+1. **Winners of this type show early.** About 10 days from launch to its peak implies that a creative in this format
+   either earns its delivery quickly or does not. That supports judging our test at 3-5 days, but only once the funnel
+   is confirmed working (see the orders-since-Oct-26 problem).
+2. **Placements.** The ad runs on Facebook and Instagram only. The Pillow ad that sent about 1,000 clicks and no
+   shoppers should be rechecked for Audience Network or Messenger traffic; restrict our new ads to Facebook and Instagram
+   placements.
+3. **"Unique" creative reuse** means the structure is not yet copied widely in Atria's set, so borrowing the structure
+   (not the claims) is not borrowing a saturated format.
 
 ## 1. Reference ad: protocol spec
 
@@ -179,7 +209,8 @@ words present: PCOS, androgens, hormones. These are not claims Ninu can make. Th
 
 ## 2. Why it may be working (my interpretation, not spec)
 
-Hypotheses tied to the evidence above:
+Hypotheses tied to the evidence above (the ad is a confirmed top-1% delivery performer, section 0b, but nothing here
+proves which element earns it):
 
 1. **The hook is the avatar's own question, shown and written.** A white text card from frame 0 and a face in distress
    by 1.5s [S01] means a muted viewer gets the whole hook. The topic is specific and embarrassing, so only the avatar
