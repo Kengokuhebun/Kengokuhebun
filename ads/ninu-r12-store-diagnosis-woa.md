@@ -140,3 +140,14 @@ many times".
   reserved in a Shopify cart and the kit's inventory is untracked, so the timer would be false urgency.
 - Stock bar versus timer only: at about 0.8 orders a day (7 orders in the first 9 days), a 50-kit cap would show about 16%
   claimed at the end of the 10 days, which reads as slow selling. Keep the timer-only version until sales volume is higher.
+
+## 8. Mentor feedback applied to the PDP (benefits section and bundle contents)
+
+- Benefits list now has benefits only (no inclusions, no mechanism): "A two-minute routine you'll actually stick to",
+  "No greasy hands, no stained pillows", "Mess-free, even on your most tired nights", "Use the oil you already love",
+  "Throw it in your bag, no leaks". The mechanism line added under the headline was removed, and so was the intro paragraph.
+- The bundle's "what you get" moved from small grey text to a checklist at 15px inside each option card:
+  Kit = dispenser, 60ml scalp oil (30-day supply), satin sleep bonnet, free ebook. Dispenser Only = dispenser and bonnet,
+  with "Oil and ebook not included".
+- The ebook is still promised on the page and nothing delivers it yet. Set up delivery, or take it out of the list.
+- Mobile order is now the natural order: headline, benefits, FAQ link, option cards. The sticky bar still carries the price and button.
