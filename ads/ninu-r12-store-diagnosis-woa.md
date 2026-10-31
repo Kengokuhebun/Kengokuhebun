@@ -135,3 +135,8 @@ many times".
   Shopify variant price and the `price` for the kit in the page's `TIER` map, which is in cents). If the price will not
   go up, remove the strike price and the "goes to $62.49" line before launching.
 - Size: Apple Pay and Google Pay logos replaced by text pills to free about 3.3KB. File is 47,908 bytes of 51,200.
+- Side cart: added a line above Secure Checkout, "Early Black Friday price ends in <countdown>. Goes to $62.49 on Nov 11.",
+  shown only while the cart has items and the sale is live. A "cart reserved for 10 minutes" timer was not built: nothing is
+  reserved in a Shopify cart and the kit's inventory is untracked, so the timer would be false urgency.
+- Stock bar versus timer only: at about 0.8 orders a day (7 orders in the first 9 days), a 50-kit cap would show about 16%
+  claimed at the end of the 10 days, which reads as slow selling. Keep the timer-only version until sales volume is higher.
