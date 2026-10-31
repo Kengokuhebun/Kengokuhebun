@@ -119,3 +119,19 @@ many times".
 - The theme's purple scroll-to-top button and the "Low stock" pill are hidden on mobile (the bar carries the ship date).
 - Whitespace minified: 50,954 to 49,728 bytes (limit 51,200).
 - Not touched: the "EARLY BLACK FRIDAY" pill inside slide 1, "Trusted by 10,000+ women", the reviews and receipts.
+
+## 7. Early Black Friday sale UI (added to `pdp/ninu-pdp.html`)
+
+- Kit card: strike-through $62.49 in raspberry next to $49.99, an "Early Black Friday Sale" pill, a countdown under the
+  Add to Basket button, and the line "Price goes to $62.49 on Nov 11." The sticky mobile bar shows the strike price too.
+  Quantity changes the strike price (2 kits: $124.98), and Dispenser Only shows no sale.
+- Countdown ends at a fixed time for every visitor: Nov 10, 2026 11:59 PM Pacific (`Date.UTC(2026,10,11,7,59,59)`).
+  When it passes, the strike, pill, bar and timer remove themselves. The page never restarts the timer per visitor.
+- Stock bar: not built as "89% sold". It reads the kit's real Shopify inventory (Liquid) and stays hidden unless the kit's
+  inventory is tracked and the quantity is between 1 and the cap in the code (`CAP=50`). To switch it on: product
+  inventory, Track quantity, set it to the number of kits you will sell at this price, and untick Continue selling when
+  out of stock. Today the kit is untracked (shows -8), so the bar is hidden.
+- Conditions that make the strike price legitimate: the kit must actually be charged at $62.49 from Nov 11 (change the
+  Shopify variant price and the `price` for the kit in the page's `TIER` map, which is in cents). If the price will not
+  go up, remove the strike price and the "goes to $62.49" line before launching.
+- Size: Apple Pay and Google Pay logos replaced by text pills to free about 3.3KB. File is 47,908 bytes of 51,200.
