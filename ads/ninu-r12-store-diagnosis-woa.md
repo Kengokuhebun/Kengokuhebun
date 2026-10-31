@@ -122,7 +122,7 @@ many times".
 
 ## 7. Early Black Friday sale UI (added to `pdp/ninu-pdp.html`)
 
-- Kit card: strike-through $62.49 in raspberry next to $49.99, an "Early Black Friday Sale" pill, a countdown under the
+- Kit card: strike-through $62.49 in brick red next to $49.99, an "Early Black Friday Sale" pill, a countdown under the
   Add to Basket button, and the line "Price goes to $62.49 on Nov 11." The sticky mobile bar shows the strike price too.
   Quantity changes the strike price (2 kits: $124.98), and Dispenser Only shows no sale.
 - Countdown ends at a fixed time for every visitor: Nov 10, 2026 11:59 PM Pacific (`Date.UTC(2026,10,11,7,59,59)`).
