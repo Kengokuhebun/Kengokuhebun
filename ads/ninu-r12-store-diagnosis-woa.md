@@ -74,3 +74,48 @@ per ad (loss before the page loads), ATC rate by ad, placement breakdown of the 
 
 Decision arithmetic for the offer (kill-criteria COGS): a 3-for-2 style offer at $99.98 for 3 kits leaves about $62.67
 after COGS ($11.37 x 3) and card fees, against $34.74 on a single kit, so it roughly doubles the CAC you can afford.
+
+## 5. Offer options against the master document (Drive doc, offer rules only)
+
+The master document has no worked offer breakdown (no prescribed bundle or price ladder). It has rules and a menu:
+- Section 3: "Offer + Bonuses: what they get, and what sweeteners come with it", plus guarantee and urgency.
+- Intake rule: "Offer: only if straight to product page. Exact prices, tiers, bonuses, guarantee. Never invent prices."
+- Offer framings it lists: "price-agnostic / BOGO named / guarantee-led / kit-led / quantity-as-course".
+- PDP slide 01: an offer badge "must reflect my real offer"; slide 09: do not fabricate a complementary product.
+- Offer block: per-day or per-use cost math if real; "free gift or free shipping callouts if real"; "No manufactured
+  urgency unless the brand truth gives you a real deadline."
+- CTA rule: button text names the offer, one-line guarantee subtext under it, "Sticky bottom bar on mobile only".
+- Its own diagnosis rule: "Weak CTR with good impressions means hook and lead. Good clicks but weak conversion means the
+  belief shift did not complete, strengthen the body. Add-to-cart but no purchase means risk, offer, urgency."
+
+| | Kit + 1 free oil (gift) | 3-Month Kit at $79.99 (kit-led, quantity-as-course) |
+|---|---|---|
+| Allowed by the doc | Yes: free gift callout "if real", bonus stacking is a listed device | Yes: "quantity-as-course" is a listed framing; per-use math is encouraged |
+| Real deadline for urgency | Yes (a dated promotion) | Yes (a dated promotion) |
+| AOV | unchanged ($49.99) | +60% ($79.99) |
+| Margin after COGS and card fees | $27 to $31 (down from $34.74) | $49 to $56 (up) |
+| Cost per night (30 nights per oil) | $0.83 (60 nights for $49.99) | $0.89 (90 nights for $79.99) |
+| Fits "do not drop AOV" | No (neutral AOV, lower margin) | Yes |
+| Needs | supplier quote for an extra oil | supplier quote for kit + 2 oils, new Shopify product |
+
+By the doc's own rule the first lever is not the offer. Clicks are good (1,708 social sessions) and add-to-cart is weak
+(0.7%), which the doc reads as "belief shift did not complete, strengthen the body". The offer rule applies after
+add-to-cart, and the add-to-cart to order step here is healthy (78% of social checkouts complete). So: round 1 changes
+the page (mechanism and price block early, sticky bar) with the offer frozen at $49.99. Round 2 tests the 3-Month Kit
+as the one offer change. The doc's "one variable per round" rule is also the answer to "the offer has been changed so
+many times".
+
+## 6. Mobile round 1: what changed in `pdp/ninu-pdp.html` (below 900px only; desktop unchanged)
+
+- One-line top bar (dropped the bonnet text, which is in the bullets).
+- Compact nav (smaller logo and cart button).
+- Thumbnail row hidden on mobile; a "1/12" counter sits under the gallery instead.
+- New benefit line under the headline: "Oil poured on your hair mostly stays on your hair. These hollow tips part the strands
+  and release it where it matters: your scalp." (a mechanism statement, no result claim; check you are happy with
+  "mostly").
+- Price block moves above the intro and bullets; the trust bar and "Trusted by" block follow it.
+- Sticky bottom bar: price (follows the selected option and quantity), "Ships <date> · 30-day guarantee" and an
+  Add to Basket button that uses the same add function and analytics event as the main button.
+- The theme's purple scroll-to-top button and the "Low stock" pill are hidden on mobile (the bar carries the ship date).
+- Whitespace minified: 50,954 to 49,728 bytes (limit 51,200).
+- Not touched: the "EARLY BLACK FRIDAY" pill inside slide 1, "Trusted by 10,000+ women", the reviews and receipts.

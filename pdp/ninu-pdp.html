@@ -1,526 +1,466 @@
-
-<style>.ninu-wrap{--bg:#F5EFE6;--card:#FBF7F0;--ink:#241812;--muted:#7A6A5C;--line:#E4D9CB;--acc:#B85A3E;--acc-2:#8E3F27;--gold:#C79A5A;--sage:#5C7A55;--white:#fff;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);box-sizing:border-box;line-height:1.5}.ninu-wrap *,.ninu-wrap *::before,.ninu-wrap *::after{box-sizing:border-box}.ninu-wrap img{max-width:100%;display:block}.ninu-topbar{background:var(--ink);color:#F0E6D8;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 14px}.ninu-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--line);background:var(--bg)}.ninu-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;letter-spacing:.28em;font-weight:500}.ninu-cart-btn{background:none;border:1px solid var(--ink);border-radius:999px;padding:9px 16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;display:flex;gap:8px;align-items:center;color:var(--ink)}.ninu-cart-btn .ninu-cart-count{background:var(--acc);color:#fff;border-radius:999px;min-width:20px;height:20px;font-size:11px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px}.ninu-pdp{max-width:1240px;margin:0 auto;padding:36px 28px 60px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px}@media(max-width:900px){.ninu-pdp{grid-template-columns:1fr;gap:28px;padding:20px 16px 40px}}.ninu-gallery{display:grid;grid-template-columns:72px 1fr;gap:12px;position:sticky;top:20px;align-self:start}@media(max-width:900px){.ninu-gallery{grid-template-columns:1fr;position:static}}.ninu-thumbs{display:flex;flex-direction:column;gap:8px;max-height:600px;overflow-y:auto;scrollbar-width:none}.ninu-thumbs::-webkit-scrollbar{display:none}@media(max-width:900px){.ninu-thumbs{flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none}}.ninu-thumb{width:72px;height:72px;background:var(--card);border:1.5px solid transparent;border-radius:4px;overflow:hidden;cursor:pointer;flex-shrink:0;transition:border-color .15s}.ninu-thumb.active{border-color:var(--acc)}.ninu-thumb img{width:100%;height:100%;object-fit:cover}.ninu-main-img{background:var(--card);border-radius:6px;aspect-ratio:1/1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}.ninu-main-img::-webkit-scrollbar{display:none}.ninu-main-img img{width:100%;height:100%;object-fit:cover;flex-shrink:0;scroll-snap-align:center}.ninu-info{padding-top:6px}.ninu-pill{display:inline-block;background:var(--ink);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:3px;margin-bottom:12px;font-weight:700}.ninu-h1{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:30px;line-height:1.08;letter-spacing:-.3px;font-weight:800;text-transform:uppercase;margin:0 0 8px;color:var(--ink)}.ninu-intro{font-size:14px;line-height:1.5;color:#3B2C22;margin:0 0 14px}.ninu-features{list-style:none;padding:0;margin:0 0 10px;display:grid;grid-template-columns:1fr;gap:4px}.ninu-features li{position:relative;padding-left:14px;font-size:12.5px;line-height:1.45;color:var(--ink)}.ninu-features li::before{content:'•';position:absolute;left:2px;color:var(--acc);font-weight:800;top:-2px;font-size:14px}.ninu-faqlink{display:inline-block;font-size:12px;color:var(--muted);text-decoration:underline;margin:0 0 16px;cursor:pointer;background:none;border:none;padding:0;font-family:inherit}.ninu-opts{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}.ninu-opt{position:relative;border:2px solid var(--line);border-radius:12px;background:var(--white);transition:all .18s;overflow:hidden}.ninu-opt:hover{border-color:var(--muted)}.ninu-opt.selected{border-color:var(--acc);background:linear-gradient(180deg,#FEFAF3,#FBF3E8)}.ninu-opt input{position:absolute;opacity:0;pointer-events:none}.ninu-opt-head{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;cursor:pointer}.ninu-opt-main{flex:1;min-width:0}.ninu-opt-title{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:.01em}.ninu-opt-sub{font-size:11.5px;color:var(--muted);margin-top:1px;line-height:1.35}.ninu-opt-save{display:inline-block;background:var(--acc);color:#fff;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:3px 7px;border-radius:4px;margin-top:7px}.ninu-opt-price-row{margin-top:6px;display:flex;align-items:baseline;gap:8px}.ninu-opt-price{font-family:'Inter',Arial,sans-serif;font-size:22px;font-weight:800;color:var(--ink);line-height:1}.ninu-opt-radio{width:20px;height:20px;border-radius:999px;border:2px solid var(--muted);flex-shrink:0;position:relative;background:var(--white);margin-top:2px}.ninu-opt.selected .ninu-opt-radio{border-color:var(--acc)}.ninu-opt.selected .ninu-opt-radio::after{content:'';position:absolute;inset:3px;background:var(--acc);border-radius:999px}.ninu-opt-body{display:none;padding:0 16px 16px}.ninu-opt.selected .ninu-opt-body{display:block}.ninu-opt-mbg{font-size:12px;color:var(--acc-2);font-weight:600;margin:0 0 12px}.ninu-opt-mbg::before{content:'✓';color:var(--sage);font-weight:700;margin-right:5px}.ninu-qty{display:flex;align-items:center;justify-content:center;gap:0;margin:0 0 10px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px;max-width:200px;margin-inline:auto}.ninu-qty button{width:36px;height:34px;border:none;background:none;font-size:18px;font-weight:600;cursor:pointer;color:var(--ink);font-family:inherit}.ninu-qty-val{font-size:15px;font-weight:700;flex:1;text-align:center}.ninu-social{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;max-width:480px;margin:12px auto 0}.ninu-social-av{display:flex;flex-shrink:0}.ninu-social-av span{width:30px;height:30px;border-radius:999px;background:#D9CFC2;border:2px solid var(--card);margin-left:-9px;overflow:hidden;display:block}.ninu-social-av span:first-child{margin-left:0}.ninu-social-av img{width:100%;height:100%;object-fit:cover;display:block}.ninu-social-t{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:1px}.ninu-social-d{font-size:10.5px;color:var(--muted);line-height:1.3}.ninu-faq{background:var(--bg);padding:64px 20px 40px;max-width:800px;margin:0 auto}.ninu-faq-h{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:500;line-height:1.1;text-align:center;margin:0 0 32px}.ninu-faq details{border-bottom:1px solid var(--line);padding:14px 0}.ninu-faq details summary{list-style:none;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px}.ninu-faq details summary::after{content:'+';font-size:22px;font-weight:400;color:var(--muted);transition:transform .2s;flex-shrink:0}.ninu-faq details[open] summary::after{transform:rotate(45deg)}.ninu-faq details summary::-webkit-details-marker{display:none}.ninu-faq details p{margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#3B2C22}.ninu-atc{width:100%;background:var(--ink);color:#F0E6D8;border:none;padding:20px;font-size:14px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border-radius:10px;cursor:pointer;transition:transform .12s;font-family:inherit}.ninu-atc:hover{transform:translateY(-1px);background:var(--acc-2)}.ninu-atc:disabled{opacity:.6;cursor:wait}.ninu-stock{position:fixed;bottom:14px;left:14px;z-index:9997;display:flex;align-items:center;gap:6px;background:rgba(20,12,8,.95);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;padding:6px 10px 6px 8px;border-radius:999px;box-shadow:0 3px 12px rgba(20,12,8,.28);text-transform:uppercase}.ninu-stock-dot{width:7px;height:7px;border-radius:999px;background:#FF3B30;position:relative;flex-shrink:0;box-shadow:0 0 6px rgba(255,59,48,.7)}.ninu-stock-dot::before,.ninu-stock-dot::after{content:'';position:absolute;inset:0;border-radius:999px;background:#FF3B30;animation:ninupulse 1.6s ease-out infinite}.ninu-stock-dot::after{animation-delay:.8s}@keyframes ninupulse{0%{transform:scale(1);opacity:.95}100%{transform:scale(3.2);opacity:0}}.ninu-scrim{position:fixed;inset:0;background:rgba(20,12,8,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:9998}.ninu-scrim.open{opacity:1;pointer-events:auto}.ninu-sidecart{position:fixed;top:0;right:0;height:100vh;width:min(440px,100vw);background:var(--bg);z-index:9999;transform:translateX(100%);transition:transform .28s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;box-shadow:-20px 0 40px rgba(20,12,8,.15)}.ninu-sidecart.open{transform:translateX(0)}.ninu-sc-head{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.ninu-sc-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;letter-spacing:.02em}.ninu-sc-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink);line-height:1}.ninu-sc-body{flex:1;overflow-y:auto;padding:22px 26px}.ninu-empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}.ninu-line{display:flex;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:20px}.ninu-line-img{width:76px;height:92px;background:var(--card);border-radius:6px;flex-shrink:0;overflow:hidden}.ninu-line-img img{width:100%;height:100%;object-fit:cover}.ninu-line-info{flex:1;font-size:14px;min-width:0}.ninu-line-title{font-weight:600;margin-bottom:2px}.ninu-line-tier{font-size:12px;color:var(--muted);margin-bottom:8px}.ninu-line-price{font-weight:700}.ninu-line-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:11px;text-decoration:underline;padding:0;margin-top:4px}.ninu-upsell{background:linear-gradient(180deg,#FEF9F0,#FBEEDD);border:1.5px dashed var(--gold);border-radius:10px;padding:16px 18px;margin-bottom:18px;position:relative}.ninu-upsell-h{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc-2);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px}.ninu-upsell-h::before{content:'★';color:var(--gold)}.ninu-upsell-t{font-size:14.5px;font-weight:700;margin-bottom:4px}.ninu-upsell-d{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:12px}.ninu-upsell-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.ninu-upsell-price{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600}.ninu-upsell-price small{font-size:12px;color:var(--muted);font-family:inherit;font-weight:400}.ninu-upsell-add{background:var(--sage);color:#fff;border:none;padding:10px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border-radius:6px;cursor:pointer;font-family:inherit}.ninu-upsell-add:hover{background:#4A6544}.ninu-upsell.added{background:#EEF3EA;border-style:solid;border-color:var(--sage)}.ninu-upsell.added .ninu-upsell-add{background:var(--muted)}.ninu-stack{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}.ninu-stack-h{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}.ninu-stack ul{list-style:none;padding:0;margin:0;font-size:13px;line-height:1.7}.ninu-stack ul li{display:flex;justify-content:space-between;gap:10px;padding:3px 0}.ninu-stack ul li .k::before{content:'✓ ';color:var(--sage);font-weight:700}.ninu-stack ul li .v{color:var(--sage);font-weight:700}.ninu-totals{padding:14px 0;border-top:1px solid var(--line);font-size:14px}.ninu-totals-row{display:flex;justify-content:space-between;margin-bottom:6px}.ninu-totals-row.big{font-size:20px;font-weight:700;margin-top:8px}.ninu-sc-foot{padding:20px 26px;border-top:1px solid var(--line);background:var(--card)}.ninu-checkout{width:100%;background:var(--acc);color:#fff;border:none;padding:18px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;border-radius:10px;cursor:pointer;font-family:inherit}.ninu-checkout:hover{background:var(--acc-2)}.ninu-checkout:disabled{opacity:.5;cursor:not-allowed}.ninu-sc-note{text-align:center;font-size:11px;color:var(--muted);margin-top:10px;line-height:1.5}.ninu-ba{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}.ninu-ba-inner{max-width:1240px;margin:0 auto;padding:0 28px}@media(max-width:900px){.ninu-ba{padding:44px 0}.ninu-ba-inner{padding:0 16px}}.ninu-ba-eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);text-align:center;font-weight:600;margin-bottom:14px}.ninu-ba-h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:500;line-height:1.05;letter-spacing:-.5px;text-align:center;margin:0 0 12px}.ninu-ba-sub{font-size:15px;color:var(--muted);text-align:center;max-width:560px;margin:0 auto 36px;line-height:1.55}.ninu-ba-scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,1fr);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.ninu-ba-scroller::-webkit-scrollbar{display:none}@media(min-width:900px){.ninu-ba-scroller{grid-auto-columns:1fr;grid-auto-flow:column;overflow:visible}}.ninu-ba-card{scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.ninu-ba-split{position:relative;aspect-ratio:2/1;background:var(--card);overflow:hidden}.ninu-ba-split img{width:100%;height:100%;object-fit:cover;display:block}.ninu-ba-tag{position:absolute;top:10px;background:rgba(20,12,8,.78);color:#F0E6D8;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:4px}.ninu-ba-tag.left{left:10px}.ninu-ba-tag.right{right:10px}.ninu-ba-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}.ninu-ba-stars{color:var(--gold);letter-spacing:2px;font-size:15px}.ninu-ba-card blockquote{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.35;color:#2F231A;font-style:italic;font-weight:500}.ninu-ba-attrib{font-size:12px;color:var(--muted);margin-top:auto;letter-spacing:.02em}.ninu-ba-dots{display:flex;gap:6px;justify-content:center;margin-top:18px}.ninu-ba-dots span{width:6px;height:6px;border-radius:99px;background:var(--line)}@media(min-width:900px){.ninu-ba-dots{display:none}}.ninu-protect{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:none;align-items:center;gap:12px;cursor:pointer;transition:border-color .18s,background .18s}.ninu-protect.visible{display:flex}.ninu-protect:hover{border-color:var(--muted)}.ninu-protect.checked{border-color:var(--sage);background:#F3F6F0}.ninu-protect-icon{flex-shrink:0;width:36px;height:36px;border-radius:8px;background:#EEF3EA;color:var(--sage);display:flex;align-items:center;justify-content:center}.ninu-protect-icon svg{width:22px;height:22px;display:block}.ninu-protect-text{flex:1;min-width:0}.ninu-protect-t{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:1px}.ninu-protect-d{font-size:11.5px;color:var(--muted);line-height:1.4}.ninu-protect-side{display:flex;align-items:center;gap:10px;flex-shrink:0}.ninu-protect-side input{position:absolute;opacity:0;pointer-events:none}.ninu-protect-check{width:20px;height:20px;border-radius:5px;border:2px solid var(--muted);background:var(--white);position:relative;transition:all .18s;flex-shrink:0}.ninu-protect-check::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);opacity:0;transition:opacity .18s}.ninu-protect.checked .ninu-protect-check{border-color:var(--sage);background:var(--sage)}.ninu-protect.checked .ninu-protect-check::after{opacity:1}.ninu-protect-price{font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap}.ninu-tb{--bg:#F5EFE6;--card:#FBF7F0;--ink:#241812;--muted:#7A6A5C;--line:#E4D9CB;--acc:#B85A3E;--acc-2:#8E3F27;--gold:#C79A5A;--sage:#5C7A55;--white:#fff;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);box-sizing:border-box;max-width:480px;margin:12px auto 0}.ninu-tb *,.ninu-tb *::before,.ninu-tb *::after{box-sizing:border-box}.ninu-tb-guarantee{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:10px}.ninu-tb-guarantee-icon{flex-shrink:0;width:32px;height:32px;border-radius:999px;background:#EEF3EA;color:var(--sage);display:flex;align-items:center;justify-content:center}.ninu-tb-guarantee-icon svg{width:18px;height:18px;display:block}.ninu-tb-guarantee-t{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:1px}.ninu-tb-guarantee-d{font-size:11px;color:var(--muted);line-height:1.3}.ninu-tb-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 6px;margin-bottom:10px}.ninu-tb-icon{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px;padding:0 2px}.ninu-tb-icon-circle{width:28px;height:28px;border-radius:999px;background:var(--white);border:1px solid var(--line);color:var(--acc-2);display:flex;align-items:center;justify-content:center;flex-shrink:0}.ninu-tb-icon-circle svg{width:14px;height:14px;display:block}.ninu-tb-icon span{font-size:9.5px;line-height:1.2;font-weight:600;color:var(--ink);letter-spacing:.01em}.ninu-tb-payments{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:10px}.ninu-tb-pay{width:36px;height:24px;border-radius:5px;background:var(--white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted)}.ninu-tb-pay svg{width:19px;height:19px;display:block}.ninu-tb-pay-wide{width:44px}.ninu-tb-pay-wide svg{width:34px;height:18px}.ninu-tb-pay.ninu-tb-pay-text{font-size:8.5px;font-weight:800;letter-spacing:.02em;color:var(--muted)}@media (max-width:360px){ .ninu-tb-icons{padding:14px 4px} .ninu-tb-icon span{font-size:9.5px}}</style>
-
+<style>.ninu-wrap{--bg:#F5EFE6;--card:#FBF7F0;--ink:#241812;--muted:#7A6A5C;--line:#E4D9CB;--acc:#B85A3E;--acc-2:#8E3F27;--gold:#C79A5A;--sage:#5C7A55;--white:#fff;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);box-sizing:border-box;line-height:1.5}.ninu-wrap *,.ninu-wrap *::before,.ninu-wrap *::after{box-sizing:border-box}.ninu-wrap img{max-width:100%;display:block}.ninu-topbar{background:var(--ink);color:#F0E6D8;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 14px}.ninu-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--line);background:var(--bg)}.ninu-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;letter-spacing:.28em;font-weight:500}.ninu-cart-btn{background:none;border:1px solid var(--ink);border-radius:999px;padding:9px 16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;display:flex;gap:8px;align-items:center;color:var(--ink)}.ninu-cart-btn .ninu-cart-count{background:var(--acc);color:#fff;border-radius:999px;min-width:20px;height:20px;font-size:11px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px}.ninu-pdp{max-width:1240px;margin:0 auto;padding:36px 28px 60px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px}@media(max-width:900px){.ninu-pdp{grid-template-columns:1fr;gap:28px;padding:20px 16px 40px}}.ninu-gallery{display:grid;grid-template-columns:72px 1fr;gap:12px;position:sticky;top:20px;align-self:start}@media(max-width:900px){.ninu-gallery{grid-template-columns:1fr;position:static}}.ninu-thumbs{display:flex;flex-direction:column;gap:8px;max-height:600px;overflow-y:auto;scrollbar-width:none}.ninu-thumbs::-webkit-scrollbar{display:none}@media(max-width:900px){.ninu-thumbs{flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none}}.ninu-thumb{width:72px;height:72px;background:var(--card);border:1.5px solid transparent;border-radius:4px;overflow:hidden;cursor:pointer;flex-shrink:0;transition:border-color .15s}.ninu-thumb.active{border-color:var(--acc)}.ninu-thumb img{width:100%;height:100%;object-fit:cover}.ninu-main-img{background:var(--card);border-radius:6px;aspect-ratio:1/1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}.ninu-main-img::-webkit-scrollbar{display:none}.ninu-main-img img{width:100%;height:100%;object-fit:cover;flex-shrink:0;scroll-snap-align:center}.ninu-info{padding-top:6px}.ninu-pill{display:inline-block;background:var(--ink);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:3px;margin-bottom:12px;font-weight:700}.ninu-h1{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:30px;line-height:1.08;letter-spacing:-.3px;font-weight:800;text-transform:uppercase;margin:0 0 8px;color:var(--ink)}.ninu-intro{font-size:14px;line-height:1.5;color:#3B2C22;margin:0 0 14px}.ninu-features{list-style:none;padding:0;margin:0 0 10px;display:grid;grid-template-columns:1fr;gap:4px}.ninu-features li{position:relative;padding-left:14px;font-size:12.5px;line-height:1.45;color:var(--ink)}.ninu-features li::before{content:'•';position:absolute;left:2px;color:var(--acc);font-weight:800;top:-2px;font-size:14px}.ninu-faqlink{display:inline-block;font-size:12px;color:var(--muted);text-decoration:underline;margin:0 0 16px;cursor:pointer;background:none;border:none;padding:0;font-family:inherit}.ninu-opts{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}.ninu-opt{position:relative;border:2px solid var(--line);border-radius:12px;background:var(--white);transition:all .18s;overflow:hidden}.ninu-opt:hover{border-color:var(--muted)}.ninu-opt.selected{border-color:var(--acc);background:linear-gradient(180deg,#FEFAF3,#FBF3E8)}.ninu-opt input{position:absolute;opacity:0;pointer-events:none}.ninu-opt-head{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;cursor:pointer}.ninu-opt-main{flex:1;min-width:0}.ninu-opt-title{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:.01em}.ninu-opt-sub{font-size:11.5px;color:var(--muted);margin-top:1px;line-height:1.35}.ninu-opt-save{display:inline-block;background:var(--acc);color:#fff;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:3px 7px;border-radius:4px;margin-top:7px}.ninu-opt-price-row{margin-top:6px;display:flex;align-items:baseline;gap:8px}.ninu-opt-price{font-family:'Inter',Arial,sans-serif;font-size:22px;font-weight:800;color:var(--ink);line-height:1}.ninu-opt-radio{width:20px;height:20px;border-radius:999px;border:2px solid var(--muted);flex-shrink:0;position:relative;background:var(--white);margin-top:2px}.ninu-opt.selected .ninu-opt-radio{border-color:var(--acc)}.ninu-opt.selected .ninu-opt-radio::after{content:'';position:absolute;inset:3px;background:var(--acc);border-radius:999px}.ninu-opt-body{display:none;padding:0 16px 16px}.ninu-opt.selected .ninu-opt-body{display:block}.ninu-opt-mbg{font-size:12px;color:var(--acc-2);font-weight:600;margin:0 0 12px}.ninu-opt-mbg::before{content:'✓';color:var(--sage);font-weight:700;margin-right:5px}.ninu-qty{display:flex;align-items:center;justify-content:center;gap:0;margin:0 0 10px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px;max-width:200px;margin-inline:auto}.ninu-qty button{width:36px;height:34px;border:none;background:none;font-size:18px;font-weight:600;cursor:pointer;color:var(--ink);font-family:inherit}.ninu-qty-val{font-size:15px;font-weight:700;flex:1;text-align:center}.ninu-social{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;max-width:480px;margin:12px auto 0}.ninu-social-av{display:flex;flex-shrink:0}.ninu-social-av span{width:30px;height:30px;border-radius:999px;background:#D9CFC2;border:2px solid var(--card);margin-left:-9px;overflow:hidden;display:block}.ninu-social-av span:first-child{margin-left:0}.ninu-social-av img{width:100%;height:100%;object-fit:cover;display:block}.ninu-social-t{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:1px}.ninu-social-d{font-size:10.5px;color:var(--muted);line-height:1.3}.ninu-faq{background:var(--bg);padding:64px 20px 40px;max-width:800px;margin:0 auto}.ninu-faq-h{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:500;line-height:1.1;text-align:center;margin:0 0 32px}.ninu-faq details{border-bottom:1px solid var(--line);padding:14px 0}.ninu-faq details summary{list-style:none;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px}.ninu-faq details summary::after{content:'+';font-size:22px;font-weight:400;color:var(--muted);transition:transform .2s;flex-shrink:0}.ninu-faq details[open] summary::after{transform:rotate(45deg)}.ninu-faq details summary::-webkit-details-marker{display:none}.ninu-faq details p{margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#3B2C22}.ninu-atc{width:100%;background:var(--ink);color:#F0E6D8;border:none;padding:20px;font-size:14px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border-radius:10px;cursor:pointer;transition:transform .12s;font-family:inherit}.ninu-atc:hover{transform:translateY(-1px);background:var(--acc-2)}.ninu-atc:disabled{opacity:.6;cursor:wait}.ninu-stock{position:fixed;bottom:14px;left:14px;z-index:9997;display:flex;align-items:center;gap:6px;background:rgba(20,12,8,.95);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;padding:6px 10px 6px 8px;border-radius:999px;box-shadow:0 3px 12px rgba(20,12,8,.28);text-transform:uppercase}.ninu-stock-dot{width:7px;height:7px;border-radius:999px;background:#FF3B30;position:relative;flex-shrink:0;box-shadow:0 0 6px rgba(255,59,48,.7)}.ninu-stock-dot::before,.ninu-stock-dot::after{content:'';position:absolute;inset:0;border-radius:999px;background:#FF3B30;animation:ninupulse 1.6s ease-out infinite}.ninu-stock-dot::after{animation-delay:.8s}@keyframes ninupulse{0%{transform:scale(1);opacity:.95}100%{transform:scale(3.2);opacity:0}}.ninu-scrim{position:fixed;inset:0;background:rgba(20,12,8,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:9998}.ninu-scrim.open{opacity:1;pointer-events:auto}.ninu-sidecart{position:fixed;top:0;right:0;height:100vh;width:min(440px,100vw);background:var(--bg);z-index:9999;transform:translateX(100%);transition:transform .28s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;box-shadow:-20px 0 40px rgba(20,12,8,.15)}.ninu-sidecart.open{transform:translateX(0)}.ninu-sc-head{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.ninu-sc-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;letter-spacing:.02em}.ninu-sc-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink);line-height:1}.ninu-sc-body{flex:1;overflow-y:auto;padding:22px 26px}.ninu-empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}.ninu-line{display:flex;gap:14px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:20px}.ninu-line-img{width:76px;height:92px;background:var(--card);border-radius:6px;flex-shrink:0;overflow:hidden}.ninu-line-img img{width:100%;height:100%;object-fit:cover}.ninu-line-info{flex:1;font-size:14px;min-width:0}.ninu-line-title{font-weight:600;margin-bottom:2px}.ninu-line-tier{font-size:12px;color:var(--muted);margin-bottom:8px}.ninu-line-price{font-weight:700}.ninu-line-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:11px;text-decoration:underline;padding:0;margin-top:4px}.ninu-upsell{background:linear-gradient(180deg,#FEF9F0,#FBEEDD);border:1.5px dashed var(--gold);border-radius:10px;padding:16px 18px;margin-bottom:18px;position:relative}.ninu-upsell-h{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc-2);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px}.ninu-upsell-h::before{content:'★';color:var(--gold)}.ninu-upsell-t{font-size:14.5px;font-weight:700;margin-bottom:4px}.ninu-upsell-d{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:12px}.ninu-upsell-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.ninu-upsell-price{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600}.ninu-upsell-price small{font-size:12px;color:var(--muted);font-family:inherit;font-weight:400}.ninu-upsell-add{background:var(--sage);color:#fff;border:none;padding:10px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border-radius:6px;cursor:pointer;font-family:inherit}.ninu-upsell-add:hover{background:#4A6544}.ninu-upsell.added{background:#EEF3EA;border-style:solid;border-color:var(--sage)}.ninu-upsell.added .ninu-upsell-add{background:var(--muted)}.ninu-stack{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}.ninu-stack-h{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}.ninu-stack ul{list-style:none;padding:0;margin:0;font-size:13px;line-height:1.7}.ninu-stack ul li{display:flex;justify-content:space-between;gap:10px;padding:3px 0}.ninu-stack ul li .k::before{content:'✓ ';color:var(--sage);font-weight:700}.ninu-stack ul li .v{color:var(--sage);font-weight:700}.ninu-totals{padding:14px 0;border-top:1px solid var(--line);font-size:14px}.ninu-totals-row{display:flex;justify-content:space-between;margin-bottom:6px}.ninu-totals-row.big{font-size:20px;font-weight:700;margin-top:8px}.ninu-sc-foot{padding:20px 26px;border-top:1px solid var(--line);background:var(--card)}.ninu-checkout{width:100%;background:var(--acc);color:#fff;border:none;padding:18px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;border-radius:10px;cursor:pointer;font-family:inherit}.ninu-checkout:hover{background:var(--acc-2)}.ninu-checkout:disabled{opacity:.5;cursor:not-allowed}.ninu-sc-note{text-align:center;font-size:11px;color:var(--muted);margin-top:10px;line-height:1.5}.ninu-ba{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}.ninu-ba-inner{max-width:1240px;margin:0 auto;padding:0 28px}@media(max-width:900px){.ninu-ba{padding:44px 0}.ninu-ba-inner{padding:0 16px}}.ninu-ba-eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);text-align:center;font-weight:600;margin-bottom:14px}.ninu-ba-h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:500;line-height:1.05;letter-spacing:-.5px;text-align:center;margin:0 0 12px}.ninu-ba-sub{font-size:15px;color:var(--muted);text-align:center;max-width:560px;margin:0 auto 36px;line-height:1.55}.ninu-ba-scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,1fr);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.ninu-ba-scroller::-webkit-scrollbar{display:none}@media(min-width:900px){.ninu-ba-scroller{grid-auto-columns:1fr;grid-auto-flow:column;overflow:visible}}.ninu-ba-card{scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.ninu-ba-split{position:relative;aspect-ratio:2/1;background:var(--card);overflow:hidden}.ninu-ba-split img{width:100%;height:100%;object-fit:cover;display:block}.ninu-ba-tag{position:absolute;top:10px;background:rgba(20,12,8,.78);color:#F0E6D8;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:4px}.ninu-ba-tag.left{left:10px}.ninu-ba-tag.right{right:10px}.ninu-ba-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}.ninu-ba-stars{color:var(--gold);letter-spacing:2px;font-size:15px}.ninu-ba-card blockquote{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.35;color:#2F231A;font-style:italic;font-weight:500}.ninu-ba-attrib{font-size:12px;color:var(--muted);margin-top:auto;letter-spacing:.02em}.ninu-ba-dots{display:flex;gap:6px;justify-content:center;margin-top:18px}.ninu-ba-dots span{width:6px;height:6px;border-radius:99px;background:var(--line)}@media(min-width:900px){.ninu-ba-dots{display:none}}.ninu-protect{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:16px;display:none;align-items:center;gap:12px;cursor:pointer;transition:border-color .18s,background .18s}.ninu-protect.visible{display:flex}.ninu-protect:hover{border-color:var(--muted)}.ninu-protect.checked{border-color:var(--sage);background:#F3F6F0}.ninu-protect-icon{flex-shrink:0;width:36px;height:36px;border-radius:8px;background:#EEF3EA;color:var(--sage);display:flex;align-items:center;justify-content:center}.ninu-protect-icon svg{width:22px;height:22px;display:block}.ninu-protect-text{flex:1;min-width:0}.ninu-protect-t{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:1px}.ninu-protect-d{font-size:11.5px;color:var(--muted);line-height:1.4}.ninu-protect-side{display:flex;align-items:center;gap:10px;flex-shrink:0}.ninu-protect-side input{position:absolute;opacity:0;pointer-events:none}.ninu-protect-check{width:20px;height:20px;border-radius:5px;border:2px solid var(--muted);background:var(--white);position:relative;transition:all .18s;flex-shrink:0}.ninu-protect-check::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);opacity:0;transition:opacity .18s}.ninu-protect.checked .ninu-protect-check{border-color:var(--sage);background:var(--sage)}.ninu-protect.checked .ninu-protect-check::after{opacity:1}.ninu-protect-price{font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap}.ninu-tb{--bg:#F5EFE6;--card:#FBF7F0;--ink:#241812;--muted:#7A6A5C;--line:#E4D9CB;--acc:#B85A3E;--acc-2:#8E3F27;--gold:#C79A5A;--sage:#5C7A55;--white:#fff;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);box-sizing:border-box;max-width:480px;margin:12px auto 0}.ninu-tb *,.ninu-tb *::before,.ninu-tb *::after{box-sizing:border-box}.ninu-tb-guarantee{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:10px}.ninu-tb-guarantee-icon{flex-shrink:0;width:32px;height:32px;border-radius:999px;background:#EEF3EA;color:var(--sage);display:flex;align-items:center;justify-content:center}.ninu-tb-guarantee-icon svg{width:18px;height:18px;display:block}.ninu-tb-guarantee-t{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:1px}.ninu-tb-guarantee-d{font-size:11px;color:var(--muted);line-height:1.3}.ninu-tb-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 6px;margin-bottom:10px}.ninu-tb-icon{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px;padding:0 2px}.ninu-tb-icon-circle{width:28px;height:28px;border-radius:999px;background:var(--white);border:1px solid var(--line);color:var(--acc-2);display:flex;align-items:center;justify-content:center;flex-shrink:0}.ninu-tb-icon-circle svg{width:14px;height:14px;display:block}.ninu-tb-icon span{font-size:9.5px;line-height:1.2;font-weight:600;color:var(--ink);letter-spacing:.01em}.ninu-tb-payments{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:10px}.ninu-tb-pay{width:36px;height:24px;border-radius:5px;background:var(--white);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted)}.ninu-tb-pay svg{width:19px;height:19px;display:block}.ninu-tb-pay-wide{width:44px}.ninu-tb-pay-wide svg{width:34px;height:18px}.ninu-tb-pay.ninu-tb-pay-text{font-size:8.5px;font-weight:800;letter-spacing:.02em;color:var(--muted)}@media (max-width:360px){ .ninu-tb-icons{padding:14px 4px} .ninu-tb-icon span{font-size:9.5px}}.ninu-sub{font-size:13.5px;line-height:1.4;color:#3B2C22;margin:0 0 12px;font-weight:500}.ninu-cnt,.ninu-bar{display:none}@media(max-width:900px){.ninu-topbar{font-size:10px;letter-spacing:.06em;padding:8px 8px}.ninu-nav{padding:8px 16px}.ninu-logo{font-size:22px}.ninu-cart-btn{padding:6px 14px}.ninu-thumbs,.ninu-pill,.ninu-stock{display:none}.ninu-pdp{padding:12px 16px 24px;gap:14px}.ninu-cnt{display:block;justify-self:end;color:var(--muted);font-size:11px;font-weight:600;margin:-6px 2px -8px}.ninu-info{display:flex;flex-direction:column}.ninu-h1{font-size:21px;letter-spacing:-.2px;margin:0 0 6px}.ninu-opts,.ninu-social,.ninu-tb{order:1}.ninu-intro,.ninu-features,.ninu-faqlink{order:2}.ninu-wrap{margin-bottom:68px}.scroll-to-top-btn{display:none!important}.ninu-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:9998;background:var(--card);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));align-items:center;gap:12px;box-shadow:0 -4px 16px rgba(36,24,18,.08)}.ninu-bar-t{flex:1;display:flex;flex-direction:column;line-height:1.25}.ninu-bar-t b{font-size:19px}.ninu-bar-t span{font-size:11px;color:var(--muted)}.ninu-bar-t i{font-style:normal}.ninu-bar-btn{width:auto;flex:0 0 auto;padding:15px 22px;font-size:12px;letter-spacing:.14em;border-radius:8px}}</style>
 <div class="ninu-wrap">
-  <div class="ninu-topbar">FREE US SHIPPING · 30-DAY MONEY-BACK GUARANTEE · SATIN BONNET INCLUDED WITH KIT</div>
-
-  <nav class="ninu-nav">
-    <div class="ninu-logo">N I N U</div>
-    <button class="ninu-cart-btn" onclick="ninuOpenCart()">
-      <span>Cart</span>
-      <span class="ninu-cart-count" id="ninu-count">0</span>
-    </button>
-  </nav>
-
-  <div class="ninu-pdp">
-    
-    <div class="ninu-gallery">
-      <div class="ninu-thumbs" id="ninu-thumbs"></div>
-      <div class="ninu-main-img" id="ninu-scroller" onscroll="ninuSync()"></div>
-    </div>
-
-    
-    <div class="ninu-info">
-      <span class="ninu-pill">New</span>
-      <h1 class="ninu-h1">Ninu Scalp Oil Dispenser</h1>
-
-      <p class="ninu-intro">A two-minute nightly routine you&rsquo;ll actually stick to &mdash; no greasy hands, no stained pillows, no scalp routine that quits by week two.</p>
-
-      <ul class="ninu-features">
-        <li>Two-Minute Nightly Routine</li>
-        <li>Mess-Free, Clean Application</li>
-        <li>1-4ml Precision Dosing Chamber</li>
-        <li>Works With Any Scalp Oil</li>
-        <li>Travel-Ready Design</li>
-        <li>60ml Scalp Oil Included (30-Day Supply)</li>
-        <li>Satin Sleep Bonnet Included</li>
-        <li>Free &ldquo;Scalp Routine That Sticks&rdquo; eBook</li>
-      </ul>
-
-      <a href="#ninu-faq" class="ninu-faqlink">View FAQs</a>
-
-      <div class="ninu-opts">
-        <div class="ninu-opt selected" data-tier="kit">
-          <label class="ninu-opt-head" onclick="ninuPick(this.parentNode)">
-            <input type="radio" name="opt" checked>
-            <div class="ninu-opt-main">
-              <div class="ninu-opt-title">The Ninu Kit</div>
-              <div class="ninu-opt-sub">Dispenser + 60ml oil + satin bonnet + free ebook</div>
-              <span class="ninu-opt-save">Best Value</span>
-              <div class="ninu-opt-price-row"><span class="ninu-opt-price">$49.99</span></div>
-            </div>
-            <span class="ninu-opt-radio" aria-hidden="true"></span>
-          </label>
-          <div class="ninu-opt-body">
-            <div class="ninu-opt-mbg">30-Day Money-Back Guarantee</div>
-            <div class="ninu-qty" aria-label="Quantity">
-              <button type="button" onclick="ninuQty(-1)" aria-label="Decrease">&minus;</button>
-              <span class="ninu-qty-val">1</span>
-              <button type="button" onclick="ninuQty(1)" aria-label="Increase">+</button>
-            </div>
-            <button class="ninu-atc" onclick="ninuAdd()">Add to Basket &mdash; <span class="ninu-atc-price">$49.99</span></button>
-          </div>
-        </div>
-
-        <div class="ninu-opt" data-tier="dispenser">
-          <label class="ninu-opt-head" onclick="ninuPick(this.parentNode)">
-            <input type="radio" name="opt">
-            <div class="ninu-opt-main">
-              <div class="ninu-opt-title">Dispenser Only</div>
-              <div class="ninu-opt-sub">Precision applicator + satin bonnet</div>
-              <div class="ninu-opt-price-row"><span class="ninu-opt-price">$39.99</span></div>
-            </div>
-            <span class="ninu-opt-radio" aria-hidden="true"></span>
-          </label>
-          <div class="ninu-opt-body">
-            <div class="ninu-opt-mbg">30-Day Money-Back Guarantee</div>
-            <div class="ninu-qty" aria-label="Quantity">
-              <button type="button" onclick="ninuQty(-1)" aria-label="Decrease">&minus;</button>
-              <span class="ninu-qty-val">1</span>
-              <button type="button" onclick="ninuQty(1)" aria-label="Increase">+</button>
-            </div>
-            <button class="ninu-atc" onclick="ninuAdd()">Add to Basket &mdash; <span class="ninu-atc-price">$39.99</span></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="ninu-social">
-        <div class="ninu-social-av" aria-hidden="true">
-          <span><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/avatar1_small_cce5dc13-91e4-44ce-9151-bb165c871588.jpg?v=1793045428" alt="" loading="lazy"></span>
-          <span><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/avatar2_small_4a1aebec-2aba-48d3-9922-b4a2989b59e3.jpg?v=1793045428" alt="" loading="lazy"></span>
-          <span><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/avatar3_small_2600b51b-b345-4f69-90f3-7804bd23786d.jpg?v=1793045428" alt="" loading="lazy"></span>
-        </div>
-        <div>
-          <div class="ninu-social-t">Trusted by 10,000+ women</div>
-          <div class="ninu-social-d">Postpartum moms who made the switch. Their words, not ours.</div>
-        </div>
-      </div>
-
-      <section class="ninu-tb" aria-label="Guarantee and trust information">
-        <div class="ninu-tb-guarantee">
-          <span class="ninu-tb-guarantee-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3zm-1 15-3-3 1.4-1.4L11 14.2l4.6-4.6L17 11l-6 6z"/></svg>
-          </span>
-          <div>
-            <div class="ninu-tb-guarantee-t">30-Day Money-Back Guarantee</div>
-            <div class="ninu-tb-guarantee-d">Not right for you? Full refund, no hassle.</div>
-          </div>
-        </div>
-
-        
-        <div class="ninu-tb-icons">
-          <div class="ninu-tb-icon">
-            <span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 0 1 6 0v3zm3 4a2 2 0 0 1 1 3.73V19h-2v-2.27A2 2 0 0 1 12 13z"/></svg></span>
-            <span>Secure Checkout</span>
-          </div>
-          <div class="ninu-tb-icon">
-            <span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.54.3C18 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C8 15 17 8 17 8z"/></svg></span>
-            <span>Natural Ingredients</span>
-          </div>
-          <div class="ninu-tb-icon">
-            <span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="#fff"/><rect x="3" y="5" width="18" height="2" fill="#B22234"/><rect x="3" y="9" width="18" height="2" fill="#B22234"/><rect x="3" y="13" width="18" height="2" fill="#B22234"/><rect x="3" y="17" width="18" height="2" fill="#B22234"/><rect x="3" y="5" width="8" height="8" fill="#3C3B6E"/></svg></span>
-            <span>Made in the USA</span>
-          </div>
-          <div class="ninu-tb-icon">
-            <span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h8A1.5 1.5 0 0 1 14 6.5V9h2.1a1.5 1.5 0 0 1 1.21.62l2.4 3.26a1.5 1.5 0 0 1 .29.89V16a1 1 0 0 1-1 1h-.68a2.25 2.25 0 0 1-4.24 0H9.52a2.25 2.25 0 0 1-4.24 0H4a1 1 0 0 1-1-1zm12 6h3.47l-1.74-2.36L15 9.9zM7.4 15.9a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm9 0a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7z"/></svg></span>
-            <span>Free US Shipping</span>
-          </div>
-        </div>
-
-        
-        <div class="ninu-tb-payments" aria-label="Accepted payment methods">
-          <span class="ninu-tb-pay" title="Visa"><svg viewBox="0 0 36 14" fill="#1A1F71"><text x="18" y="11" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" font-style="italic">VISA</text></svg></span>
-          <span class="ninu-tb-pay" title="Mastercard"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="7" fill="#EB001B"/><circle cx="15" cy="12" r="7" fill="#F79E1B"/><path d="M12 6.174a7 7 0 0 0 0 11.652 7 7 0 0 0 0-11.652z" fill="#FF5F00"/></svg></span>
-          <span class="ninu-tb-pay" title="American Express"><svg viewBox="0 0 36 24" style="background:#006FCF"><text x="18" y="15" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="900" fill="#fff" letter-spacing=".3">AMEX</text></svg></span>
-          <span class="ninu-tb-pay" title="PayPal"><svg viewBox="0 0 24 24" fill="#003087"><path d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></svg></span>
-          <span class="ninu-tb-pay" title="Apple Pay"><svg viewBox="0 0 24 24" fill="#000000"><path d="M2.15 4.318a42.16 42.16 0 0 0-.454.003c-.15.005-.303.013-.452.04a1.44 1.44 0 0 0-1.06.772c-.07.138-.114.278-.14.43-.028.148-.037.3-.04.45A10.2 10.2 0 0 0 0 6.222v11.557c0 .07.002.138.003.207.004.15.013.303.04.452.027.15.072.291.142.429a1.436 1.436 0 0 0 .63.63c.138.07.278.115.43.142.148.027.3.036.45.04l.208.003h20.194l.207-.003c.15-.004.303-.013.452-.04.15-.027.291-.071.428-.141a1.432 1.432 0 0 0 .631-.631c.07-.138.115-.278.141-.43.027-.148.036-.3.04-.45.002-.07.003-.138.003-.208l.001-.246V6.221c0-.07-.002-.138-.004-.207a2.995 2.995 0 0 0-.04-.452 1.446 1.446 0 0 0-1.2-1.201 3.022 3.022 0 0 0-.452-.04 10.448 10.448 0 0 0-.453-.003zm0 .512h19.942c.066 0 .131.002.197.003.115.004.25.01.375.032.109.02.2.05.287.094a.927.927 0 0 1 .407.407.997.997 0 0 1 .094.288c.022.123.028.258.031.374.002.065.003.13.003.197v11.552c0 .065 0 .13-.003.196-.003.115-.009.25-.032.375a.927.927 0 0 1-.5.693 1.002 1.002 0 0 1-.286.094 2.598 2.598 0 0 1-.373.032l-.2.003H1.906c-.066 0-.133-.002-.196-.003a2.61 2.61 0 0 1-.375-.032c-.109-.02-.2-.05-.288-.094a.918.918 0 0 1-.406-.407 1.006 1.006 0 0 1-.094-.288 2.531 2.531 0 0 1-.032-.373 9.588 9.588 0 0 1-.002-.197V6.224c0-.065 0-.131.002-.197.004-.114.01-.248.032-.375.02-.108.05-.199.094-.287a.925.925 0 0 1 .407-.406 1.03 1.03 0 0 1 .287-.094c.125-.022.26-.029.375-.032.065-.002.131-.002.196-.003zm4.71 3.7c-.3.016-.668.199-.88.456-.191.22-.36.58-.316.918.338.03.675-.169.888-.418.205-.258.345-.603.308-.955zm2.207.42v5.493h.852v-1.877h1.18c1.078 0 1.835-.739 1.835-1.812 0-1.07-.742-1.805-1.808-1.805zm.852.719h.982c.739 0 1.161.396 1.161 1.089 0 .692-.422 1.092-1.164 1.092h-.979zm-3.154.3c-.45.01-.83.28-1.05.28-.235 0-.593-.264-.981-.257a1.446 1.446 0 0 0-1.23.747c-.527.908-.139 2.255.374 2.995.249.366.549.769.944.754.373-.014.52-.242.973-.242.454 0 .586.242.98.235.41-.007.667-.366.915-.733.286-.417.403-.82.41-.841-.007-.008-.79-.308-.797-1.209-.008-.754.615-1.113.644-1.135-.352-.52-.9-.578-1.09-.593a1.123 1.123 0 0 0-.092-.002zm8.204.397c-.99 0-1.606.533-1.652 1.256h.777c.072-.358.369-.586.845-.586.502 0 .803.266.803.711v.309l-1.097.064c-.951.054-1.488.484-1.488 1.184 0 .72.548 1.207 1.332 1.207.526 0 1.032-.281 1.264-.727h.019v.659h.788v-2.76c0-.803-.62-1.317-1.591-1.317zm1.94.072l1.446 4.009c0 .003-.073.24-.073.247-.125.41-.33.571-.711.571-.069 0-.206 0-.267-.015v.666c.06.011.267.019.335.019.83 0 1.226-.312 1.568-1.283l1.5-4.214h-.868l-1.012 3.259h-.015l-1.013-3.26zm-1.167 2.189v.316c0 .521-.45.917-1.024.917-.442 0-.731-.228-.731-.579 0-.342.278-.56.769-.593z"/></svg></span>
-          <span class="ninu-tb-pay ninu-tb-pay-wide" title="Google Pay"><svg viewBox="0 0 38 20"><path d="M18.1 9.4v3.1h-1V5h2.6c.6 0 1.2.2 1.6.6.5.4.7 1 .7 1.6s-.2 1.2-.7 1.6c-.4.4-1 .6-1.6.6zm0-3.5v2.6h1.6c.4 0 .7-.1 1-.4.5-.5.5-1.3 0-1.8-.3-.3-.6-.4-1-.4z" fill="#5F6368"/><path d="M24.5 8c.7 0 1.3.2 1.7.6.4.4.6.9.6 1.5v3h-.95v-.68h-.04c-.4.6-1 .9-1.7.9-.6 0-1.1-.17-1.5-.52a1.64 1.64 0 0 1-.6-1.3c0-.56.2-1 .64-1.33.42-.33 1-.5 1.66-.5.6 0 1.1.1 1.44.33v-.23c0-.35-.14-.65-.4-.9a1.4 1.4 0 0 0-.96-.36c-.56 0-1 .24-1.3.7l-.86-.55c.46-.65 1.1-1 2-1zm-1.3 3.56c0 .27.12.5.33.66.2.17.46.26.75.26.4 0 .78-.15 1.08-.45.3-.3.46-.65.46-1.05-.3-.23-.73-.35-1.3-.35-.4 0-.76.1-1.03.3-.2.15-.3.37-.3.63z" fill="#5F6368"/><path d="M31 8.2l-3.34 7.68h-1l1.24-2.68L25.7 8.2h1.07l1.57 3.78h.02l1.53-3.78z" fill="#5F6368"/><path d="M13.6 9.1c0-.33-.03-.65-.08-.95H9.3v1.8h2.42a2.07 2.07 0 0 1-.9 1.36v1.1h1.45c.85-.78 1.33-1.94 1.33-3.3z" fill="#4285F4"/><path d="M9.3 13.7c1.2 0 2.22-.4 2.96-1.08l-1.45-1.1c-.4.27-.92.43-1.5.43-1.16 0-2.14-.77-2.5-1.82H5.3v1.14a4.7 4.7 0 0 0 4 2.43z" fill="#34A853"/><path d="M6.8 10.13a2.8 2.8 0 0 1 0-1.76V7.23H5.3a4.65 4.65 0 0 0 0 4.2z" fill="#FBBC04"/><path d="M9.3 6.56c.65 0 1.24.22 1.7.65l1.28-1.26A4.6 4.6 0 0 0 9.3 4.7a4.7 4.7 0 0 0-4 2.53l1.5 1.14c.36-1.05 1.34-1.81 2.5-1.81z" fill="#EA4335"/></svg></span>
-        </div>
-
-      </section>
-    </div>
-  </div>
-
-  <section class="ninu-ba">
-    <div class="ninu-ba-inner">
-      <div class="ninu-ba-eyebrow">— Real results, month by month —</div>
-      <h2 class="ninu-ba-h2">The receipts</h2>
-      <p class="ninu-ba-sub">Postpartum moms, first-person crown-and-hairline shots, no filters, no glamour lighting. Their words, not ours.</p>
-
-      <div class="ninu-ba-scroller">
-        <article class="ninu-ba-card">
-          <div class="ninu-ba-split">
-            <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_30_2026_09_26_48_AM.png?v=1790774978" alt="Rachel M. — split image showing temple hairline at month 2 next to month 5">
-            <span class="ninu-ba-tag left">Month 2</span>
-            <span class="ninu-ba-tag right">Month 5</span>
-          </div>
-          <div class="ninu-ba-body">
-            <div class="ninu-ba-stars">★★★★★</div>
-            <blockquote>"I stopped hiding my temples. Three months in, the fuzz is finally turning into actual hair."</blockquote>
-            <div class="ninu-ba-attrib">Rachel M. · 5 months postpartum · verified buyer</div>
-          </div>
-        </article>
-
-        <article class="ninu-ba-card">
-          <div class="ninu-ba-split">
-            <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_30_2026_09_29_10_AM.png?v=1790774978" alt="Amara T. — split image showing crown at week 1 next to month 4">
-            <span class="ninu-ba-tag left">Week 1</span>
-            <span class="ninu-ba-tag right">Month 4</span>
-          </div>
-          <div class="ninu-ba-body">
-            <div class="ninu-ba-stars">★★★★★</div>
-            <blockquote>"The applicator actually gets oil to my scalp instead of my pillow. Life changer for how tired I am at night."</blockquote>
-            <div class="ninu-ba-attrib">Amara T. · 6 months postpartum · verified buyer</div>
-          </div>
-        </article>
-
-        <article class="ninu-ba-card">
-          <div class="ninu-ba-split">
-            <img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/1c6dad8f-d2d2-4bb7-a1c3-0d00847e110d.png?v=1790774978" alt="Jenna K. — split image showing hairline at month 3 next to month 6">
-            <span class="ninu-ba-tag left">Month 3</span>
-            <span class="ninu-ba-tag right">Month 6</span>
-          </div>
-          <div class="ninu-ba-body">
-            <div class="ninu-ba-stars">★★★★★</div>
-            <blockquote>"Six months in and my baby hairs finally look like part of my hair, not a halo of chaos around it."</blockquote>
-            <div class="ninu-ba-attrib">Jenna K. · 8 months postpartum · verified buyer</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="ninu-ba-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-    </div>
-  </section>
-
-  <section class="ninu-faq" id="ninu-faq">
-    <h2 class="ninu-faq-h">You have questions. We have answers.</h2>
-    <details><summary>What is the Ninu Scalp Oil Dispenser?</summary><p>A precision applicator with hollow silicone tips that deliver scalp oil directly onto the skin along your part line, instead of on top of your hair where it can't absorb. Clear 1-4ml dosing chamber, one-handed operation, two-minute nightly routine.</p></details>
-    <details><summary>What's included in the Ninu Kit?</summary><p>The Ninu applicator dispenser, 60ml of our postpartum-formulated scalp oil (a 30-day supply), a satin sleep bonnet to keep oil on your scalp instead of your pillow, our "Scalp Routine That Sticks" ebook, free US shipping, and a 30-day money-back guarantee.</p></details>
-    <details><summary>Does the oil actually reach the scalp?</summary><p>Yes. That's the whole point. Hair strands don't absorb oil &mdash; only skin does. The hollow silicone tips press flat against the scalp along your part, so the oil is released on skin directly instead of being deposited on top of hair where most of it slides off into a towel or pillow.</p></details>
-    <details><summary>Can I use my own oil?</summary><p>Yes. Works with any scalp oil thin enough to flow through the tips &mdash; rosemary, argan, jojoba, castor. The dispenser is the mechanism; the oil is a preference.</p></details>
-    <details><summary>Won't my hair be greasy?</summary><p>Because the oil goes on skin, not strands, no &mdash; much less greasy than any dropper method. One or two tips' worth per section is plenty.</p></details>
-    <details><summary>What if it doesn't work for me?</summary><p>Send it back within 30 days for a full refund, no questions. If the routine doesn't start sticking within the first month, it's not the right fit.</p></details>
-  </section>
-
-
-  <div class="ninu-stock" aria-live="polite"><span class="ninu-stock-dot" aria-hidden="true"></span>Low stock &middot; Ships <span id="ninu-ship">—</span></div>
-
-  <div class="ninu-scrim" id="ninu-scrim" onclick="ninuCloseCart()"></div>
-  <aside class="ninu-sidecart" id="ninu-sidecart" aria-hidden="true">
-    <div class="ninu-sc-head">
-      <div class="ninu-sc-title">Your Ritual</div>
-      <button class="ninu-sc-close" onclick="ninuCloseCart()" aria-label="Close">✕</button>
-    </div>
-    <div class="ninu-sc-body" id="ninu-sc-body">
-      <div class="ninu-empty" id="ninu-empty">Your cart is empty.</div>
-      <div id="ninu-lines"></div>
-
-      
-      <div class="ninu-upsell" id="ninu-upsell" style="display:none">
-        <div class="ninu-upsell-h">Never run out</div>
-        <div class="ninu-upsell-t">Add monthly oil refill</div>
-        <div class="ninu-upsell-d">60ml, delivered monthly. Save $16 vs one-time ($32.99). Skip, pause or cancel any time.</div>
-        <div class="ninu-upsell-row">
-          <div class="ninu-upsell-price">$16.99<small> /month</small></div>
-          <button class="ninu-upsell-add" id="ninu-upsell-btn" onclick="ninuToggleRefill()">Add to cart</button>
-        </div>
-      </div>
-
-      
-      <label class="ninu-protect" id="ninu-protect">
-        <span class="ninu-protect-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3zm-1 15-3-3 1.4-1.4L11 14.2l4.6-4.6L17 11l-6 6z"/></svg>
-        </span>
-        <div class="ninu-protect-text">
-          <div class="ninu-protect-t">Shipping protection</div>
-          <div class="ninu-protect-d">Covered against loss, theft or damage in transit.</div>
-        </div>
-        <div class="ninu-protect-side">
-          <input type="checkbox" id="ninu-protect-input" onchange="ninuToggleProtection(this.checked)">
-          <span class="ninu-protect-price" id="ninu-protect-price">—</span>
-          <span class="ninu-protect-check" aria-hidden="true"></span>
-        </div>
-      </label>
-
-      
-      <div class="ninu-stack" id="ninu-stack" style="display:none">
-        <div class="ninu-stack-h">What's included</div>
-        <ul id="ninu-stack-list"></ul>
-      </div>
-
-      <div class="ninu-totals" id="ninu-totals" style="display:none">
-        <div class="ninu-totals-row"><span>Subtotal</span><span id="ninu-subtotal">$0.00</span></div>
-        <div class="ninu-totals-row"><span>Shipping</span><span style="color:var(--sage);font-weight:700">FREE</span></div>
-        <div class="ninu-totals-row big"><span>Total today</span><span id="ninu-total">$0.00</span></div>
-      </div>
-    </div>
-    <div class="ninu-sc-foot">
-      <button class="ninu-checkout" id="ninu-checkout" onclick="ninuCheckout()" disabled>Secure Checkout →</button>
-      <div class="ninu-sc-note" id="ninu-sc-note">Your cart is empty.</div>
-    </div>
-  </aside>
+<div class="ninu-topbar">FREE US SHIPPING · 30-DAY MONEY-BACK GUARANTEE</div>
+<nav class="ninu-nav">
+<div class="ninu-logo">N I N U</div>
+<button class="ninu-cart-btn" onclick="ninuOpenCart()">
+<span>Cart</span>
+<span class="ninu-cart-count" id="ninu-count">0</span>
+</button>
+</nav>
+<div class="ninu-pdp">
+<div class="ninu-gallery">
+<div class="ninu-thumbs" id="ninu-thumbs"></div>
+<div class="ninu-main-img" id="ninu-scroller" onscroll="ninuSync()"></div>
+<span class="ninu-cnt" id="ninu-cnt">1/12</span>
 </div>
-
+<div class="ninu-info">
+<span class="ninu-pill">New</span>
+<h1 class="ninu-h1">Ninu Scalp Oil Dispenser</h1>
+<p class="ninu-sub">Oil poured on your hair mostly stays on your hair. These hollow tips part the strands and release it where it matters: your scalp.</p>
+<p class="ninu-intro">A two-minute nightly routine you&rsquo;ll actually stick to &mdash; no greasy hands, no stained pillows, no scalp routine that quits by week two.</p>
+<ul class="ninu-features">
+<li>Two-Minute Nightly Routine</li>
+<li>Mess-Free, Clean Application</li>
+<li>1-4ml Precision Dosing Chamber</li>
+<li>Works With Any Scalp Oil</li>
+<li>Travel-Ready Design</li>
+<li>60ml Scalp Oil Included (30-Day Supply)</li>
+<li>Satin Sleep Bonnet Included</li>
+<li>Free &ldquo;Scalp Routine That Sticks&rdquo; eBook</li>
+</ul>
+<a href="#ninu-faq" class="ninu-faqlink">View FAQs</a>
+<div class="ninu-opts">
+<div class="ninu-opt selected" data-tier="kit">
+<label class="ninu-opt-head" onclick="ninuPick(this.parentNode)">
+<input type="radio" name="opt" checked>
+<div class="ninu-opt-main">
+<div class="ninu-opt-title">The Ninu Kit</div>
+<div class="ninu-opt-sub">Dispenser + 60ml oil + satin bonnet + free ebook</div>
+<span class="ninu-opt-save">Best Value</span>
+<div class="ninu-opt-price-row"><span class="ninu-opt-price">$49.99</span></div>
+</div>
+<span class="ninu-opt-radio" aria-hidden="true"></span>
+</label>
+<div class="ninu-opt-body">
+<div class="ninu-opt-mbg">30-Day Money-Back Guarantee</div>
+<div class="ninu-qty" aria-label="Quantity">
+<button type="button" onclick="ninuQty(-1)" aria-label="Decrease">&minus;</button>
+<span class="ninu-qty-val">1</span>
+<button type="button" onclick="ninuQty(1)" aria-label="Increase">+</button>
+</div>
+<button class="ninu-atc" onclick="ninuAdd()">Add to Basket &mdash; <span class="ninu-atc-price">$49.99</span></button>
+</div>
+</div>
+<div class="ninu-opt" data-tier="dispenser">
+<label class="ninu-opt-head" onclick="ninuPick(this.parentNode)">
+<input type="radio" name="opt">
+<div class="ninu-opt-main">
+<div class="ninu-opt-title">Dispenser Only</div>
+<div class="ninu-opt-sub">Precision applicator + satin bonnet</div>
+<div class="ninu-opt-price-row"><span class="ninu-opt-price">$39.99</span></div>
+</div>
+<span class="ninu-opt-radio" aria-hidden="true"></span>
+</label>
+<div class="ninu-opt-body">
+<div class="ninu-opt-mbg">30-Day Money-Back Guarantee</div>
+<div class="ninu-qty" aria-label="Quantity">
+<button type="button" onclick="ninuQty(-1)" aria-label="Decrease">&minus;</button>
+<span class="ninu-qty-val">1</span>
+<button type="button" onclick="ninuQty(1)" aria-label="Increase">+</button>
+</div>
+<button class="ninu-atc" onclick="ninuAdd()">Add to Basket &mdash; <span class="ninu-atc-price">$39.99</span></button>
+</div>
+</div>
+</div>
+<div class="ninu-social">
+<div class="ninu-social-av" aria-hidden="true">
+<span><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/avatar1_small_cce5dc13-91e4-44ce-9151-bb165c871588.jpg?v=1793045428" alt="" loading="lazy"></span>
+<span><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/avatar2_small_4a1aebec-2aba-48d3-9922-b4a2989b59e3.jpg?v=1793045428" alt="" loading="lazy"></span>
+<span><img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/avatar3_small_2600b51b-b345-4f69-90f3-7804bd23786d.jpg?v=1793045428" alt="" loading="lazy"></span>
+</div>
+<div>
+<div class="ninu-social-t">Trusted by 10,000+ women</div>
+<div class="ninu-social-d">Postpartum moms who made the switch. Their words, not ours.</div>
+</div>
+</div>
+<section class="ninu-tb" aria-label="Guarantee and trust information">
+<div class="ninu-tb-guarantee">
+<span class="ninu-tb-guarantee-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3zm-1 15-3-3 1.4-1.4L11 14.2l4.6-4.6L17 11l-6 6z"/></svg>
+</span>
+<div>
+<div class="ninu-tb-guarantee-t">30-Day Money-Back Guarantee</div>
+<div class="ninu-tb-guarantee-d">Not right for you? Full refund, no hassle.</div>
+</div>
+</div>
+<div class="ninu-tb-icons">
+<div class="ninu-tb-icon">
+<span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 0 1 6 0v3zm3 4a2 2 0 0 1 1 3.73V19h-2v-2.27A2 2 0 0 1 12 13z"/></svg></span>
+<span>Secure Checkout</span>
+</div>
+<div class="ninu-tb-icon">
+<span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.54.3C18 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C8 15 17 8 17 8z"/></svg></span>
+<span>Natural Ingredients</span>
+</div>
+<div class="ninu-tb-icon">
+<span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="#fff"/><rect x="3" y="5" width="18" height="2" fill="#B22234"/><rect x="3" y="9" width="18" height="2" fill="#B22234"/><rect x="3" y="13" width="18" height="2" fill="#B22234"/><rect x="3" y="17" width="18" height="2" fill="#B22234"/><rect x="3" y="5" width="8" height="8" fill="#3C3B6E"/></svg></span>
+<span>Made in the USA</span>
+</div>
+<div class="ninu-tb-icon">
+<span class="ninu-tb-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h8A1.5 1.5 0 0 1 14 6.5V9h2.1a1.5 1.5 0 0 1 1.21.62l2.4 3.26a1.5 1.5 0 0 1 .29.89V16a1 1 0 0 1-1 1h-.68a2.25 2.25 0 0 1-4.24 0H9.52a2.25 2.25 0 0 1-4.24 0H4a1 1 0 0 1-1-1zm12 6h3.47l-1.74-2.36L15 9.9zM7.4 15.9a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7zm9 0a.85.85 0 1 0 0 1.7.85.85 0 0 0 0-1.7z"/></svg></span>
+<span>Free US Shipping</span>
+</div>
+</div>
+<div class="ninu-tb-payments" aria-label="Accepted payment methods">
+<span class="ninu-tb-pay" title="Visa"><svg viewBox="0 0 36 14" fill="#1A1F71"><text x="18" y="11" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" font-style="italic">VISA</text></svg></span>
+<span class="ninu-tb-pay" title="Mastercard"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="7" fill="#EB001B"/><circle cx="15" cy="12" r="7" fill="#F79E1B"/><path d="M12 6.174a7 7 0 0 0 0 11.652 7 7 0 0 0 0-11.652z" fill="#FF5F00"/></svg></span>
+<span class="ninu-tb-pay" title="American Express"><svg viewBox="0 0 36 24" style="background:#006FCF"><text x="18" y="15" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="900" fill="#fff" letter-spacing=".3">AMEX</text></svg></span>
+<span class="ninu-tb-pay" title="PayPal"><svg viewBox="0 0 24 24" fill="#003087"><path d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></svg></span>
+<span class="ninu-tb-pay" title="Apple Pay"><svg viewBox="0 0 24 24" fill="#000000"><path d="M2.15 4.318a42.16 42.16 0 0 0-.454.003c-.15.005-.303.013-.452.04a1.44 1.44 0 0 0-1.06.772c-.07.138-.114.278-.14.43-.028.148-.037.3-.04.45A10.2 10.2 0 0 0 0 6.222v11.557c0 .07.002.138.003.207.004.15.013.303.04.452.027.15.072.291.142.429a1.436 1.436 0 0 0 .63.63c.138.07.278.115.43.142.148.027.3.036.45.04l.208.003h20.194l.207-.003c.15-.004.303-.013.452-.04.15-.027.291-.071.428-.141a1.432 1.432 0 0 0 .631-.631c.07-.138.115-.278.141-.43.027-.148.036-.3.04-.45.002-.07.003-.138.003-.208l.001-.246V6.221c0-.07-.002-.138-.004-.207a2.995 2.995 0 0 0-.04-.452 1.446 1.446 0 0 0-1.2-1.201 3.022 3.022 0 0 0-.452-.04 10.448 10.448 0 0 0-.453-.003zm0 .512h19.942c.066 0 .131.002.197.003.115.004.25.01.375.032.109.02.2.05.287.094a.927.927 0 0 1 .407.407.997.997 0 0 1 .094.288c.022.123.028.258.031.374.002.065.003.13.003.197v11.552c0 .065 0 .13-.003.196-.003.115-.009.25-.032.375a.927.927 0 0 1-.5.693 1.002 1.002 0 0 1-.286.094 2.598 2.598 0 0 1-.373.032l-.2.003H1.906c-.066 0-.133-.002-.196-.003a2.61 2.61 0 0 1-.375-.032c-.109-.02-.2-.05-.288-.094a.918.918 0 0 1-.406-.407 1.006 1.006 0 0 1-.094-.288 2.531 2.531 0 0 1-.032-.373 9.588 9.588 0 0 1-.002-.197V6.224c0-.065 0-.131.002-.197.004-.114.01-.248.032-.375.02-.108.05-.199.094-.287a.925.925 0 0 1 .407-.406 1.03 1.03 0 0 1 .287-.094c.125-.022.26-.029.375-.032.065-.002.131-.002.196-.003zm4.71 3.7c-.3.016-.668.199-.88.456-.191.22-.36.58-.316.918.338.03.675-.169.888-.418.205-.258.345-.603.308-.955zm2.207.42v5.493h.852v-1.877h1.18c1.078 0 1.835-.739 1.835-1.812 0-1.07-.742-1.805-1.808-1.805zm.852.719h.982c.739 0 1.161.396 1.161 1.089 0 .692-.422 1.092-1.164 1.092h-.979zm-3.154.3c-.45.01-.83.28-1.05.28-.235 0-.593-.264-.981-.257a1.446 1.446 0 0 0-1.23.747c-.527.908-.139 2.255.374 2.995.249.366.549.769.944.754.373-.014.52-.242.973-.242.454 0 .586.242.98.235.41-.007.667-.366.915-.733.286-.417.403-.82.41-.841-.007-.008-.79-.308-.797-1.209-.008-.754.615-1.113.644-1.135-.352-.52-.9-.578-1.09-.593a1.123 1.123 0 0 0-.092-.002zm8.204.397c-.99 0-1.606.533-1.652 1.256h.777c.072-.358.369-.586.845-.586.502 0 .803.266.803.711v.309l-1.097.064c-.951.054-1.488.484-1.488 1.184 0 .72.548 1.207 1.332 1.207.526 0 1.032-.281 1.264-.727h.019v.659h.788v-2.76c0-.803-.62-1.317-1.591-1.317zm1.94.072l1.446 4.009c0 .003-.073.24-.073.247-.125.41-.33.571-.711.571-.069 0-.206 0-.267-.015v.666c.06.011.267.019.335.019.83 0 1.226-.312 1.568-1.283l1.5-4.214h-.868l-1.012 3.259h-.015l-1.013-3.26zm-1.167 2.189v.316c0 .521-.45.917-1.024.917-.442 0-.731-.228-.731-.579 0-.342.278-.56.769-.593z"/></svg></span>
+<span class="ninu-tb-pay ninu-tb-pay-wide" title="Google Pay"><svg viewBox="0 0 38 20"><path d="M18.1 9.4v3.1h-1V5h2.6c.6 0 1.2.2 1.6.6.5.4.7 1 .7 1.6s-.2 1.2-.7 1.6c-.4.4-1 .6-1.6.6zm0-3.5v2.6h1.6c.4 0 .7-.1 1-.4.5-.5.5-1.3 0-1.8-.3-.3-.6-.4-1-.4z" fill="#5F6368"/><path d="M24.5 8c.7 0 1.3.2 1.7.6.4.4.6.9.6 1.5v3h-.95v-.68h-.04c-.4.6-1 .9-1.7.9-.6 0-1.1-.17-1.5-.52a1.64 1.64 0 0 1-.6-1.3c0-.56.2-1 .64-1.33.42-.33 1-.5 1.66-.5.6 0 1.1.1 1.44.33v-.23c0-.35-.14-.65-.4-.9a1.4 1.4 0 0 0-.96-.36c-.56 0-1 .24-1.3.7l-.86-.55c.46-.65 1.1-1 2-1zm-1.3 3.56c0 .27.12.5.33.66.2.17.46.26.75.26.4 0 .78-.15 1.08-.45.3-.3.46-.65.46-1.05-.3-.23-.73-.35-1.3-.35-.4 0-.76.1-1.03.3-.2.15-.3.37-.3.63z" fill="#5F6368"/><path d="M31 8.2l-3.34 7.68h-1l1.24-2.68L25.7 8.2h1.07l1.57 3.78h.02l1.53-3.78z" fill="#5F6368"/><path d="M13.6 9.1c0-.33-.03-.65-.08-.95H9.3v1.8h2.42a2.07 2.07 0 0 1-.9 1.36v1.1h1.45c.85-.78 1.33-1.94 1.33-3.3z" fill="#4285F4"/><path d="M9.3 13.7c1.2 0 2.22-.4 2.96-1.08l-1.45-1.1c-.4.27-.92.43-1.5.43-1.16 0-2.14-.77-2.5-1.82H5.3v1.14a4.7 4.7 0 0 0 4 2.43z" fill="#34A853"/><path d="M6.8 10.13a2.8 2.8 0 0 1 0-1.76V7.23H5.3a4.65 4.65 0 0 0 0 4.2z" fill="#FBBC04"/><path d="M9.3 6.56c.65 0 1.24.22 1.7.65l1.28-1.26A4.6 4.6 0 0 0 9.3 4.7a4.7 4.7 0 0 0-4 2.53l1.5 1.14c.36-1.05 1.34-1.81 2.5-1.81z" fill="#EA4335"/></svg></span>
+</div>
+</section>
+</div>
+</div>
+<section class="ninu-ba">
+<div class="ninu-ba-inner">
+<div class="ninu-ba-eyebrow">— Real results, month by month —</div>
+<h2 class="ninu-ba-h2">The receipts</h2>
+<p class="ninu-ba-sub">Postpartum moms, first-person crown-and-hairline shots, no filters, no glamour lighting. Their words, not ours.</p>
+<div class="ninu-ba-scroller">
+<article class="ninu-ba-card">
+<div class="ninu-ba-split">
+<img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_30_2026_09_26_48_AM.png?v=1790774978" alt="Rachel M. — split image showing temple hairline at month 2 next to month 5">
+<span class="ninu-ba-tag left">Month 2</span>
+<span class="ninu-ba-tag right">Month 5</span>
+</div>
+<div class="ninu-ba-body">
+<div class="ninu-ba-stars">★★★★★</div>
+<blockquote>"I stopped hiding my temples. Three months in, the fuzz is finally turning into actual hair."</blockquote>
+<div class="ninu-ba-attrib">Rachel M. · 5 months postpartum · verified buyer</div>
+</div>
+</article>
+<article class="ninu-ba-card">
+<div class="ninu-ba-split">
+<img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/ChatGPT_Image_Sep_30_2026_09_29_10_AM.png?v=1790774978" alt="Amara T. — split image showing crown at week 1 next to month 4">
+<span class="ninu-ba-tag left">Week 1</span>
+<span class="ninu-ba-tag right">Month 4</span>
+</div>
+<div class="ninu-ba-body">
+<div class="ninu-ba-stars">★★★★★</div>
+<blockquote>"The applicator actually gets oil to my scalp instead of my pillow. Life changer for how tired I am at night."</blockquote>
+<div class="ninu-ba-attrib">Amara T. · 6 months postpartum · verified buyer</div>
+</div>
+</article>
+<article class="ninu-ba-card">
+<div class="ninu-ba-split">
+<img src="https://cdn.shopify.com/s/files/1/1084/3894/6122/files/1c6dad8f-d2d2-4bb7-a1c3-0d00847e110d.png?v=1790774978" alt="Jenna K. — split image showing hairline at month 3 next to month 6">
+<span class="ninu-ba-tag left">Month 3</span>
+<span class="ninu-ba-tag right">Month 6</span>
+</div>
+<div class="ninu-ba-body">
+<div class="ninu-ba-stars">★★★★★</div>
+<blockquote>"Six months in and my baby hairs finally look like part of my hair, not a halo of chaos around it."</blockquote>
+<div class="ninu-ba-attrib">Jenna K. · 8 months postpartum · verified buyer</div>
+</div>
+</article>
+</div>
+<div class="ninu-ba-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+</div>
+</section>
+<section class="ninu-faq" id="ninu-faq">
+<h2 class="ninu-faq-h">You have questions. We have answers.</h2>
+<details><summary>What is the Ninu Scalp Oil Dispenser?</summary><p>A precision applicator with hollow silicone tips that deliver scalp oil directly onto the skin along your part line, instead of on top of your hair where it can't absorb. Clear 1-4ml dosing chamber, one-handed operation, two-minute nightly routine.</p></details>
+<details><summary>What's included in the Ninu Kit?</summary><p>The Ninu applicator dispenser, 60ml of our postpartum-formulated scalp oil (a 30-day supply), a satin sleep bonnet to keep oil on your scalp instead of your pillow, our "Scalp Routine That Sticks" ebook, free US shipping, and a 30-day money-back guarantee.</p></details>
+<details><summary>Does the oil actually reach the scalp?</summary><p>Yes. That's the whole point. Hair strands don't absorb oil &mdash; only skin does. The hollow silicone tips press flat against the scalp along your part, so the oil is released on skin directly instead of being deposited on top of hair where most of it slides off into a towel or pillow.</p></details>
+<details><summary>Can I use my own oil?</summary><p>Yes. Works with any scalp oil thin enough to flow through the tips &mdash; rosemary, argan, jojoba, castor. The dispenser is the mechanism; the oil is a preference.</p></details>
+<details><summary>Won't my hair be greasy?</summary><p>Because the oil goes on skin, not strands, no &mdash; much less greasy than any dropper method. One or two tips' worth per section is plenty.</p></details>
+<details><summary>What if it doesn't work for me?</summary><p>Send it back within 30 days for a full refund, no questions. If the routine doesn't start sticking within the first month, it's not the right fit.</p></details>
+</section>
+<div class="ninu-bar"><div class="ninu-bar-t"><b class="ninu-atc-price">$49.99</b><span>Ships <i id="ninu-ship2">—</i> · 30-day guarantee</span></div><button class="ninu-atc ninu-bar-btn" onclick="ninuAdd()">Add to Basket</button></div>
+<div class="ninu-stock" aria-live="polite"><span class="ninu-stock-dot" aria-hidden="true"></span>Low stock &middot; Ships <span id="ninu-ship">—</span></div>
+<div class="ninu-scrim" id="ninu-scrim" onclick="ninuCloseCart()"></div>
+<aside class="ninu-sidecart" id="ninu-sidecart" aria-hidden="true">
+<div class="ninu-sc-head">
+<div class="ninu-sc-title">Your Ritual</div>
+<button class="ninu-sc-close" onclick="ninuCloseCart()" aria-label="Close">✕</button>
+</div>
+<div class="ninu-sc-body" id="ninu-sc-body">
+<div class="ninu-empty" id="ninu-empty">Your cart is empty.</div>
+<div id="ninu-lines"></div>
+<div class="ninu-upsell" id="ninu-upsell" style="display:none">
+<div class="ninu-upsell-h">Never run out</div>
+<div class="ninu-upsell-t">Add monthly oil refill</div>
+<div class="ninu-upsell-d">60ml, delivered monthly. Save $16 vs one-time ($32.99). Skip, pause or cancel any time.</div>
+<div class="ninu-upsell-row">
+<div class="ninu-upsell-price">$16.99<small> /month</small></div>
+<button class="ninu-upsell-add" id="ninu-upsell-btn" onclick="ninuToggleRefill()">Add to cart</button>
+</div>
+</div>
+<label class="ninu-protect" id="ninu-protect">
+<span class="ninu-protect-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3zm-1 15-3-3 1.4-1.4L11 14.2l4.6-4.6L17 11l-6 6z"/></svg>
+</span>
+<div class="ninu-protect-text">
+<div class="ninu-protect-t">Shipping protection</div>
+<div class="ninu-protect-d">Covered against loss, theft or damage in transit.</div>
+</div>
+<div class="ninu-protect-side">
+<input type="checkbox" id="ninu-protect-input" onchange="ninuToggleProtection(this.checked)">
+<span class="ninu-protect-price" id="ninu-protect-price">—</span>
+<span class="ninu-protect-check" aria-hidden="true"></span>
+</div>
+</label>
+<div class="ninu-stack" id="ninu-stack" style="display:none">
+<div class="ninu-stack-h">What's included</div>
+<ul id="ninu-stack-list"></ul>
+</div>
+<div class="ninu-totals" id="ninu-totals" style="display:none">
+<div class="ninu-totals-row"><span>Subtotal</span><span id="ninu-subtotal">$0.00</span></div>
+<div class="ninu-totals-row"><span>Shipping</span><span style="color:var(--sage);font-weight:700">FREE</span></div>
+<div class="ninu-totals-row big"><span>Total today</span><span id="ninu-total">$0.00</span></div>
+</div>
+</div>
+<div class="ninu-sc-foot">
+<button class="ninu-checkout" id="ninu-checkout" onclick="ninuCheckout()" disabled>Secure Checkout →</button>
+<div class="ninu-sc-note" id="ninu-sc-note">Your cart is empty.</div>
+</div>
+</aside>
+</div>
 <script>
 (function(){
-  // === REPLACE THESE VALUES =========================================
-  var KIT_VARIANT_ID = '63751529824586';            // The Ninu Kit — $49.99
-  var DISPENSER_VARIANT_ID = '63751699595594';      // Ninu Applicator + Satin Bonnet — $39.99
-  var REFILL_VARIANT_ID = '63751894630730';         // Rosemary Essential Oil Refill
-  var REFILL_SELLING_PLAN_ID = '693367669066';      // Monthly Refill · every 4 weeks · 48% off
-  var SHIPPING_PROTECTION_VARIANT_ID = '64051862405450'; // Shipping protection add-on
-  var MONEY_FORMAT = function(cents){ return '$' + (cents/100).toFixed(2); };
-  // =================================================================
-
-  var TIER = {
-    kit:       { title: 'The Ninu Kit',   price: 4999, variant: KIT_VARIANT_ID,
-                 includes: ['Ninu applicator dispenser','60ml scalp oil (30-day supply)','Satin sleep bonnet','Free "Scalp Routine That Sticks" ebook','Free US shipping','30-day money-back guarantee'] },
-    dispenser: { title: 'Ninu Dispenser', price: 3999, variant: DISPENSER_VARIANT_ID,
-                 includes: ['Ninu applicator dispenser','Satin sleep bonnet','Free US shipping','30-day money-back guarantee'] }
-  };
-  var state = { tier: 'kit' };
-
-  var qty = 1;
-
-  function syncPrice(){
-    var p = MONEY_FORMAT(TIER[state.tier].price * qty);
-    document.querySelectorAll('.ninu-atc-price').forEach(function(e){ e.textContent = p; });
-    document.querySelectorAll('.ninu-qty-val').forEach(function(e){ e.textContent = qty; });
-  }
-
-  window.ninuPick = function(el){
-    document.querySelectorAll('.ninu-opt').forEach(function(t){ t.classList.remove('selected'); t.querySelector('input').checked = false; });
-    el.classList.add('selected'); el.querySelector('input').checked = true;
-    state.tier = el.dataset.tier;
-    syncPrice();
-  };
-
-  window.ninuQty = function(delta){
-    qty = Math.max(1, Math.min(10, qty + delta));
-    syncPrice();
-  };
-
-  window.ninuGo = function(i){
-    var s = document.getElementById('ninu-scroller');
-    s.scrollTo({left: i * s.clientWidth, behavior: 'smooth'});
-  };
-  window.ninuSync = function(){
-    var s = document.getElementById('ninu-scroller');
-    var i = Math.round(s.scrollLeft / s.clientWidth);
-    var thumbs = document.querySelectorAll('.ninu-thumb');
-    thumbs.forEach(function(t,j){ t.classList.toggle('active', j === i); });
-  };
-
-  window.ninuOpenCart = function(){
-    document.getElementById('ninu-sidecart').classList.add('open');
-    document.getElementById('ninu-sidecart').setAttribute('aria-hidden','false');
-    document.getElementById('ninu-scrim').classList.add('open');
-  };
-  window.ninuCloseCart = function(){
-    document.getElementById('ninu-sidecart').classList.remove('open');
-    document.getElementById('ninu-sidecart').setAttribute('aria-hidden','true');
-    document.getElementById('ninu-scrim').classList.remove('open');
-  };
-
-  // --- Shopify cart wiring -----------------------------------------
-  function ajaxAdd(items){
-    return fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify({ items: items })
-    }).then(function(r){
-      return r.text().then(function(body){
-        if(!r.ok){
-          console.error('[Ninu] /cart/add.js failed', r.status, body);
-          var msg;
-          try { msg = JSON.parse(body).description || JSON.parse(body).message; } catch(e){ msg = body.slice(0,200); }
-          throw new Error('[' + r.status + '] ' + msg);
-        }
-        return JSON.parse(body);
-      });
-    });
-  }
-  function ajaxGetCart(){
-    return fetch('/cart.js', {headers:{'Accept':'application/json'}}).then(function(r){ return r.json(); });
-  }
-  function ajaxChange(line, quantity){
-    return fetch('/cart/change.js', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify({ line: line, quantity: quantity })
-    }).then(function(r){ return r.json(); });
-  }
-
-  window.ninuAdd = function(){
-    var btns = document.querySelectorAll('.ninu-atc');
-    btns.forEach(function(b){ b.disabled = true; });
-    var t = TIER[state.tier];
-    ajaxAdd([{ id: t.variant, quantity: qty }])
-      .then(function(){ try{window.Shopify.analytics.publish('product_added_to_cart',{cartLine:{merchandise:{id:t.variant},quantity:qty}});}catch(e){} return refreshCart(); })
-      .then(function(){ ninuOpenCart(); })
-      .catch(function(e){ console.error('[Ninu] add-to-cart error', e); alert('Add to cart failed: ' + (e.message || e)); })
-      .finally(function(){ btns.forEach(function(b){ b.disabled = false; }); });
-  };
-
-  window.ninuToggleRefill = function(){
-    var upsell = document.getElementById('ninu-upsell');
-    var btn = document.getElementById('ninu-upsell-btn');
-    btn.disabled = true;
-    if(upsell.classList.contains('added')){
-      // Remove refill line
-      ajaxGetCart().then(function(cart){
-        var idx = cart.items.findIndex(function(i){ return String(i.variant_id) === String(REFILL_VARIANT_ID); });
-        if(idx >= 0) return ajaxChange(idx + 1, 0);
-      }).then(refreshCart).finally(function(){ btn.disabled = false; });
-    } else {
-      ajaxAdd([{ id: REFILL_VARIANT_ID, quantity: 1, selling_plan: REFILL_SELLING_PLAN_ID }])
-        .then(refreshCart)
-        .catch(function(e){ alert('Could not add refill. Check subscription setup.'); console.error(e); })
-        .finally(function(){ btn.disabled = false; });
-    }
-  };
-
-  window.ninuToggleProtection = function(checked){
-    var input = document.getElementById('ninu-protect-input');
-    input.disabled = true;
-    if(checked){
-      ajaxAdd([{ id: SHIPPING_PROTECTION_VARIANT_ID, quantity: 1 }])
-        .then(refreshCart)
-        .catch(function(e){ input.checked = false; alert('Could not add shipping protection: ' + (e.message || e)); console.error(e); })
-        .finally(function(){ input.disabled = false; });
-    } else {
-      ajaxGetCart().then(function(cart){
-        var idx = cart.items.findIndex(function(i){ return String(i.variant_id) === String(SHIPPING_PROTECTION_VARIANT_ID); });
-        if(idx >= 0) return ajaxChange(idx + 1, 0);
-      }).then(refreshCart).finally(function(){ input.disabled = false; });
-    }
-  };
-
-  function initProtectionPrice(){
-    fetch('/variants/' + SHIPPING_PROTECTION_VARIANT_ID + '.js', {headers:{'Accept':'application/json'}})
-      .then(function(r){ return r.ok ? r.json() : null; })
-      .then(function(v){
-        if(v && typeof v.price === 'number'){
-          document.getElementById('ninu-protect-price').textContent = '+ ' + MONEY_FORMAT(v.price);
-        }
-      })
-      .catch(function(){});
-  }
-
-  window.ninuRemoveLine = function(lineIdx){
-    ajaxChange(lineIdx + 1, 0).then(refreshCart);
-  };
-
-  window.ninuCheckout = function(){ window.location.href = '/checkout'; };
-
-  function refreshCart(){
-    return ajaxGetCart().then(renderCart);
-  }
-
-  function renderCart(cart){
-    document.getElementById('ninu-count').textContent = cart.item_count;
-    var linesEl = document.getElementById('ninu-lines');
-    var empty = document.getElementById('ninu-empty');
-    var stack = document.getElementById('ninu-stack');
-    var totals = document.getElementById('ninu-totals');
-    var upsell = document.getElementById('ninu-upsell');
-    var upsellBtn = document.getElementById('ninu-upsell-btn');
-    var checkout = document.getElementById('ninu-checkout');
-    var scNote = document.getElementById('ninu-sc-note');
-
-    if(!cart.items.length){
-      linesEl.innerHTML = '';
-      empty.style.display = 'block';
-      stack.style.display = 'none';
-      totals.style.display = 'none';
-      upsell.style.display = 'none';
-      checkout.disabled = true;
-      scNote.textContent = 'Add a kit to see your order.';
-      return;
-    }
-
-    empty.style.display = 'none';
-    checkout.disabled = false;
-
-    var TIER_BY_VARIANT = {};
-    Object.keys(TIER).forEach(function(k){ TIER_BY_VARIANT[String(TIER[k].variant)] = k; });
-
-    linesEl.innerHTML = cart.items.map(function(item, i){
-      var t = TIER[TIER_BY_VARIANT[String(item.variant_id)]];
-      var qtyLabel = (t && t.kits > 1) ? (t.kits * item.quantity) + ' Kits' : 'Qty ' + item.quantity;
-      var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · monthly' : 'One-time · ' + qtyLabel;
-      return '<div class="ninu-line">' +
-        '<div class="ninu-line-img"><img src="' + (item.image || '') + '" alt=""></div>' +
-        '<div class="ninu-line-info">' +
-          '<div class="ninu-line-title">' + item.product_title + '</div>' +
-          '<div class="ninu-line-tier">' + tierLabel + '</div>' +
-          '<div class="ninu-line-price">' + MONEY_FORMAT(item.final_line_price) + '</div>' +
-          '<button class="ninu-line-remove" onclick="ninuRemoveLine(' + i + ')">Remove</button>' +
-        '</div>' +
-      '</div>';
-    }).join('');
-
-    // Offer stack — inferred from first kit/dispenser line
-    var kitLine = cart.items.find(function(i){ return !!TIER_BY_VARIANT[String(i.variant_id)]; });
-    if(kitLine){
-      var t = TIER[TIER_BY_VARIANT[String(kitLine.variant_id)]];
-      document.getElementById('ninu-stack-list').innerHTML = t.includes.map(function(x){ return '<li><span class="k">' + x + '</span><span class="v">Included</span></li>'; }).join('');
-      stack.style.display = 'block';
-    } else {
-      stack.style.display = 'none';
-    }
-
-    // Refill upsell — show when kit/dispenser is in cart and refill isn't
-    var hasKit = !!kitLine;
-    var hasRefill = cart.items.some(function(i){ return String(i.variant_id) === String(REFILL_VARIANT_ID); });
-    if(hasKit){
-      upsell.style.display = 'block';
-      if(hasRefill){
-        upsell.classList.add('added');
-        upsellBtn.textContent = 'Remove';
-      } else {
-        upsell.classList.remove('added');
-        upsellBtn.textContent = 'Add to cart';
-      }
-    } else {
-      upsell.style.display = 'none';
-    }
-
-    // Shipping protection — show when kit/dispenser is in cart
-    var hasProtect = cart.items.some(function(i){ return String(i.variant_id) === String(SHIPPING_PROTECTION_VARIANT_ID); });
-    var protectEl = document.getElementById('ninu-protect');
-    var protectInput = document.getElementById('ninu-protect-input');
-    if(hasKit){
-      protectEl.classList.add('visible');
-      protectInput.checked = hasProtect;
-      protectEl.classList.toggle('checked', hasProtect);
-    } else {
-      protectEl.classList.remove('visible','checked');
-      protectInput.checked = false;
-    }
-
-    totals.style.display = 'block';
-    document.getElementById('ninu-subtotal').textContent = MONEY_FORMAT(cart.items_subtotal_price);
-    document.getElementById('ninu-total').textContent = MONEY_FORMAT(cart.total_price);
-    scNote.innerHTML = hasRefill ? 'Refills auto-ship monthly at $16.99. Skip, pause or cancel any time.' : 'Free US shipping · 30-day money-back guarantee.';
-  }
-
-  // Ships-by date (today + 2 business days, skip weekends)
-  (function(){var d=new Date();d.setDate(d.getDate()+2);while(d.getDay()%6===0)d.setDate(d.getDate()+1);var e=document.getElementById('ninu-ship');if(e)e.textContent=d.toLocaleDateString('en',{weekday:'short',day:'numeric',month:'short'});})();
-
-  // Build gallery from 12-image list
-  var _P='https://cdn.shopify.com/s/files/1/1084/3894/6122/files/';
-  var _G=['Ecommerce_hero_image_layout_9f70bb03_2K.jpg','Woman_applying_scalp_treatment_a27eae60.jpg','Creating_informational_product_c__5fbff81a_2K.jpg','Create_dispenser_informational_l__1f1f8699.jpg','Create_FAQ_card_design_e8d84f7e.jpg','Creating_hair_care_routine_layout_6be65eed.jpg','Woman_holding_Ninu_dispenser_2d3f6016.jpg','Dispenser_on_bathroom_vanity_c33b87a7.jpg','Flat_lay_of_scalp_kit_5cb4b3bf.jpg','Comparing_dropper_and_dispenser___f55499b2.jpg','Comparison_card_for_oil_dispensers_030258f3.jpg','Change_capacity_and_shipping_terms_745ff0e8.jpg'];
-  var _si='',_ti='';
-  _G.forEach(function(u,i){
-    _si+='<img src="'+_P+u+'" alt="">';
-    _ti+='<div class="ninu-thumb'+(i?'':' active')+'" onclick="ninuGo('+i+')"><img src="'+_P+u+'" alt=""></div>';
-  });
-  document.getElementById('ninu-scroller').innerHTML=_si;
-  document.getElementById('ninu-thumbs').innerHTML=_ti;
-
-  // Initial cart sync
-  document.addEventListener('DOMContentLoaded', function(){ refreshCart().catch(function(){}); initProtectionPrice(); });
+// === REPLACE THESE VALUES =========================================
+var KIT_VARIANT_ID = '63751529824586';            // The Ninu Kit — $49.99
+var DISPENSER_VARIANT_ID = '63751699595594';      // Ninu Applicator + Satin Bonnet — $39.99
+var REFILL_VARIANT_ID = '63751894630730';         // Rosemary Essential Oil Refill
+var REFILL_SELLING_PLAN_ID = '693367669066';      // Monthly Refill · every 4 weeks · 48% off
+var SHIPPING_PROTECTION_VARIANT_ID = '64051862405450'; // Shipping protection add-on
+var MONEY_FORMAT = function(cents){ return '$' + (cents/100).toFixed(2); };
+// =================================================================
+var TIER = {
+kit:       { title: 'The Ninu Kit',   price: 4999, variant: KIT_VARIANT_ID,
+includes: ['Ninu applicator dispenser','60ml scalp oil (30-day supply)','Satin sleep bonnet','Free "Scalp Routine That Sticks" ebook','Free US shipping','30-day money-back guarantee'] },
+dispenser: { title: 'Ninu Dispenser', price: 3999, variant: DISPENSER_VARIANT_ID,
+includes: ['Ninu applicator dispenser','Satin sleep bonnet','Free US shipping','30-day money-back guarantee'] }
+};
+var state = { tier: 'kit' };
+var qty = 1;
+function syncPrice(){
+var p = MONEY_FORMAT(TIER[state.tier].price * qty);
+document.querySelectorAll('.ninu-atc-price').forEach(function(e){ e.textContent = p; });
+document.querySelectorAll('.ninu-qty-val').forEach(function(e){ e.textContent = qty; });
+}
+window.ninuPick = function(el){
+document.querySelectorAll('.ninu-opt').forEach(function(t){ t.classList.remove('selected'); t.querySelector('input').checked = false; });
+el.classList.add('selected'); el.querySelector('input').checked = true;
+state.tier = el.dataset.tier;
+syncPrice();
+};
+window.ninuQty = function(delta){
+qty = Math.max(1, Math.min(10, qty + delta));
+syncPrice();
+};
+window.ninuGo = function(i){
+var s = document.getElementById('ninu-scroller');
+s.scrollTo({left: i * s.clientWidth, behavior: 'smooth'});
+};
+window.ninuSync = function(){
+var s = document.getElementById('ninu-scroller');
+var i = Math.round(s.scrollLeft / s.clientWidth);
+var thumbs = document.querySelectorAll('.ninu-thumb');
+thumbs.forEach(function(t,j){ t.classList.toggle('active', j === i); });
+var c=document.getElementById('ninu-cnt');if(c)c.textContent=(i+1)+'/'+thumbs.length;
+};
+window.ninuOpenCart = function(){
+document.getElementById('ninu-sidecart').classList.add('open');
+document.getElementById('ninu-sidecart').setAttribute('aria-hidden','false');
+document.getElementById('ninu-scrim').classList.add('open');
+};
+window.ninuCloseCart = function(){
+document.getElementById('ninu-sidecart').classList.remove('open');
+document.getElementById('ninu-sidecart').setAttribute('aria-hidden','true');
+document.getElementById('ninu-scrim').classList.remove('open');
+};
+// --- Shopify cart wiring -----------------------------------------
+function ajaxAdd(items){
+return fetch('/cart/add.js', {
+method: 'POST',
+headers: {'Content-Type':'application/json','Accept':'application/json'},
+body: JSON.stringify({ items: items })
+}).then(function(r){
+return r.text().then(function(body){
+if(!r.ok){
+console.error('[Ninu] /cart/add.js failed', r.status, body);
+var msg;
+try { msg = JSON.parse(body).description || JSON.parse(body).message; } catch(e){ msg = body.slice(0,200); }
+throw new Error('[' + r.status + '] ' + msg);
+}
+return JSON.parse(body);
+});
+});
+}
+function ajaxGetCart(){
+return fetch('/cart.js', {headers:{'Accept':'application/json'}}).then(function(r){ return r.json(); });
+}
+function ajaxChange(line, quantity){
+return fetch('/cart/change.js', {
+method: 'POST',
+headers: {'Content-Type':'application/json','Accept':'application/json'},
+body: JSON.stringify({ line: line, quantity: quantity })
+}).then(function(r){ return r.json(); });
+}
+window.ninuAdd = function(){
+var btns = document.querySelectorAll('.ninu-atc');
+btns.forEach(function(b){ b.disabled = true; });
+var t = TIER[state.tier];
+ajaxAdd([{ id: t.variant, quantity: qty }])
+.then(function(){ try{window.Shopify.analytics.publish('product_added_to_cart',{cartLine:{merchandise:{id:t.variant},quantity:qty}});}catch(e){} return refreshCart(); })
+.then(function(){ ninuOpenCart(); })
+.catch(function(e){ console.error('[Ninu] add-to-cart error', e); alert('Add to cart failed: ' + (e.message || e)); })
+.finally(function(){ btns.forEach(function(b){ b.disabled = false; }); });
+};
+window.ninuToggleRefill = function(){
+var upsell = document.getElementById('ninu-upsell');
+var btn = document.getElementById('ninu-upsell-btn');
+btn.disabled = true;
+if(upsell.classList.contains('added')){
+// Remove refill line
+ajaxGetCart().then(function(cart){
+var idx = cart.items.findIndex(function(i){ return String(i.variant_id) === String(REFILL_VARIANT_ID); });
+if(idx >= 0) return ajaxChange(idx + 1, 0);
+}).then(refreshCart).finally(function(){ btn.disabled = false; });
+} else {
+ajaxAdd([{ id: REFILL_VARIANT_ID, quantity: 1, selling_plan: REFILL_SELLING_PLAN_ID }])
+.then(refreshCart)
+.catch(function(e){ alert('Could not add refill. Check subscription setup.'); console.error(e); })
+.finally(function(){ btn.disabled = false; });
+}
+};
+window.ninuToggleProtection = function(checked){
+var input = document.getElementById('ninu-protect-input');
+input.disabled = true;
+if(checked){
+ajaxAdd([{ id: SHIPPING_PROTECTION_VARIANT_ID, quantity: 1 }])
+.then(refreshCart)
+.catch(function(e){ input.checked = false; alert('Could not add shipping protection: ' + (e.message || e)); console.error(e); })
+.finally(function(){ input.disabled = false; });
+} else {
+ajaxGetCart().then(function(cart){
+var idx = cart.items.findIndex(function(i){ return String(i.variant_id) === String(SHIPPING_PROTECTION_VARIANT_ID); });
+if(idx >= 0) return ajaxChange(idx + 1, 0);
+}).then(refreshCart).finally(function(){ input.disabled = false; });
+}
+};
+function initProtectionPrice(){
+fetch('/variants/' + SHIPPING_PROTECTION_VARIANT_ID + '.js', {headers:{'Accept':'application/json'}})
+.then(function(r){ return r.ok ? r.json() : null; })
+.then(function(v){
+if(v && typeof v.price === 'number'){
+document.getElementById('ninu-protect-price').textContent = '+ ' + MONEY_FORMAT(v.price);
+}
+})
+.catch(function(){});
+}
+window.ninuRemoveLine = function(lineIdx){
+ajaxChange(lineIdx + 1, 0).then(refreshCart);
+};
+window.ninuCheckout = function(){ window.location.href = '/checkout'; };
+function refreshCart(){
+return ajaxGetCart().then(renderCart);
+}
+function renderCart(cart){
+document.getElementById('ninu-count').textContent = cart.item_count;
+var linesEl = document.getElementById('ninu-lines');
+var empty = document.getElementById('ninu-empty');
+var stack = document.getElementById('ninu-stack');
+var totals = document.getElementById('ninu-totals');
+var upsell = document.getElementById('ninu-upsell');
+var upsellBtn = document.getElementById('ninu-upsell-btn');
+var checkout = document.getElementById('ninu-checkout');
+var scNote = document.getElementById('ninu-sc-note');
+if(!cart.items.length){
+linesEl.innerHTML = '';
+empty.style.display = 'block';
+stack.style.display = 'none';
+totals.style.display = 'none';
+upsell.style.display = 'none';
+checkout.disabled = true;
+scNote.textContent = 'Add a kit to see your order.';
+return;
+}
+empty.style.display = 'none';
+checkout.disabled = false;
+var TIER_BY_VARIANT = {};
+Object.keys(TIER).forEach(function(k){ TIER_BY_VARIANT[String(TIER[k].variant)] = k; });
+linesEl.innerHTML = cart.items.map(function(item, i){
+var t = TIER[TIER_BY_VARIANT[String(item.variant_id)]];
+var qtyLabel = (t && t.kits > 1) ? (t.kits * item.quantity) + ' Kits' : 'Qty ' + item.quantity;
+var tierLabel = item.selling_plan_allocation ? 'Subscribe & save · monthly' : 'One-time · ' + qtyLabel;
+return '<div class="ninu-line">' +
+'<div class="ninu-line-img"><img src="' + (item.image || '') + '" alt=""></div>' +
+'<div class="ninu-line-info">' +
+'<div class="ninu-line-title">' + item.product_title + '</div>' +
+'<div class="ninu-line-tier">' + tierLabel + '</div>' +
+'<div class="ninu-line-price">' + MONEY_FORMAT(item.final_line_price) + '</div>' +
+'<button class="ninu-line-remove" onclick="ninuRemoveLine(' + i + ')">Remove</button>' +
+'</div>' +
+'</div>';
+}).join('');
+// Offer stack — inferred from first kit/dispenser line
+var kitLine = cart.items.find(function(i){ return !!TIER_BY_VARIANT[String(i.variant_id)]; });
+if(kitLine){
+var t = TIER[TIER_BY_VARIANT[String(kitLine.variant_id)]];
+document.getElementById('ninu-stack-list').innerHTML = t.includes.map(function(x){ return '<li><span class="k">' + x + '</span><span class="v">Included</span></li>'; }).join('');
+stack.style.display = 'block';
+} else {
+stack.style.display = 'none';
+}
+// Refill upsell — show when kit/dispenser is in cart and refill isn't
+var hasKit = !!kitLine;
+var hasRefill = cart.items.some(function(i){ return String(i.variant_id) === String(REFILL_VARIANT_ID); });
+if(hasKit){
+upsell.style.display = 'block';
+if(hasRefill){
+upsell.classList.add('added');
+upsellBtn.textContent = 'Remove';
+} else {
+upsell.classList.remove('added');
+upsellBtn.textContent = 'Add to cart';
+}
+} else {
+upsell.style.display = 'none';
+}
+// Shipping protection — show when kit/dispenser is in cart
+var hasProtect = cart.items.some(function(i){ return String(i.variant_id) === String(SHIPPING_PROTECTION_VARIANT_ID); });
+var protectEl = document.getElementById('ninu-protect');
+var protectInput = document.getElementById('ninu-protect-input');
+if(hasKit){
+protectEl.classList.add('visible');
+protectInput.checked = hasProtect;
+protectEl.classList.toggle('checked', hasProtect);
+} else {
+protectEl.classList.remove('visible','checked');
+protectInput.checked = false;
+}
+totals.style.display = 'block';
+document.getElementById('ninu-subtotal').textContent = MONEY_FORMAT(cart.items_subtotal_price);
+document.getElementById('ninu-total').textContent = MONEY_FORMAT(cart.total_price);
+scNote.innerHTML = hasRefill ? 'Refills auto-ship monthly at $16.99. Skip, pause or cancel any time.' : 'Free US shipping · 30-day money-back guarantee.';
+}
+// Ships-by date (today + 2 business days, skip weekends)
+(function(){var d=new Date();d.setDate(d.getDate()+2);while(d.getDay()%6===0)d.setDate(d.getDate()+1);var t=d.toLocaleDateString('en',{weekday:'short',day:'numeric',month:'short'});['ninu-ship','ninu-ship2'].forEach(function(i){var e=document.getElementById(i);if(e)e.textContent=t;});})();
+// Build gallery from 12-image list
+var _P='https://cdn.shopify.com/s/files/1/1084/3894/6122/files/';
+var _G=['Ecommerce_hero_image_layout_9f70bb03_2K.jpg','Woman_applying_scalp_treatment_a27eae60.jpg','Creating_informational_product_c__5fbff81a_2K.jpg','Create_dispenser_informational_l__1f1f8699.jpg','Create_FAQ_card_design_e8d84f7e.jpg','Creating_hair_care_routine_layout_6be65eed.jpg','Woman_holding_Ninu_dispenser_2d3f6016.jpg','Dispenser_on_bathroom_vanity_c33b87a7.jpg','Flat_lay_of_scalp_kit_5cb4b3bf.jpg','Comparing_dropper_and_dispenser___f55499b2.jpg','Comparison_card_for_oil_dispensers_030258f3.jpg','Change_capacity_and_shipping_terms_745ff0e8.jpg'];
+var _si='',_ti='';
+_G.forEach(function(u,i){
+_si+='<img src="'+_P+u+'" alt="">';
+_ti+='<div class="ninu-thumb'+(i?'':' active')+'" onclick="ninuGo('+i+')"><img src="'+_P+u+'" alt=""></div>';
+});
+document.getElementById('ninu-scroller').innerHTML=_si;
+document.getElementById('ninu-thumbs').innerHTML=_ti;
+// Initial cart sync
+document.addEventListener('DOMContentLoaded', function(){ refreshCart().catch(function(){}); initProtectionPrice(); });
 })();
 </script>
-
