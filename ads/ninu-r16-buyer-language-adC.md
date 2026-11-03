@@ -90,7 +90,7 @@ Do not run this copy until the Nov 11 price change is set up, or delete the two 
 - Same ad set if budget allows; if not, same budget in two separate ad sets so Meta isn't splitting one learning phase. At roughly £20 a day total, that means £10 each, which is thin. I'd rather run them in turn on one ad set: control a few days, then variant.
 - Judge in this order: (1) link CPC, which should not move because the creative and first lines are unchanged; (2) add-to-cart per link click; (3) cost per add-to-cart; (4) purchases.
 - Kill checkpoints: £14 with 0 link clicks, £28 with 0 add-to-cart, £42 with 0 checkout, £54 with 0 purchases.
-- A real read needs about 100 link clicks per ad. Fewer than that is noise.
+- Sample size: about 100 link clicks is enough to read link CPC. It is NOT enough to read add-to-cart rate. At a 0.7% add-to-cart rate, 100 clicks gives about 1 add-to-cart, so telling 0.7% from 2.5% needs roughly 300 to 400 clicks per ad (about £160 to £210 each at £0.53 a click). At £20 to £25 a day, that means one clean test at a time, or comparing one ad against the 0.7% baseline instead of a parallel control.
 - What would confirm the hypothesis: link CTR roughly equal across the two and add-to-cart per click clearly higher on the variant.
 - What would not: both flat, which points back to the page, price or trust.
 - Sample caution: Hook3 has 50 clicks and at most one add-to-cart so far. This is a direction, not a result.

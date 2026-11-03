@@ -218,7 +218,7 @@ One variable per round. All three share the offer block, so the story is the onl
 | 3 | R17-B against R17-A | Short against medium, same offer block |
 | 4 | R17-C against the better of A or B | Whether the long advertorial earns its length |
 
-Judge each on add-to-cart per link click, then cost per add-to-cart, then purchases. Checkpoints: £14 with 0 link clicks, £28 with 0 add-to-cart, £42 with 0 checkout, £54 with 0 purchases. About 100 link clicks per ad before comparing. At £20 to £25 a day, run them in turn on one ad set instead of splitting the budget.
+Judge each on add-to-cart per link click, then cost per add-to-cart, then purchases. Checkpoints: £14 with 0 link clicks, £28 with 0 add-to-cart, £42 with 0 checkout, £54 with 0 purchases. About 100 link clicks reads link CPC; reading add-to-cart rate needs roughly 300 to 400 clicks per ad, so at this budget run one test at a time. At £20 to £25 a day, run them in turn on one ad set instead of splitting the budget.
 
 ## Still to decide
 
