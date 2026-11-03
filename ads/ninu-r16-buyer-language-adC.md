@@ -25,7 +25,7 @@ The body from the second paragraph down. This is a bundled body change, so a win
 | Guarantee turned into a test, placed last | ch 7, 14 | Risk reversal is the closing argument |
 | "Hair doesn't absorb oil. Skin does." removed | ch 9 | An absolute that a knowledgeable reader can dispute |
 
-## Primary text (about 400 words)
+## Primary text (438 words)
 
 I had the castor oil. I had the rosemary. I believed in the routine. I just couldn't make myself do it consistently.
 
