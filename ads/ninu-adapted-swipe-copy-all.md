@@ -13,6 +13,7 @@ Last updated 2026-11-05. Every swipe that has been rebuilt for Ninu, with the fu
 | R17-C | TryVera (advertorial) | Long advertorial | 643 | Ready |
 | R22 | Neuropathy supplement ad ("one question" discovery) | Long story | 838 | Ready, after R16 |
 | R23 | Cancer-cure ad (credentialed lead, towel test) | Long story | 815 | Ready, after R16 |
+| R24 | Diabetes supplement ad ("tap and drain" mechanism explainer) | Long advertorial, second person | 638 | Ready, after R16 |
 | R13 | Quilty, first version (older offer wording) | Notes native | 664 | Superseded by R17-A |
 | R14 | GoFree, first version | Bedside native | 450 | Superseded by R17-B |
 | R15 | TryVera, first version | Long advertorial | 725 | Superseded by R17-C |
@@ -481,6 +482,99 @@ Make tonight the easy one. Tap Shop Now.
 P.S. If you're reading this in bed with wet hands, about to tell yourself Sunday: it's not you. You don't need a better reminder. You need a routine that's easier than the reason to quit.
 
 P.P.S. Keep the oil you love. The dispenser works with it.
+```
+
+---
+
+## R24: Diabetes supplement ad ("tap and drain" mechanism explainer)
+
+**Format:** Long advertorial, second person, argument-led (no persona) · **Words:** 638 · **Status:** Ready, after R16
+
+Reference: a ~950-word advertorial selling an alpha-lipoic acid supplement for blood sugar. **It is a deceptive health ad.** It makes treatment claims, uses an invented medical history, studies and statistics, and disparages doctors and a common diabetes drug. None of that carries over. I took only the argument structure, which is the most different from the stories above: no persona, no scene, a direct-address explanation of a hidden "second half" of the problem. It suits a market that already knows the problem and has tried the obvious fixes.
+
+Hooks:
+
+1. if you've restarted your scalp oil routine again, it's not because you need more willpower
+2. you've been fixing the wrong half of your scalp oil routine
+3. the oil isn't the problem. the route is.
+4. a reminder works for a week. then it plateaus.
+5. your scalp oil routine has a bottle problem and a route problem. you've only fixed one.
+
+Breakdown (device in the reference, then what Ninu does with it):
+
+| Device in the reference | Ninu |
+|---|---|
+| Direct callout listing everything already tried ("even though you've cleaned up your diet... tried berberine") | **Kept.** Castor oil, rosemary, shower cap, reminder |
+| "Not willpower. You've been fixing the wrong half." | **Kept.** The bottle and the route |
+| "Tap and drain": two controls, and every fix works on only one | **Adapted** to bottle and route. Every fix (oil, reminder, streak app) works on the bottle; none changes the route |
+| "It worked for a few weeks, then plateaued" | **Kept.** Reminders help a week or two, then plateau |
+| Vivid anecdotes of side effects of the common drug | **Dropped.** Third-party anecdotes and bashing a drug. Ninu uses the mess of a dropper and fingers instead |
+| The cruel irony (the drug causes the problem it should prevent) | **Adapted.** The harder you push a messy method, the faster you burn out |
+| "Your doctor isn't lying, they use the tool they were trained on" | **Adapted.** "Whoever told you to be consistent wasn't lying" |
+| 1966 German approval, 4,000 patients, "can't patent a natural molecule" | **Dropped.** Invented history and a conspiracy-style reason it's hidden |
+| Studies and statistics for the mechanism | **Dropped.** Ninu has none. The mechanism is described plainly and can be checked |
+| "If you tried it before and it did nothing, here's the reason" (racemic vs pure) | **Adapted.** If you tried a pump or dropper cap, it's the same route in a different bottle |
+| A precise formula spec | **Adapted.** Four checks, all verifiable on the product |
+| Guarantee with a number she tracks ("track your fasting glucose for 60 days") | **Adapted.** "Count your skipped nights for 30 days", with the existing unconditional 30-day guarantee |
+| Future-pacing the doctor's reaction ("keep doing what you're doing") | **Adapted.** The 10pm moment with nothing to start over |
+| "Now you know what they know." | **Adapted.** "Now you know where the routine was breaking." |
+
+Fixed with the other ads: headline, description, CTA. No gift lines until the gifts are live. The Nov 10 and $62.49 lines need the price to really change.
+
+```
+If you've restarted your scalp oil routine again, even though you bought the castor oil, the rosemary and the shower cap, and set the reminder, it isn't because you need more willpower.
+
+It's because you've been fixing the wrong half of the problem.
+
+Here's what the "just do it every night" advice never mentions.
+
+Your routine has two controls. The bottle and the route.
+
+The bottle is everything you can buy and decide. Which oil. How much. How often. Whether there's a reminder on your phone at 10pm.
+
+The route is how the oil gets from the bottle to your scalp.
+
+Every fix you've tried works on the bottle. A better oil. A second oil. A reminder. A calendar. A streak app. They help for a week or two, and then they plateau, because the route is still the same.
+
+Here's the route with a dropper or your fingers. Oil on your fingers before they touch anything. Running down your neck. Soaking into the towel on your shoulders. A part that's barely damp when you check it.
+
+On the nights you're tired, the route is what loses. Wet hands, a towel, a sink to wipe, and a baby who's up in forty minutes. That isn't a willpower problem. It's a broken route.
+
+Here's the cruel part. The harder you try to be disciplined about a messy route, the faster you burn out. Four nights of effort, then the first rough night wins. Not because you're weak. Because the method costs more than you have left at 10pm.
+
+Whoever told you to be consistent wasn't lying. They just never had to do it with a baby on their arm.
+
+If you've already tried a pump bottle or a dropper cap and it still didn't stick, that's why. It's the same route in a different bottle. A pump or a dropper puts the oil on your hair first. Fingers put it on your hands, your neck and the towel. The one place you want it is the one place that route doesn't go.
+
+So the fix isn't a better bottle. It's a different route.
+
+That's what Ninu is. A small dispenser with hollow silicone tips. You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. Then you move down the part and do the next one.
+
+Four things to check on any fix, this one included.
+
+It lands on your scalp, along the part.
+
+It works with one hand.
+
+You can see how much you're using. Ninu has a clear chamber with 1 to 4ml markings.
+
+It works with the oil you already own.
+
+Ninu does all four. About two minutes.
+
+Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the route easy enough that you keep doing it. If you don't want to oil your scalp, this isn't for you.
+
+If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+
+It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
+
+And you can measure it. Count your skipped nights for 30 days. If you're still skipping, or the oil isn't landing where I said it would, you have 30 days to get your money back.
+
+There's a moment every tired mom plays in her head. It's 10pm. You reach for the bottle and you don't think about the towel, the sink or Sunday. Two minutes later you're asleep. Nothing to start over.
+
+Now you know where the routine was breaking.
+
+Make tonight the easy one. Tap Shop Now.
 ```
 
 ---
