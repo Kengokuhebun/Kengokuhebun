@@ -88,8 +88,14 @@ Soft overhead bathroom light at about 4200K, plain and slightly dull. An open va
 
 ## 8. "My mother died of Alzheimer's" ad
 
-*3am, oily hands, the baby monitor glowing.*
+*3am, oil on the bed, the baby monitor glowing.*
 
 ```
-The only light is the green glow of a baby monitor on the nightstand and a faint amber nightlight, dark and grainy, an unedited phone photo, no flash. First-person view from a pillow looking across the bed: a slim feminine hand in the foreground with short plain nails and no rings, dripping with pale golden-yellow oil, glistening to the wrist, oil running down the slender forearm into the sleeve of a faded oversized women's t-shirt, a big shiny slick smeared across the duvet and the edge of the pillow, a phone lying face-down with greasy fingerprints, the monitor glowing in the dark. Tired, slightly out of focus at the edges, and clammy-looking. The oil is a pale golden-yellow, clear and translucent like olive oil or a light rosemary-infused oil, with a greasy wet shine. It is NOT dark, brown or black and not motor oil. Where it soaks fabric the fabric turns darker and heavy with a yellow tint. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+The only light is the green glow of a baby monitor on the nightstand and a faint amber nightlight, dark and grainy, an unedited phone photo of a bedroom at 3am, no flash. View from the pillow looking across the bed: a rumpled grey duvet with a large shiny slick of pale golden-yellow oil smeared across it, the edge of a white pillowcase stained with the same oil, a phone lying face-down on the nightstand with greasy fingerprints on its case, the monitor glowing green. Nobody in the frame. Messy and out of focus at the edges. The oil is a pale golden-yellow, clear like olive oil, with a wet shine, not dark and not motor oil. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+```
+
+*Backup, if the first is still blocked:*
+
+```
+Dim amber light from a single nightlight, grainy, an unedited phone photo of a bedroom at night, no flash. A close view of a rumpled grey duvet with a large glossy smear of pale golden-yellow oil across it and a white pillowcase corner stained with the same oil, a baby monitor glowing green in the background. Nobody in the frame. The oil is a pale golden-yellow, clear like olive oil, with a wet shine, not dark and not motor oil. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
 ```
