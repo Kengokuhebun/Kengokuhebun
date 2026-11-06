@@ -8,7 +8,11 @@ Paste each prompt into your image generator. Each image goes with the matching c
 
 ## 1. Quilty
 
-Quilty uses the iOS Notes screenshot, so there is no image prompt. The picture is the copy itself in a Notes window, titled "Skipped oiling my scalp again." Say the word and I will render it.
+*The oil mark on the pillowcase.*
+
+```
+Low warm lamp light from camera left at about 2800K, the soft yellow of a bedside lamp, the rest of the room in dim shadow. A tight crop on the corner of a white cotton pillowcase with a large dark oily patch the size of a palm, soft feathered edges, and a second smaller mark near the seam. The corner of a grey duvet beside it. Shallow depth of field the way a phone portrait mode renders it, slightly grainy and warm. Ordinary and unglamorous. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+```
 
 ---
 
