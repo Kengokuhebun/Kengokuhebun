@@ -15,6 +15,7 @@ Last updated 2026-11-05. Every swipe that has been rebuilt for Ninu, with the fu
 | R23 | Cancer-cure ad (credentialed lead, towel test) | Long story | 815 | Ready, after R16 |
 | R24 | Diabetes supplement ad ("tap and drain" mechanism explainer) | Long advertorial, second person | 638 | Ready, after R16 |
 | R25 | Fake "my father died" post for a UV device (contrarian rant) | Long first-person rant | 850 | Ready, after R16 |
+| R26 | Fake "my mother died of Alzheimer's" post for a sleep supplement (countdown timeline) | Long first-person confession | 824 | Ready, after R16 |
 | R13 | Quilty, first version (older offer wording) | Notes native | 664 | Superseded by R17-A |
 | R14 | GoFree, first version | Bedside native | 450 | Superseded by R17-B |
 | R15 | TryVera, first version | Long advertorial | 725 | Superseded by R17-C |
@@ -702,6 +703,142 @@ The obvious question is which oil to use. The one you already own. Keep it.
 Make tonight the easy one. Tap Shop Now.
 
 P.S. If you're reading this in bed with wet hands, about to tell yourself Sunday: it's not you. You don't need another bottle. You need a routine that's easier than the reason to quit.
+```
+
+---
+
+## R26: Fake "my mother died of Alzheimer's" post for a sleep supplement (stage-by-stage countdown)
+
+**Format:** Long first-person confession with a timeline set piece · **Words:** 824 · **Status:** Ready, after R16
+
+Reference: a ~2,300-word post selling a tart cherry supplement. **It is a deceptive, fear-based health ad.** It claims the supplement protects against Alzheimer's and that poor sleep causes it, using an invented neurologist, an invented researcher and invented statistics. None of that carries over. I took the structure only. Two devices here are new to the file: the **stage-by-stage countdown timeline** and the **"X vs Y" reframe** (sedation vs restoration, which becomes doing the routine vs the oil reaching your scalp).
+
+Hooks:
+
+1. it's finally over. six months of restarting my scalp oil routine.
+2. five restarts. five sundays.
+3. night 1: spa. night 5: wet hands, skipped. here's the whole timeline.
+4. my husband asked me one question about my scalp oil routine.
+5. there's a difference between doing your scalp oil routine and your scalp getting the oil
+
+Breakdown (device in the reference, then what Ninu does with it):
+
+| Device in the reference | Ninu |
+|---|---|
+| "It's finally over" plus a one-line open loop ("her neurologist told me something I can't stop thinking about") | **Adapted.** "Six months of restarting... one question my husband asked me" |
+| Reader qualifier: "if you have sleep problems, this changes everything" | **Adapted.** "If you've ever skipped your scalp oil" |
+| Delay the reveal: "first I need to tell you what I watched happen... not the pamphlet version" | **Kept.** "Not the 'just be consistent' version. Night by night" |
+| Specific, human detail (cursive, crossword in pen then pencil) | **Adapted.** The towel half on, the bottle moving behind the other bottles |
+| The countdown timeline ("2 years before death" to "1 week before") | **Adapted.** Restart one, night one, through restart five |
+| Mid-story teasers ("I didn't know it at the time, but all of this was connected...") | **Kept** |
+| The false "rally" then a bigger crash | **Adapted.** Restart three lasted eleven nights, then a cold |
+| The reveal through an unexpected question about the narrator ("How do you sleep?") | **Adapted.** "What actually happens when you do?", from her husband |
+| An invented neurologist explaining a named system and a 30 percent risk | **Dropped** |
+| Three generations with the same pattern | **Dropped** |
+| A long list of failed fixes, with doses | **Adapted.** Oil, second oil, reminder, shower cap, streak app, pump bottle |
+| An invented researcher explaining "sedation vs restoration" | **Adapted.** "Doing the routine vs the oil getting to your scalp", with no authority |
+| "Biggest lie in the aisle", the mega-dose vs the microdose | **Adapted.** A bigger bottle on the same route is more on the towel |
+| "Most products are heat-processed; only one brand keeps the compounds intact" | **Adapted.** Bottle fixes vs a different route |
+| "I ordered it that night. Not because I was tired. Because I was scared." | **Adapted.** "Not because I'd become more disciplined. Because I was done starting over" |
+| Results by day and month | **Adapted.** An honest night-by-night, with a missed night |
+| "She never had a chance. Nobody told her the difference." | **Adapted.** "Nobody told me the difference" |
+| "I'm not going the same way she did." | **Adapted.** "I'm not starting over on Sunday again" |
+| P.S. about duration ("not a week, five months") | **Adapted.** "It's been five weeks" |
+
+Fixed with the other ads: headline, description, CTA. No gift lines until the gifts are live. The Nov 10 and $62.49 lines need the price to really change.
+
+```
+It's finally over. Six months of restarting my scalp oil routine. Five restarts. Five Sundays.
+
+I'm writing this because of one question my husband asked me, and I can't stop thinking about it.
+
+If you've ever skipped your scalp oil, it changes how you'll do it.
+
+But first I need to tell you what I watched happen to my routine. Not the "just be consistent" version. The real version. Night by night.
+
+I'm 34. My daughter was five months old when I started.
+
+Restart one, night one. A fresh bottle, a towel, thirty minutes. It felt like a spa. I thought, this is it.
+
+Night two. Same.
+
+Night three. The baby woke once. I did it faster, with the towel half on.
+
+Night four. Fine.
+
+Night five. The baby was up three times. I got into bed with wet hands and did not do it.
+
+Night six. I skipped again. I told myself Sunday.
+
+Week two. The bottle moved from the nightstand to the bathroom counter.
+
+Week three. The bottle moved behind the other bottles.
+
+Week four. I bought a different oil and called it restart two.
+
+Restart three lasted eleven nights. I thought, now it's a habit. Then the baby got a cold, and I was out again.
+
+By restart four I'd stopped telling my husband I was starting.
+
+Restart five was a shower cap, a reminder on my phone and a streak app. The streak was three.
+
+I didn't know it at the time, but every one of those restarts was connected to something I'd never looked at.
+
+I'd been asking, how do I get more disciplined. I'd never asked what the routine was asking of me.
+
+Then one night my husband said something I didn't expect. Not "did you do it?" He said, "What actually happens when you do?"
+
+So I told him. Oil on my fingers before I touched anything. Running down my neck. Soaking into the towel on my shoulders. A sink to wipe. Wet hands in a bed.
+
+Saying it out loud, I heard it.
+
+There's a difference between doing the routine and your scalp getting the oil. You can do the first every night for a year and never really get the second.
+
+So I did a test. A clean white towel over my shoulders, my usual routine, then I checked three places.
+
+My part. Barely damp.
+
+My fingers. Slick.
+
+The towel. Soaked.
+
+I'd been doing the routine. The oil had been going everywhere else.
+
+And a bigger bottle makes it worse. More oil on the same route is more oil on the towel. A better oil, a second oil, a reminder, a pump bottle: they all work on the bottle. None of them changes the route.
+
+That's why they all plateau.
+
+I went looking for a different route. I found a dispenser with hollow silicone tips. It's called Ninu.
+
+You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings, so you can see how much you're using. One hand. About two minutes. It works with the oil you already own.
+
+I ordered it that night. Not because I'd become more disciplined. Because I was done starting over.
+
+The first night, I didn't use a towel.
+
+The second night, same.
+
+By the end of the first week I hadn't skipped a night. That had never happened.
+
+In week three the baby was up four times and I missed a night. I did it the next night. There was nothing to restart.
+
+By week five it was automatic, the same as washing my face.
+
+Nobody ever told me the difference between doing the routine and getting the oil onto my scalp. I'd have saved myself six months and a drawer of bottles.
+
+Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+
+It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
+
+And you can check it yourself. Count your skipped nights for 30 days. If you're still skipping, or the oil isn't landing where I said it would, you have 30 days to get your money back.
+
+I'm not starting over on Sunday again.
+
+Make tonight the easy one. Tap Shop Now.
+
+P.S. I'm not writing this after a week. It's been five weeks, and the bottle is still on the nightstand. The one thing that changed was the route.
 ```
 
 ---
