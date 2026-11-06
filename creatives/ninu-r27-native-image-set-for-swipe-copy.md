@@ -221,11 +221,21 @@ The only light is the green glow of a baby monitor on the nightstand and a faint
 **Copy beat:** Escalation: the bottle moves  
 **Relevant copy line(s):** "The bottle moved from the nightstand to the bathroom counter. Then behind the other bottles."
 
-**Prompts (two photos, then combine):**
+**Prompts (generate two separate photos, then place them side by side with plain white labels "Night 1" and "Week 3" added in HTML):**
+
+Photo A, Night 1:
 
 ```
-Generate two photos and label them in HTML. Photo A (label Night 1): Soft warm lamp light about 2900K. A tidy nightstand with a plain unlabeled amber dropper bottle front and centre next to a folded towel and a glass of water, hopeful and neat. Photo B (label Week 3): Flat bathroom light about 4200K. A cluttered bathroom shelf with shampoo, conditioner, a pump soap and cotton pads in front, and the same plain unlabeled amber bottle pushed to the back behind them, a little dusty, half hidden. Keep the bottle identical and unbranded in both. Place side by side with plain white labels Night 1 and Week 3. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+Soft warm lamp light at about 2900K. A tidy nightstand with a plain unlabeled amber dropper bottle front and centre, next to a folded towel and a glass of water, hopeful and neat. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
 ```
+
+Photo B, Week 3:
+
+```
+Flat bathroom light at about 4200K. A cluttered bathroom shelf with a shampoo bottle, conditioner, a pump hand soap and cotton pads in front, and the same plain unlabeled amber dropper bottle pushed to the back behind them, a little dusty, half hidden. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+```
+
+Keep the bottle plain, unbranded and the same shape in both. Use the same seed or reference for the bottle if the generator allows.
 
 **Why it works:** A before and after of behaviour, not of results. Reads in one second.
 
