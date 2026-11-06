@@ -51,7 +51,7 @@ const server = http.createServer(async (req, res) => {
   if (url.pathname === "/__calls") return send(res, 200, calls);
   const path = url.pathname.replace(/^\/v\d+\.\d+/, "");
   const params = req.method === "GET" ? Object.fromEntries(url.searchParams) : await readBody(req);
-  const token = params.access_token;
+  const token = params.access_token || (req.headers.authorization || "").replace(/^Bearer /, "");
   delete params.access_token;
   delete params.appsecret_proof;
   calls.push({ method: req.method, path, params });

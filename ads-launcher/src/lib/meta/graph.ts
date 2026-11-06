@@ -84,7 +84,8 @@ export class GraphClient {
   }
 
   private authParams(): Record<string, string> {
-    const params: Record<string, string> = { access_token: this.opts.token };
+    // The token travels in the Authorization header (kept out of URLs and logs).
+    const params: Record<string, string> = {};
     if (this.opts.appSecret) {
       params.appsecret_proof = crypto
         .createHmac("sha256", this.opts.appSecret)
@@ -102,7 +103,11 @@ export class GraphClient {
       if (init.query) init.query.forEach((v, k) => url.searchParams.set(k, v));
       let res: Response;
       try {
-        res = await this.opts.fetchImpl(url.toString(), { method, body: init.body, headers: init.headers });
+        res = await this.opts.fetchImpl(url.toString(), {
+          method,
+          body: init.body,
+          headers: { ...(init.headers as Record<string, string> | undefined), authorization: `Bearer ${this.opts.token}` },
+        });
       } catch (err) {
         if (attempt < this.opts.maxRetries) {
           attempt += 1;

@@ -224,10 +224,10 @@ describe("executePlan", () => {
 
 describe("GraphClient", () => {
   it("encodes objects as JSON, retries transient errors, hides the token", async () => {
-    const seen: { url: string; body: string }[] = [];
+    const seen: { url: string; body: string; auth?: string }[] = [];
     let n = 0;
     const fetchImpl = (async (url: string, init: RequestInit) => {
-      seen.push({ url, body: String(init.body ?? "") });
+      seen.push({ url, body: String(init.body ?? ""), auth: (init.headers as Record<string, string>)?.authorization });
       n += 1;
       if (n === 1) return new Response(JSON.stringify({ error: { message: "Please reduce the amount", code: 17 } }), { status: 400 });
       return new Response(JSON.stringify({ id: "c1" }), { status: 200 });
@@ -240,6 +240,9 @@ describe("GraphClient", () => {
     const body = new URLSearchParams(seen[1].body);
     expect(body.get("special_ad_categories")).toBe("[]");
     expect(body.get("appsecret_proof")).toMatch(/^[0-9a-f]{64}$/);
+    expect(body.get("access_token")).toBeNull();
+    expect(seen[1].url).not.toContain("SECRET");
+    expect(seen[1].auth).toBe("Bearer SECRET");
   });
 
   it("throws a readable MetaApiError without the token", async () => {
