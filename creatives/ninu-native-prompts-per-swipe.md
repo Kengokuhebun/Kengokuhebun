@@ -52,10 +52,16 @@ Soft cool daylight from a small bathroom window at the left, about 5000K, the pl
 
 ## 5. Cancer-cure ad
 
-*POV: oily hands and a soaked towel.*
+*Oily hands holding a soaked towel.*
 
 ```
-Flat bathroom light at about 4000K, a plain bathroom, no flash. First-person point of view looking down at your own lap while sitting on the edge of a bathtub, a woman's perspective: a white towel over the shoulders hanging in the frame, heavy and dark with pale golden-yellow oil, a faded grey high-neck cotton sweatshirt with a dark oily patch at the neckline, a greasy yellow streak on the towel where oil has run down, and two slim feminine hands with short plain nails and no rings held out in front, fingers and palms glistening and dripping golden oil onto the towel. It looks slimy, messy and uncomfortable. Tilted a little, the way a phone is held at chest height. No face. The oil is a pale golden-yellow, clear and translucent like olive oil or a light rosemary-infused oil, with a greasy wet shine. It is NOT dark, brown or black and not motor oil. Where it soaks fabric the fabric turns darker and heavy with a yellow tint. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+Flat bathroom light at about 4000K, a plain family bathroom, no flash. First-person view looking down at two feminine hands with short plain nails, no rings, holding up a white cotton towel that is heavy and darkened with pale golden-yellow oil, oil dripping from the towel into a white bathtub below, a small shiny puddle of it on the tub floor. The towel is stained and messy. Slightly tilted, a casual phone photo. The oil is a pale golden-yellow, clear like olive oil, with a wet shine, not dark and not motor oil. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
+```
+
+*Backup, if the first is still blocked:*
+
+```
+Flat bathroom light at about 4000K, a plain family bathroom, no flash. A white cotton towel lying crumpled on the edge of a bathtub, darkened and heavy with pale golden-yellow oil, a feminine hand with short plain nails, no rings, pinching one corner of it and lifting it so oil drips from it onto the floor tiles. Slightly tilted, a casual phone photo. The oil is a pale golden-yellow, clear like olive oil, with a wet shine, not dark and not motor oil. Shot on an iPhone, ordinary phone sharpness, slight noise, imperfect framing. No text, no logos, no brand names, no packaging, no product, no faces.
 ```
 
 ---
