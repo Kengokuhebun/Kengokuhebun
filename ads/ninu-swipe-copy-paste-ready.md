@@ -12,10 +12,10 @@ Run them one at a time, after the current test. The current test copy (R16) is i
 
 ## 1. Quilty
 
-*Pair with an iOS Notes style image. Note title: "skipped my scalp oil again".* · 522 words
+*Pair with an iOS Notes style image. Note title: "skipped oiling my scalp again".* · 522 words
 
 ```
-Skipped my scalp oil again.
+Skipped oiling my scalp again.
 
 I had the castor oil. I had the rosemary. I believed in the routine. I just couldn't make myself do it consistently.
 
@@ -27,7 +27,7 @@ A chore at 10pm after a full day with a baby is a chore that gets skipped.
 
 I'd do it four nights in a row. Then the baby would be up three times and I'd get into bed with wet hands and just not do it. The bottle migrated to the back of the shelf and I told myself I'd start over Sunday. I never started over Sunday.
 
-I just wanted to feel like myself again. The scalp oil was the one thing I was doing for me, and it was the one thing I kept skipping.
+I just wanted to feel like myself again. Oiling my scalp was the one thing I was doing for me, and it was the one thing I kept skipping.
 
 So I made a list on my phone of what actually stopped me. It wasn't the oil.
 
@@ -65,7 +65,7 @@ Make tonight the easy one. Tap Shop Now.
 *Pair with a bedside-photo native image.* · 415 words
 
 ```
-Okay I need to talk about scalp oil.
+Okay I need to talk about oiling my scalp.
 
 Not the biotin. Not the collagen. Not the gummies. The routine.
 
@@ -121,7 +121,7 @@ Make tonight the easy one. Tap Shop Now.
 *Long advertorial. Use a plain native image.* · 643 words
 
 ```
-Please STOP trying to be more consistent with your scalp oil. I know that sounds crazy, but every time you set a reminder, buy another bottle, or promise yourself Sunday, you're ignoring what's REALLY making you skip. Let me explain.
+Please STOP trying to be more consistent with oiling your scalp. I know that sounds crazy, but every time you set a reminder, buy another bottle, or promise yourself Sunday, you're ignoring what's REALLY making you skip. Let me explain.
 
 It was 10pm on a Sunday when I finally gave up.
 
@@ -139,7 +139,7 @@ I never started over Sunday. Every. Single. Sunday.
 
 My routine was annoying. Oil on my fingers before I touched anything else. Running down my neck. Soaking into the towel I'd wrapped around my shoulders. By the time I finished one section I was already thinking about the cleanup.
 
-Meanwhile every mom in my fb group did her nightly oil for six months straight. I made it eleven nights. I started believing it was me.
+Meanwhile every mom in my fb group oiled her scalp every night for six months straight. I made it eleven nights. I started believing it was me.
 
 But I didn't want to stop. I just wanted to feel like myself again.
 
@@ -391,7 +391,7 @@ It works with the oil you already own.
 
 Ninu does all four. About two minutes.
 
-Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the route easy enough that you keep doing it. If you don't want to oil your scalp, this isn't for you.
+Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you keep doing it. If you don't want to oil your scalp, this isn't for you.
 
 If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
 
@@ -509,7 +509,7 @@ It's finally over. Six months of restarting my scalp oil routine. Five restarts.
 
 I'm writing this because of one question my husband asked me, and I can't stop thinking about it.
 
-If you've ever skipped your scalp oil, it changes how you'll do it.
+If you've ever skipped oiling your scalp, this changes how you'll do it.
 
 But first I need to tell you what I watched happen to my routine. Not the "just be consistent" version. The real version. Night by night.
 
