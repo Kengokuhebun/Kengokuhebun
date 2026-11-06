@@ -14,6 +14,7 @@ Last updated 2026-11-05. Every swipe that has been rebuilt for Ninu, with the fu
 | R22 | Neuropathy supplement ad ("one question" discovery) | Long story | 838 | Ready, after R16 |
 | R23 | Cancer-cure ad (credentialed lead, towel test) | Long story | 815 | Ready, after R16 |
 | R24 | Diabetes supplement ad ("tap and drain" mechanism explainer) | Long advertorial, second person | 638 | Ready, after R16 |
+| R25 | Fake "my father died" post for a UV device (contrarian rant) | Long first-person rant | 850 | Ready, after R16 |
 | R13 | Quilty, first version (older offer wording) | Notes native | 664 | Superseded by R17-A |
 | R14 | GoFree, first version | Bedside native | 450 | Superseded by R17-B |
 | R15 | TryVera, first version | Long advertorial | 725 | Superseded by R17-C |
@@ -575,6 +576,132 @@ There's a moment every tired mom plays in her head. It's 10pm. You reach for the
 Now you know where the routine was breaking.
 
 Make tonight the easy one. Tap Shop Now.
+```
+
+---
+
+## R25: Fake "my father died" post for a UV toilet device (contrarian rant)
+
+**Format:** Long first-person rant, forum-post style · **Words:** 850 · **Status:** Ready, after R16
+
+Reference: a ~2,300-word "I'm going to say something nobody wants to hear" post selling a UV toilet sanitizer. **It is a deceptive, fear-based health ad.** It claims a device would have prevented the narrator's father's death from sepsis, that other safety measures are useless, and it relies on an invented nurse, an invented facility director and invented infection statistics. None of that carries over. I took the rant structure only. It's the most aggressive voice in the file, so use it where a blunt, direct tone fits the avatar (tired, fed up, tried everything).
+
+Hooks:
+
+1. i'm going to say something nobody trying to fix their scalp oil routine wants to hear
+2. buying another bottle of scalp oil is not going to make you do it
+3. none of it is going to work. i know because i did all of it.
+4. it was never an oil problem
+5. if you keep restarting your scalp oil routine, read this before you buy another bottle
+
+Breakdown (device in the reference, then what Ninu does with it):
+
+| Device in the reference | Ninu |
+|---|---|
+| "Something nobody wants to hear, and I don't care if it upsets you" | **Kept**, without the profanity |
+| Contrarian claim naming exactly what the reader is doing ("more grab bars won't keep your parent out of hospital") | **Adapted.** Another bottle won't make you do it |
+| A list of everything the reader has bought, then "NONE OF IT WILL WORK" | **Kept.** Oil, rosemary, shower cap, reminder, streak app |
+| "I did ALL of it, and my father died anyway" | **Adapted** to "I did all of it and was still skipping nights". The death is dropped |
+| "It was never a bathroom safety problem": a reframe of the problem category | **Kept.** "An oil problem that was never an oil problem" |
+| Direct address, "read this entire post" | **Kept** |
+| Escalating timeline (three UTIs, each worse) | **Adapted.** Four restarts, each with a different fix |
+| Cost anchor ($3,000 modifications, $67,000 bill) | **Dropped.** Invented figures. Replaced by "I'd been up against the method, not my discipline" |
+| A parent still at risk, so the stakes continue | **Dropped.** Ninu's stakes are a routine, not a life |
+| A buried nurse comment with the "math" of regrowth | **Dropped.** An invented source. Ninu uses the towel test the reader can run |
+| "Why didn't the doctor tell me? Because grab bars are billable" | **Adapted** mildly: the advice is about the oil because the oil is what gets sold. No blame, no conspiracy |
+| "This exists for home use, for under $40, and nobody told us" | **Adapted.** The dispenser, with what to check |
+| The cheap version fails, the insider-recommended one works | **Adapted.** A pump bottle fails ("same route, different bottle"). No invented insider |
+| Results at one, two and three months, plus a doctor's quote | **Dropped.** Replaced by the honest night-by-night timeline |
+| Repeated "NONE OF THAT WORKS" callouts | **Kept.** Better oil, reminder, shower cap |
+| "EDIT: lots of people messaged me..." | **Dropped.** Invented engagement. Replaced by an honest FAQ line, "which oil? The one you own" |
+| P.S. and P.P.S. with the link repeated | **Adapted.** One P.S. ("it's not you") |
+
+Fixed with the other ads: headline, description, CTA. No gift lines until the gifts are live. The Nov 10 and $62.49 lines need the price to really change.
+
+```
+I'm going to say something nobody trying to fix their scalp oil routine wants to hear, and I don't care if it upsets you.
+
+Buying another bottle is not going to make you do it.
+
+Not the new oil. Not the rosemary this time. Not the shower cap. Not the reminder at 10pm. Not the streak app.
+
+None of it is going to work.
+
+I know, because I did all of it. Every oil. Every reminder. Every "just be consistent" tip. For six months. And I was still skipping nights, still getting into bed with wet hands, still pushing the bottle to the back of the shelf.
+
+Because I spent six months treating an oil problem that was never an oil problem.
+
+If you keep restarting your routine and you came here to ask which oil to try next, you're about to spend money on the wrong half of the problem. Read this all the way through. The answer isn't another bottle.
+
+Here's what happened.
+
+I had the castor oil. I had the rosemary. I believed in the routine. I just couldn't make myself do it consistently.
+
+I'd do it four nights in a row. Then the baby would be up three times, and I'd get into bed with wet hands and skip it.
+
+Restart one: a new oil.
+
+Restart two: a reminder on my phone.
+
+Restart three: a shower cap.
+
+Restart four: a streak app, which gave me a streak of three.
+
+Every one of them made me feel like I was doing something. None of them changed what I had to do at 10pm.
+
+And what I had to do at 10pm was this. Oil on my fingers before I touched anything else. Running down my neck. Soaking into the towel on my shoulders. A sink to wipe. By the time I'd finished one section I was already thinking about the cleanup.
+
+A chore at 10pm after a full day with a baby is a chore that gets skipped.
+
+I thought it through one night. A messy routine with a towel and a wipe-down, at the exact point in the day when I had nothing left. Against a routine that takes two minutes and leaves nothing to clean up. It wasn't close. I had never been up against my own discipline. I'd been up against the method.
+
+Why did nobody tell me? Because the advice is about the oil. The oil is what gets sold, so the oil is what gets talked about. Nobody ever asked how I was getting it onto my scalp.
+
+So I ran a test. A clean white towel over my shoulders, my usual routine, then I checked three places.
+
+My part. Barely damp.
+
+My fingers. Slick.
+
+The towel. Soaked.
+
+The oil was going everywhere except where I wanted it.
+
+The first thing I tried after that was a pump bottle. Same route, different bottle. Then I found a dispenser with hollow silicone tips. It's called Ninu.
+
+You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber with 1 to 4ml markings. One hand. About two minutes. It works with the oil I already owned.
+
+The first night, I didn't use a towel.
+
+By the end of week one I hadn't skipped a night. That had never happened.
+
+In week three the baby was up four times and I missed a night. I did it the next night. There was nothing to restart.
+
+By week five it was automatic, the same as washing my face.
+
+So when I see someone asking which oil to try next, I want to reach through the screen.
+
+A better oil doesn't fix a routine you can't keep.
+
+A reminder doesn't fix a routine that's too messy to start.
+
+A shower cap doesn't fix wet hands.
+
+You're not wasting oil. You're wasting nights.
+
+Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+
+It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
+
+And you can check it yourself. Count your skipped nights for 30 days. If you're still skipping, or the oil isn't landing where I said it would, you have 30 days to get your money back.
+
+The obvious question is which oil to use. The one you already own. Keep it.
+
+Make tonight the easy one. Tap Shop Now.
+
+P.S. If you're reading this in bed with wet hands, about to tell yourself Sunday: it's not you. You don't need another bottle. You need a routine that's easier than the reason to quit.
 ```
 
 ---
