@@ -1,59 +1,88 @@
-# Ninu swipe copy: one version of each, ready to paste
+# Ninu swipe copy v2: the mechanism bridge, one version of each, ready to paste
 
-Copy each block straight into **Primary text**. One adapted version per swipe you sent, 8 in total.
+**This replaces the first version.** Rebuilt after the R16 post-mortem (`ninu-r28-r16-failure-feedback-loop.md`). Copy each block into **Primary text**. One version per swipe you sent, 8 in total.
 
 **Same on every ad:** Headline `Your messy oil routine's worst nightmare` · Description `Free US shipping · 30-day guarantee` · CTA `Shop Now` with the tagged link. Don't type a URL in the copy.
 
-**Before you paste:** every block says $49.99 until Nov 10, then $62.49 on Nov 11. That is true only if the price really changes on Nov 11. If it doesn't, delete that one paragraph. None of them mention the free gifts yet. Add a gift line only once the gifts are in the box.
+## What changed, and why
 
-Run them one at a time, after the current test. The current test copy (R16) is in `ninu-r16-buyer-language-adC.md`.
+R16 failed because the traffic was poor, but its copy also had real gaps against the master document. Every ad below now runs the same chain, inside its own swipe's structure:
+
+1. **The deeper wound, shown in a scene.** Not just "I skipped a night". She has stopped recognising herself since the baby, and this oil was the one thing that was only hers. No hair-loss or shedding description, and nothing is said about her hair or body in the second person.
+2. **Failed fixes, in her order.** Shampoo, vitamins, satin pillowcase, shower cap over castor oil, an $88 a month supplement, a 10pm reminder. These come from the avatar research, so she sees someone who tried what she tried.
+3. **A discovery, not a pitch.** The narrator finds the cause through her own observation: the towel check, a sister on FaceTime, a husband's question, a question asked on the edge of the tub. She is not sold anything.
+4. **The mechanism hits the pain.** The oil was going into a towel, a sleeve and her neck. Months of the only ten minutes she had, wasted, and she blamed herself. That is the belief shift: it was never her, and never the oil.
+5. **The mechanism in use, then the proof she can run herself.** The same towel check, dry towel, dry fingers.
+6. **The outcome she actually wants.** Not a perfect routine. One thing every night that is hers, kept. Each ad says plainly that it cannot promise anything about her hair.
+7. **The objections.** "Can't I buy a plain bottle for less" is answered directly. Delivery takes 6 to 12 days, stated up front.
+
+**Before you paste**
+
+- Every block says $49.99 until Nov 10, then $62.49 on Nov 11. That is true only if the price really changes on Nov 11, and only if $62.49 was a price you really charged. If not, delete that paragraph.
+- No ad mentions the free gifts. Add a gift line only when the gifts are in the box.
+- Persona details (age, the baby's age, the sister, the husband, the counts) are brand voice. Do not present them as a real customer.
+- Run one at a time, after the control test.
 
 ---
 
 ## 1. Quilty
 
-*Pair with an iOS Notes style image. Note title: "skipped oiling my scalp again".* · 522 words
+*Pair with a photo native image (the pillowcase oil patch). If you post it as a Notes screenshot instead, use the first line as the note title.* · 605 words
 
 ```
 Skipped oiling my scalp again.
 
-I had the castor oil. I had the rosemary. I believed in the routine. I just couldn't make myself do it consistently.
+Writing this down so I stop calling it a willpower problem.
 
-I want to be careful here, because I never stopped believing in the oil. The oil was fine. What I couldn't keep up was everything around it.
+I had the castor oil. I had the rosemary. I believed in the routine. And I kept skipping it.
 
-Somebody has to wash her hands. Somebody has to wrap a towel around her shoulders, change the pillowcase, wipe the sink. That somebody is me, at 10pm.
+Since the baby, I've stopped recognising myself in photos. Oiling my scalp was the one thing I did that was just for me. And it was the one thing I kept skipping.
 
-A chore at 10pm after a full day with a baby is a chore that gets skipped.
+Here's everything I tried to fix that, in order.
 
-I'd do it four nights in a row. Then the baby would be up three times and I'd get into bed with wet hands and just not do it. The bottle migrated to the back of the shelf and I told myself I'd start over Sunday. I never started over Sunday.
+A new shampoo. Vitamins. A satin pillowcase. Castor oil with a shower cap. A supplement at $88 a month. A reminder on my phone at 10pm that only made me feel worse.
 
-I just wanted to feel like myself again. Oiling my scalp was the one thing I was doing for me, and it was the one thing I kept skipping.
+None of it was wrong. That's what made me feel like the problem.
 
-So I made a list on my phone of what actually stopped me. It wasn't the oil.
+Tonight I did one thing differently. I put a clean white towel over my shoulders and did my normal routine. Then I checked three places.
 
-The towel. The wet hands. The clean pillowcase. The cleanup. 10pm.
+My part. Barely damp.
 
-A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. Almost none of it was reaching my scalp, which is the only place I wanted it. I wasn't going to get better at a bad method. I needed a different one, one that lives next to the bed.
+My fingers. Slick.
 
-That's when I found a dispenser with hollow silicone tips. It's called Ninu.
+The towel. Soaked.
 
-Here's how it works. You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings. One hand. About two minutes. Works with the oil I already had.
+Five months of doing something for me, and almost all of it was going into a towel.
 
-The first night I thought: oh. This is what it's supposed to feel like.
+That is not a discipline problem. A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. The one place I wanted it was the one place it wasn't going.
+
+And it explains the skipping. At 10pm, with nothing left, a routine with wet hands, a towel, a sink to wipe and nothing to show for it is the first thing to go.
+
+So I found a dispenser with hollow silicone tips. It's called Ninu.
+
+You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings, so I can see how much I use. One hand. About two minutes. It works with the oil I already had.
+
+The first night I did the same towel check. Dry towel. Dry fingers. I thought: oh. That's where it was supposed to go.
 
 By the end of the first week I hadn't skipped a night. That had never happened.
 
+By week three it was automatic. And somewhere in there I noticed I was doing something for me every night and keeping it. That's what I'd wanted all along. Not a perfect routine. One thing that was mine.
+
+I can't tell you what it will do for your hair. Nobody honest can. What it did was make the routine something I keep.
+
 Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
 
-Here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+Here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
 And you can test it properly. Use it every night for 30 days. If the routine isn't easier and the oil isn't landing where I said it would, you get your money back.
 
 I was never the problem. The method was.
-
-The habit was always there. The routine just needed to be easier than the reason to quit.
 
 Make tonight the easy one. Tap Shop Now.
 ```
@@ -62,52 +91,60 @@ Make tonight the easy one. Tap Shop Now.
 
 ## 2. GoFree
 
-*Pair with a bedside-photo native image.* · 415 words
+*Pair with the bedside native image (the ruined nightstand).* · 547 words
 
 ```
 Okay I need to talk about oiling my scalp.
 
-Not the biotin. Not the collagen. Not the gummies. The routine.
+Not the biotin. Not the collagen. Not the gummies. The part where it actually goes on.
 
-Because if you've tried to do it every night with a baby in the house, you know the routine is what makes you quit.
+Since the baby I've kept one thing for myself. 10pm, oil, ten minutes where nobody needs me. And I kept skipping it. Every skip felt like losing the one thing that was mine.
 
-I've wrapped a towel around my shoulders AND worried about the pillowcase AND wiped down the sink. I've pushed the bottle to the back of the shelf and told myself Sunday.
+Up three times a night. The castor oil. The rosemary. Wet hands I carried to bed, because if you believe in the routine you carry the wet hands to bed. That is the law.
 
-Up three times a night. The castor oil. The rosemary. The cleanup after. Wet hands I carried to bed, because if you believe in the routine you carry the wet hands to bed. That is the law.
+Then my sister watched me do it over FaceTime.
 
-A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. Almost none of it was reaching my scalp.
+She didn't say anything for a bit. Then she said, "You know that's mostly going on your sleeve, right?"
 
-Then I found a dispenser with hollow silicone tips.
+I looked down. My sleeve was soaked. My neck was shiny. When I felt my part, it was barely damp.
 
-It's about the size of my palm. I put it on the nightstand.
+That's it. That's what I'd been doing for five months.
+
+A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. I had been oiling my sleeve.
+
+And I'd been so angry at myself for skipping. I was never skipping the oil. I was skipping the sleeve.
+
+So I found a dispenser with hollow silicone tips. It's about the size of my palm. I put it on the nightstand.
 
 That's it.
 
-Here's how it works. You part your hair. You press the tips against your scalp along the part and the oil releases right there, on the skin. Then you move down the part. One hand. About two minutes.
+You part your hair. You press the tips against your scalp along the part and the oil releases right there, on the skin. Then you move down the part. One hand. About two minutes.
 
 That's it.
 
-Night one I thought: oh. This is what it's supposed to feel like. No towel. No wet hands. No cleanup.
+Night one I thought: oh. This is what it's supposed to feel like. No towel. No wet hands. No cleanup. My sleeve was dry.
 
 That's it.
 
 End of week one, I hadn't skipped a night. That had never happened.
 
-A few weeks in, the routine was automatic, same as washing my face. The dispenser was still on the nightstand where I put it on night one.
+A few weeks in, the routine was automatic, same as washing my face. The dispenser was still on the nightstand where I put it on night one. And I'd kept the one thing that was mine, week after week, for the first time since the baby.
 
 That's it.
 
-Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. If you don't want to oil your scalp, this isn't for you.
+I can't promise what it does for your hair. I can tell you what it did for me. Ten minutes that are mine, kept, every night.
 
-Here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+Here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
 And you can test it properly. Use it every night for 30 days. If the routine isn't easier and the oil isn't landing where I said it would, you get your money back.
-
-I was never the problem. The method was.
-
-The habit was always there. The routine just needed to be easier than the reason to quit.
 
 That's it.
 
@@ -118,10 +155,10 @@ Make tonight the easy one. Tap Shop Now.
 
 ## 3. TryVera
 
-*Long advertorial. Use a plain native image.* · 643 words
+*Long advertorial. Use the soaked-towel native image.* · 808 words
 
 ```
-Please STOP trying to be more consistent with oiling your scalp. I know that sounds crazy, but every time you set a reminder, buy another bottle, or promise yourself Sunday, you're ignoring what's REALLY making you skip. Let me explain.
+Please STOP trying to be more consistent with oiling your scalp. I know that sounds crazy, but every time you set a reminder, buy another bottle or promise yourself Sunday, you're ignoring what's REALLY making you skip. Let me explain.
 
 It was 10pm on a Sunday when I finally gave up.
 
@@ -131,43 +168,57 @@ The baby had been up three times.
 
 And I was lying there thinking: I can't even do this one thing for myself.
 
-I had the castor oil. I had the rosemary. I believed in the routine. I just couldn't make myself do it consistently.
+Since she was born I've barely recognised the woman in my photos. Oiling my scalp was the one thing I did that was mine. I was losing that too.
 
-I'd do it four nights in a row, skip one, then skip another. The bottle migrated to the back of the shelf and I told myself I'd start over Sunday.
+I had the castor oil. I had the rosemary. I believed in the routine.
 
-I never started over Sunday. Every. Single. Sunday.
-
-My routine was annoying. Oil on my fingers before I touched anything else. Running down my neck. Soaking into the towel I'd wrapped around my shoulders. By the time I finished one section I was already thinking about the cleanup.
+I'd tried everything people tell you to try. A new shampoo. Vitamins. A satin pillowcase. A shower cap over the castor oil. A supplement at $88 a month. A reminder on my phone, which only made me feel guilty at 10pm.
 
 Meanwhile every mom in my fb group oiled her scalp every night for six months straight. I made it eleven nights. I started believing it was me.
 
-But I didn't want to stop. I just wanted to feel like myself again.
+I didn't want to stop. I just wanted to feel like myself again.
 
-Then I found a dispenser with hollow silicone tips. I almost scrolled past it.
+At 2am I found a dispenser with hollow silicone tips. I almost scrolled past it. Then I thought about my towel.
 
-It wasn't about discipline. Or motivation. Or wanting it enough. It was about where the oil was going.
+I ordered it that night. And while it was in the mail, I ran a test. A clean white towel over my shoulders, my old routine, exactly the way I always did it. Then I checked three places.
 
-A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. Nights of working it down the strands, and almost none of it reached my scalp. Like watering the leaves when you meant the roots.
+My part. Barely damp.
 
-A reminder gets you to start. An easier routine gets you to keep going.
+My fingers. Slick.
 
-Here's how it works. You part your hair. You press the tips against your scalp along the part. The oil releases right there, directly on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings. One hand. About two minutes. Works with the oil I already had.
+The towel. Soaked.
 
-I wasn't undisciplined. I was just using the wrong tool.
+I sat on the edge of the bath and looked at it.
 
-I ordered the Ninu Kit that night.
+Months of nights. Four bottles. Eleven wet pillowcases. And almost all of it had gone into a towel, my sleeves and my neck. Not where I wanted it.
 
-The first night I used it I thought: oh. This is what it's supposed to feel like. No towel. No wet hands. No cleanup.
+That's what was really making me skip. It wasn't discipline, or motivation, or wanting it enough. It was where the oil was going.
 
-By the end of the first week I hadn't skipped a night. That had never happened. I never started over Sunday. This time I didn't have to.
+A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. It was like watering the leaves when you meant the roots.
+
+A reminder gets you to start. An easier route gets you to keep going.
+
+When it arrived, this is how it worked. You part your hair. You press the tips against your scalp along the part. The oil releases right there, directly on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings. One hand. About two minutes. It works with the oil I already had.
+
+The first night I did the towel check again. Dry towel. Dry fingers. I thought: oh. This is what it's supposed to feel like.
+
+By the end of the first week I hadn't skipped a night. That had never happened.
+
+By week three I wasn't thinking about it. It was just what I did at the end of the day, like washing my face. And I noticed something else. It was the first thing since the baby that I'd kept for myself.
 
 What makes me a little angry now is that nobody told me. Everyone said do it every night. Nobody ever asked how I was applying the oil I already believed in.
+
+I can't promise what it does for your hair, and neither can anyone else. What it did for me was make the one thing that was mine something I keep.
 
 Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
 
 If you do, and you're reading this from bed with wet hands, about to tell yourself Sunday: it's not you. You don't need a better reminder.
 
-Here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+So here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
@@ -180,9 +231,9 @@ Make tonight the easy one. Tap Shop Now.
 
 ---
 
-## 4. Neuropathy supplement ad
+## 4. Neuropathy ad
 
-*Long story. Plain native image.* · 838 words
+*Long story. Use the leaked bottle on the shelf native image.* · 937 words
 
 ```
 I restarted my scalp oil routine four times in six months.
@@ -195,9 +246,13 @@ It was a Sunday, 10pm. I was sitting on the edge of the tub with a towel around 
 
 I'd told myself Sunday would be the start. It had been the start four other Sundays.
 
-I had the castor oil. I had the rosemary. I believed in the routine. Every time, I'd do it four nights in a row. Then the baby would be up three times, I'd get into bed with wet hands, and I'd skip it. Then I'd skip a second night. The bottle would drift to the back of the shelf and I'd tell myself I'd start over Sunday.
+I had the castor oil. I had the rosemary. I believed in the routine. Every time, I'd do it four nights in a row. Then the baby would be up three times, I'd get into bed with wet hands, and I'd skip it. The bottle would drift to the back of the shelf.
 
 Every. Single. Sunday.
+
+What I couldn't say to anyone was why it mattered so much. Since the baby I'd stopped recognising myself. Oiling my scalp was the one part of the day that was only mine. Every skipped night felt like another piece of me going quiet.
+
+So I'd tried everything. A new shampoo. Vitamins. A satin pillowcase. A shower cap. A reminder on my phone that just made me feel guilty at 10pm. Another bottle, which went to the back of the shelf with the first one.
 
 That night I finished a section and looked down. The towel was soaked. My neck was shiny. I put my fingers on my part to check, and it was barely damp.
 
@@ -207,11 +262,13 @@ Where is the oil actually going?
 
 On my fingers. Down my neck. Into the towel. Onto my pillowcase on the nights I didn't wash it out. Everywhere except the one place I wanted it.
 
+Six months. Every night I had managed, I'd spent ten minutes and good oil on everything except my scalp. And I'd blamed myself for the nights I skipped.
+
 Nobody had ever asked me that. Everyone said do it every night. Nobody asked how I was applying it.
 
-I'd spent six months trying to be more disciplined about a method that left the oil on everything but my scalp. It was like watering the leaves when you meant the roots.
+It was like watering the leaves when you meant the roots.
 
-And I'd tried the other fixes. A reminder on my phone, which just made me feel guilty at 10pm. Another bottle, which went to the back of the shelf with the first one. A reminder gets you to start. An easier routine gets you to keep going.
+A reminder gets you to start. An easier routine gets you to keep going.
 
 So I made a list on my phone. Not features. What I actually needed.
 
@@ -227,7 +284,7 @@ It has to take about two minutes. If it took ten, it was Sunday again.
 
 I found a dispenser with hollow silicone tips. It's called Ninu. It checked every line.
 
-Here's how it works. You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings. One hand. About two minutes.
+You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber, 1 to 4ml markings, so I can see how much I use. One hand. About two minutes. It works with the oil I already had.
 
 The first night I thought: oh. This is what it's supposed to feel like. I looked at my shoulders. I hadn't used a towel.
 
@@ -241,17 +298,23 @@ Week three. The baby was up four times and I fell asleep with my shoes on. I mis
 
 Week five. It was automatic, same as washing my face. Not because I'd become more disciplined. Because the method was wrong before and this one isn't.
 
-Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you've never oiled your scalp, or you don't want to, this isn't for you.
+Somewhere in week four I noticed what I'd wanted all along. Not a perfect routine. One thing a day that was mine, kept.
 
-If you already have a bottle and a good intention, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+I can't tell you what it will do for your hair. Nobody honest can. It made the routine something I do.
+
+Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+Here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
-And you can run the same check I did. Tonight, put the towel on out of habit, use the dispenser, and look at the towel. If the routine isn't easier and the oil isn't landing where I said it would, you have 30 days to get your money back.
+And you can test it properly. Use it every night for 30 days. If the routine isn't easier and the oil isn't landing where I said it would, you get your money back.
 
 I was never the problem. The method was.
-
-The habit was always there. The routine just needed to be easier than the reason to quit.
 
 Make tonight the easy one. Tap Shop Now.
 ```
@@ -260,7 +323,7 @@ Make tonight the easy one. Tap Shop Now.
 
 ## 5. Cancer-cure ad
 
-*Long story. Pair with the oil-on-towel image.* · 815 words
+*Long story. Use the oil-ruined laundry basket native image.* · 945 words
 
 ```
 After four restarts, three bottles of oil, a shower cap and a very wet towel, I finally worked out why my scalp oil routine never stuck.
@@ -271,9 +334,11 @@ I'm not a hair expert. I'm a tired mom of one who has gotten into bed with wet h
 
 It was a Sunday, 10pm. I was sitting on the edge of the tub with a towel around my shoulders and a bottle of castor oil I'd bought in March. It was the fourth time I'd called that night "the start."
 
+Since the baby, I'd stopped recognising myself. The oil was the one thing I did just for me. I didn't want to lose that too.
+
 I'd done everything people told me to do. Of course I had.
 
-The castor oil. Then the rosemary. Then a shower cap, because someone in a thread said to wear one. Then a silk pillowcase. Then a reminder on my phone that went off at 10pm and only made me feel worse.
+The castor oil. Then the rosemary. Then a shower cap, because someone in a thread said to wear one. Then a silk pillowcase. A supplement at $88 a month. Then a reminder on my phone that went off at 10pm and only made me feel worse.
 
 I'd do it four nights in a row. Then the baby would be up three times, and I'd get into bed with wet hands and skip it.
 
@@ -298,6 +363,8 @@ My fingers. Slick.
 The towel. Soaked.
 
 The oil was going everywhere except where I wanted it.
+
+I sat there and did the sum. Months of nights. Good oil. Ten minutes of the only time that was mine. And almost all of it had been going into a towel.
 
 My first fix was a different bottle with a pump. Same problem, different bottle. A dropper puts the oil on your hair. Fingers put it on your hands, your neck and the towel. Neither was getting it to my scalp.
 
@@ -325,15 +392,21 @@ Week one. It's oil on a scalp. No rush, no tingle. The difference was that I did
 
 Week three. The baby was up four times and I fell asleep with my shoes on. I missed a night. I did it the next night. That was the whole plan. There was nothing to restart.
 
-Week five. It was automatic, the same as washing my face.
+Week five. It was automatic, the same as washing my face. And I realised it was the first thing since the baby that I was doing for me and actually keeping.
 
-Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you've never oiled your scalp, or you don't want to, this isn't for you.
+I can't promise what it does for your hair. What I can say is what it did for the routine.
 
-If you already have a bottle and a good intention, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+If you already have a bottle and a good intention, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
-And you can run the same test I did. Tonight, put a white towel on out of habit, use the dispenser, and look at the towel. If the routine isn't easier and the oil isn't landing where I said it would, you have 30 days to get your money back.
+And you can check it yourself. Count your skipped nights for 30 days. If you're still skipping, or the oil isn't landing where I said it would, you have 30 days to get your money back.
 
 I was never the problem. The method was.
 
@@ -346,9 +419,9 @@ P.P.S. Keep the oil you love. The dispenser works with it.
 
 ---
 
-## 6. Diabetes supplement ad
+## 6. Diabetes ad
 
-*Long advertorial, second person. Plain native image.* · 638 words
+*Long advertorial, second person. Use the oil-soaked t-shirt collar native image.* · 868 words
 
 ```
 If you've restarted your scalp oil routine again, even though you bought the castor oil, the rosemary and the shower cap, and set the reminder, it isn't because you need more willpower.
@@ -367,7 +440,13 @@ Every fix you've tried works on the bottle. A better oil. A second oil. A remind
 
 Here's the route with a dropper or your fingers. Oil on your fingers before they touch anything. Running down your neck. Soaking into the towel on your shoulders. A part that's barely damp when you check it.
 
+You don't have to take my word for it. Tonight, put a clean white towel over your shoulders and do your routine exactly as you always do. Then check three places. Your part. Your fingers. The towel. I did, and the towel took most of it. Check yours and see.
+
+If that's true for you too, then every night you managed, a lot of your oil and your time went somewhere you never meant it to. And every night you skipped, you were skipping a route that wasn't paying you back.
+
 On the nights you're tired, the route is what loses. Wet hands, a towel, a sink to wipe, and a baby who's up in forty minutes. That isn't a willpower problem. It's a broken route.
+
+And it costs more than a skipped night. For a lot of moms, this is the only ten minutes of the day that's theirs. When it keeps breaking, it feels like you're failing at the one thing you do for yourself. You're not. The route is.
 
 Here's the cruel part. The harder you try to be disciplined about a messy route, the faster you burn out. Four nights of effort, then the first rough night wins. Not because you're weak. Because the method costs more than you have left at 10pm.
 
@@ -391,15 +470,21 @@ It works with the oil you already own.
 
 Ninu does all four. About two minutes.
 
-Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you keep doing it. If you don't want to oil your scalp, this isn't for you.
+I can't tell you what it will do for your hair. I can tell you it makes the routine easy enough that you keep doing it. And a routine you keep is the first step to anything else you wanted from it.
 
-If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
-And you can measure it. Count your skipped nights for 30 days. If you're still skipping, or the oil isn't landing where I said it would, you have 30 days to get your money back.
+And you can check it yourself. Count your skipped nights for 30 days. If you're still skipping, or the oil isn't landing where I said it would, you have 30 days to get your money back.
 
-There's a moment every tired mom plays in her head. It's 10pm. You reach for the bottle and you don't think about the towel, the sink or Sunday. Two minutes later you're asleep. Nothing to start over.
+There's a moment every tired mom plays in her head. It's 10pm. You reach for the bottle and you don't think about the towel, the sink or Sunday. Two minutes later you're asleep. Ten minutes that were yours, kept. Nothing to start over.
 
 Now you know where the routine was breaking.
 
@@ -408,9 +493,9 @@ Make tonight the easy one. Tap Shop Now.
 
 ---
 
-## 7. "My father died" UV device ad
+## 7. "My father died" ad
 
-*Long first-person rant. Plain native image.* · 850 words
+*Long first-person rant. Use the drawer of leaking oils native image.* · 956 words
 
 ```
 I'm going to say something nobody trying to fix their scalp oil routine wants to hear, and I don't care if it upsets you.
@@ -431,6 +516,8 @@ Here's what happened.
 
 I had the castor oil. I had the rosemary. I believed in the routine. I just couldn't make myself do it consistently.
 
+And it hurt more than it should have. Since the baby, I'd stopped recognising myself. That oil was the one thing I did just for me. Every skipped night felt like proof I couldn't even keep that.
+
 I'd do it four nights in a row. Then the baby would be up three times, and I'd get into bed with wet hands and skip it.
 
 Restart one: a new oil.
@@ -447,8 +534,6 @@ And what I had to do at 10pm was this. Oil on my fingers before I touched anythi
 
 A chore at 10pm after a full day with a baby is a chore that gets skipped.
 
-I thought it through one night. A messy routine with a towel and a wipe-down, at the exact point in the day when I had nothing left. Against a routine that takes two minutes and leaves nothing to clean up. It wasn't close. I had never been up against my own discipline. I'd been up against the method.
-
 Why did nobody tell me? Because the advice is about the oil. The oil is what gets sold, so the oil is what gets talked about. Nobody ever asked how I was getting it onto my scalp.
 
 So I ran a test. A clean white towel over my shoulders, my usual routine, then I checked three places.
@@ -461,9 +546,13 @@ The towel. Soaked.
 
 The oil was going everywhere except where I wanted it.
 
+Six months of it. I'd been giving the best ten minutes I had left in the day to a towel.
+
 The first thing I tried after that was a pump bottle. Same route, different bottle. Then I found a dispenser with hollow silicone tips. It's called Ninu.
 
 You part your hair. You press the tips against your scalp along the part. The oil releases right there, on the skin. Nothing runs. Nothing drips. You move down the part and do the next one. Clear chamber with 1 to 4ml markings. One hand. About two minutes. It works with the oil I already owned.
+
+I know what you're thinking. Another gadget for the drawer. I have a drawer of bottles too. The difference is that this one deals with the part that was breaking.
 
 The first night, I didn't use a towel.
 
@@ -471,7 +560,7 @@ By the end of week one I hadn't skipped a night. That had never happened.
 
 In week three the baby was up four times and I missed a night. I did it the next night. There was nothing to restart.
 
-By week five it was automatic, the same as washing my face.
+By week five it was automatic, the same as washing my face. And it was the first thing since the baby that I'd kept for myself.
 
 So when I see someone asking which oil to try next, I want to reach through the screen.
 
@@ -483,9 +572,15 @@ A shower cap doesn't fix wet hands.
 
 You're not wasting oil. You're wasting nights.
 
-Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+I can't promise what it does for your hair. What it does is make the routine something you keep.
 
-If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
@@ -500,9 +595,9 @@ P.S. If you're reading this in bed with wet hands, about to tell yourself Sunday
 
 ---
 
-## 8. "My mother died of Alzheimer's" sleep supplement ad
+## 8. "My mother died of Alzheimer's" ad
 
-*Long first-person confession. Plain native image.* · 824 words
+*Long first-person confession. Use the 3am bed-with-the-monitor native image.* · 943 words
 
 ```
 It's finally over. Six months of restarting my scalp oil routine. Five restarts. Five Sundays.
@@ -513,7 +608,7 @@ If you've ever skipped oiling your scalp, this changes how you'll do it.
 
 But first I need to tell you what I watched happen to my routine. Not the "just be consistent" version. The real version. Night by night.
 
-I'm 34. My daughter was five months old when I started.
+I'm 34. My daughter was five months old when I started. Since she was born I'd stopped recognising myself. The oil was the one thing I was doing for me.
 
 Restart one, night one. A fresh bottle, a towel, thirty minutes. It felt like a spa. I thought, this is it.
 
@@ -538,6 +633,8 @@ Restart three lasted eleven nights. I thought, now it's a habit. Then the baby g
 By restart four I'd stopped telling my husband I was starting.
 
 Restart five was a shower cap, a reminder on my phone and a streak app. The streak was three.
+
+Every skipped night felt like losing the one thing that was mine. And I kept blaming myself.
 
 I didn't know it at the time, but every one of those restarts was connected to something I'd never looked at.
 
@@ -579,13 +676,19 @@ By the end of the first week I hadn't skipped a night. That had never happened.
 
 In week three the baby was up four times and I missed a night. I did it the next night. There was nothing to restart.
 
-By week five it was automatic, the same as washing my face.
+By week five it was automatic, the same as washing my face. And I realised I'd kept the one thing that was mine for five weeks running.
 
 Nobody ever told me the difference between doing the routine and getting the oil onto my scalp. I'd have saved myself six months and a drawer of bottles.
 
-Here's what it won't do. It won't make your oil work harder, and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+I can't promise what it does for your hair. What it did for me was give me back the one thing I kept losing.
 
-If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99, with free US shipping. That's about $1.67 a night to start.
+Here's what it won't do. It won't make your oil work harder and it won't do the routine for you. It makes the routine easy enough that you actually do it. If you don't want to oil your scalp, this isn't for you.
+
+If you do, here's the kit. The dispenser, 60ml of scalp oil (about a month of nights) and a satin sleep bonnet. $49.99 with free US shipping. Delivery takes 6 to 12 days.
+
+That's about $1.67 a night to start.
+
+You can find a plain applicator bottle for less. I'm not going to pretend you can't. This is the whole routine in one box, set up the night it arrives, so there's nothing to hunt for at 10pm.
 
 It's $49.99 until Nov 10 for our early Black Friday sale. On Nov 11 it goes to $62.49.
 
