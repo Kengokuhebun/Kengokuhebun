@@ -27,6 +27,18 @@ A personal tool to bulk-launch Meta ads. You upload creatives, set campaign sett
 | Optional Supabase Storage and history table (for hosting online) | Done |
 | Login with Facebook, AI campaign builder, placement-asset pairing (one ad with 1:1 + 9:16), multiple text variations | v2 |
 
+## Install on Linux as a desktop app
+
+```bash
+sudo apt install -y git curl
+git clone -b claude/ads-launcher-v1 https://github.com/Kengokuhebun/Kengokuhebun.git ~/ninu
+bash ~/ninu/ads-launcher/scripts/install-linux.sh
+```
+
+The installer sets up Node.js 22 for your user if needed, builds the app, asks for your Meta token once (saved in `.env.local`, readable only by you), and adds an **Ads Launcher** icon to your app menu and desktop. Clicking it starts the app in the background on http://localhost:3737 (this computer only) and opens your browser.
+
+Terminal commands: `~/.local/bin/ads-launcher` (open), `ads-launcher stop`, `ads-launcher update` (pull and rebuild), `ads-launcher log`.
+
 ## Run it on your computer
 
 You need Node.js 20 or newer.
