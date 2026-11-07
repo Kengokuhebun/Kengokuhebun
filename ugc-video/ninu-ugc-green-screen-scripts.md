@@ -23,7 +23,7 @@ Format: a woman talks to camera, cut out and placed in the bottom corner (green-
 | 1 | 3–7s | "Castor oil, rosemary. Then the baby was up three times and I'd skip it." | **B1** wet hands on a duvet at night, monitor glow (new image) | 3 wake-ups. Skipped. |
 | 2 | 7–11s | "New shampoo. Vitamins. A satin pillowcase. An $88 supplement. A 10pm reminder." | Quick cuts, under 1 second each: **B2a** shampoo, **B2b** vitamins, **B2c** satin pillowcase, **B2d** supplement tub, **B2e** phone lock screen "10:00 PM, oil your scalp" (new images) | A tick on each, then a red cross on all |
 | 3 | 11–15s | "Every skipped night felt like losing the one thing that was mine." | Presenter goes full screen for this line, close and quiet | |
-| 4 | 15–20s | "So I checked with a white towel. Part, barely damp. Fingers, slick. Towel, soaked." | **B3a** close-up of a parted scalp, barely shiny (new) · **B3b** oily fingertips (new) · **S3 towel** native | Part: damp · Fingers: slick · Towel: soaked |
+| 4 | 15–20s | "So I checked with a white towel. Part, barely damp. Fingers, slick. Towel, soaked." | Presenter full screen on "Part, barely damp" · **B3b** oily fingertips · **S3 towel** native (B3a dropped: the generated part read as thinning hair) | Part: damp · Fingers: slick · Towel: soaked |
 | 5 | 20–23s | "It was never me. It was the method." | **S5 laundry** native, then **S6 collar** native | It was the method. |
 | 6 | 23–30s | "Ninu's silicone tips sit on my part and release the oil right on my scalp. One hand, two minutes." | **REAL product clip** (`pdp/gift-assets/ninu-in-use-720p-lite.mp4`): part, press, move down the part | One hand · 2 minutes |
 | 7 | 30–31s | "Dry towel." | **B4** a dry, folded white towel on the bath edge (new) | Dry towel |
@@ -74,3 +74,12 @@ Product shots stay real. Do not generate the dispenser with AI; generators get t
 **Estimated total for all three videos:** about $6 to $7, including tests and a few re-rolls of images.
 
 Alternatives considered: InfiniteTalk is cheap at 480P but limited to 15 seconds per take, so the body would need 4 stitched takes. OmniHuman 1.5 is the most expensive ($0.135 a second) and recommends under 15 seconds. Veo 3.1 and Kling 3.0 make speech themselves, but in 8 to 15 second clips the voice changes from clip to clip.
+
+---
+
+## Generated 2026-11-07 (kie.ai)
+
+- Presenter: Nano Banana Pro. Voice: Gemini 3.8 Flash TTS, voice "Sulafat" (ElevenLabs on kie.ai was returning server errors). Pauses tightened to about 0.25s and pace raised 7%.
+- Talking heads: Kling AI Avatar 2.0 Standard, 720p. BODY 73s, H1 3.5s, H2 7.2s (speech ends at 5.5s), H3 7.2s.
+- Stills: B1, B2a to B2e, B3b, B4, B6 (Nano Banana Pro, B6 uses the presenter as reference).
+- Credits used: about 1,124. Files were delivered in chat; kie.ai keeps generated files for 14 days.
