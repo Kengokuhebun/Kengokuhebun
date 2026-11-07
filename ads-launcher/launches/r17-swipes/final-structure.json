@@ -12,6 +12,11 @@
   },
   "ads": [
     {
+      "name": "S1 Quilty - 2026-11-07",
+      "id": "120251266008520342",
+      "creativeId": "1124422627008735"
+    },
+    {
       "name": "S2 Nightstand - 2026-11-07",
       "id": "120251265983760342",
       "creativeId": "2843765202663105"
@@ -46,6 +51,5 @@
       "id": "120251265985170342",
       "creativeId": "1183536940786928"
     }
-  ],
-  "pending": "S1 Quilty (pillowcase image not yet received as a file)"
+  ]
 }
