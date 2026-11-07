@@ -1,0 +1,51 @@
+{
+  "note": "Final structure. The first build (campaign 120251265963390342, R17 Swipes, 7 ad sets) was deleted on 2026-11-07 at the owner's request; its creatives are reused here.",
+  "campaign": {
+    "id": "120250953264900342",
+    "name": "R1_Ninu"
+  },
+  "adset": {
+    "id": "120251265983490342",
+    "name": "R17 Swipes - US W25-44 - 2026-11-07",
+    "daily_budget_gbp": 75,
+    "status": "PAUSED"
+  },
+  "ads": [
+    {
+      "name": "S2 Nightstand - 2026-11-07",
+      "id": "120251265983760342",
+      "creativeId": "2843765202663105"
+    },
+    {
+      "name": "S3 Towel - 2026-11-07",
+      "id": "120251265984010342",
+      "creativeId": "1671921321152218"
+    },
+    {
+      "name": "S4 Shelf - 2026-11-07",
+      "id": "120251265984180342",
+      "creativeId": "1709015337311046"
+    },
+    {
+      "name": "S5 Laundry - 2026-11-07",
+      "id": "120251265984540342",
+      "creativeId": "1670994971222304"
+    },
+    {
+      "name": "S6 Collar - 2026-11-07",
+      "id": "120251265984790342",
+      "creativeId": "2067114963951419"
+    },
+    {
+      "name": "S7 Drawer - 2026-11-07",
+      "id": "120251265984950342",
+      "creativeId": "1162929622984215"
+    },
+    {
+      "name": "S8 Bed 3am - 2026-11-07",
+      "id": "120251265985170342",
+      "creativeId": "1183536940786928"
+    }
+  ],
+  "pending": "S1 Quilty (pillowcase image not yet received as a file)"
+}
