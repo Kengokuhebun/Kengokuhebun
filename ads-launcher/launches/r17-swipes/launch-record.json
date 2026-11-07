@@ -1,0 +1,131 @@
+{
+  "id": "9b1ca31a-6152-4e79-b67b-fab395543946",
+  "createdAt": "2026-11-07T01:02:15.506Z",
+  "dryRun": false,
+  "accountId": "act_1308050554875217",
+  "campaign": {
+    "mode": "new",
+    "name": "2026-11-07 - Sales - R17 Swipes",
+    "id": "120251265963390342"
+  },
+  "adsets": [
+    {
+      "name": "2026-11-07 - US W25-44 - S2 Nightstand",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S2 Nightstand - 2026-11-07",
+          "creativeName": "S2 Nightstand - 2026-11-07 | creative",
+          "assetName": "S2 Nightstand",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "2843765202663105",
+          "id": "120251265965320342"
+        }
+      ],
+      "id": "120251265964910342"
+    },
+    {
+      "name": "2026-11-07 - US W25-44 - S3 Towel",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S3 Towel - 2026-11-07",
+          "creativeName": "S3 Towel - 2026-11-07 | creative",
+          "assetName": "S3 Towel",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "1671921321152218",
+          "id": "120251265965610342"
+        }
+      ],
+      "id": "120251265965390342"
+    },
+    {
+      "name": "2026-11-07 - US W25-44 - S4 Shelf",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S4 Shelf - 2026-11-07",
+          "creativeName": "S4 Shelf - 2026-11-07 | creative",
+          "assetName": "S4 Shelf",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "1709015337311046",
+          "id": "120251265965910342"
+        }
+      ],
+      "id": "120251265965660342"
+    },
+    {
+      "name": "2026-11-07 - US W25-44 - S5 Laundry",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S5 Laundry - 2026-11-07",
+          "creativeName": "S5 Laundry - 2026-11-07 | creative",
+          "assetName": "S5 Laundry",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "1670994971222304",
+          "id": "120251265966650342"
+        }
+      ],
+      "id": "120251265966000342"
+    },
+    {
+      "name": "2026-11-07 - US W25-44 - S6 Collar",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S6 Collar - 2026-11-07",
+          "creativeName": "S6 Collar - 2026-11-07 | creative",
+          "assetName": "S6 Collar",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "2067114963951419",
+          "id": "120251265967160342"
+        }
+      ],
+      "id": "120251265966810342"
+    },
+    {
+      "name": "2026-11-07 - US W25-44 - S7 Drawer",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S7 Drawer - 2026-11-07",
+          "creativeName": "S7 Drawer - 2026-11-07 | creative",
+          "assetName": "S7 Drawer",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "1162929622984215",
+          "id": "120251265968080342"
+        }
+      ],
+      "id": "120251265967440342"
+    },
+    {
+      "name": "2026-11-07 - US W25-44 - S8 Bed 3am",
+      "warnings": [],
+      "ads": [
+        {
+          "name": "S8 Bed 3am - 2026-11-07",
+          "creativeName": "S8 Bed 3am - 2026-11-07 | creative",
+          "assetName": "S8 Bed 3am",
+          "kind": "image",
+          "warnings": [],
+          "creativeId": "1183536940786928",
+          "id": "120251265968770342"
+        }
+      ],
+      "id": "120251265968490342"
+    }
+  ],
+  "warnings": [],
+  "totals": {
+    "adsetsCreated": 7,
+    "adsCreated": 7,
+    "failed": 0
+  }
+}
