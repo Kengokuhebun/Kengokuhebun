@@ -8,10 +8,10 @@ For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed wi
 
 | Fact | Used in the prompts | Rule |
 |---|---|---|
-| Black Friday price | **$49.99** (20% off $62.49) | The real checkout price during the sale |
-| Regular price | **$62.49** | Must have been the real selling price before the sale |
-| Sale end | **Sun Nov 30** | The price must really go back up after |
-| Christmas order-by | **Fri Dec 12** | 6 to 12 day delivery, so Dec 12 + 12 = Dec 24 |
+| Black Friday price | **$49.99**, shown as a plain price | No "% off", no struck-through price and no end date, because the price is not changing |
+| Christmas order-by | **Fri Dec 12** | 6 to 12 day delivery, so Dec 12 + 12 = Dec 24. This is the only deadline in the ads |
+
+Also set the store's compare-at price to blank (or remove the $62.49 strike and the countdown) so the page matches the ads.
 
 ## The chain every ad follows
 
@@ -41,7 +41,7 @@ Attach: `refs/ninu-dispenser.jpg`, `refs/dispenser-in-use.png`
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, editorial infographic style on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) and terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written, nothing cramped.
 
-TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · 20% OFF THE NINU KIT · ENDS SUN NOV 30"
+TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
 
 HEADLINE, large espresso, first person: "Clumps in the shower. Half my ponytail gone. So I started oiling my scalp."
 
@@ -53,7 +53,7 @@ RIGHT HALF titled "THE NINU WAY" with a small gold check. Same hair and angle, a
 
 HONEST LINE under the split, small italic espresso, centred: "It can't promise what your hair does. It gets the oil you believe in onto your scalp, and makes the routine easy enough to keep."
 
-BOTTOM OFFER BANNER, full width, terracotta with white text, two lines: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" and "$62.49 (struck through) $49.99 · Free US shipping · 30-day money-back guarantee", white pill button on the right "Shop now".
+BOTTOM OFFER BANNER, full width, terracotta with white text, two lines: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" and "$49.99 · Free US shipping · 30-day money-back guarantee", white pill button on the right "Shop now".
 
 No other text, no reviews, no star ratings, no faces, no before-and-after hair.
 ```
@@ -67,7 +67,7 @@ Attach: `refs/ninu-dispenser.jpg`, `refs/dispenser-in-use.png`
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, listicle layout on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) number badges, terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written.
 
-TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · 20% OFF · ENDS SUN NOV 30"
+TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
 
 HEADLINE, large: "5 reasons I stopped oiling my scalp with a dropper"
 SUBHEAD, terracotta: "Postpartum shedding sent me to scalp oil. The dropper nearly made me quit."
@@ -83,26 +83,25 @@ RIGHT THIRD, tall photo-real image of the Ninu dispenser exactly like the attach
 
 STRIP above the offer, small italic espresso: "It won't promise what your hair does. It makes the routine you believe in easy enough to keep."
 
-BOTTOM OFFER BANNER, terracotta with white text: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" / "$62.49 (struck through) $49.99 · about $1.67 a night · 30-day money-back guarantee", white pill button "Shop now".
+BOTTOM OFFER BANNER, terracotta with white text: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" / "$49.99 · about $1.67 a night · 30-day money-back guarantee", white pill button "Shop now".
 
 No reviews, no star ratings, no faces, no hair before-and-after, no other text.
 ```
 
 ---
 
-## Ad 3: Warehouse notice (true deadlines, no stock claims)
+## Ad 3: Warehouse notice (Christmas shipping deadline, no stock claims)
 
 Attach: `refs/ninu-dispenser.jpg`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, photo-real overhead shot of a warehouse packing table: an open brown cardboard shipping box with tissue paper, inside it the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) and a caramel satin sleep bonnet, a tape gun, brown tape, a thermal label printer, harsh flat warehouse light, slightly gritty phone-photo look.
 
-TOP BANNER across the image, black and yellow hazard-stripe edge, black center with yellow bold text: "BLACK FRIDAY · 20% OFF · ENDS SUN NOV 30"
+TOP BANNER across the image, black and yellow hazard-stripe edge, black center with yellow bold text: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
 
-A large white shipping-slip notice taped to the box, black monospace type, a red rubber-stamp box in the corner reading "PRICE CHANGE NOTICE". Slip text, every word exactly:
+A large white shipping-slip notice taped to the box, black monospace type, a red rubber-stamp box in the corner reading "HOLIDAY SHIPPING NOTICE". Slip text, every word exactly:
 "NINU KIT · BLACK FRIDAY ORDERS"
-"Black Friday price: $49.99 (20% off $62.49)"
-"Price returns to $62.49 on Mon Dec 1"
+"Black Friday price: $49.99"
 "Delivery: 6 to 12 days, free US shipping"
 "Want it by Christmas? Order by Fri Dec 12"
 "In the box: dispenser, 60ml scalp oil, satin bonnet"
@@ -124,7 +123,7 @@ Attach: `refs/towel-native.jpg`, `refs/ninu-dispenser.jpg`
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, bold warning-label design. Bright safety-yellow background (#F7C600) with thick black and yellow hazard stripes along the top and bottom edges, heavy black condensed sans-serif type, every word spelled exactly as written.
 
-TOP STRIP, black with yellow text: "BLACK FRIDAY · 20% OFF · ENDS SUN NOV 30"
+TOP STRIP, black with yellow text: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
 
 Black warning triangle icon, then HEADLINE in huge black type: "WARNING: If you oil your scalp with a dropper, check your towel."
 SUBHEAD in black: "Postpartum shedding is why I started oiling. The dropper is why I kept quitting."
@@ -139,7 +138,7 @@ CENTER RIGHT, a white card with black text, titled "The towel test (tonight)":
 
 LOWER SECTION, white rounded panel: a small photo-real image of the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) and the text: "THE FIX: Ninu's hollow silicone tips put the oil on the part. One hand. About 2 minutes. Works with the oil you own." Under it, smaller: "It can't promise what your hair does. It gets the oil where you meant it to go."
 
-BOTTOM BANNER, black with yellow text: "The Ninu Kit $62.49 (struck through) $49.99 · Free US shipping · 30-day money-back guarantee" and a yellow pill button with black text "Shop now".
+BOTTOM BANNER, black with yellow text: "The Ninu Kit $49.99 · Free US shipping · 30-day money-back guarantee" and a yellow pill button with black text "Shop now".
 
 No reviews, no faces, no hair before-and-after, no other text.
 ```
@@ -151,4 +150,4 @@ No reviews, no faces, no hair before-and-after, no other text.
 - Check every price, date and the kit contents against the live store on the day.
 - The kit oil is "60ml scalp oil" to match the page. The bottle that ships is MELAO rosemary essential oil, so no prompt pictures the bottle.
 - Your kit photo's caption strip lists "EBOOK". The guide isn't delivered to buyers yet, so none of these ads mention it. Fix delivery before using that photo in an ad.
-- Make the store's Black Friday price, compare-at price and end date match before turning the ads on.
+- Make the store match the ads: $49.99, no compare-at price, no "price goes up" countdown.
