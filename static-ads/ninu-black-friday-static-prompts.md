@@ -27,7 +27,8 @@ Also set the store's compare-at price to blank (or remove the $62.49 strike and 
 **Rules kept:**
 - **Her shedding is first person** ("my ponytail"), never "you have hair loss". Meta rejects ads that tell the viewer she has a health condition.
 - **No hair results**, no before-and-after hair, no "stops shedding". Each ad says plainly it can't promise what her hair does. That's the honest line her skepticism asks for.
-- **No reviews, counts or "thousands of moms"**, and no free gifts.
+- **No reviews, counts or "thousands of moms".**
+- **The 4 free gifts are in every ad** (owner confirmed 2026-11-08: massager and pouch packed in every order, guide and Night Tracker emailed after purchase). If any of them stops, take it out of the ads the same day.
 - **No em dashes, no exclamation marks.**
 
 **Shared style:** cream `#F5EFE6`, espresso `#241812`, gold `#C79A5A`, terracotta `#B85A3E`; Black Friday banners espresso with gold text; clean bold sans-serif, nothing smaller than 26 px at 1080 wide; oil always pale golden-yellow and clear.
@@ -41,7 +42,7 @@ Attach: `refs/ninu-dispenser.jpg`, `refs/dispenser-in-use.png`
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, editorial infographic style on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) and terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written, nothing cramped.
 
-TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
+TOP BANNER, full width, white background with a thin red border, all text in bold bright red (#E0201B), large and easy to read: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
 
 HEADLINE, large espresso, first person: "Clumps in the shower. Half my ponytail gone. So I started oiling my scalp."
 
@@ -53,7 +54,7 @@ RIGHT HALF titled "THE NINU WAY" with a small gold check. Same hair and angle, a
 
 HONEST LINE under the split, small italic espresso, centred: "It can't promise what your hair does. It gets the oil you believe in onto your scalp, and makes the routine easy enough to keep."
 
-BOTTOM OFFER BANNER, full width, terracotta with white text, two lines: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" and "$49.99 · Free US shipping · 30-day money-back guarantee", white pill button on the right "Shop now".
+BOTTOM OFFER BANNER, full width, terracotta with white text, three lines: "The Ninu Kit $49.99: dispenser + 60ml scalp oil + satin bonnet", then in bold gold "+ 4 FREE GIFTS: scalp massager · bedside pouch · routine guide · Ninu Night Tracker", then "Free US shipping · 30-day money-back guarantee". White pill button on the right "Shop now".
 
 No other text, no reviews, no star ratings, no faces, no before-and-after hair.
 ```
@@ -67,7 +68,7 @@ Attach: `refs/ninu-dispenser.jpg`, `refs/dispenser-in-use.png`
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, listicle layout on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) number badges, terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written.
 
-TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
+TOP BANNER, full width, white background with a thin red border, all text in bold bright red (#E0201B), large and easy to read: "BLACK FRIDAY · THE NINU KIT $49.99 · FREE US SHIPPING"
 
 HEADLINE, large: "5 reasons I stopped oiling my scalp with a dropper"
 SUBHEAD, terracotta: "Postpartum shedding sent me to scalp oil. The dropper nearly made me quit."
@@ -83,7 +84,7 @@ RIGHT THIRD, tall photo-real image of the Ninu dispenser exactly like the attach
 
 STRIP above the offer, small italic espresso: "It won't promise what your hair does. It makes the routine you believe in easy enough to keep."
 
-BOTTOM OFFER BANNER, terracotta with white text: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" / "$49.99 · about $1.67 a night · 30-day money-back guarantee", white pill button "Shop now".
+BOTTOM OFFER BANNER, terracotta with white text, three lines: "The Ninu Kit $49.99: dispenser + 60ml scalp oil + satin bonnet", then in bold gold "+ 4 FREE GIFTS: scalp massager · bedside pouch · routine guide · Ninu Night Tracker", then "About $1.67 a night · 30-day money-back guarantee". White pill button "Shop now".
 
 No reviews, no star ratings, no faces, no hair before-and-after, no other text.
 ```
@@ -105,11 +106,13 @@ A large white shipping-slip notice taped to the box, black monospace type, a red
 "Delivery: 6 to 12 days, free US shipping"
 "Want it by Christmas? Order by Fri Dec 12"
 "In the box: dispenser, 60ml scalp oil, satin bonnet"
+"FREE: scalp massager, bedside pouch"
+"FREE by email: routine guide, Ninu Night Tracker"
 "30-day money-back guarantee"
 
-A yellow sticky note beside the slip, handwritten in marker: "For every mom oiling her scalp through postpartum shedding. Pack these first."
+A LARGE square bright-yellow sticky note stuck flat and straight-on beside the slip, about a quarter of the image width, facing the camera with no angle or curl, evenly lit with no glare or shadow across it. Written in thick black permanent marker, big bold neat handwriting filling the note, high contrast and easy to read at phone size, in four short lines: "For every mom" / "oiling her scalp through" / "postpartum shedding." / "Pack these first."
 
-BOTTOM BANNER, espresso with white text: "Oil on your scalp, not your towel. One hand, about 2 minutes." and a terracotta pill button "Order now".
+BOTTOM BANNER, espresso with white text, two lines: "Oil on your scalp, not your towel. One hand, about 2 minutes." and in bold gold "+ 4 FREE GIFTS: scalp massager · bedside pouch · routine guide · Ninu Night Tracker". Terracotta pill button "Order now".
 
 No stock counts, no "selling out", no reviews, no faces, no other text.
 ```
@@ -138,7 +141,7 @@ CENTER RIGHT, a white card with black text, titled "The towel test (tonight)":
 
 LOWER SECTION, white rounded panel: a small photo-real image of the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) and the text: "THE FIX: Ninu's hollow silicone tips put the oil on the part. One hand. About 2 minutes. Works with the oil you own." Under it, smaller: "It can't promise what your hair does. It gets the oil where you meant it to go."
 
-BOTTOM BANNER, black with yellow text: "The Ninu Kit $49.99 · Free US shipping · 30-day money-back guarantee" and a yellow pill button with black text "Shop now".
+BOTTOM BANNER, black with yellow text, two lines: "The Ninu Kit $49.99 · Free US shipping · 30-day money-back guarantee" and in bold white "+ 4 FREE GIFTS: scalp massager · bedside pouch · routine guide · Ninu Night Tracker". Yellow pill button with black text "Shop now".
 
 No reviews, no faces, no hair before-and-after, no other text.
 ```
@@ -149,5 +152,5 @@ No reviews, no faces, no hair before-and-after, no other text.
 
 - Check every price, date and the kit contents against the live store on the day.
 - The kit oil is "60ml scalp oil" to match the page. The bottle that ships is MELAO rosemary essential oil, so no prompt pictures the bottle.
-- Your kit photo's caption strip lists "EBOOK". The guide isn't delivered to buyers yet, so none of these ads mention it. Fix delivery before using that photo in an ad.
+- The kit photo (`refs/ninu-kit.jpg`) can now be used as an extra reference for the offer banners, since the guide is being delivered.
 - Make the store match the ads: $49.99, no compare-at price, no "price goes up" countdown.
