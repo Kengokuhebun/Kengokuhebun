@@ -1,79 +1,89 @@
-# Ninu Black Friday statics: 4 prompts, one version each
+# Ninu Black Friday statics v2: 4 prompts, one version each
 
-For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed with each prompt so the dispenser looks like the real one. Every word in the ads is written out in the prompt; if the model misspells anything, tell me and I'll set the text in a clean layout instead.
+For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed with each prompt so the dispenser looks like the real one. Every word is written into the prompt; if the model misspells anything, I'll set the text in a clean layout instead.
+
+**v2 change:** the avatar leads. Every ad opens on her postpartum shedding, in her words from the Reddit research, then bridges: she turned to scalp oiling, the method made it messy and she kept skipping it (the winning angle), the dispenser fixes the method (the mechanism), and she gets back what she wants: to feel like herself, with ten minutes a night that are hers.
 
 ## Fill these in before generating (they must be true in the store)
 
 | Fact | Used in the prompts | Rule |
 |---|---|---|
-| Black Friday price | **$46.87** (25% off $62.49) | Must be the real checkout price during the sale |
-| Regular price it's 25% off | **$62.49** | Must have been the real selling price before the sale |
-| Sale end | **Sun Nov 30** | Price must really go back up after |
-| Christmas order-by date | **Fri Dec 12** | Delivery takes 6 to 12 days, so Dec 12 + 12 days = Dec 24 |
+| Black Friday price | **$46.87** (25% off $62.49) | The real checkout price during the sale |
+| Regular price | **$62.49** | Must have been the real selling price before the sale |
+| Sale end | **Sun Nov 30** | The price must really go back up after |
+| Christmas order-by | **Fri Dec 12** | 6 to 12 day delivery, so Dec 12 + 12 = Dec 24 |
 
-If any of these change, replace them in every prompt. No free gifts are mentioned (not in the box yet).
+## The chain every ad follows
 
-## What each ad does (Breakthrough Advertising, applied)
+| Link | Her words (source) | How it appears |
+|---|---|---|
+| **Pain** | "literal clumps in the shower" · "my ponytail is half the size it used to be" · "bald looking temples" (r/BabyBumps) · "My poor baby is usually covered in my hair" (r/Mommit) · "in the mirror crying" | Headline and pain strip, in first person |
+| **What she tried** | "Massage in castor oil, put on a shower cap" · "$88/mo" supplement · vitamins, biotin, collagen | "I had the castor oil. I had the rosemary." |
+| **Skepticism** | "Did anything ACTUALLY help? (not influencer BS real mom experience)" | First-person voice, the honest line, no review claims |
+| **Winning angle** (Ad C) | "Oil on my fingers… Running down my neck. Soaking into the towel" · "I'd tell myself I'd start over Sunday" | The old way: dropper, towel, skipped nights |
+| **Mechanism** (Ad C) | "You press the tips against the scalp along the part and the oil releases right there" | The Ninu way |
+| **Desire** | "I just want to feel like myself again, honestly." (r/BabyBumps) | The closing line |
 
-- **Filters in the first line.** Every headline says "scalp oil", so women who don't oil scroll past (Schwartz ch 2: reject as many as you attract).
-- **Mechanism leads** (stage 3 to 4 market): how the oil gets to the scalp is the new idea, not "oil for hair".
-- **Bad, then good** (ch 12): the dropper, fingers and towel method, then the tips. Attacks the method, never a brand.
-- **A test she can run** (the towel test), tied to the **guarantee as the last fact** before the button (ch 7, 14).
-- **Deadly Sincerity** (ch 13): one line on what it won't do.
-- **A price reason-why** (ch 11): Black Friday plus a real end date, plus per-night maths.
-- **Kept out:** thinning-hair pictures, stock counts, reviews, "thousands of moms", hair-result claims.
+**Rules kept:**
+- **Her shedding is first person** ("my ponytail"), never "you have hair loss". Meta rejects ads that tell the viewer she has a health condition.
+- **No hair results**, no before-and-after hair, no "stops shedding". Each ad says plainly it can't promise what her hair does. That's the honest line her skepticism asks for.
+- **No reviews, counts or "thousands of moms"**, and no free gifts.
+- **No em dashes, no exclamation marks.**
 
-Shared style for all four: brand cream `#F5EFE6`, espresso `#241812`, gold `#C79A5A`, terracotta `#B85A3E`. Black Friday banners in espresso with gold text. Clean bold sans-serif headlines, generous line spacing, nothing below 26 px at 1080 wide. The oil is always pale golden-yellow and clear, never dark.
+**Shared style:** cream `#F5EFE6`, espresso `#241812`, gold `#C79A5A`, terracotta `#B85A3E`; Black Friday banners espresso with gold text; clean bold sans-serif, nothing smaller than 26 px at 1080 wide; oil always pale golden-yellow and clear.
 
 ---
 
-## Ad 1: Problem / solution split
+## Ad 1: Problem / solution, avatar first
 
 Attach: `refs/dispenser-reference.png`, `refs/dispenser-in-use.png`
 
 ```
-Vertical 4:5 Facebook feed ad, 1080x1350, clean editorial infographic style on a warm cream background (#F5EFE6), dark espresso text (#241812), gold (#C79A5A) and terracotta (#B85A3E) accents. Bold modern sans-serif type, every word spelled exactly as written, high legibility, nothing cramped.
+Vertical 4:5 Facebook feed ad, 1080x1350, editorial infographic style on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) and terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written, nothing cramped.
 
-TOP BANNER, full width, espresso background, gold text: "BLACK FRIDAY · 25% OFF THE NINU KIT · ENDS SUN NOV 30"
+TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · 25% OFF THE NINU KIT · ENDS SUN NOV 30"
 
-HEADLINE under the banner, large, espresso: "Your scalp oil is going everywhere except your scalp."
-SUBHEAD, smaller, terracotta: "For moms who oil their scalp and keep skipping it."
+HEADLINE, large espresso, first person: "Clumps in the shower. Half my ponytail gone. So I started oiling my scalp."
+
+PAIN STRIP under the headline, left: a photo-real close-up of a woman's hand holding a clump of shed brown hair over a white shower drain, water droplets, flat bathroom light, no face. Right of the photo, three short espresso lines with small terracotta dots: "Hair all over the baby" , "Temples I hid in every photo" , "I just wanted to feel like myself again". Under it, one terracotta line across the width: "I had the castor oil. I had the rosemary. I kept skipping it. Here's why."
 
 MAIN AREA split exactly in half with a thin gold vertical divider.
-LEFT HALF titled "THE DROPPER WAY" with a small red X. Photo-real close-up from behind of a woman's shoulder-length brown hair with a centre part, a glass dropper dripping pale golden-yellow clear oil onto the hair strands (not the scalp), oil running down the back of her neck, a soaked white towel over her shoulders with a wet yellow patch. No face. Four short labels with thin pointer lines: "Oil sits on the hair" , "Runs down your neck" , "Soaks the towel" , "Part barely damp".
-RIGHT HALF titled "THE NINU WAY" with a small gold check. Same hair and angle, a hand pressing the Ninu dispenser (exactly like the reference image: palm-sized clear cylinder with a cream scalloped dome cap, 1 to 4ml markings, a cluster of hollow translucent silicone tips at the base) against the scalp along the part, pale golden oil visible inside the clear chamber, the towel on her shoulders dry and clean. No face. Four labels with thin pointer lines: "Hollow tips sit on the part" , "Oil releases on the scalp" , "One hand, about 2 minutes" , "Dry towel, nothing drips".
+LEFT HALF titled "THE DROPPER WAY" with a small red X. Photo-real view from behind of shoulder-length brown hair with a centre part, a glass dropper dripping pale golden-yellow clear oil onto the hair strands, oil running down the back of the neck, a soaked white towel over the shoulders with a wet yellow patch. No face. Labels with thin pointer lines: "Oil sits on the hair" , "Runs down your neck" , "Soaks the towel" , "So you skip it at 10pm".
+RIGHT HALF titled "THE NINU WAY" with a small gold check. Same hair and angle, a hand pressing the Ninu dispenser (exactly like the reference: palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, cluster of hollow translucent silicone tips) against the scalp along the part, pale golden oil inside the clear chamber, the towel dry and clean. No face. Labels: "Hollow tips sit on the part" , "Oil releases on your scalp" , "One hand, about 2 minutes" , "Easy enough to do every night".
 
-STRIP under the split, cream with three numbered gold circles in a row: "1 Part your hair" "2 Press the tips along the part" "3 Move down and repeat". Under it, small italic espresso line: "Works with the oil you already own. It won't do the routine for you. It makes it easy enough that you keep doing it."
+HONEST LINE under the split, small italic espresso, centred: "It can't promise what your hair does. It gets the oil you believe in onto your scalp, and makes the routine easy enough to keep."
 
-BOTTOM OFFER BANNER, full width, terracotta background, white text, two lines: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" and "$62.49 (struck through) $46.87 · Free US shipping · 30-day money-back guarantee", with a white pill button on the right reading "Shop now".
+BOTTOM OFFER BANNER, full width, terracotta with white text, two lines: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" and "$62.49 (struck through) $46.87 · Free US shipping · 30-day money-back guarantee", white pill button on the right "Shop now".
 
-No other text, no logos except the word Ninu, no reviews, no star ratings, no faces, no before-and-after hair.
+No other text, no reviews, no star ratings, no faces, no before-and-after hair.
 ```
 
 ---
 
-## Ad 2: 5 reasons why
+## Ad 2: 5 reasons, first person
 
 Attach: `refs/dispenser-reference.png`, `refs/dispenser-in-use.png`
 
 ```
-Vertical 4:5 Facebook feed ad, 1080x1350, listicle layout on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) number badges, terracotta (#B85A3E) accents. Bold modern sans-serif, every word spelled exactly as written.
+Vertical 4:5 Facebook feed ad, 1080x1350, listicle layout on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) number badges, terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written.
 
 TOP BANNER, full width, espresso with gold text: "BLACK FRIDAY · 25% OFF · ENDS SUN NOV 30"
 
-HEADLINE, large: "5 reasons to switch how you oil your scalp"
-SUBHEAD, small terracotta: "For moms who own a scalp oil and keep skipping it."
+HEADLINE, large: "5 reasons I stopped oiling my scalp with a dropper"
+SUBHEAD, terracotta: "Postpartum shedding sent me to scalp oil. The dropper nearly made me quit."
 
-FIVE ROWS down the left two-thirds, each with a gold circle number, a bold line and a lighter supporting line:
-"1  Oil on your scalp, not your hair" / "Hollow silicone tips release it right along the part."
-"2  One hand, about two minutes" / "Because the other one usually has a baby on it."
-"3  No towel, no drips, no sink to wipe" / "The routine you skip at 10pm, minus the mess."
-"4  Works with the oil you already own" / "And the kit comes with 60ml of scalp oil to start."
-"5  30 nights to try it" / "If the routine isn't easier, you get your money back."
+FIVE ROWS down the left two-thirds, each with a gold circle number, a bold line and a lighter line:
+"1  The oil lands on my scalp, not my hair" / "Hollow silicone tips release it right along the part."
+"2  One hand, about two minutes" / "The other one usually has the baby."
+"3  No towel, no oil down my neck" / "Nothing runs. Nothing drips. No sink to wipe."
+"4  I stopped skipping nights" / "No more telling myself I'd start over Sunday."
+"5  Ten minutes a night that are mine again" / "The one thing I do just for me, and I keep it."
 
-RIGHT THIRD, a tall photo-real image of the Ninu dispenser exactly like the reference (palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, cluster of hollow translucent silicone tips) standing on a warm wooden nightstand at night beside a satin caramel sleep bonnet, warm lamp light, pale golden-yellow oil inside the chamber, clean and dry surface.
+RIGHT THIRD, tall photo-real image of the Ninu dispenser exactly like the reference (palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) on a warm wooden nightstand at night beside a caramel satin sleep bonnet and a glowing baby monitor, warm lamp light, pale golden oil in the chamber, clean dry surface.
 
-BOTTOM OFFER BANNER, terracotta with white text: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" / "$62.49 (struck through) $46.87 · about $1.56 a night · Free US shipping", white pill button "Shop now".
+STRIP above the offer, small italic espresso: "It won't promise what your hair does. It makes the routine you believe in easy enough to keep."
+
+BOTTOM OFFER BANNER, terracotta with white text: "The Ninu Kit: dispenser + 60ml scalp oil + satin bonnet" / "$62.49 (struck through) $46.87 · about $1.56 a night · 30-day money-back guarantee", white pill button "Shop now".
 
 No reviews, no star ratings, no faces, no hair before-and-after, no other text.
 ```
@@ -82,16 +92,14 @@ No reviews, no star ratings, no faces, no hair before-and-after, no other text.
 
 ## Ad 3: Warehouse notice (true deadlines, no stock claims)
 
-The real urgency is the sale end date and the Christmas order-by date. Stock is not tracked, so the ad never says stock is running out.
-
 Attach: `refs/dispenser-reference.png`
 
 ```
-Vertical 4:5 Facebook feed ad, 1080x1350, photo-real overhead shot of a warehouse packing table: brown cardboard shipping box open with tissue paper, inside it the Ninu dispenser exactly like the reference (palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) and a caramel satin sleep bonnet, a tape gun, a roll of brown tape, a thermal label printer, harsh flat warehouse light, slightly gritty phone-photo look.
+Vertical 4:5 Facebook feed ad, 1080x1350, photo-real overhead shot of a warehouse packing table: an open brown cardboard shipping box with tissue paper, inside it the Ninu dispenser exactly like the reference (palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) and a caramel satin sleep bonnet, a tape gun, brown tape, a thermal label printer, harsh flat warehouse light, slightly gritty phone-photo look.
 
 TOP BANNER across the image, black and yellow hazard-stripe edge, black center with yellow bold text: "BLACK FRIDAY · 25% OFF · ENDS SUN NOV 30"
 
-A large white printed shipping-slip style notice taped to the box, black monospace type, a red rubber-stamp box in the corner reading "PRICE CHANGE NOTICE". Slip text, every word exactly:
+A large white shipping-slip notice taped to the box, black monospace type, a red rubber-stamp box in the corner reading "PRICE CHANGE NOTICE". Slip text, every word exactly:
 "NINU KIT · BLACK FRIDAY ORDERS"
 "Black Friday price: $46.87 (25% off $62.49)"
 "Price returns to $62.49 on Mon Dec 1"
@@ -100,7 +108,7 @@ A large white printed shipping-slip style notice taped to the box, black monospa
 "In the box: dispenser, 60ml scalp oil, satin bonnet"
 "30-day money-back guarantee"
 
-Small handwritten marker note on a sticky note beside the slip: "For the moms who keep skipping their scalp oil".
+A yellow sticky note beside the slip, handwritten in marker: "For every mom oiling her scalp through postpartum shedding. Pack these first."
 
 BOTTOM BANNER, espresso with white text: "Oil on your scalp, not your towel. One hand, about 2 minutes." and a terracotta pill button "Order now".
 
@@ -111,8 +119,6 @@ No stock counts, no "selling out", no reviews, no faces, no other text.
 
 ## Ad 4: Warning
 
-The warning is about the method (true and checkable), and the scarcity is the real end date.
-
 Attach: `refs/towel-native.jpg`, `refs/dispenser-reference.png`
 
 ```
@@ -121,8 +127,9 @@ Vertical 4:5 Facebook feed ad, 1080x1350, bold warning-label design. Bright safe
 TOP STRIP, black with yellow text: "BLACK FRIDAY · 25% OFF · ENDS SUN NOV 30"
 
 Black warning triangle icon, then HEADLINE in huge black type: "WARNING: If you oil your scalp with a dropper, check your towel."
+SUBHEAD in black: "Postpartum shedding is why I started oiling. The dropper is why I kept quitting."
 
-CENTER LEFT, a photo inset with a thick black border showing a white towel soaked with pale golden-yellow clear oil hanging over a white bathtub, oil dripping into a puddle on grey tiles (use the attached towel photo). Black label on the photo: "Where the oil went".
+CENTER LEFT, a photo inset with a thick black border showing a white towel soaked with pale golden-yellow clear oil hanging over a white bathtub, oil dripping into a puddle on grey tiles (use the attached towel photo). Black label on the photo: "Where my oil went".
 
 CENTER RIGHT, a white card with black text, titled "The towel test (tonight)":
 "1  White towel on your shoulders"
@@ -130,7 +137,7 @@ CENTER RIGHT, a white card with black text, titled "The towel test (tonight)":
 "3  Check your part, fingers and towel"
 "Towel soaked? The oil isn't on your scalp."
 
-LOWER SECTION, white rounded panel: small photo-real image of the Ninu dispenser exactly like the reference (clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) and the text: "THE FIX: Ninu's hollow silicone tips put the oil on the part. One hand. About 2 minutes. Works with the oil you own."
+LOWER SECTION, white rounded panel: a small photo-real image of the Ninu dispenser exactly like the reference (clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) and the text: "THE FIX: Ninu's hollow silicone tips put the oil on the part. One hand. About 2 minutes. Works with the oil you own." Under it, smaller: "It can't promise what your hair does. It gets the oil where you meant it to go."
 
 BOTTOM BANNER, black with yellow text: "The Ninu Kit $62.49 (struck through) $46.87 · Free US shipping · 30-day money-back guarantee" and a yellow pill button with black text "Shop now".
 
@@ -142,5 +149,5 @@ No reviews, no faces, no hair before-and-after, no other text.
 ## Before you launch
 
 - Check every price, date and the kit contents against the live store on the day.
-- The kit oil is shown as "60ml scalp oil" to match the page. The bottle that ships is MELAO rosemary essential oil, so none of the prompts picture the bottle.
-- Make the store's Black Friday price, compare-at price and end date match the ads before turning them on.
+- The kit oil is "60ml scalp oil" to match the page. The bottle that ships is MELAO rosemary essential oil, so no prompt pictures the bottle.
+- Make the store's Black Friday price, compare-at price and end date match before turning the ads on.
