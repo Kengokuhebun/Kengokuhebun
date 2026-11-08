@@ -1,6 +1,6 @@
 # Ninu Black Friday statics v2: 4 prompts, one version each
 
-For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed with each prompt so the dispenser looks like the real one. Every word is written into the prompt; if the model misspells anything, I'll set the text in a clean layout instead.
+For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed with each prompt so the product looks like the real one: `refs/ninu-dispenser.png` (the dispenser close-up) and, where listed, `refs/ninu-kit.png` (dispenser, 60ml oil, satin bonnet). Every word is written into the prompt; if the model misspells anything, I'll set the text in a clean layout instead.
 
 **v2 change:** the avatar leads. Every ad opens on her postpartum shedding, in her words from the Reddit research, then bridges: she turned to scalp oiling, the method made it messy and she kept skipping it (the winning angle), the dispenser fixes the method (the mechanism), and she gets back what she wants: to feel like herself, with ten minutes a night that are hers.
 
@@ -36,7 +36,7 @@ For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed wi
 
 ## Ad 1: Problem / solution, avatar first
 
-Attach: `refs/dispenser-reference.png`, `refs/dispenser-in-use.png`
+Attach: `refs/ninu-dispenser.png`, `refs/dispenser-in-use.png`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, editorial infographic style on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) and terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written, nothing cramped.
@@ -49,7 +49,7 @@ PAIN STRIP under the headline, left: a photo-real close-up of a woman's hand hol
 
 MAIN AREA split exactly in half with a thin gold vertical divider.
 LEFT HALF titled "THE DROPPER WAY" with a small red X. Photo-real view from behind of shoulder-length brown hair with a centre part, a glass dropper dripping pale golden-yellow clear oil onto the hair strands, oil running down the back of the neck, a soaked white towel over the shoulders with a wet yellow patch. No face. Labels with thin pointer lines: "Oil sits on the hair" , "Runs down your neck" , "Soaks the towel" , "So you skip it at 10pm".
-RIGHT HALF titled "THE NINU WAY" with a small gold check. Same hair and angle, a hand pressing the Ninu dispenser (exactly like the reference: palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, cluster of hollow translucent silicone tips) against the scalp along the part, pale golden oil inside the clear chamber, the towel dry and clean. No face. Labels: "Hollow tips sit on the part" , "Oil releases on your scalp" , "One hand, about 2 minutes" , "Easy enough to do every night".
+RIGHT HALF titled "THE NINU WAY" with a small gold check. Same hair and angle, a hand pressing the Ninu dispenser (exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath)) against the scalp along the part, pale golden oil inside the clear chamber, the towel dry and clean. No face. Labels: "Hollow tips sit on the part" , "Oil releases on your scalp" , "One hand, about 2 minutes" , "Easy enough to do every night".
 
 HONEST LINE under the split, small italic espresso, centred: "It can't promise what your hair does. It gets the oil you believe in onto your scalp, and makes the routine easy enough to keep."
 
@@ -62,7 +62,7 @@ No other text, no reviews, no star ratings, no faces, no before-and-after hair.
 
 ## Ad 2: 5 reasons, first person
 
-Attach: `refs/dispenser-reference.png`, `refs/dispenser-in-use.png`
+Attach: `refs/ninu-dispenser.png`, `refs/dispenser-in-use.png`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, listicle layout on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) number badges, terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written.
@@ -79,7 +79,7 @@ FIVE ROWS down the left two-thirds, each with a gold circle number, a bold line 
 "4  I stopped skipping nights" / "No more telling myself I'd start over Sunday."
 "5  Ten minutes a night that are mine again" / "The one thing I do just for me, and I keep it."
 
-RIGHT THIRD, tall photo-real image of the Ninu dispenser exactly like the reference (palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) on a warm wooden nightstand at night beside a caramel satin sleep bonnet and a glowing baby monitor, warm lamp light, pale golden oil in the chamber, clean dry surface.
+RIGHT THIRD, tall photo-real image of the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) on a warm wooden nightstand at night beside a caramel satin sleep bonnet and a glowing baby monitor, warm lamp light, pale golden oil in the chamber, clean dry surface.
 
 STRIP above the offer, small italic espresso: "It won't promise what your hair does. It makes the routine you believe in easy enough to keep."
 
@@ -92,10 +92,10 @@ No reviews, no star ratings, no faces, no hair before-and-after, no other text.
 
 ## Ad 3: Warehouse notice (true deadlines, no stock claims)
 
-Attach: `refs/dispenser-reference.png`
+Attach: `refs/ninu-dispenser.png`
 
 ```
-Vertical 4:5 Facebook feed ad, 1080x1350, photo-real overhead shot of a warehouse packing table: an open brown cardboard shipping box with tissue paper, inside it the Ninu dispenser exactly like the reference (palm-sized clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) and a caramel satin sleep bonnet, a tape gun, brown tape, a thermal label printer, harsh flat warehouse light, slightly gritty phone-photo look.
+Vertical 4:5 Facebook feed ad, 1080x1350, photo-real overhead shot of a warehouse packing table: an open brown cardboard shipping box with tissue paper, inside it the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) and a caramel satin sleep bonnet, a tape gun, brown tape, a thermal label printer, harsh flat warehouse light, slightly gritty phone-photo look.
 
 TOP BANNER across the image, black and yellow hazard-stripe edge, black center with yellow bold text: "BLACK FRIDAY · 25% OFF · ENDS SUN NOV 30"
 
@@ -119,7 +119,7 @@ No stock counts, no "selling out", no reviews, no faces, no other text.
 
 ## Ad 4: Warning
 
-Attach: `refs/towel-native.jpg`, `refs/dispenser-reference.png`
+Attach: `refs/towel-native.jpg`, `refs/ninu-dispenser.png`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, bold warning-label design. Bright safety-yellow background (#F7C600) with thick black and yellow hazard stripes along the top and bottom edges, heavy black condensed sans-serif type, every word spelled exactly as written.
@@ -137,7 +137,7 @@ CENTER RIGHT, a white card with black text, titled "The towel test (tonight)":
 "3  Check your part, fingers and towel"
 "Towel soaked? The oil isn't on your scalp."
 
-LOWER SECTION, white rounded panel: a small photo-real image of the Ninu dispenser exactly like the reference (clear cylinder, cream scalloped dome cap, 1 to 4ml markings, hollow translucent silicone tips) and the text: "THE FIX: Ninu's hollow silicone tips put the oil on the part. One hand. About 2 minutes. Works with the oil you own." Under it, smaller: "It can't promise what your hair does. It gets the oil where you meant it to go."
+LOWER SECTION, white rounded panel: a small photo-real image of the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) and the text: "THE FIX: Ninu's hollow silicone tips put the oil on the part. One hand. About 2 minutes. Works with the oil you own." Under it, smaller: "It can't promise what your hair does. It gets the oil where you meant it to go."
 
 BOTTOM BANNER, black with yellow text: "The Ninu Kit $62.49 (struck through) $46.87 · Free US shipping · 30-day money-back guarantee" and a yellow pill button with black text "Shop now".
 
@@ -150,4 +150,5 @@ No reviews, no faces, no hair before-and-after, no other text.
 
 - Check every price, date and the kit contents against the live store on the day.
 - The kit oil is "60ml scalp oil" to match the page. The bottle that ships is MELAO rosemary essential oil, so no prompt pictures the bottle.
+- Your kit photo's caption strip lists "EBOOK". The guide isn't delivered to buyers yet, so none of these ads mention it. Fix delivery before using that photo in an ad.
 - Make the store's Black Friday price, compare-at price and end date match before turning the ads on.
