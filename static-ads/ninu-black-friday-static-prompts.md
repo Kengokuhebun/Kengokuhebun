@@ -1,6 +1,6 @@
 # Ninu Black Friday statics v2: 4 prompts, one version each
 
-For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed with each prompt so the product looks like the real one: `refs/ninu-dispenser.png` (the dispenser close-up) and, where listed, `refs/ninu-kit.png` (dispenser, 60ml oil, satin bonnet). Every word is written into the prompt; if the model misspells anything, I'll set the text in a clean layout instead.
+For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed with each prompt so the product looks like the real one: `refs/ninu-dispenser.jpg` (the dispenser close-up) and, where listed, `refs/ninu-kit.jpg` (dispenser, 60ml oil, satin bonnet). Every word is written into the prompt; if the model misspells anything, I'll set the text in a clean layout instead.
 
 **v2 change:** the avatar leads. Every ad opens on her postpartum shedding, in her words from the Reddit research, then bridges: she turned to scalp oiling, the method made it messy and she kept skipping it (the winning angle), the dispenser fixes the method (the mechanism), and she gets back what she wants: to feel like herself, with ten minutes a night that are hers.
 
@@ -36,7 +36,7 @@ For **Nano Banana Pro** (kie.ai), 4:5, 2K. Attach the reference images listed wi
 
 ## Ad 1: Problem / solution, avatar first
 
-Attach: `refs/ninu-dispenser.png`, `refs/dispenser-in-use.png`
+Attach: `refs/ninu-dispenser.jpg`, `refs/dispenser-in-use.png`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, editorial infographic style on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) and terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written, nothing cramped.
@@ -62,7 +62,7 @@ No other text, no reviews, no star ratings, no faces, no before-and-after hair.
 
 ## Ad 2: 5 reasons, first person
 
-Attach: `refs/ninu-dispenser.png`, `refs/dispenser-in-use.png`
+Attach: `refs/ninu-dispenser.jpg`, `refs/dispenser-in-use.png`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, listicle layout on warm cream (#F5EFE6), espresso text (#241812), gold (#C79A5A) number badges, terracotta (#B85A3E) accents, bold modern sans-serif, every word spelled exactly as written.
@@ -92,7 +92,7 @@ No reviews, no star ratings, no faces, no hair before-and-after, no other text.
 
 ## Ad 3: Warehouse notice (true deadlines, no stock claims)
 
-Attach: `refs/ninu-dispenser.png`
+Attach: `refs/ninu-dispenser.jpg`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, photo-real overhead shot of a warehouse packing table: an open brown cardboard shipping box with tissue paper, inside it the Ninu dispenser exactly like the attached dispenser photo (a palm-sized clear cylindrical chamber with thin vertical channels inside, a soft cream dome cap with gentle scalloped dimples on top, 1ml to 4ml markings on the side, and a cluster of seven short translucent rounded silicone tips underneath) and a caramel satin sleep bonnet, a tape gun, brown tape, a thermal label printer, harsh flat warehouse light, slightly gritty phone-photo look.
@@ -119,7 +119,7 @@ No stock counts, no "selling out", no reviews, no faces, no other text.
 
 ## Ad 4: Warning
 
-Attach: `refs/towel-native.jpg`, `refs/ninu-dispenser.png`
+Attach: `refs/towel-native.jpg`, `refs/ninu-dispenser.jpg`
 
 ```
 Vertical 4:5 Facebook feed ad, 1080x1350, bold warning-label design. Bright safety-yellow background (#F7C600) with thick black and yellow hazard stripes along the top and bottom edges, heavy black condensed sans-serif type, every word spelled exactly as written.
