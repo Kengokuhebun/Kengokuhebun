@@ -1,0 +1,13 @@
+{
+  "created": "2026-11-10",
+  "campaign": {"id": "120250953264900342", "name": "R1_Ninu"},
+  "adset": {"id": "120251307551640342", "name": "Hook3_GiftTest_OldPDP_vs_Gifts", "daily_budget_gbp": 30, "status": "PAUSED",
+            "copied_from": "120251286699140342 (Hook3_PageTest_Current_vs_OldPDP), settings unchanged"},
+  "ads": [
+    {"id": "120251307558610342", "name": "Hook3_OG_Copy_OLDPDP_CTRL", "creative": "1153367830497222",
+     "url": "https://tryninu.store/products/the-ninu-kit?view=old-pdp"},
+    {"id": "120251307559490342", "name": "Hook3_OG_Copy_GIFTS", "creative": "1465229084940182",
+     "url": "https://tryninu.store/products/the-ninu-kit?view=old-pdp-gifts"}
+  ],
+  "identical_except": "website URL; all Advantage+ creative enhancements off, multi-advertiser ads off, no URL parameters"
+}
