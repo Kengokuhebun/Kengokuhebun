@@ -1,0 +1,27 @@
+{
+ "adset": {
+  "id": "120251341775100342",
+  "name": "Menopause 3-Angle CostCap \u00a330 - US W45-64 Feed - 2026-11-12",
+  "bid_strategy": "COST_CAP",
+  "cost_cap_gbp": 30,
+  "daily_budget_gbp": 70,
+  "status": "PAUSED"
+ },
+ "ads": [
+  {
+   "name": "M1 Identity Colour - CostCap",
+   "id": "120251341775500342",
+   "creativeId": "2360908681345037"
+  },
+  {
+   "name": "M2 Night Pillowcase - CostCap",
+   "id": "120251341775590342",
+   "creativeId": "2116694612295492"
+  },
+  {
+   "name": "M3 Drawer Nothing Changed - CostCap",
+   "id": "120251341776230342",
+   "creativeId": "1676232684177988"
+  }
+ ]
+}
