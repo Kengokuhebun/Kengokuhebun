@@ -28,8 +28,8 @@ const JOBS = [
   ['C1__Colour-Identity__9x16', 1080, 1920, colour(1080, 1920, 108)],
   ['C2__Native-NightScalp__4x5', 1080, 1350, native(1080, 1350, 'A2-pillow-1x1.jpg', C2, 52, 1, 270)],
   ['C2__Native-NightScalp__9x16', 1080, 1920, native(1080, 1920, 'A2-pillow-9x16.jpg', C2, 250, 1376 / 768)],
-  ['C3__Native-TriedEverything__4x5', 1080, 1350, native(1080, 1350, 'A3-counter-v1.png', C3, 70)],
-  ['C3__Native-TriedEverything__9x16', 1080, 1920, native(1080, 1920, 'A3-counter-v1.png', C3, 300)],
+  ['C3__Native-TriedEverything__4x5', 1080, 1350, native(1080, 1350, 'A3-drawer-1x1.jpg', C3, 52, 1, 270)],
+  ['C3__Native-TriedEverything__9x16', 1080, 1920, native(1080, 1920, 'A3-drawer-9x16.jpg', C3, 250, 1376 / 768)],
 ];
 (async () => {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox'] });
