@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
 const DIR = __dirname, OUT = path.join(DIR, 'final');
 fs.mkdirSync(OUT, { recursive: true });
 const ORANGE = 'linear-gradient(135deg, #ffb347 0%, #ff7a3d 25%, #ff4e4e 55%, #e5366b 80%, #c6327a 100%)';
-const img = f => 'data:image/png;base64,' + fs.readFileSync(path.join(DIR, 'raw', f)).toString('base64');
+const img = f => 'data:image/' + (f.endsWith('.jpg') ? 'jpeg' : 'png') + ';base64,' + fs.readFileSync(path.join(DIR, 'raw', f)).toString('base64');
 
 const colour = (w, h, size) => `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0;padding:0}html,body{width:${w}px;height:${h}px;overflow:hidden}
@@ -13,10 +13,10 @@ body{background:${ORANGE};display:flex;align-items:center;justify-content:center
 .hook{font-family:-apple-system,'Helvetica Neue',Roboto,Arial,sans-serif;font-style:italic;font-weight:800;font-size:${size}px;line-height:1.12;letter-spacing:-2px;color:#fff;white-space:nowrap;text-shadow:0 3px 18px rgba(0,0,0,.12)}
 </style></head><body><div class="hook"><div>my hair was always</div><div>my best feature.</div><div>then menopause</div><div>happened 😭</div></div></body></html>`;
 
-const native = (w, h, file, lines, top) => `<!doctype html><html><head><meta charset="utf-8"><style>
+const native = (w, h, file, lines, top, ar = 1152 / 896, phTop = null) => `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0;padding:0}html,body{width:${w}px;height:${h}px;overflow:hidden;background:#000}
 .bg{position:absolute;inset:-60px;background:url(${img(file)}) center/cover;filter:blur(40px) brightness(.55)}
-.ph{position:absolute;left:0;width:${w}px;top:${(h - w * 1152 / 896) / 2}px;height:${w * 1152 / 896}px;background:url(${img(file)}) center/cover}
+.ph{position:absolute;left:0;width:${w}px;top:${phTop ?? (h - w * ar) / 2}px;height:${w * ar}px;background:url(${img(file)}) center/cover}
 .cap{position:absolute;left:0;right:0;top:${top}px;display:flex;flex-direction:column;align-items:center;gap:0}
 .cap span{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:500;font-size:46px;line-height:1.25;color:#fff;background:rgba(0,0,0,.62);padding:6px 18px;border-radius:10px;margin:-3px 0;text-align:center}
 </style></head><body><div class="bg"></div><div class="ph"></div><div class="cap">${lines.map(l => `<span>${l}</span>`).join('')}</div></body></html>`;
@@ -26,8 +26,8 @@ const C3 = ['2 years since menopause.', 'all of this.', 'nothing changed 😩'];
 const JOBS = [
   ['C1__Colour-Identity__4x5', 1080, 1350, colour(1080, 1350, 100)],
   ['C1__Colour-Identity__9x16', 1080, 1920, colour(1080, 1920, 108)],
-  ['C2__Native-NightScalp__4x5', 1080, 1350, native(1080, 1350, 'A2-night-v2.png', C2, 120)],
-  ['C2__Native-NightScalp__9x16', 1080, 1920, native(1080, 1920, 'A2-night-v2.png', C2, 330)],
+  ['C2__Native-NightScalp__4x5', 1080, 1350, native(1080, 1350, 'A2-pillow-1x1.jpg', C2, 52, 1, 270)],
+  ['C2__Native-NightScalp__9x16', 1080, 1920, native(1080, 1920, 'A2-pillow-9x16.jpg', C2, 250, 1376 / 768)],
   ['C3__Native-TriedEverything__4x5', 1080, 1350, native(1080, 1350, 'A3-counter-v1.png', C3, 70)],
   ['C3__Native-TriedEverything__9x16', 1080, 1920, native(1080, 1920, 'A3-counter-v1.png', C3, 300)],
 ];
