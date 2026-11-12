@@ -1,0 +1,35 @@
+{
+ "createdAt": "2026-11-12T04:20:59.589224Z",
+ "campaign": "120251314073930342",
+ "link": "https://tryninu.store/products/ninu-applicator-satin-bonnet?view=new-pdp",
+ "ads": [
+  {
+   "name": "M1 Identity Colour - 2026-11-12",
+   "id": "120251337224760342",
+   "creativeId": "2360908681345037",
+   "imageHash": "dac54f69bb42bcdc732c4bbb220d785c",
+   "error": null
+  },
+  {
+   "name": "M2 Night Pillowcase - 2026-11-12",
+   "id": "120251337225950342",
+   "creativeId": "2116694612295492",
+   "imageHash": "5e92e3962a4fd7f6afa07a53180070f5",
+   "error": null
+  },
+  {
+   "name": "M3 Drawer Nothing Changed - 2026-11-12",
+   "id": "120251337228800342",
+   "creativeId": "1676232684177988",
+   "imageHash": "b6f2ef4430ecbe05c1a8d77d65ef5f4a",
+   "error": null
+  }
+ ],
+ "adset": {
+  "id": "120251337223110342",
+  "name": "Menopause 3-Angle - US W45-65 Feed - 2026-11-12",
+  "daily_budget_gbp": 70,
+  "status": "PAUSED",
+  "placements": "Facebook Feed + Instagram Feed only"
+ }
+}
