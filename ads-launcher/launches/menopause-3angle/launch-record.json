@@ -29,7 +29,8 @@
   "id": "120251337223110342",
   "name": "Menopause 3-Angle - US W45-65 Feed - 2026-11-12",
   "daily_budget_gbp": 70,
-  "status": "PAUSED",
+  "status": "ACTIVE",
   "placements": "Facebook Feed + Instagram Feed only"
- }
+ },
+ "activatedAt": "2026-11-12 (owner asked to turn on)"
 }
