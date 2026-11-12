@@ -1,9 +1,9 @@
 {
  "adset": {
   "id": "120251341775100342",
-  "name": "Menopause 3-Angle CostCap \u00a330 - US W45-64 Feed - 2026-11-12",
+  "name": "Menopause 3-Angle CostCap \u00a345 - US W45-64 Feed - 2026-11-12",
   "bid_strategy": "COST_CAP",
-  "cost_cap_gbp": 30,
+  "cost_cap_gbp": 45,
   "daily_budget_gbp": 70,
   "status": "ACTIVE"
  },
@@ -36,5 +36,8 @@
    "adId": "120251341929700342"
   }
  ],
- "note": "2026-11-12: cost-cap ad set switched on; normal ad set paused at \u00a318.50 spent, 102 impressions, 2 link clicks, 2 landing page views, 0 add-to-cart."
+ "note": "2026-11-12: cost-cap ad set switched on; normal ad set paused at \u00a318.50 spent, 102 impressions, 2 link clicks, 2 landing page views, 0 add-to-cart.",
+ "history": [
+  "2026-11-12 22:00 UTC: 0 impressions in ~12h at \u00a330 cap; raised to \u00a345."
+ ]
 }
