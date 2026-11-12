@@ -87,10 +87,37 @@
 .sw-faq{display:grid;grid-template-columns:340px 1fr;gap:40px}@media(max-width:800px){.sw-faq{grid-template-columns:1fr;gap:10px}}
 .sw-faq .sw-acc{margin-top:0;border-left:1px solid var(--line);padding-left:20px;border-top:0}@media(max-width:800px){.sw-faq .sw-acc{border-left:0;padding-left:0}}
 .sw-faq summary{font-size:16px}.sw-faq summary:after{content:'+';font-size:22px;line-height:.8}.sw-faq details[open] summary:after{content:'\00d7'}
+.sw-hd{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:18px 32px}@media(max-width:800px){.sw-hd{padding:12px 16px}}
+.sw-logo{font-weight:700;font-size:22px;letter-spacing:.18em;color:var(--ink);text-decoration:none}
+.sw-cbtn{position:relative;background:none;border:0;cursor:pointer;color:var(--ink);padding:4px}.sw-cbtn svg{width:26px;height:26px;display:block}
+.sw-cbtn i{position:absolute;top:-4px;right:-6px;min-width:18px;height:18px;border-radius:9px;background:var(--acc);color:#fff;font-style:normal;font-size:11px;display:none;align-items:center;justify-content:center;padding:0 4px}.sw-cbtn i.on{display:flex}
+.sw-sec-pay{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:12px}
+.sw-sec-pay .sw-payments{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.sw-pay{width:36px;height:24px;border-radius:5px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--mut)}.sw-pay svg{width:19px;height:19px;display:block}.sw-pay-wide{width:44px}.sw-pay-wide svg{width:34px;height:18px}.sw-pay.sw-pay-text{font-size:8.5px;font-weight:800;letter-spacing:.02em}
+.sw-lockl{text-align:center;font-size:12.5px;color:var(--mut);margin-top:8px}
+.sw-scrim{position:fixed;inset:0;background:rgba(41,2,23,.35);opacity:0;pointer-events:none;transition:opacity .25s;z-index:9998}.sw-scrim.on{opacity:1;pointer-events:auto}
+.sw-dr{position:fixed;top:0;right:0;height:100%;width:440px;max-width:100%;background:#fff;z-index:9999;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink)}.sw-dr.on{transform:none}
+.sw-dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line);font-size:17px}.sw-dh button{background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--ink)}
+.sw-gb{background:#fff8ef;border-bottom:1px solid var(--line);padding:12px 22px}.sw-gb .r{display:flex;gap:10px;align-items:center;font-size:13px}.sw-gb .r img{width:34px;height:34px;border:1px solid var(--line);border-radius:6px;background:#fff;object-fit:contain;padding:2px}.sw-gb b{font-weight:600}.sw-gb em{font-style:normal;color:var(--red);font-weight:600}
+.sw-gbar{height:6px;border-radius:3px;background:#c9a96a;margin-top:10px}
+.sw-db{flex:1;overflow-y:auto;padding:18px 22px}
+.sw-li{border:1px solid #ecc9cc;border-radius:12px;padding:14px;margin-bottom:14px}
+.sw-lr{display:flex;gap:14px}.sw-lr>img{width:64px;height:64px;flex:0 0 64px;border:1px solid var(--line);border-radius:8px;object-fit:contain;background:var(--blush);padding:4px}
+.sw-lr .m{flex:1;min-width:0}.sw-lr .n{display:flex;justify-content:space-between;gap:8px;font-size:15.5px}.sw-lr .s{font-size:13px;margin-top:4px;color:var(--mut)}
+.sw-q2{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:99px;margin-top:8px}.sw-q2 button{background:none;border:0;width:30px;height:28px;cursor:pointer;font-size:15px;color:var(--ink)}.sw-q2 span{min-width:20px;text-align:center;font-size:13.5px}
+.sw-inc{border-top:1px solid #f1dfe1;margin-top:12px;padding-top:6px}
+.sw-ir{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:13px}.sw-ir img{width:34px;height:34px;flex:0 0 34px;border-radius:6px;background:var(--blush);object-fit:contain;padding:2px}.sw-ir .x{flex:1}.sw-ir .v{font-size:12.5px;color:var(--mut)}.sw-ir .f{color:var(--red);font-weight:600;font-size:12.5px}
+.sw-ir small{display:inline-block;border:1px solid #e9b6b6;color:var(--acc);border-radius:99px;padding:0 7px;font-size:10.5px;margin-left:6px}
+.sw-up{background:#f8f1f0;border-radius:12px;padding:14px}.sw-up h6{font-size:14.5px;font-weight:500;margin-bottom:10px}.sw-up .r{display:flex;align-items:center;gap:12px;font-size:13.5px}.sw-up img{width:44px;height:44px;border-radius:6px;object-fit:contain;background:#fff;border:1px solid var(--line);padding:2px}.sw-up .x{flex:1}.sw-up button{border:1px solid var(--ink);background:#fff;border-radius:99px;padding:5px 14px;cursor:pointer;font-family:inherit;font-size:13px}.sw-up p{font-size:12px;color:var(--mut);margin-top:8px}
+.sw-emp{text-align:center;padding:40px 0;font-size:15px}
+.sw-df{border-top:1px solid var(--line);padding:16px 22px 18px}.sw-tl{display:flex;justify-content:space-between;font-size:15px;margin-bottom:6px}.sw-tl.r{color:var(--red)}.sw-tl.b{font-weight:600;font-size:16px}
+.sw-co{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:12px;background:var(--acc);color:#fff;border:0;border-radius:99px;padding:17px;font-size:15.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:inherit}.sw-co svg{width:16px;height:16px}.sw-co:disabled{opacity:.5}
+.sw-dt{text-align:center;font-size:12px;margin-top:10px}.sw-dt span{color:#c9a96a}
 .sw-fine{font-size:12px;color:var(--mut);margin-top:24px}
 </style>
 
 <div class="sw-bar"><b>Black Friday:</b> Buy 1, Get 4 Free</div>
+<header class="sw-hd"><a class="sw-logo" href="/">NINU</a><button class="sw-cbtn" type="button" id="sw-cb" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2.2l2.3 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/></svg><i id="sw-cn">0</i></button></header>
 
 <div class="sw-w">
 <section class="sw-hero">
@@ -114,6 +141,8 @@
   </ul>
   <button class="sw-btn" type="button" id="sw-add">Add to cart</button>
   <p class="sw-err" id="sw-err"></p>
+  <div class="sw-sec-pay"><div class="sw-payments" aria-label="Accepted payment methods"><span class="sw-pay" title="Visa"><svg viewBox="0 0 36 14" fill="#1A1F71"><text x="18" y="11" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="11" font-weight="900" font-style="italic">VISA</text></svg></span><span class="sw-pay" title="Mastercard"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="7" fill="#EB001B"/><circle cx="15" cy="12" r="7" fill="#F79E1B"/><path d="M12 6.174a7 7 0 0 0 0 11.652 7 7 0 0 0 0-11.652z" fill="#FF5F00"/></svg></span><span class="sw-pay" title="American Express"><svg viewBox="0 0 36 24" style="background:#006FCF"><text x="18" y="15" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="900" fill="#fff" letter-spacing=".3">AMEX</text></svg></span><span class="sw-pay sw-pay-wide sw-pay-text" title="Apple Pay">Apple Pay</span><span class="sw-pay sw-pay-wide sw-pay-text" title="Google Pay">Google Pay</span></div></div>
+  <p class="sw-lockl">&#128274; Secure checkout &middot; 30-day money-back guarantee</p>
 
   <div class="sw-bf">
    <h3><b>Black Friday:</b> buy 1, get 4 free</h3>
@@ -256,6 +285,20 @@
   <p class="sw-fine">Ninu is an applicator. It doesn&rsquo;t treat any hair or scalp condition.</p>
  </div>
 </div></section>
+
+<div class="sw-scrim" id="sw-scrim"></div>
+<aside class="sw-dr" id="sw-dr" aria-hidden="true" aria-label="Cart">
+ <div class="sw-dh"><span id="sw-dtit">Your Cart</span><button type="button" id="sw-dx" aria-label="Close cart">&times;</button></div>
+ <div class="sw-gb" id="sw-gb" style="display:none"><div class="r"><img data-s="scalp-massager-tile-cream-removebg-preview.png" alt=""><div><b>You&rsquo;ve unlocked 4 free gifts!</b><br>Black Friday deal &middot; <em>FREE</em> with your kit</div></div><div class="sw-gbar"></div></div>
+ <div class="sw-db" id="sw-db"></div>
+ <div class="sw-df">
+  <div class="sw-tl r" id="sw-gl" style="display:none"><span>Black Friday: 4 free gifts</span><span>FREE</span></div>
+  <div class="sw-tl"><span>Shipping</span><span>FREE</span></div>
+  <div class="sw-tl b"><span>Estimated total</span><span id="sw-tot">$0.00</span></div>
+  <button type="button" class="sw-co" id="sw-co"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 0 1 6 0v3z"/></svg>Continue to checkout</button>
+  <p class="sw-dt">30-day money-back guarantee &bull; Free US shipping &bull; Secure checkout</p>
+ </div>
+</aside>
 <!-- REVIEWS: add your reviews app block (e.g. Judge.me) as its own section below this one once you have real reviews. -->
 
 <script>
@@ -271,11 +314,40 @@ tr.addEventListener('click',function(e){var t=e.target.closest('button');if(t)go
 sc.addEventListener('scroll',function(){var i=Math.round(sc.scrollLeft/sc.clientWidth);tr.querySelectorAll('button').forEach(function(x,j){x.classList.toggle('on',j===i)})});
 document.getElementById('sw-nx').onclick=function(){var i=Math.round(sc.scrollLeft/sc.clientWidth)+1;go(i>=G.length?0:i)};
 document.getElementById('sw-see').onclick=function(){go(1)};
-var btn=document.getElementById('sw-add'),err=document.getElementById('sw-err');
-btn.onclick=function(){btn.disabled=true;btn.textContent='Adding...';err.style.display='none';
-fetch('/cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:[{id:KIT,quantity:1,properties:{'Black Friday gifts':'Scalp massager, Bedside pouch, Guide, Night Tracker'}}]})})
-.then(function(r){if(!r.ok)throw 0;location.href='/cart'})
-.catch(function(){btn.disabled=false;btn.textContent='Add to cart';err.textContent='Something went wrong. Please try again.';err.style.display='block'})};
+var RF='63751894630730',RSP=693367669066,KITN=+KIT;
+var INC=[['Silicone_scalp_oil_dispenser_pho__dc19d7af-removebg-preview.png','Ninu scalp oil dispenser'],['oil-bottle-tile-cream-removebg-preview.png','60ml scalp oil (about 30 days)'],['Satin_sleep_bonnet_product_photo__8b382487_2K-removebg-preview.png','Satin sleep bonnet']];
+var GF=[['scalp-massager-tile-cream-removebg-preview.png','Scalp massager'],['Cosmetic_pouch_product_photograph_a8983e00-removebg-preview.png','Bedside pouch'],['guide-tile.png','The Scalp Routine That Sticks guide'],['tracker-tile.png','Ninu Night Tracker']];
+var $=function(i){return document.getElementById(i)},dr=$('sw-dr'),scr=$('sw-scrim'),M=function(c){return '$'+(c/100).toFixed(2)};
+function open_(){dr.classList.add('on');scr.classList.add('on');dr.setAttribute('aria-hidden','false');load()}
+function close_(){dr.classList.remove('on');scr.classList.remove('on');dr.setAttribute('aria-hidden','true')}
+$('sw-cb').onclick=open_;$('sw-dx').onclick=close_;scr.onclick=close_;
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close_()});
+function ir(f,n,r){return '<div class="sw-ir"><img src="'+P+f+'" alt=""><span class="x">'+n+r+'</span></div>'}
+function render(c){var n=c.item_count;$('sw-cn').textContent=n;$('sw-cn').classList.toggle('on',n>0);
+$('sw-dtit').textContent=n?'Your Cart has '+n+' item'+(n>1?'s':''):'Your Cart';
+var hasKit=c.items.some(function(i){return i.variant_id===KITN}),hasRf=c.items.some(function(i){return i.variant_id===+RF});
+$('sw-gb').style.display=hasKit?'block':'none';$('sw-gl').style.display=hasKit?'flex':'none';
+$('sw-tot').textContent=M(c.total_price);$('sw-co').disabled=!n;
+if(!n){$('sw-db').innerHTML='<p class="sw-emp">Your cart is empty.</p><button class="sw-btn" type="button" id="sw-ea">Add the Ninu Kit</button>';$('sw-ea').onclick=add;return}
+var h='';c.items.forEach(function(it,k){var kit=it.variant_id===KITN;
+h+='<div class="sw-li"><div class="sw-lr"><img src="'+(it.image||'')+'" alt=""><div class="m"><div class="n"><span>'+(kit?'The Ninu Kit':it.product_title)+'</span><span>'+M(it.final_line_price)+'</span></div>'+
+'<div class="s">'+(kit?'Oil on your scalp, not your pillow':(it.selling_plan_allocation?it.selling_plan_allocation.selling_plan.name:(it.variant_title||'')))+'</div>'+
+'<div class="sw-q2"><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity-1)+'" aria-label="Decrease">'+(it.quantity>1?'&minus;':'&#128465;')+'</button><span>'+it.quantity+'</span><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity+1)+'" aria-label="Increase">+</button></div></div></div>';
+if(kit){h+='<div class="sw-inc">';INC.forEach(function(x){h+=ir(x[0],x[1],'')});GF.forEach(function(x){h+=ir(x[0],x[1]+'<small>Black Friday gift</small>','').replace('</span></div>','</span><span class="f">FREE</span></div>')});h+='</div>'}
+h+='</div>'});
+if(hasKit&&!hasRf)h+='<div class="sw-up"><h6>Never run out of oil</h6><div class="r"><img src="'+P+INC[1][0]+'" alt=""><span class="x">Monthly oil refill, 60ml</span><span>$16.99/mo</span><button type="button" id="sw-rf">Add</button></div><p>Skip, pause or cancel any time.</p></div>';
+$('sw-db').innerHTML=h;
+$('sw-db').querySelectorAll('.sw-q2 button').forEach(function(b){b.onclick=function(){post('/cart/change.js',{line:+b.dataset.l,quantity:+b.dataset.q})}});
+if($('sw-rf'))$('sw-rf').onclick=function(){post('/cart/add.js',{items:[{id:RF,quantity:1,selling_plan:RSP}]})}}
+function load(){return fetch('/cart.js',{headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(render).catch(function(){})}
+function post(u,b){return fetch(u,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(b)}).then(function(r){if(!r.ok)throw 0;return load()})}
+$('sw-co').onclick=function(){location.href='/checkout'};
+var btn=$('sw-add'),err=$('sw-err');
+function add(){btn.disabled=true;btn.textContent='Adding...';err.style.display='none';
+post('/cart/add.js',{items:[{id:KIT,quantity:1,properties:{'Black Friday gifts':'Scalp massager, Bedside pouch, Guide, Night Tracker'}}]})
+.then(function(){btn.disabled=false;btn.textContent='Add to cart';open_()})
+.catch(function(){btn.disabled=false;btn.textContent='Add to cart';err.textContent='Something went wrong. Please try again.';err.style.display='block'})}
+btn.onclick=add;load();
 })();
 </script>
 </div>
