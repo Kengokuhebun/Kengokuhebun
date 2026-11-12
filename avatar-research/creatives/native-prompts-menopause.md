@@ -2,7 +2,11 @@
 
 This file applies the master document's "Native Image Ad: Master Prompt" protocol, all four steps. Angle 1 uses the colour creative, so it isn't covered here.
 
-**Input note.** The longform copy for these two angles isn't written yet, so I ran the protocol against each angle's story beats. The copy will follow those beats. Every "copy line" below is either a verbatim Reddit quote (with its thread ID) or a planned copy line, and each is labelled.
+**Input note.** Updated 2026-11-12 to match the final longform copy in `../05-menopause-longform-copy.md`. Every "copy line" below is either a verbatim Reddit quote (with its thread ID) or a line from that copy, and each is labelled.
+
+**On-image captions (final):**
+- Angle 2: `11:47pm. scalp itching again. / my derm says it's all / in my head 🙃`
+- Angle 3: `2 years since menopause. / all of this. / nothing changed 😩`
 
 **Tail to paste after every prompt:**
 `Shot on an older iPhone, harsh real-life light, visible noise, slightly soft focus, imperfect off-centre framing. Looks like a photo someone took to show a friend, not an ad. No text, no logos, no brand names, no readable labels, no packaging design.`
@@ -23,7 +27,8 @@ Generate at 4:5 for Feed and 9:16 for Stories. Make 4 variations of each and pic
 - **Emotional tension.**
   - Dominant: frustration at being dismissed ("all in my head").
   - Secondary: embarrassment ("afraid people are going to think I have lice"), sleep loss, and feeling old.
-- **Turning point:** she asks "where is the oil actually going?"
+- **Turning point:** she looks at her pillowcase and asks "where is the oil actually going?" Answer: into her hair, onto her hands, into the pillow. Everywhere except her scalp.
+- **Bridge to the product:** she already oils her scalp at night. The oil was going into her hair and onto her pillow, so she skipped it. The pillowcase is the proof.
 - **UMP (unique mechanism of the problem):** fingers and droppers put oil in the hair, not on the scalp. **UMS (unique mechanism of the solution):** hollow tips pressed along the part put it on the skin.
 - **Dream state:** lamp off at 10:30, a clean pillowcase, hair that doesn't look greasy in the morning, no midnight trips to the sink.
 - **Avatar:** woman aged about 56, years since her last period, reading glasses on the nightstand, a husband asleep beside her, works or is retired.
@@ -38,7 +43,7 @@ Generate at 4:5 for Feed and 9:16 for Stories. Make 4 variations of each and pic
 1. Hook: 11:47pm, scratching, "derm says it's all in my head"
 2. Problem: the itch at night, no flakes, nobody believes her
 3. Escalation: she gets up at midnight to wash her hair in the sink, scared people think she has lice
-4. Discovery: "where is the oil actually going?"
+4. Discovery: the oil-ringed pillowcase. "Where is the oil actually going?"
 5. Mechanism: oil in her hair versus oil on her scalp
 6. Dream state: lamp off, clean pillowcase, normal hair at breakfast
 7. Close: what it won't do, the kit, the 30-day check
@@ -183,15 +188,16 @@ Generate at 4:5 for Feed and 9:16 for Stories. Make 4 variations of each and pic
 
 ---
 
-# ANGLE 3: tried everything, still skipping ("two years since menopause, all of this")
+# ANGLE 3: tried everything, nothing changed ("2 years since menopause. all of this. nothing changed")
 
 ## Step 1. Dissect
 
 - **Core problem.**
   - Physical: hair thinning at the part, drier and wiry, growing slowly after menopause.
-  - Failed fixes: she has bought every fix (supplements, expensive shampoo, rosemary oil, a shower cap, a reminder), but the oiling routine is so messy she keeps skipping it.
+  - Failed fixes: she has bought every fix (supplements, collagen, a $96 shampoo, two rosemary oils, a shower cap, a reminder). Two years and nothing changed.
+  - The hidden reason, revealed later in the copy: the oil was never reaching her scalp, and the routine was so messy she skipped half the nights. Skipping is not the lead. It comes out at the towel check.
 - **Emotional tension.**
-  - Dominant: angry exhaustion ("I've tried so many things to help, and nothing works").
+  - Dominant: angry exhaustion and money wasted ("I've tried so many things to help, and nothing works", "Most don't work and they are not inexpensive").
   - Secondary: grief ("My hair has always been my best feature"), self-blame and money wasted.
 - **Turning point:** the white-towel check (part barely damp, fingers slick, towel soaked).
 - **UMP:** every fix she bought works on the bottle. None changes the route the oil takes to the scalp. **UMS:** a route that puts the oil on the skin.
@@ -205,9 +211,9 @@ Generate at 4:5 for Feed and 9:16 for Stories. Make 4 variations of each and pic
 
 ## Step 2. Arc
 
-1. Hook: "2 years. All of this. Still skipping it."
+1. Hook: "2 years since menopause. All of this. Nothing changed."
 2. Problem: thick hair turned thin and wiry, the doctor and hairdresser shrugged
-3. Escalation: restarts one to five, money spent, the bottle at the back of the shelf
+3. Escalation: the money (gummies, collagen, $96 shampoo, two oils), then the messy nights she skipped
 4. Discovery: the towel check
 5. Mechanism: the bottle versus the route
 6. Dream state: one bottle, two minutes, nothing to restart
@@ -355,14 +361,14 @@ Generate at 4:5 for Feed and 9:16 for Stories. Make 4 variations of each and pic
 ## Picks to generate first
 
 **Angle 2 (night scalp):**
-1. Image 1, the oil-ringed pillowcase. Safe.
+1. Image 1, the oil-ringed pillowcase. Safe. **Lead image.** It's the copy's turning point.
 2. Image 3, the fingernails after scratching. Safe.
 3. Image 6, the "all in my head" headline over the dark bed. Safe.
 
 The disgusting option is Image 2, the scalp under the vanity light **[REVIEW RISK]**.
 
 **Angle 3 (tried everything):**
-1. Image 1, the drawer. Safe.
+1. Image 1, the drawer. Safe. **Lead image.** It's the hook: "all of this. nothing changed".
 2. Image 5, the towel check. Safe.
 3. Image 3, the ponytail band. Safe.
 

@@ -22,7 +22,7 @@ const native = (w, h, file, lines, top) => `<!doctype html><html><head><meta cha
 </style></head><body><div class="bg"></div><div class="ph"></div><div class="cap">${lines.map(l => `<span>${l}</span>`).join('')}</div></body></html>`;
 
 const C2 = ['11:47pm. scalp itching again.', 'my derm says it’s all', 'in my head 🙃'];
-const C3 = ['2 years of trying to fix my', 'hair since menopause.', 'all of this. still skipping it', 'every single night 😩'];
+const C3 = ['2 years since menopause.', 'all of this.', 'nothing changed 😩'];
 const JOBS = [
   ['C1__Colour-Identity__4x5', 1080, 1350, colour(1080, 1350, 100)],
   ['C1__Colour-Identity__9x16', 1080, 1920, colour(1080, 1920, 108)],
