@@ -1,0 +1,281 @@
+<!-- Ninu PDP, Solawave layout. Paste into a Custom Liquid section. Images load from the store's Files (same as ninu-pdp.html). -->
+<div class="sw">
+<style>
+.sw{--ink:#290217;--acc:#7c1c2f;--acc2:#5f1323;--red:#d62e1f;--bg:#fffaf7;--blush:#fbf1ef;--blush2:#f6e3e1;--line:#ecd9d6;--mut:#6d5560;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.45}
+.sw *{box-sizing:border-box;margin:0;padding:0}.sw img,.sw video{display:block;max-width:100%}.sw a{color:inherit}
+.sw-bar{background:#000;color:#fff;text-align:center;font-size:14px;padding:9px 16px;letter-spacing:.01em}.sw-bar b{color:#ff5a4a;font-weight:600}
+.sw-w{max-width:1200px;margin:0 auto;padding:0 32px}@media(max-width:800px){.sw-w{padding:0 16px}}
+.sw-hero{display:grid;grid-template-columns:480px minmax(0,1fr);gap:70px;padding:18px 0 60px;align-items:start}@media(max-width:1000px){.sw-hero{grid-template-columns:minmax(0,1fr);gap:18px;padding-top:0}}
+.sw-gal{position:sticky;top:16px}@media(max-width:1000px){.sw-gal{position:static;margin:0 -16px}}
+.sw-main{position:relative;background:var(--blush);border-radius:18px;overflow:hidden;aspect-ratio:1/1}@media(max-width:1000px){.sw-main{border-radius:0}}
+.sw-sc{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.sw-sc::-webkit-scrollbar{display:none}
+.sw-sc img,.sw-sc video{width:100%;height:100%;flex:0 0 100%;object-fit:cover;scroll-snap-align:center}.sw-sc video{object-fit:contain;background:var(--blush)}
+.sw-pill{position:absolute;top:22px;left:22px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:15px;letter-spacing:.02em;z-index:2}
+.sw-th{display:flex;gap:12px;align-items:center;margin:20px 0 14px;padding:0 4px}@media(max-width:1000px){.sw-th{padding:0 16px;margin-top:12px}}
+.sw-tr{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;flex:1}.sw-tr::-webkit-scrollbar{display:none}
+.sw-tr button{flex:0 0 64px;height:64px;border:1px solid transparent;border-radius:4px;overflow:hidden;background:var(--blush);cursor:pointer;padding:0}.sw-tr button.on{border-color:var(--ink)}.sw-tr img{width:100%;height:100%;object-fit:cover}
+.sw-tr .v{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--acc)}
+.sw-arr{flex:0 0 34px;height:34px;border-radius:50%;border:0;background:var(--acc);color:#fff;font-size:18px;cursor:pointer}
+.sw-see{display:block;width:100%;border:1px solid var(--acc);background:var(--blush2);border-radius:99px;padding:11px;font-size:14px;cursor:pointer;color:var(--ink);font-family:inherit}@media(max-width:1000px){.sw-see{border-radius:0;border-left:0;border-right:0}}
+.sw-q{background:var(--blush);border-radius:14px;margin-top:16px;padding:24px;text-align:center;font-size:17px}@media(max-width:1000px){.sw-q{margin:16px 16px 0}}
+.sw-rate{font-size:15px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.sw-dot{width:7px;height:7px;border-radius:50%;background:#e6c79c}
+.sw h1{font-weight:400;font-size:30px;line-height:1.2;margin:12px 0 8px;letter-spacing:-.01em}
+.sw-pr{display:flex;align-items:center;gap:12px;font-size:21px}.sw-badge{background:var(--red);color:#fff;font-size:13.5px;font-weight:600;letter-spacing:.04em;padding:5px 9px;border-radius:2px}
+.sw-sub{font-size:17px;margin:16px 0 22px}
+.sw-ck{list-style:none;display:grid;gap:15px;margin-bottom:28px}.sw-ck li{font-size:16px;padding-left:26px;position:relative}.sw-ck li:before{content:'';position:absolute;left:2px;top:3px;width:12px;height:6px;border-left:1.5px solid var(--acc);border-bottom:1.5px solid var(--acc);transform:rotate(-45deg)}
+.sw-btn{display:block;width:100%;background:var(--acc);color:#fff;border:0;border-radius:99px;padding:19px;font-size:19px;font-weight:500;cursor:pointer;font-family:inherit}.sw-btn:hover{background:var(--acc2)}.sw-btn:disabled{opacity:.6}
+.sw-err{color:var(--red);font-size:13px;margin-top:8px;display:none}
+.sw-bf{border:1px solid var(--blush2);border-radius:14px;margin-top:20px;padding:22px 16px 18px;text-align:center}
+.sw-bf h3{font-weight:400;font-size:19px;margin-bottom:18px}.sw-bf h3 b{color:var(--red);font-weight:400}
+.sw-kit{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px}
+.sw-kt{width:130px}.sw-kt span{display:block;background:var(--blush);border-radius:10px;aspect-ratio:1/1;position:relative}.sw-kt img{width:100%;height:100%;object-fit:contain;padding:10px}
+.sw-tag{position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);background:#fff;border-radius:99px;font-size:13px;padding:3px 10px;box-shadow:0 1px 3px rgba(0,0,0,.08);white-space:nowrap}.sw-tag.f{background:var(--red);color:#fff;font-weight:600;letter-spacing:.04em;font-size:11.5px}
+.sw-kt p{font-size:13px;margin-top:18px}
+.sw-plus{font-size:20px}
+.sw-gg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px}
+.sw-g span{display:block;background:var(--blush);border-radius:10px;aspect-ratio:1/1;position:relative;border:1px dashed var(--blush2)}.sw-g img{width:100%;height:100%;object-fit:contain;padding:8px}
+.sw-g b{display:block;font-weight:400;font-size:12.5px;margin-top:16px;line-height:1.25}.sw-g small{display:block;font-size:11px;color:var(--mut);margin-top:2px}
+.sw-bfn{font-size:13.5px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.sw-trust{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;font-size:13px;margin:12px 0 18px}.sw-trust span:before{content:'\2713';margin-right:6px;color:var(--acc);font-size:11px}
+.sw-box{background:var(--blush);border:1px solid var(--blush2);border-radius:14px;padding:22px 24px;display:flex;gap:22px;align-items:center}
+.sw-ico{flex:0 0 54px;height:54px;border-radius:50%;border:1px solid var(--acc);display:flex;align-items:center;justify-content:center;color:var(--acc);font-size:12px;text-align:center;line-height:1.1}
+.sw-eb{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.sw-box h4{font-weight:400;font-size:17px;margin:4px 0}.sw-box p{font-size:13.5px}
+.sw-why{background:var(--blush);border-radius:14px;padding:26px 22px;margin-top:20px}.sw-why>h3{font-weight:500;font-size:21px;line-height:1.3;margin-bottom:20px}.sw-why>h3 em{font-style:normal;color:var(--acc)}
+.sw-n{display:flex;gap:12px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--blush2)}.sw-n:first-of-type{border-top:0;padding-top:0}
+.sw-n i{flex:0 0 26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;font-style:normal;font-size:13px;display:flex;align-items:center;justify-content:center}
+.sw-n b{display:block;color:var(--acc);font-weight:600;font-size:16.5px}.sw-n p{font-size:14px;margin-top:3px}
+.sw-acc{margin-top:22px;border-top:1px solid var(--line)}.sw-acc details{border-bottom:1px solid var(--line)}
+.sw-acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:18px 0;font-size:17px}.sw-acc summary::-webkit-details-marker{display:none}.sw-acc summary:after{content:'\2193';font-size:17px}.sw-acc details[open] summary:after{content:'\2191'}
+.sw-acc .c{padding:0 0 18px;font-size:15px;display:grid;gap:10px}
+.sw-sec{padding:70px 0}.sw-alt{background:#fdf6f3}
+.sw-h2{font-weight:400;font-size:38px;line-height:1.15;letter-spacing:-.01em}@media(max-width:800px){.sw-h2{font-size:29px}}
+.sw-ce{text-align:center}.sw-ce .sw-eb{color:var(--ink);margin-bottom:8px}.sw-ce p.l{max-width:470px;margin:8px auto 0;font-size:14.5px}
+.sw-plan{display:grid;grid-template-columns:1fr 1.45fr;gap:20px;margin-top:32px;align-items:start}@media(max-width:800px){.sw-plan{grid-template-columns:1fr}}
+.sw-plan>img{border-radius:14px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.sw-steps{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:500px){.sw-steps{grid-template-columns:1fr}}
+.sw-st{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 18px}.sw-st em{font-style:normal;font-size:11.5px;border:1px solid var(--blush2);background:var(--blush);border-radius:99px;padding:2px 9px}.sw-st b{display:block;font-weight:400;font-size:17px;margin:10px 0 6px}.sw-st p{font-size:13px;color:var(--mut)}
+.sw-mk{grid-column:1/-1;background:var(--blush);border:1px solid var(--blush2);border-radius:99px;padding:12px 22px;font-size:13px;text-align:center}.sw-mk b{color:var(--acc);font-weight:400}
+.sw-rit{border:1px solid var(--ink);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1.3fr 1fr;background:linear-gradient(90deg,#fbf3f1,#f4e6e4)}@media(max-width:800px){.sw-rit{grid-template-columns:1fr}}
+.sw-rit .t{padding:40px 36px}@media(max-width:800px){.sw-rit .t{padding:28px 20px}}.sw-rit .t>p{margin:6px 0 30px;font-size:15px}
+.sw-rit .eb2{font-size:12.5px;letter-spacing:.12em;font-weight:500;margin-bottom:10px}
+.sw-bg4{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}@media(max-width:500px){.sw-bg4{grid-template-columns:1fr}}
+.sw-bg4 i{display:block;font-style:normal;color:#c79a5b;font-size:22px;margin-bottom:8px}.sw-bg4 b{display:block;font-weight:500;font-size:15px;margin-bottom:8px}.sw-bg4 p{font-size:14px}
+.sw-rit>img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.sw-tech{display:grid;grid-template-columns:1fr 260px 1fr;gap:20px;align-items:center;margin-top:40px}@media(max-width:800px){.sw-tech{grid-template-columns:1fr 1fr}.sw-tech>img{grid-column:1/-1;grid-row:1;max-width:220px;margin:0 auto}}
+.sw-tech>img{width:100%}.sw-tc{display:grid;gap:120px}@media(max-width:800px){.sw-tc{gap:24px}}
+.sw-tc div b{display:block;font-weight:400;font-size:16px;letter-spacing:.04em;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid #e58c80;margin-bottom:10px}.sw-tc div p{font-size:13.5px;color:#a0535a}
+.sw-tc.l{text-align:right}
+.sw-cmp{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px;align-items:center}@media(max-width:800px){.sw-cmp{grid-template-columns:1fr}}
+.sw-cmp>img{border-radius:14px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.sw-vs{border-radius:12px;overflow:hidden}.sw-vs>div{padding:26px 30px}.sw-vs .u{background:#f6eceb}.sw-vs .th{background:#fff;position:relative}
+.sw-vs h5{font-size:21px;font-weight:700;letter-spacing:.03em;margin-bottom:14px}.sw-vs .th h5{font-weight:400}
+.sw-vs ul{list-style:none;display:grid;gap:9px;font-size:14px}.sw-vs li{padding-left:24px;position:relative}.sw-vs .u li:before{content:'\2713';position:absolute;left:0;top:0;width:15px;height:15px;border-radius:50%;background:#a5616a;color:#fff;font-size:9px;display:flex;align-items:center;justify-content:center}
+.sw-vs .th li:before{content:'\00d7';position:absolute;left:0;top:0;width:15px;height:15px;border-radius:50%;border:1px solid #999;color:#777;font-size:11px;display:flex;align-items:center;justify-content:center;line-height:1}
+.sw-vsb{position:absolute;top:-17px;left:22px;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--line);font-size:12px;display:flex;align-items:center;justify-content:center}
+.sw-qs{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;margin-top:28px;padding-bottom:6px}.sw-qs::-webkit-scrollbar{display:none}
+.sw-qc{flex:0 0 290px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column}
+.sw-qc b{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-bottom:12px}.sw-qc p{font-size:15px;flex:1}.sw-qc a{font-size:12px;color:var(--mut);margin-top:14px}
+.sw-vid{border-radius:14px;overflow:hidden;margin-top:28px;background:var(--blush)}.sw-vid video{width:100%;max-height:440px;object-fit:contain}
+.sw-mq{background:#a5616a;color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0}.sw-mq div{display:inline-block;animation:swm 30s linear infinite;font-size:19px;letter-spacing:.03em}.sw-mq span{margin:0 34px}@keyframes swm{to{transform:translateX(-50%)}}
+.sw-how{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:36px;text-align:center}@media(max-width:800px){.sw-how{grid-template-columns:1fr;gap:28px}}
+.sw-how b{display:block;font-weight:500;font-size:16px;margin-bottom:12px}.sw-how img{width:100%;max-width:240px;margin:0 auto 14px;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:1px solid var(--acc)}.sw-how p{font-size:13.5px;max-width:250px;margin:0 auto}
+.sw-gl{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}@media(max-width:800px){.sw-gl{grid-template-columns:1fr}}
+.sw-gc{border:1px solid #e6b9b4;border-radius:14px;padding:28px 26px;background:#fff}.sw-gc h4{font-weight:400;font-size:19px;margin-bottom:20px}
+.sw-gc dl{display:grid;gap:18px}.sw-gc dt{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-bottom:5px}.sw-gc dd{font-size:14px}
+.sw-gi{background:radial-gradient(circle,#f8e9e6,#fdf8f6 70%);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:40px}.sw-gi img{max-height:420px;object-fit:contain}
+.sw-faq{display:grid;grid-template-columns:340px 1fr;gap:40px}@media(max-width:800px){.sw-faq{grid-template-columns:1fr;gap:10px}}
+.sw-faq .sw-acc{margin-top:0;border-left:1px solid var(--line);padding-left:20px;border-top:0}@media(max-width:800px){.sw-faq .sw-acc{border-left:0;padding-left:0}}
+.sw-faq summary{font-size:16px}.sw-faq summary:after{content:'+';font-size:22px;line-height:.8}.sw-faq details[open] summary:after{content:'\00d7'}
+.sw-fine{font-size:12px;color:var(--mut);margin-top:24px}
+</style>
+
+<div class="sw-bar"><b>Black Friday:</b> Buy 1, Get 4 Free</div>
+
+<div class="sw-w">
+<section class="sw-hero">
+ <div class="sw-gal">
+  <div class="sw-main"><div class="sw-sc" id="sw-sc"></div></div>
+  <div class="sw-th"><div class="sw-tr" id="sw-tr"></div><button class="sw-arr" type="button" id="sw-nx" aria-label="Next image">&#8250;</button></div>
+  <button class="sw-see" type="button" id="sw-see">&#9654;&nbsp; See it in action</button>
+  <p class="sw-q">&ldquo;I was never the problem. The method was.&rdquo;</p>
+ </div>
+
+ <div>
+  <div class="sw-rate"><span>Free US shipping</span><span class="sw-dot"></span><span>30-day money-back guarantee</span></div>
+  <h1>Ninu Scalp Oil Dispenser Kit</h1>
+  <div class="sw-pr"><span>$49.99</span><span class="sw-badge">BUY 1 GET 4 FREE</span></div>
+  <p class="sw-sub">Puts the oil on your scalp, not your hair, your hands or your pillow.</p>
+  <ul class="sw-ck">
+   <li>Oil on your scalp, not your pillow</li>
+   <li>Two minutes, one hand</li>
+   <li>No wet hands, no towel, no cleanup</li>
+   <li>Works with the oil you already own</li>
+  </ul>
+  <button class="sw-btn" type="button" id="sw-add">Add to cart</button>
+  <p class="sw-err" id="sw-err"></p>
+
+  <div class="sw-bf">
+   <h3><b>Black Friday:</b> buy 1, get 4 free</h3>
+   <div class="sw-kit">
+    <div class="sw-kt"><span><img data-s="Silicone_scalp_oil_dispenser_pho__dc19d7af-removebg-preview.png" alt="Ninu Kit"><i class="sw-tag">$49.99</i></span><p>The Ninu Kit</p></div>
+    <div class="sw-plus">+</div>
+    <div class="sw-kt"><span style="border:1px dashed #e6b9b4"><img data-s="scalp-massager-tile-cream-removebg-preview.png" alt="4 free gifts"><i class="sw-tag f">FREE</i></span><p>4 free gifts</p></div>
+   </div>
+   <div class="sw-gg">
+    <div class="sw-g"><span><img data-s="scalp-massager-tile-cream-removebg-preview.png" alt="Scalp massager"><i class="sw-tag f">FREE</i></span><b>Scalp massager</b><small>For wash day</small></div>
+    <div class="sw-g"><span><img data-s="Cosmetic_pouch_product_photograph_a8983e00-removebg-preview.png" alt="Bedside pouch"><i class="sw-tag f">FREE</i></span><b>Bedside pouch</b><small>Your routine, within reach</small></div>
+    <div class="sw-g"><span><img data-s="guide-tile.png" alt="Guide"><i class="sw-tag f">FREE</i></span><b>The Scalp Routine That Sticks</b><small>Guide, emailed to you</small></div>
+    <div class="sw-g"><span><img data-s="tracker-tile.png" alt="Night Tracker"><i class="sw-tag f">FREE</i></span><b>Ninu Night Tracker</b><small>30-night tracker, emailed to you</small></div>
+   </div>
+   <p class="sw-bfn">The kit comes with the dispenser, 60ml scalp oil and a satin bonnet. All 4 gifts are included free with every kit.</p>
+  </div>
+  <div class="sw-trust"><span>30-Day Money-Back Guarantee</span><span>Free US Shipping</span><span>Secure Checkout</span></div>
+
+  <div class="sw-box"><div class="sw-ico">2<br>min</div><div><div class="sw-eb">Right on the part</div><h4>You press, it releases</h4><p>Press the tips along your part, section by section. One hand, about two minutes.</p></div></div>
+
+  <div class="sw-why">
+   <h3>You&rsquo;ve tried droppers and fingers, but they aren&rsquo;t <em>Ninu</em>. That matters.</h3>
+   <div class="sw-n"><i>1</i><div><b>Hollow silicone tips.</b><p>Press them against your scalp along the part and the oil is released on the skin, not on top of your hair.</p></div></div>
+   <div class="sw-n"><i>2</i><div><b>A clear 1 to 4ml chamber.</b><p>You see exactly how much oil you&rsquo;re using. About 2ml a night.</p></div></div>
+   <div class="sw-n"><i>3</i><div><b>One hand, two minutes.</b><p>No towel, no oily fingers, nothing to wipe up.</p></div></div>
+   <div class="sw-n"><i>4</i><div><b>Your oil, your choice.</b><p>Most thin scalp oils work. The dispenser is the tool.</p></div></div>
+  </div>
+
+  <div class="sw-box" style="margin-top:20px"><div class="sw-ico">30<br>days</div><div><h4>30-day money-back guarantee</h4><p>Not right for you? Send it back within 30 days for a full refund. No hassle.</p></div></div>
+
+  <div class="sw-acc">
+   <details open><summary>Description</summary><div class="c"><p><b>Oil on your scalp. Not everywhere else.</b></p><p>Ninu is a small applicator with hollow silicone tips. You press the tips to your scalp along your part and the oil is released on the skin, instead of on top of your hair, a towel or your pillow. Clear 1 to 4ml chamber, one hand, about two minutes.</p></div></details>
+   <details><summary>How to Use</summary><div class="c"><p>1. Fill the clear chamber with your oil. The 1 to 4ml marks show how much.</p><p>2. Part your hair so the tips can reach your scalp.</p><p>3. Press the tips against your scalp along the part. The oil is released right there.</p><p>4. Make a new part and repeat across the top of your head.</p><p>5. Satin bonnet on, light off.</p></div></details>
+   <details><summary>What&rsquo;s in the Box</summary><div class="c"><p>Ninu scalp oil dispenser, 60ml scalp oil (about a 30-day supply), satin sleep bonnet.</p><p>Black Friday gifts: scalp massager, bedside pouch, &ldquo;The Scalp Routine That Sticks&rdquo; guide and the Ninu Night Tracker. The guide and tracker are emailed to you after you order.</p></div></details>
+   <details><summary>Shipping &amp; Returns</summary><div class="c"><p>Free US shipping.</p><p>30-day money-back guarantee. Not right for you? Send it back within 30 days for a full refund.</p></div></details>
+  </div>
+ </div>
+</section>
+</div>
+
+<section class="sw-sec sw-alt"><div class="sw-w">
+ <div class="sw-ce"><div class="sw-eb">Your 2 minutes</div><h2 class="sw-h2">A routine you can actually follow</h2><p class="l">Fill, part, press, repeat. Keep it on the nightstand and it runs itself.</p></div>
+ <div class="sw-plan">
+  <img data-s="Woman_applying_scalp_treatment_a27eae60.jpg" alt="Applying oil along the part">
+  <div class="sw-steps">
+   <div class="sw-st"><em>Step 1</em><b>Fill</b><p>Fill the clear chamber with your oil. About 2ml a night means one 60ml bottle lasts around a month.</p></div>
+   <div class="sw-st"><em>Step 2</em><b>Part</b><p>Part your hair so the tips can reach your scalp.</p></div>
+   <div class="sw-st"><em>Step 3</em><b>Press</b><p>Press the hollow silicone tips against your scalp along the part. The oil is released right there, on the skin.</p></div>
+   <div class="sw-st"><em>Step 4</em><b>Move across</b><p>Make a new part and repeat. Work across the top of your head, a part at a time.</p></div>
+   <p class="sw-mk"><b>Make it easy.</b> Leave your dispenser and oil on the nightstand, in your bedside pouch. If you have to go and find it, you won&rsquo;t.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="sw-sec"><div class="sw-w">
+ <div class="sw-rit">
+  <div class="t">
+   <div class="eb2">SIMPLE. ONE-HANDED. NO MESS.</div>
+   <h2 class="sw-h2">The 2-minute scalp ritual</h2>
+   <p>Every night, without the mess:</p>
+   <div class="sw-bg4">
+    <div><i>&#8595;</i><b>On the scalp</b><p>The oil is released on the skin along your part, not through your hair.</p></div>
+    <div><i>&#8776;</i><b>Nothing drips</b><p>No oil down your neck, on your towel or on your pillowcase.</p></div>
+    <div><i>&#9675;</i><b>One hand, two minutes</b><p>Easy at 10pm, even when you&rsquo;re exhausted.</p></div>
+    <div><i>&#10003;</i><b>Your oil</b><p>Works with the oil you already own. Nothing new to learn.</p></div>
+   </div>
+  </div>
+  <img data-s="Woman_holding_Ninu_dispenser_2d3f6016.jpg" alt="Holding the Ninu dispenser">
+ </div>
+</div></section>
+
+<section class="sw-sec" style="padding-top:20px"><div class="sw-w">
+ <div class="sw-ce"><div class="sw-eb">SIMPLE DESIGN. NO MESS.</div><h2 class="sw-h2">Inside the dispenser</h2></div>
+ <div class="sw-tech">
+  <div class="sw-tc l"><div><b>Dome cap</b><p>Hold and press with one hand.</p></div><div><b>Hollow silicone tips</b><p>Release the oil on the skin along your part.</p></div></div>
+  <img data-s="Silicone_scalp_oil_dispenser_pho__dc19d7af-removebg-preview.png" alt="Ninu dispenser">
+  <div class="sw-tc"><div><b>Clear chamber</b><p>See your oil level at a glance.</p></div><div><b>1 to 4ml markings</b><p>Use the same amount every night.</p></div></div>
+ </div>
+</div></section>
+
+<section class="sw-sec sw-alt"><div class="sw-w">
+ <h2 class="sw-h2">The smart choice for scalp oiling</h2><p style="margin-top:6px;font-size:14.5px">Oil where you meant it. Two minutes. One hand.</p>
+ <div class="sw-cmp">
+  <img data-s="Comparing_dropper_and_dispenser___f55499b2.jpg" alt="Dropper versus Ninu dispenser">
+  <div class="sw-vs">
+   <div class="u"><h5>NINU</h5><ul><li>Oil released on the scalp, along the part</li><li>One hand, about two minutes</li><li>Clear 1 to 4ml markings</li><li>No towel, no oily fingers</li><li>Works with the oil you already own</li></ul></div>
+   <div class="th"><span class="sw-vsb">VS</span><h5>DROPPERS &amp; FINGERS</h5><ul><li>Oil ends up on your hair, not your scalp</li><li>Runs down your neck and onto the towel</li><li>Oily hands, two hands</li><li>Guessing how much you used</li><li>Greasy pillowcase by morning</li></ul></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="sw-sec"><div class="sw-w">
+ <h2 class="sw-h2">You&rsquo;re not the only one</h2><p style="margin-top:6px;font-size:14.5px">What women on Reddit say about oiling their scalp. Their words, linked.</p>
+ <div class="sw-qs">
+  <div class="sw-qc"><b>The dropper</b><p>&ldquo;the stupid dropper in the medication seems to put most of the medication in my hair vs on my scalp&rdquo;</p><a href="https://www.reddit.com/r/FemaleHairLoss/comments/1w2jkcv/" target="_blank" rel="noopener">r/FemaleHairLoss</a></div>
+  <div class="sw-qc"><b>Into the hair</b><p>&ldquo;so much would get on my hair instead&rdquo;</p><a href="https://www.reddit.com/r/FemaleHairLoss/comments/1vrn16i/" target="_blank" rel="noopener">r/FemaleHairLoss</a></div>
+  <div class="sw-qc"><b>The greasy fear</b><p>&ldquo;I was nervous about using oil. I was thinking that it would make my hair look greasy&rdquo;</p><a href="https://www.reddit.com/r/AskWomenOver50/comments/1qgbocz/" target="_blank" rel="noopener">r/AskWomenOver50</a></div>
+  <div class="sw-qc"><b>The mess</b><p>&ldquo;runs down your face, stains towels your clothes, makes your hair look terrible&rdquo;</p><a href="https://www.reddit.com/r/FemaleHairLoss/comments/1stomyv/" target="_blank" rel="noopener">r/FemaleHairLoss</a></div>
+  <div class="sw-qc"><b>The routine</b><p>&ldquo;burned out from applying the serums and solutions 2x a day&rdquo;</p><a href="https://www.reddit.com/r/FemaleHairLoss/comments/1srx830/" target="_blank" rel="noopener">r/AskWomenOver50</a></div>
+ </div>
+ <div class="sw-vid"><video src="//cdn.shopify.com/videos/c/o/v/88726671c14c4e3c9a52243df1c0b3a6.mp4" autoplay muted loop playsinline></video></div>
+</div></section>
+
+<div class="sw-mq"><div><span>BUY 1 GET 4 FREE</span><span>FREE US SHIPPING</span><span>30-DAY MONEY-BACK GUARANTEE</span><span>ONE HAND, TWO MINUTES</span><span>BUY 1 GET 4 FREE</span><span>FREE US SHIPPING</span><span>30-DAY MONEY-BACK GUARANTEE</span><span>ONE HAND, TWO MINUTES</span></div></div>
+
+<section class="sw-sec"><div class="sw-w">
+ <h2 class="sw-h2 sw-ce">How to use</h2>
+ <div class="sw-how">
+  <div><b>Fill</b><img data-s="Dispenser_on_bathroom_vanity_c33b87a7.jpg" alt=""><p>Fill the clear chamber with your oil. The 1 to 4ml marks show you how much.</p></div>
+  <div><b>Part &amp; press</b><img data-s="Woman_applying_scalp_treatment_a27eae60.jpg" alt=""><p>Part your hair and press the tips against your scalp. The oil is released on the skin. One hand.</p></div>
+  <div><b>Bonnet, then bed</b><img data-s="Flat_lay_of_scalp_kit_5cb4b3bf.jpg" alt=""><p>Satin bonnet on, light off. About two minutes, start to finish.</p></div>
+ </div>
+</div></section>
+
+<section class="sw-sec sw-alt"><div class="sw-w">
+ <h2 class="sw-h2">Simple tool, easy routine</h2>
+ <div class="sw-gl">
+  <div class="sw-gc"><h4>At a glance</h4><dl>
+   <div><dt>Applicator</dt><dd>Hollow silicone tips</dd></div>
+   <div><dt>Chamber</dt><dd>Clear, with 1 to 4ml markings</dd></div>
+   <div><dt>Routine time</dt><dd>About two minutes, one hand</dd></div>
+   <div><dt>Oil</dt><dd>Most thin scalp oils work</dd></div>
+   <div><dt>What&rsquo;s in the kit</dt><dd>Ninu dispenser, 60ml scalp oil (about 30 days), satin sleep bonnet</dd></div>
+   <div><dt>Black Friday gifts</dt><dd>Scalp massager, bedside pouch, guide (emailed), Night Tracker (emailed)</dd></div>
+   <div><dt>Guarantee</dt><dd>30-day money-back guarantee</dd></div>
+  </dl></div>
+  <div class="sw-gi"><img data-s="Silicone_scalp_oil_dispenser_pho__dc19d7af-removebg-preview.png" alt="Ninu dispenser"></div>
+ </div>
+</div></section>
+
+<section class="sw-sec"><div class="sw-w sw-faq">
+ <h2 class="sw-h2">Frequently asked questions</h2>
+ <div class="sw-acc">
+  <details open><summary>What is the Ninu Scalp Oil Dispenser?</summary><div class="c"><p>A small applicator with hollow silicone tips. You press the tips to your scalp along your part and the oil is released on the skin. Clear 1 to 4ml chamber, one hand, about two minutes.</p></div></details>
+  <details><summary>What&rsquo;s included in the Black Friday deal?</summary><div class="c"><p>The Ninu Kit (dispenser, 60ml scalp oil and a satin sleep bonnet) for $49.99, plus 4 free gifts: a scalp massager, a bedside pouch, &ldquo;The Scalp Routine That Sticks&rdquo; guide and the Ninu Night Tracker. The guide and tracker are emailed to you after you order.</p></div></details>
+  <details><summary>Does the oil reach my scalp?</summary><div class="c"><p>That&rsquo;s what it&rsquo;s built for. The hollow tips press against your scalp along the part, so the oil is released on the skin instead of on top of your hair, a towel or your pillow.</p></div></details>
+  <details><summary>Can I use my own oil?</summary><div class="c"><p>Most thin scalp oils work. The dispenser is the tool; the oil is your choice.</p></div></details>
+  <details><summary>Won&rsquo;t it be greasy?</summary><div class="c"><p>The oil goes along your part, not all over your strands, so you use a small amount. Start with one or two tips&rsquo; worth per section.</p></div></details>
+  <details><summary>What if it&rsquo;s not for me?</summary><div class="c"><p>Send it back within 30 days for a full refund. We want you to keep it only if the routine sticks.</p></div></details>
+  <p class="sw-fine">Ninu is an applicator. It doesn&rsquo;t treat any hair or scalp condition.</p>
+ </div>
+</div></section>
+<!-- REVIEWS: add your reviews app block (e.g. Judge.me) as its own section below this one once you have real reviews. -->
+
+<script>
+(function(){
+var P='https://cdn.shopify.com/s/files/1/1084/3894/6122/files/',KIT='63751529824586';
+var G=['Replace_bottle_in_image_fb8a1622_2K.jpg','//cdn.shopify.com/videos/c/o/v/88726671c14c4e3c9a52243df1c0b3a6.mp4','Woman_applying_scalp_treatment_a27eae60.jpg','Creating_informational_product_c__5fbff81a_2K.jpg','Create_dispenser_informational_l__1f1f8699.jpg','Create_FAQ_card_design_e8d84f7e.jpg','Creating_hair_care_routine_layout_6be65eed.jpg','Woman_holding_Ninu_dispenser_2d3f6016.jpg','Dispenser_on_bathroom_vanity_c33b87a7.jpg','Flat_lay_of_scalp_kit_5cb4b3bf.jpg','Comparing_dropper_and_dispenser___f55499b2.jpg','Comparison_card_for_oil_dispensers_030258f3.jpg','Change_capacity_and_shipping_terms_745ff0e8.jpg'];
+document.querySelectorAll('.sw img[data-s]').forEach(function(i){i.src=P+i.dataset.s;i.loading='lazy'});
+var sc=document.getElementById('sw-sc'),tr=document.getElementById('sw-tr'),a='',b='';
+G.forEach(function(u,i){var v=u.indexOf('.mp4')>0;a+=v?'<video src="'+u+'" autoplay muted loop playsinline></video>':'<img src="'+P+u+'" alt="">';b+='<button type="button" data-i="'+i+'"'+(i?'':' class="on"')+'>'+(v?'<span class="v">&#9654;</span>':'<img src="'+P+u+'?width=150" alt="" loading="lazy">')+'</button>'});
+sc.innerHTML=a;tr.innerHTML=b;
+function go(i){sc.scrollTo({left:i*sc.clientWidth,behavior:'smooth'})}
+tr.addEventListener('click',function(e){var t=e.target.closest('button');if(t)go(+t.dataset.i)});
+sc.addEventListener('scroll',function(){var i=Math.round(sc.scrollLeft/sc.clientWidth);tr.querySelectorAll('button').forEach(function(x,j){x.classList.toggle('on',j===i)})});
+document.getElementById('sw-nx').onclick=function(){var i=Math.round(sc.scrollLeft/sc.clientWidth)+1;go(i>=G.length?0:i)};
+document.getElementById('sw-see').onclick=function(){go(1)};
+var btn=document.getElementById('sw-add'),err=document.getElementById('sw-err');
+btn.onclick=function(){btn.disabled=true;btn.textContent='Adding...';err.style.display='none';
+fetch('/cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:[{id:KIT,quantity:1,properties:{'Black Friday gifts':'Scalp massager, Bedside pouch, Guide, Night Tracker'}}]})})
+.then(function(r){if(!r.ok)throw 0;location.href='/cart'})
+.catch(function(){btn.disabled=false;btn.textContent='Add to cart';err.textContent='Something went wrong. Please try again.';err.style.display='block'})};
+})();
+</script>
+</div>
