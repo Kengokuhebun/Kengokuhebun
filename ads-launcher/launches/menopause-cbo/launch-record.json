@@ -2,7 +2,7 @@
  "ads": [
   {
    "name": "M1 Identity Colour",
-   "creativeId": "1786252872475821",
+   "creativeId": "2182763022667373",
    "adId": "120251352931190342",
    "images": [
     "dac54f69bb42bcdc732c4bbb220d785c",
@@ -11,7 +11,7 @@
   },
   {
    "name": "M2 Night Pillowcase",
-   "creativeId": "3296982857158533",
+   "creativeId": "1444198917923257",
    "adId": "120251352931510342",
    "images": [
     "5e92e3962a4fd7f6afa07a53180070f5",
@@ -20,7 +20,7 @@
   },
   {
    "name": "M3 Drawer Nothing Changed",
-   "creativeId": "1455709940077903",
+   "creativeId": "1847628909885353",
    "adId": "120251352931850342",
    "images": [
     "b6f2ef4430ecbe05c1a8d77d65ef5f4a",
@@ -29,12 +29,12 @@
   },
   {
    "name": "BF4 Warning Menopause",
-   "creativeId": "1083083118098842",
+   "creativeId": "1430929532583815",
    "adId": "120251352931900342"
   },
   {
    "name": "BF2 Reasons Menopause",
-   "creativeId": "2340489010045691",
+   "creativeId": "1680254787053255",
    "adId": "120251352931950342"
   }
  ],
@@ -47,5 +47,23 @@
  "adset": {
   "id": "120251352930390342",
   "placements": "FB feed, FB stories, FB reels, IG feed, IG stories, IG reels"
- }
+ },
+ "url_tags": "utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{placement}}",
+ "rules": [
+  {
+   "name": "Ninu menopause: pause at \u00a328 with 0 add-to-carts",
+   "id": "1060402210353839",
+   "error": null
+  },
+  {
+   "name": "Ninu menopause: pause at \u00a354 with 0 purchases",
+   "id": "1679530307162538",
+   "error": null
+  },
+  {
+   "name": "Ninu menopause: alert on junk clicks (50+ clicks under 30p)",
+   "id": "2577401146067564",
+   "level": "campaign"
+  }
+ ]
 }
