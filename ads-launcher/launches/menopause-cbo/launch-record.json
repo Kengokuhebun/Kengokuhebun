@@ -56,7 +56,7 @@
    "error": null
   },
   {
-   "name": "Ninu menopause: pause at \u00a354 with 0 purchases",
+   "name": "Ninu menopause: pause at \u00a3100 with 0 purchases",
    "id": "1679530307162538",
    "error": null
   },
@@ -67,6 +67,7 @@
   }
  ],
  "history": [
-  "2026-11-13 ~08:15 UTC: BF4 paused (\u00a325.95 spent, 1 click)."
+  "2026-11-13 ~08:15 UTC: BF4 paused (\u00a325.95 spent, 1 click).",
+  "2026-11-13: purchase kill rule raised \u00a354 -> \u00a3100 (owner)."
  ]
 }
