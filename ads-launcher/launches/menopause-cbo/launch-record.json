@@ -1,0 +1,51 @@
+{
+ "ads": [
+  {
+   "name": "M1 Identity Colour",
+   "creativeId": "1786252872475821",
+   "adId": "120251352931190342",
+   "images": [
+    "dac54f69bb42bcdc732c4bbb220d785c",
+    "4d4de34f4a4d9028ae3e2f0f7492f785"
+   ]
+  },
+  {
+   "name": "M2 Night Pillowcase",
+   "creativeId": "3296982857158533",
+   "adId": "120251352931510342",
+   "images": [
+    "5e92e3962a4fd7f6afa07a53180070f5",
+    "b848eaad37fd9da545b400956a72656d"
+   ]
+  },
+  {
+   "name": "M3 Drawer Nothing Changed",
+   "creativeId": "1455709940077903",
+   "adId": "120251352931850342",
+   "images": [
+    "b6f2ef4430ecbe05c1a8d77d65ef5f4a",
+    "c1411564b4cd7890f72eb71117cd3348"
+   ]
+  },
+  {
+   "name": "BF4 Warning Menopause",
+   "creativeId": "1083083118098842",
+   "adId": "120251352931900342"
+  },
+  {
+   "name": "BF2 Reasons Menopause",
+   "creativeId": "2340489010045691",
+   "adId": "120251352931950342"
+  }
+ ],
+ "campaign": {
+  "id": "120251352930280342",
+  "name": "R3_Ninu_Menopause_CBO",
+  "daily_budget_gbp": 70,
+  "bid": "lowest cost (CBO)"
+ },
+ "adset": {
+  "id": "120251352930390342",
+  "placements": "FB feed, FB stories, FB reels, IG feed, IG stories, IG reels"
+ }
+}
