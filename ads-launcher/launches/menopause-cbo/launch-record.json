@@ -36,6 +36,18 @@
    "name": "BF2 Reasons Menopause",
    "creativeId": "1680254787053255",
    "adId": "120251352931950342"
+  },
+  {
+   "name": "A1_C_Orange_Textincrease",
+   "creativeId": "1048758237771967",
+   "adId": "120251358257830342",
+   "note": "copy identical to original winner; link -> new PDP; tags added"
+  },
+  {
+   "name": "A1_C_Purple_Textincrease",
+   "creativeId": "3287859378077180",
+   "adId": "120251358258070342",
+   "note": "copy identical to original winner; link -> new PDP; tags added"
   }
  ],
  "campaign": {
@@ -68,6 +80,7 @@
  ],
  "history": [
   "2026-11-13 ~08:15 UTC: BF4 paused (\u00a325.95 spent, 1 click).",
-  "2026-11-13: purchase kill rule raised \u00a354 -> \u00a3100 (owner)."
+  "2026-11-13: purchase kill rule raised \u00a354 -> \u00a3100 (owner).",
+  "2026-11-13: age restored to 45-65+ (4 of 7 past purchases were 65+); added A1_C Orange and Purple winners (copy unchanged, new PDP link)."
  ]
 }
