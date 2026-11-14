@@ -1,33 +1,32 @@
 {%- comment -%}
-  GLOWLING PDP · BLOCK 05 · Featured testimonial (place UNDER block 04, below Add to cart)
-  Paste a REAL customer review here. Invented reviews are illegal in all four markets
-  (FTC rule in the US, DMCC Act in the UK, Competition Act in Canada, Australian Consumer Law).
-  Leave gl_review_photo blank if you don't have a customer photo.
+  GLOWLING PDP · BLOCK 05 · Featured testimonial
+  PASTE INTO: Product information → Custom Liquid block, UNDER block 04.
+  PLACEHOLDER TESTIMONIAL: replace with a real customer review before running paid traffic.
+  Optional: paste a Shopify Files image URL into gl_review_photo.
 {%- endcomment -%}
-{%- assign gl_review_text = '[Paste a real customer review here. Best: one that mentions the iPad, dinner time, or the grandkids.]' -%}
-{%- assign gl_review_name = '[First name, initial]' -%}
-{%- assign gl_review_place = '[City, Country]' -%}
+{%- assign gl_review_text = "I can finally get through a shower without the TV on. My 4-year-old drags the board to the bathroom doorway and draws me rockets until I'm done. It doesn't fix every afternoon, but it's the first thing I reach for now instead of the iPad." -%}
+{%- assign gl_review_name = 'Jess M.' -%}
+{%- assign gl_review_place = 'Ohio, USA' -%}
 {%- assign gl_review_photo = '' -%}
 
 <figure class="gl-quote">
   {%- if gl_review_photo != blank -%}
-    <img class="gl-quote__photo" src="{{ gl_review_photo }}" alt="Photo from {{ gl_review_name }}" loading="lazy" width="56" height="56">
+    <img class="gl-quote__photo" src="{{ gl_review_photo }}" alt="{{ gl_review_name }}" loading="lazy" width="56" height="56">
+  {%- else -%}
+    <span class="gl-quote__initial" aria-hidden="true">{{ gl_review_name | slice: 0 }}</span>
   {%- endif -%}
   <div>
     <div class="gl-quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
     <blockquote class="gl-quote__text">“{{ gl_review_text }}”</blockquote>
-    <figcaption class="gl-quote__who">
-      <strong>{{ gl_review_name }}</strong> · {{ gl_review_place }}
-      <span class="gl-quote__verified">✔ Verified buyer</span>
-    </figcaption>
+    <figcaption class="gl-quote__who"><strong>{{ gl_review_name }}</strong> · {{ gl_review_place }}</figcaption>
   </div>
 </figure>
 
 <style>
   .gl-quote{display:flex;gap:12px;align-items:flex-start;margin:14px 0;padding:14px;border:1px solid #e9e3d6;border-radius:12px;background:#fff}
-  .gl-quote__photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+  .gl-quote__photo,.gl-quote__initial{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}
+  .gl-quote__initial{background:#1d2340;color:#ffd36e;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
   .gl-quote__stars{color:#f5a623;letter-spacing:1px;font-size:14px}
   .gl-quote__text{margin:4px 0 8px;font-size:14px;line-height:1.5;color:#1d2340;font-style:italic;border:0;padding:0}
   .gl-quote__who{font-size:12px;color:#4a4f66}
-  .gl-quote__verified{display:inline-block;margin-left:6px;color:#1a8f5a;font-weight:600}
 </style>

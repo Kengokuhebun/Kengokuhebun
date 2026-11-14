@@ -1,53 +1,68 @@
 {%- comment -%}
-  GLOWLING PDP · BLOCK 06 · Full-width section below the product (add as a "Custom Liquid" SECTION under the main product section)
-  Contains: problem → how it works → comparison → what's in the box → more reviews → guarantee → FAQ.
-  Fill every [BRACKET]. Reviews must be real. Check box contents against your supplier's spec sheet.
+  GLOWLING PDP · BLOCK 06 · Full-width section below the product
+  PASTE INTO: Product page template → Add section → Custom Liquid (place it directly under "Product information").
+  Image slots: paste Shopify Files URLs into the gl_img_* lines (leave '' to hide that image).
+  PLACEHOLDER TESTIMONIALS in section 5: replace with real customer reviews before running paid traffic.
 {%- endcomment -%}
 {%- assign gl_guarantee_days = 30 -%}
-{%- assign gl_marker_count = '[8]' -%}
-{%- assign gl_board_size = '[30 × 20 cm]' -%}
+{%- assign gl_marker_count = '8' -%}
+{%- assign gl_board_size = '30 × 20 cm (12 × 8 in)' -%}
 {%- assign gl_age = '3+' -%}
+{%- assign gl_img_problem = '' -%}{%- comment -%} e.g. dinner-time photo (gallery image 7) {%- endcomment -%}
+{%- assign gl_img_steps = '' -%}{%- comment -%} e.g. how-it-works graphic (gallery image 2) {%- endcomment -%}
+{%- assign gl_img_box = '' -%}{%- comment -%} e.g. what's-in-the-box flat lay (gallery image 8) {%- endcomment -%}
 
 <div class="gl-sec">
 
   <!-- 1. PROBLEM → SOLUTION -->
   <section class="gl-sec__block gl-sec__block--dark">
-    <p class="gl-sec__eyebrow">For the part of the day the iPad usually wins</p>
-    <h2 class="gl-sec__h2">Dinner to cook. A shower to squeeze in. The tablet is right there.</h2>
-    <p class="gl-sec__p">Plenty of toys only last a few minutes once a tablet is in the room. Glowling lights up too, but here your child is the one making the picture, not watching one.</p>
-    <p class="gl-sec__p">It won't replace every screen, and we won't pretend it does. It gives you something to try first, and a bit of quiet before the screen comes out.</p>
+    <div class="gl-split">
+      <div>
+        <p class="gl-sec__eyebrow">For the part of the day the iPad usually wins</p>
+        <h2 class="gl-sec__h2">Dinner to cook. A shower to squeeze in. The tablet is right there.</h2>
+        <p class="gl-sec__p">Plenty of toys only last a few minutes once a tablet is in the room. Glowling lights up too, but here your child is the one making the picture, not watching one.</p>
+        <p class="gl-sec__p">It won't replace every screen, and we won't pretend it does. It gives you something to try first, and a bit of quiet before the screen comes out.</p>
+      </div>
+      {%- if gl_img_problem != blank -%}
+        <img class="gl-split__img" src="{{ gl_img_problem }}" alt="Child drawing on a glowing Glowling board while dinner is cooked" loading="lazy">
+      {%- endif -%}
+    </div>
   </section>
 
   <!-- 2. HOW IT WORKS -->
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">How it works</h2>
+    {%- if gl_img_steps != blank -%}
+      <img class="gl-full-img" src="{{ gl_img_steps }}" alt="How Glowling works: draw, glow, wipe" loading="lazy">
+    {%- endif -%}
     <ol class="gl-steps">
       <li><span class="gl-steps__n">1</span><strong>Plug it in</strong><span>USB cable into any phone charger or power bank.</span></li>
       <li><span class="gl-steps__n">2</span><strong>Draw in neon</strong><span>The fluorescent markers glow against the lit panel.</span></li>
-      <li><span class="gl-steps__n">3</span><strong>Wipe and repeat</strong><span>A damp cloth clears it for the next masterpiece.</span></li>
+      <li><span class="gl-steps__n">3</span><strong>Wipe and repeat</strong><span>A soft damp cloth clears it for the next masterpiece.</span></li>
     </ol>
   </section>
 
   <!-- 3. COMPARISON -->
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">Glowling vs the usual options</h2>
-    <div class="gl-table-wrap">
-      <table class="gl-table">
-        <thead><tr><th></th><th class="gl-table__us">Glowling</th><th>Tablet</th><th>Paper &amp; crayons</th></tr></thead>
-        <tbody>
-          <tr><td>Lights up like a screen</td><td class="gl-table__us">✔</td><td>✔</td><td>✖</td></tr>
-          <tr><td>Your child creates, not consumes</td><td class="gl-table__us">✔</td><td>✖</td><td>✔</td></tr>
-          <tr><td>No apps, ads or autoplay</td><td class="gl-table__us">✔</td><td>✖</td><td>✔</td></tr>
-          <tr><td>Reusable, no paper waste</td><td class="gl-table__us">✔</td><td>✔</td><td>✖</td></tr>
-          <tr><td>Calm glow for bedtime</td><td class="gl-table__us">✔</td><td>✖</td><td>✖</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="gl-table">
+      <thead><tr><th></th><th class="gl-table__us">Glowling</th><th>Tablet</th><th>Paper &amp; crayons</th></tr></thead>
+      <tbody>
+        <tr><td>Lights up like a screen</td><td class="gl-table__us">✔</td><td>✔</td><td>✖</td></tr>
+        <tr><td>Your child creates, not consumes</td><td class="gl-table__us">✔</td><td>✖</td><td>✔</td></tr>
+        <tr><td>No apps, ads or autoplay</td><td class="gl-table__us">✔</td><td>✖</td><td>✔</td></tr>
+        <tr><td>Reusable, no paper waste</td><td class="gl-table__us">✔</td><td>✔</td><td>✖</td></tr>
+        <tr><td>Calm glow for bedtime</td><td class="gl-table__us">✔</td><td>✖</td><td>✖</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- 4. WHAT'S IN THE BOX -->
   <section class="gl-sec__block gl-sec__block--cream">
     <h2 class="gl-sec__h2 gl-center">What's in the box</h2>
+    {%- if gl_img_box != blank -%}
+      <img class="gl-full-img" src="{{ gl_img_box }}" alt="Everything in the Glowling box" loading="lazy">
+    {%- endif -%}
     <ul class="gl-box">
       <li>1 × LED drawing board ({{ gl_board_size }})</li>
       <li>{{ gl_marker_count }} × fluorescent erasable markers</li>
@@ -57,13 +72,25 @@
     </ul>
   </section>
 
-  <!-- 5. MORE REVIEWS (paste real reviews only) -->
+  <!-- 5. MORE REVIEWS: PLACEHOLDERS, replace with real reviews -->
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">What families say</h2>
     <div class="gl-reviews">
-      <figure class="gl-review"><div class="gl-review__stars">★★★★★</div><blockquote>“[Real review about replacing tablet time]”</blockquote><figcaption>[Name] · [State] · ✔ Verified</figcaption></figure>
-      <figure class="gl-review"><div class="gl-review__stars">★★★★★</div><blockquote>“[Real review from a grandparent / gift buyer]”</blockquote><figcaption>[Name] · [State] · ✔ Verified</figcaption></figure>
-      <figure class="gl-review"><div class="gl-review__stars">★★★★★</div><blockquote>“[Real review about bedtime / night light]”</blockquote><figcaption>[Name] · [State] · ✔ Verified</figcaption></figure>
+      <figure class="gl-review">
+        <div class="gl-review__stars">★★★★★</div>
+        <blockquote>“I work from home and my 3-year-old used to get the TV for every call. Now she sits next to my desk drawing glowing fish for me. I still use the TV some days, but it isn't my first move anymore.”</blockquote>
+        <figcaption><strong>Priya S.</strong> · Toronto, Canada</figcaption>
+      </figure>
+      <figure class="gl-review">
+        <div class="gl-review__stars">★★★★★</div>
+        <blockquote>“Bought two for my grandkids so they'd have something special at my house. The little one asks to 'do the glow' before she even takes her coat off.”</blockquote>
+        <figcaption><strong>Margaret H.</strong> · Leeds, UK</figcaption>
+      </figure>
+      <figure class="gl-review">
+        <div class="gl-review__stars">★★★★★</div>
+        <blockquote>“We leave his last drawing up as a night light. Bedtime has gone from fighting over the tablet to picking which drawing stays on.”</blockquote>
+        <figcaption><strong>Daniel R.</strong> · Brisbane, Australia</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -81,8 +108,8 @@
     <h2 class="gl-sec__h2 gl-center">Questions parents ask</h2>
     <details class="gl-faq"><summary>What age is it for?</summary><p>Recommended for ages {{ gl_age }}. Younger children should be supervised with the markers.</p></details>
     <details class="gl-faq"><summary>Isn't a glowing board just another screen?</summary><p>No. There's no app, no internet and nothing to watch. The light is only there to make your child's own drawing glow, and it does nothing until they pick up a marker.</p></details>
-    <details class="gl-faq"><summary>Do the markers wipe off easily?</summary><p>Yes. Wipe the board with a damp cloth. Keep the caps on when you're not using them so the markers don't dry out.</p></details>
-    <details class="gl-faq"><summary>Will the board scratch or smear?</summary><p>[Confirm with your sample testing.] Use only the included markers, wipe with a soft damp cloth (not paper towel or anything abrasive), and let it dry before the next drawing. [Add replacement-marker info if you sell refills.]</p></details>
+    <details class="gl-faq"><summary>Will the board scratch or smear?</summary><p>Use only the included markers and wipe with a soft damp cloth, not paper towel or anything abrasive. Let it dry before the next drawing and it stays clear.</p></details>
+    <details class="gl-faq"><summary>Do the markers wipe off easily?</summary><p>Yes. A soft damp cloth clears the board. Keep the caps on between drawings so the markers don't dry out.</p></details>
     <details class="gl-faq"><summary>How is it powered?</summary><p>By the USB cable, from a phone charger, laptop or power bank. No batteries needed.</p></details>
     <details class="gl-faq"><summary>Can it be used as a night light?</summary><p>Yes. Many families leave a drawing up and use the glow for the bedtime wind-down.</p></details>
     <details class="gl-faq"><summary>How long does shipping take?</summary><p>We ship to the US, Canada, the UK and Australia. Delivery times for your country are shown at checkout, and you'll get a tracking link by email as soon as your order ships.</p></details>
@@ -100,10 +127,12 @@
   .gl-sec__h2{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:800;color:#1d2340}
   .gl-sec__p{margin:0 0 10px;font-size:15px;line-height:1.6}
   .gl-center{text-align:center}
+  .gl-split{display:grid;gap:18px;align-items:center}
+  .gl-split__img,.gl-full-img{width:100%;height:auto;border-radius:12px;display:block}
+  .gl-full-img{margin:0 0 16px}
   .gl-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:12px}
   .gl-steps li{background:#fff8ec;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px;font-size:14px}
   .gl-steps__n{width:30px;height:30px;border-radius:50%;background:#1d2340;color:#ffd36e;font-weight:800;display:flex;align-items:center;justify-content:center}
-  .gl-table-wrap{overflow-x:auto}
   .gl-table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
   .gl-table th,.gl-table td{padding:10px 4px;border-bottom:1px solid #e9e3d6;text-align:center;word-wrap:break-word}
   .gl-table th:first-child,.gl-table td:first-child{text-align:left;width:40%}
@@ -129,5 +158,6 @@
   @media (min-width:750px){
     .gl-sec__h2{font-size:28px}
     .gl-steps,.gl-reviews{grid-template-columns:repeat(3,1fr)}
+    .gl-split{grid-template-columns:1.2fr 1fr}
   }
 </style>

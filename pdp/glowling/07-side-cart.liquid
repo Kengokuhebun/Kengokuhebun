@@ -1,0 +1,289 @@
+{%- comment -%}
+  GLOWLING · BLOCK 07 · Side cart (slide-out cart drawer), works on every page
+  PASTE INTO: Theme editor → Footer (section group) → Add section → Custom Liquid → paste this.
+  THEN: Theme settings → Cart → Cart type → "Page" (so the theme's own drawer/popup doesn't open as well).
+  If you use Kaching Bundles: set its "after add to cart" action to "Do nothing / stay on page".
+
+  What it does:
+  - Catches every add-to-cart (theme forms, and apps that call /cart/add.js) and opens the drawer
+  - Header cart icon opens the drawer instead of the cart page
+  - Quantity +/−, remove, free-shipping progress bar per currency, optional one-click upsell
+  - Checkout button, guarantee line, payment icons
+{%- endcomment -%}
+{%- assign gl_cart_upsell_handle = '' -%}{%- comment -%} product handle to offer in the cart, e.g. 'glowling-marker-refill-pack' (leave '' to hide) {%- endcomment -%}
+{%- assign gl_cart_guarantee_days = 30 -%}
+
+<div id="gl-cart" class="gl-cart" aria-hidden="true">
+  <div class="gl-cart__overlay" data-gl-close></div>
+  <aside class="gl-cart__panel" role="dialog" aria-modal="true" aria-labelledby="gl-cart-title">
+    <header class="gl-cart__head">
+      <h2 id="gl-cart-title" class="gl-cart__title">Your cart <span data-gl-count></span></h2>
+      <button type="button" class="gl-cart__x" data-gl-close aria-label="Close cart">×</button>
+    </header>
+    <div class="gl-cart__ship" data-gl-ship hidden>
+      <p class="gl-cart__ship-msg" data-gl-ship-msg></p>
+      <div class="gl-cart__bar"><span data-gl-ship-bar></span></div>
+    </div>
+    <div class="gl-cart__body">
+      <p class="gl-cart__error" data-gl-error hidden></p>
+      <ul class="gl-cart__items" data-gl-items></ul>
+      <div class="gl-cart__empty" data-gl-empty hidden>
+        <p>Your cart is empty.</p>
+        <button type="button" class="gl-cart__btn gl-cart__btn--ghost" data-gl-close>Continue shopping</button>
+      </div>
+      <div class="gl-cart__upsell" data-gl-upsell hidden></div>
+    </div>
+    <footer class="gl-cart__foot" data-gl-foot hidden>
+      <div class="gl-cart__row"><span>Subtotal</span><strong data-gl-subtotal></strong></div>
+      <p class="gl-cart__note">Taxes and shipping calculated at checkout</p>
+      <a class="gl-cart__btn" data-gl-checkout href="#">Checkout securely</a>
+      <p class="gl-cart__guarantee">🛡️ {{ gl_cart_guarantee_days }}-day money-back guarantee</p>
+      <div class="gl-cart__pay">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="34" height="22" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="34" height="22" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="34" height="22" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="34" height="22" loading="lazy">
+        <span class="gl-cart__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="26" height="14" loading="lazy"></span>
+        <span class="gl-cart__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="26" height="14" loading="lazy"></span>
+      </div>
+    </footer>
+  </aside>
+</div>
+
+<style>
+  .gl-cart{position:fixed;inset:0;z-index:2147483000;visibility:hidden;pointer-events:none;font-family:inherit;color:#1d2340}
+  .gl-cart.is-open{visibility:visible;pointer-events:auto}
+  .gl-cart__overlay{position:absolute;inset:0;background:rgba(15,18,38,.55);opacity:0;transition:opacity .25s}
+  .gl-cart.is-open .gl-cart__overlay{opacity:1}
+  .gl-cart__panel{position:absolute;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .3s ease;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+  .gl-cart.is-open .gl-cart__panel{transform:translateX(0)}
+  .gl-cart__head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #eee}
+  .gl-cart__title{margin:0;font-size:18px;font-weight:800}
+  .gl-cart__x{background:none;border:0;font-size:30px;line-height:1;cursor:pointer;color:#1d2340;padding:0 4px}
+  .gl-cart__ship{padding:12px 18px;background:#fff8ec;border-bottom:1px solid #f1e8d4}
+  .gl-cart__ship-msg{margin:0 0 6px;font-size:13px;text-align:center}
+  .gl-cart__bar{height:8px;border-radius:99px;background:#efe6d2;overflow:hidden}
+  .gl-cart__bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffd36e,#ffb347);transition:width .4s}
+  .gl-cart__body{flex:1;overflow-y:auto;padding:8px 18px}
+  .gl-cart__error{background:#fde8e8;color:#9b1c1c;font-size:13px;padding:8px 10px;border-radius:8px}
+  .gl-cart__items{list-style:none;margin:0;padding:0}
+  .gl-cart__item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid #f0f0f0;align-items:start}
+  .gl-cart__item img{width:72px;height:72px;object-fit:cover;border-radius:8px;background:#f6f6f6}
+  .gl-cart__name{font-size:14px;font-weight:700;margin:0 0 2px;color:#1d2340;text-decoration:none;display:block}
+  .gl-cart__variant{font-size:12px;color:#666;margin:0 0 8px}
+  .gl-cart__qty{display:inline-flex;align-items:center;border:1px solid #ddd;border-radius:8px}
+  .gl-cart__qty button{width:30px;height:30px;background:none;border:0;font-size:16px;cursor:pointer;color:#1d2340}
+  .gl-cart__qty span{min-width:24px;text-align:center;font-size:14px}
+  .gl-cart__remove{display:block;margin-top:6px;background:none;border:0;padding:0;font-size:12px;color:#888;text-decoration:underline;cursor:pointer}
+  .gl-cart__price{font-size:14px;font-weight:700;text-align:right}
+  .gl-cart__compare{display:block;font-size:12px;color:#999;text-decoration:line-through;font-weight:400}
+  .gl-cart__empty{text-align:center;padding:40px 0;font-size:15px}
+  .gl-cart__upsell{margin:14px 0;padding:12px;border:1px dashed #e0d6bf;border-radius:12px;background:#fffdf7}
+  .gl-cart__upsell-label{margin:0 0 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#b07d00}
+  .gl-cart__upsell-row{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center}
+  .gl-cart__upsell-row img{width:56px;height:56px;object-fit:cover;border-radius:8px}
+  .gl-cart__upsell-row button{background:#1d2340;color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700;cursor:pointer}
+  .gl-cart__foot{padding:14px 18px 18px;border-top:1px solid #eee;background:#fff}
+  .gl-cart__row{display:flex;justify-content:space-between;font-size:16px;margin-bottom:4px}
+  .gl-cart__note{margin:0 0 12px;font-size:12px;color:#777}
+  .gl-cart__btn{display:block;width:100%;text-align:center;background:#ffd84d;color:#1d2340;font-weight:800;font-size:16px;padding:15px;border-radius:10px;border:0;text-decoration:none;cursor:pointer;box-sizing:border-box}
+  .gl-cart__btn--ghost{background:#fff;border:2px solid #1d2340;width:auto;display:inline-block;padding:10px 18px;font-size:14px}
+  .gl-cart__guarantee{margin:10px 0 8px;text-align:center;font-size:12px}
+  .gl-cart__pay{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
+  .gl-cart__pay img{width:34px;height:22px;border-radius:3px}
+  .gl-cart__chip{display:inline-flex;width:34px;height:22px;align-items:center;justify-content:center;border:1px solid #d9d9d9;border-radius:3px;background:#fff}
+  .gl-cart__chip img{width:30px;height:18px;object-fit:contain}
+  .gl-cart.is-busy .gl-cart__body,.gl-cart.is-busy .gl-cart__foot{opacity:.6;pointer-events:none}
+</style>
+
+<script>
+(function () {
+  if (window.__glCartInit) return;
+  window.__glCartInit = true;
+
+  var ROOT = ({{ routes.root_url | json }} || '/').replace(/\/?$/, '/');
+  var UPSELL = {{ gl_cart_upsell_handle | json }};
+  // Free-shipping thresholds in cents, by cart currency. Match block 04. Remove a line to hide the bar for that currency.
+  var FREE_SHIP = { USD: 5000, CAD: 7000, GBP: 4000, AUD: 7500 };
+
+  var nativeFetch = window.fetch.bind(window);
+  var root = document.getElementById('gl-cart');
+  if (!root) return;
+  document.body.appendChild(root);
+  var $ = function (sel) { return root.querySelector(sel); };
+  var els = {
+    items: $('[data-gl-items]'), empty: $('[data-gl-empty]'), foot: $('[data-gl-foot]'),
+    subtotal: $('[data-gl-subtotal]'), count: $('[data-gl-count]'), error: $('[data-gl-error]'),
+    ship: $('[data-gl-ship]'), shipMsg: $('[data-gl-ship-msg]'), shipBar: $('[data-gl-ship-bar]'),
+    upsell: $('[data-gl-upsell]'), checkout: $('[data-gl-checkout]')
+  };
+  els.checkout.setAttribute('href', ROOT + 'checkout');
+  var upsellProduct = null, upsellLoaded = false, lastFocus = null;
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); }
+  function money(cents, cur) {
+    try { return new Intl.NumberFormat(document.documentElement.lang || undefined, { style: 'currency', currency: cur }).format(cents / 100); }
+    catch (e) { return (cents / 100).toFixed(2) + ' ' + cur; }
+  }
+  function img(url, w) { if (!url) return ''; return url + (url.indexOf('?') > -1 ? '&' : '?') + 'width=' + w; }
+  function json(url, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }, opts.headers || {});
+    return nativeFetch(url, opts).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) {
+        if (!r.ok) { var e = new Error(d.description || d.message || 'Something went wrong'); e.data = d; throw e; }
+        return d;
+      });
+    });
+  }
+  function busy(on) { root.classList.toggle('is-busy', !!on); }
+  function showError(msg) { els.error.textContent = msg || ''; els.error.hidden = !msg; }
+
+  function open() {
+    if (root.classList.contains('is-open')) return;
+    lastFocus = document.activeElement;
+    root.classList.add('is-open');
+    root.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+    var x = root.querySelector('.gl-cart__x'); if (x) x.focus();
+  }
+  function close() {
+    root.classList.remove('is-open');
+    root.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function updateThemeCount(n) {
+    var sel = '#cart-icon-bubble .cart-count-bubble span[aria-hidden="true"], [data-cart-count], .cart-count, .cart-count-bubble__count, .header__cart-count';
+    document.querySelectorAll(sel).forEach(function (el) { if (!root.contains(el)) el.textContent = n; });
+  }
+
+  function renderShipping(cart) {
+    var goal = FREE_SHIP[cart.currency];
+    if (!goal || cart.item_count === 0) { els.ship.hidden = true; return; }
+    els.ship.hidden = false;
+    var left = goal - cart.total_price;
+    els.shipMsg.innerHTML = left > 0
+      ? 'You’re <strong>' + money(left, cart.currency) + '</strong> away from free shipping'
+      : '🎉 You’ve unlocked <strong>free shipping</strong>';
+    els.shipBar.style.width = Math.min(100, Math.round(cart.total_price / goal * 100)) + '%';
+  }
+
+  function renderUpsell(cart) {
+    if (!UPSELL || !upsellProduct) { els.upsell.hidden = true; return; }
+    var v = (upsellProduct.variants || []).filter(function (x) { return x.available; })[0];
+    var inCart = cart.items.some(function (i) { return i.product_id === upsellProduct.id; });
+    if (!v || inCart || cart.item_count === 0) { els.upsell.hidden = true; return; }
+    var pic = upsellProduct.featured_image ? img(upsellProduct.featured_image.indexOf('//') === 0 ? 'https:' + upsellProduct.featured_image : upsellProduct.featured_image, 120) : '';
+    els.upsell.innerHTML =
+      '<p class="gl-cart__upsell-label">Add to your order</p>' +
+      '<div class="gl-cart__upsell-row">' + (pic ? '<img src="' + esc(pic) + '" alt="">' : '<span></span>') +
+      '<div><strong style="font-size:14px">' + esc(upsellProduct.title) + '</strong><div style="font-size:13px">' + money(v.price, cart.currency) + '</div></div>' +
+      '<button type="button" data-gl-upsell-add="' + v.id + '">Add</button></div>';
+    els.upsell.hidden = false;
+  }
+
+  function render(cart) {
+    els.count.textContent = cart.item_count ? '(' + cart.item_count + ')' : '';
+    updateThemeCount(cart.item_count);
+    var empty = cart.item_count === 0;
+    els.empty.hidden = !empty;
+    els.foot.hidden = empty;
+    els.items.innerHTML = cart.items.map(function (it) {
+      var pic = it.featured_image && it.featured_image.url ? it.featured_image.url : it.image;
+      var variant = it.variant_title && it.variant_title !== 'Default Title' ? '<p class="gl-cart__variant">' + esc(it.variant_title) + '</p>' : '<p class="gl-cart__variant"></p>';
+      var compare = it.original_line_price > it.final_line_price ? '<span class="gl-cart__compare">' + money(it.original_line_price, cart.currency) + '</span>' : '';
+      return '<li class="gl-cart__item">' +
+        '<a href="' + esc(it.url) + '">' + (pic ? '<img src="' + esc(img(pic, 160)) + '" alt="' + esc(it.product_title) + '">' : '<img alt="">') + '</a>' +
+        '<div><a class="gl-cart__name" href="' + esc(it.url) + '">' + esc(it.product_title) + '</a>' + variant +
+        '<div class="gl-cart__qty"><button type="button" data-gl-qty="' + esc(it.key) + '" data-q="' + (it.quantity - 1) + '" aria-label="Decrease quantity">−</button>' +
+        '<span>' + it.quantity + '</span>' +
+        '<button type="button" data-gl-qty="' + esc(it.key) + '" data-q="' + (it.quantity + 1) + '" aria-label="Increase quantity">+</button></div>' +
+        '<button type="button" class="gl-cart__remove" data-gl-qty="' + esc(it.key) + '" data-q="0">Remove</button></div>' +
+        '<div class="gl-cart__price">' + compare + money(it.final_line_price, cart.currency) + '</div></li>';
+    }).join('');
+    els.subtotal.textContent = money(cart.total_price, cart.currency);
+    renderShipping(cart);
+    renderUpsell(cart);
+  }
+
+  function refresh() {
+    var jobs = [json(ROOT + 'cart.js')];
+    if (UPSELL && !upsellLoaded) {
+      upsellLoaded = true;
+      jobs.push(json(ROOT + 'products/' + encodeURIComponent(UPSELL) + '.js').then(function (p) { upsellProduct = p; }).catch(function () {}));
+    }
+    return Promise.all(jobs).then(function (r) { render(r[0]); return r[0]; });
+  }
+  function refreshAndOpen() { showError(''); return refresh().then(open); }
+
+  // 1) Theme add-to-cart forms (capture phase runs before the theme's own handler)
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!(form instanceof HTMLFormElement)) return;
+    var action = form.getAttribute('action') || '';
+    if (!/\/cart\/add(\.js)?(\?|$)/.test(action)) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    var btn = form.querySelector('[type="submit"], button[name="add"]');
+    if (btn) { btn.setAttribute('aria-disabled', 'true'); btn.disabled = true; }
+    showError('');
+    json(ROOT + 'cart/add.js', { method: 'POST', body: new FormData(form) })
+      .then(refreshAndOpen)
+      .catch(function (err) { refresh().then(function () { showError(err.message); open(); }); })
+      .finally(function () { if (btn) { btn.disabled = false; btn.removeAttribute('aria-disabled'); } });
+  }, true);
+
+  // 2) Apps / theme scripts that add via fetch or XHR
+  function isAdd(url) { return /\/cart\/add(\.js)?(\?|$)/.test(String(url || '')); }
+  window.fetch = function (input, init) {
+    var url = typeof input === 'string' ? input : (input && input.url);
+    return nativeFetch(input, init).then(function (res) {
+      if (isAdd(url) && res.ok) setTimeout(refreshAndOpen, 60);
+      return res;
+    });
+  };
+  var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.open = function (m, url) { this.__glUrl = url; return xOpen.apply(this, arguments); };
+  XMLHttpRequest.prototype.send = function () {
+    var xhr = this;
+    if (isAdd(xhr.__glUrl)) xhr.addEventListener('load', function () { if (xhr.status >= 200 && xhr.status < 300) setTimeout(refreshAndOpen, 60); });
+    return xSend.apply(this, arguments);
+  };
+
+  // 3) Header cart icon opens the drawer
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || root.contains(a)) return;
+    var path;
+    try { path = new URL(a.href, location.href).pathname; } catch (_) { return; }
+    if (/\/cart\/?$/.test(path) && a.origin === location.origin) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      refreshAndOpen();
+    }
+  }, true);
+
+  // 4) Drawer controls
+  root.addEventListener('click', function (e) {
+    if (e.target.closest('[data-gl-close]')) { close(); return; }
+    var q = e.target.closest('[data-gl-qty]');
+    if (q) {
+      busy(true); showError('');
+      json(ROOT + 'cart/change.js', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: q.getAttribute('data-gl-qty'), quantity: Math.max(0, parseInt(q.getAttribute('data-q'), 10)) }) })
+        .then(render).catch(function (err) { showError(err.message); }).finally(function () { busy(false); });
+      return;
+    }
+    var u = e.target.closest('[data-gl-upsell-add]');
+    if (u) {
+      busy(true);
+      json(ROOT + 'cart/add.js', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items: [{ id: Number(u.getAttribute('data-gl-upsell-add')), quantity: 1 }] }) })
+        .then(refresh).catch(function (err) { showError(err.message); }).finally(function () { busy(false); });
+    }
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('is-open')) close(); });
+
+  window.GlowlingCart = { open: refreshAndOpen, close: close, refresh: refresh };
+})();
+</script>

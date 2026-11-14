@@ -1,179 +1,58 @@
-# Glowling: Gallery Image Prompts (Seedream 4.5 / 5.0 via KIE)
+# Glowling: Gallery Prompts for Nano Banana Pro (paste-ready)
 
-These recreate the competitor's five gallery shots (same job, layout and scene type) as Glowling images, plus three extra shots for the screen-time angle. Following the Master Document, generate a white-background master reference first, then attach it to every prompt.
+**How to use**
+1. Generate **image 0** first, attaching 2–3 of your supplier's clearest product photos. Check that it matches the real product (base shape, LED strip, marker colours).
+2. For images 1–8, **attach image 0** as the reference, paste the prompt and set the aspect ratio to **1:1**.
+3. If any text comes out misspelt, regenerate, or reply to Nano Banana Pro with "Fix the spelling of '…'".
+4. Upload the finished images to the product's media in this order: 1 → 2 → 6 → 4 → 3 → 5 → 7 → 8. Put 7 (dinner-time), 2 (how it works) and 8 (box) in **Shopify Files** as well, and send me those URLs. They go into the image slots in block 06.
 
-**Global settings**
-- Aspect ratio 1:1, 2048 × 2048. Photoreal, soft cinematic light, shallow depth of field.
-- Brand palette (matches the PDP blocks): night navy `#1D2340`, glow yellow `#FFD36E`, warm cream `#FFF8EC`, accent neon pink `#FF5FA2` and teal `#3FE0C5`. The competitor uses brown; we use navy and cream so we don't look like a copy.
-- Fonts on graphics: a rounded bold sans (e.g. Nunito ExtraBold) for headlines, regular for sub-lines.
-- Text: Seedream 4.5 handles short headlines well. If small text comes out garbled, generate the image with `"text": "none"` and add the copy in Canva.
-- **Product lock:** every image must show the same board: a clear rectangular acrylic panel (landscape, about 30 × 20 cm, rounded corners) standing upright in a white base with an X-shaped foot and a short centre support fin, a warm LED strip along the bottom edge, and white-barrel fluorescent markers with coloured caps. **If your supplier's board differs (e.g. a wooden base), change this description and the master reference to match what you actually ship.**
-- Never show a brand logo other than Glowling, never add fake reviews or star ratings, and never write health claims (e.g. "eye-friendly", "safe light") on images.
+If your supplier's board looks different from the description (for example a wooden base), change the first sentence of image 0 to match before generating.
 
 ---
 
-## 0. Master reference (not in the gallery)
-**Job:** gives Seedream an exact product to copy in every later image.
-**Attach:** the clearest supplier photos of the board and markers.
-```json
-{
-  "task": "product photograph for reference",
-  "subject": "clear rectangular acrylic LED drawing board, landscape, approx 30x20cm, rounded corners, standing upright in a white plastic base with an X-shaped foot and a short centre support fin, warm white LED strip glowing along the bottom edge of the panel, panel completely blank; in front, 8 fluorescent marker pens with white barrels and caps in pink, orange, yellow, green, blue, purple, red, white, lying in a neat fan",
-  "background": "pure seamless white #FFFFFF",
-  "lighting": "even softbox studio light, subtle contact shadow",
-  "camera": "front three-quarter view, 50mm, eye level with panel centre, everything in sharp focus",
-  "style": "high-end ecommerce packshot, photoreal",
-  "text": "none",
-  "negative": "logos, text, hands, props, reflections of people, extra stands, distorted acrylic, duplicate markers"
-}
+### 0 · Master product reference (white background)
 ```
-Check it against the supplier photos (base shape, LED strip position, marker count) before you go on.
-
----
-
-## 1. Hero lifestyle (recreates competitor image 1)
-**Answers:** what is it, and will my child love it?
-**Attach:** master reference.
-```json
-{
-  "task": "lifestyle hero product photo",
-  "scene": "a 5-year-old child in a rust-coloured knitted sweater sits at a warm wooden kids' desk in a cosy bedroom at dusk, focused and smiling slightly, drawing with a white fluorescent marker on the glowing Glowling LED board",
-  "drawing_on_board": "a neon rocket ship with flames and five stars around it, lines glowing pink, orange, yellow and teal against the lit acrylic",
-  "props": "wooden pencil cup holding the fluorescent markers on the left, a small stack of picture books and a soft teddy bear on the right, bookshelf softly out of focus behind",
-  "lighting": "room lights dim and warm, the board's glow lighting the child's face from below and in front, golden hour light from a window edge",
-  "camera": "straight-on at desk height, 50mm, child centred behind the board, f/2.8 background blur",
-  "product_fidelity": "board, base and markers must match the reference image exactly",
-  "text": "none",
-  "negative": "screens, tablets, phones, logos, extra fingers, warped acrylic, text on board other than the drawing"
-}
+Using the attached product photos as the exact reference, create a clean e-commerce packshot of this LED drawing board on a pure seamless white background. Show a clear rectangular acrylic panel in landscape orientation with rounded corners, standing upright in its white base with the X-shaped foot and short centre support, and a warm white LED strip glowing softly along the bottom edge. The panel is completely blank. In front of it, eight fluorescent marker pens with white barrels and coloured caps (pink, orange, yellow, green, blue, purple, red, white) lie in a neat fan. Front three-quarter view at eye level, even softbox studio lighting, a subtle contact shadow, everything razor sharp, photorealistic. Match the product's proportions, base and LED strip exactly to the reference photos. No text, no logos, no hands, no props. Square 1:1.
 ```
 
-## 2. How it works + benefits infographic (recreates competitor image 2)
-**Answers:** how does it work, and what do I get from it?
-**Attach:** master reference.
-```json
-{
-  "task": "ecommerce infographic",
-  "layout": "top third: headline + three steps left-to-right joined by arrows, each with a thin-line icon in navy; middle: the Glowling board on a wooden coffee table in a softly blurred cream living room, glowing; bottom third: three benefit icons with labels",
-  "headline": "How Glowling Works",
-  "steps": [
-    {"icon": "hand drawing with marker", "label": "1. DRAW", "sub": "Draw on the clear panel with the neon markers"},
-    {"icon": "panel with light rays", "label": "2. GLOW", "sub": "Switch on and watch it light up"},
-    {"icon": "hand wiping with cloth", "label": "3. WIPE & REPEAT", "sub": "A damp cloth clears it in seconds"}
-  ],
-  "drawing_on_board": "a holiday scene: a glowing Christmas tree, wrapped presents, a smiling star and a little reindeer, the words 'Merry Christmas' in neon bubble letters",
-  "benefits": [
-    {"icon": "lightbulb", "label": "CREATES, NOT SCROLLS"},
-    {"icon": "recycle arrows", "label": "ENDLESSLY REUSABLE"},
-    {"icon": "plug", "label": "USB POWERED"}
-  ],
-  "palette": "cream #FFF8EC background, navy #1D2340 text and icons, glow yellow #FFD36E accents",
-  "style": "clean modern infographic over photoreal product, generous margins",
-  "negative": "brown colour scheme, competitor wording, health claims, logos other than Glowling, misspelt words"
-}
+### 1 · Hero lifestyle
+```
+Use the attached image as the exact product reference and keep the board, base and markers identical. A photorealistic lifestyle photo: a 5-year-old child in a rust-coloured knitted sweater sits at a warm wooden kids' desk in a cosy bedroom at dusk, focused and smiling slightly, drawing with a fluorescent marker on the glowing LED board. On the board is a neon rocket ship with flames and five little stars, the lines glowing pink, orange, yellow and teal against the lit acrylic. A wooden pencil cup holding the markers sits on the left; a small stack of picture books and a soft teddy bear sit on the right, with a bookshelf softly blurred behind. The room is dim and warm, and the board's glow gently lights the child's face. Shot straight on at desk height, 50mm lens, shallow depth of field. No tablets, phones, logos or extra text. Square 1:1.
 ```
 
-## 3. Lifestyle collage + benefits panel (recreates competitor image 3)
-**Answers:** what does it look like in real life, day and night?
-**Attach:** master reference.
-```json
-{
-  "task": "collage product graphic",
-  "layout": "left two-thirds: one large top photo + two small photos side by side + one wide bottom photo, rounded corners, thin cream borders; right third: navy #1D2340 vertical panel with three round icons and labels; bottom-right corner: small cream box with the Glowling wordmark and the line 'Glow time, not screen time'",
-  "photos": [
-    "the glowing board on a bedroom desk at night, neon drawing of planets and stars",
-    "a smiling girl about 6 drawing a neon rainbow on the board flat on a table, face lit by the glow",
-    "two siblings laughing while drawing together on the same board",
-    "a child asleep in bed, the board on the bedside table glowing softly with a moon and stars drawing"
-  ],
-  "panel_items": [
-    {"icon": "sparkle", "label": "SPARKS CREATIVITY", "sub": "Drawing, letters and games"},
-    {"icon": "recycle", "label": "WIPE & REUSE", "sub": "A fresh page every time"},
-    {"icon": "moon", "label": "NIGHT LIGHT TOO", "sub": "A calm glow for bedtime"}
-  ],
-  "style": "warm, cosy, photoreal photos; crisp flat panel graphics",
-  "negative": "fake reviews, star ratings, customer faces with names, tablets, phones, misspelt words"
-}
+### 2 · How it works + benefits
 ```
-*Change from the competitor:* their bottom-right "Sarah M. ★★★★★ Best gift ever" card is a stock face with an invented review. Swap in a real customer photo and review once you have one; until then use the tagline.
-
-## 4. Four use cases grid (recreates competitor image 4)
-**Answers:** what else can it do besides drawing?
-**Attach:** master reference.
-```json
-{
-  "task": "2x2 use-case grid",
-  "layout": "four equal photo tiles with a navy label strip under each tile, line icon left of each label",
-  "tiles": [
-    {"photo": "a girl drawing a neon Christmas tree on the glowing board at a desk", "label": "CREATIVE DRAWING", "sub": "Neon art that glows"},
-    {"photo": "a boy in pyjamas writing a spelling list on the board on his bed", "label": "LETTERS & NOTES", "sub": "Practise words, leave messages"},
-    {"photo": "a child tracing a printed cartoon animal placed on the lit board", "label": "TRACING FUN", "sub": "Trace any picture"},
-    {"photo": "a child asleep, board on the bedside table glowing with a moon and stars", "label": "NIGHT LIGHT", "sub": "A soft glow for bedtime"}
-  ],
-  "palette": "navy #1D2340 label strips, cream text, glow yellow icons",
-  "negative": "copyrighted cartoon characters on the tracing page, misspelt words, logos"
-}
-```
-Use an original animal on the tracing sheet, never a licensed character.
-
-## 5. Size + features (recreates competitor image 5)
-**Answers:** how big is it, and what are the key features?
-**Attach:** master reference.
-```json
-{
-  "task": "product dimensions graphic",
-  "scene": "the glowing Glowling board on a wooden desk in a dim warm room, a desk lamp off to the left, the fluorescent markers fanned in front, a small plant behind",
-  "drawing_on_board": "'Merry Christmas' in neon bubble letters with snowflakes, a tree and a snowman",
-  "annotations": "white thin dimension arrow on the left side reading '20 cm' and along the bottom reading '30 cm'",
-  "right_panel": "navy #1D2340 vertical strip with four round cream icons and labels: 'GLOWING LED', 'WIPE & REUSE', 'BUILDS FOCUS', 'GIFT READY'",
-  "style": "photoreal product shot with clean flat graphics",
-  "negative": "wrong dimensions, logos, misspelt words, competitor brown colour"
-}
-```
-**Put your real board size in the dimension labels.** The 30 × 20 cm here is a placeholder.
-
----
-
-## Extra shots for the screen-time angle (not in the competitor's gallery)
-
-### 6. Glowling vs the tablet (comparison)
-```json
-{
-  "task": "split comparison image",
-  "layout": "vertical split; left half desaturated blue-grey, right half warm and glowing",
-  "left": "a child slumped on a couch with a blank-faced stare at a tablet, room dark and cold, label 'SCREEN TIME' with three small ✖ lines: 'Autoplay', 'Ads', 'Meltdown when it's off'",
-  "right": "the same child sitting up at a table, smiling, drawing a neon dinosaur on the glowing Glowling board, label 'GLOW TIME' with three ✔ lines: 'Creating', 'Calm', 'Off with no fight'",
-  "palette": "right side cream, navy and glow yellow",
-  "negative": "real app logos, real tablet brand logos, misspelt words"
-}
-```
-Only keep "Off with no fight" if your customer reviews support it. Otherwise use "No apps".
-
-### 7. Dinner-time scene (matches the PDP problem section)
-```json
-{
-  "task": "lifestyle photo",
-  "scene": "early evening kitchen, a parent cooking at the stove in soft focus in the background, a 4-year-old at the kitchen bench in the foreground happily drawing on the glowing Glowling board, steam from a pot, warm lights",
-  "camera": "35mm, child and board sharp, parent blurred",
-  "text": "headline top-left in navy: 'Dinner's on. They're busy.'",
-  "negative": "tablets, phones, logos, extra fingers"
-}
+Use the attached image as the exact product reference. Create a clean, modern square e-commerce infographic on a warm cream background (#FFF8EC) with navy (#1D2340) text and soft glow-yellow (#FFD36E) accents. At the top, the headline "How Glowling Works" in a bold rounded sans-serif. Below it, three steps from left to right joined by thin arrows, each with a simple navy line icon: "1. DRAW" with the line "Draw on the clear panel with neon markers" (icon: hand holding a marker); "2. GLOW" with the line "Switch on and watch it light up" (icon: panel with light rays); "3. WIPE & REPEAT" with the line "A soft damp cloth clears it in seconds" (icon: hand wiping with a cloth). In the middle, a photorealistic shot of the glowing board on a wooden coffee table in a softly blurred cosy living room, with a holiday drawing on it: a glowing Christmas tree, wrapped presents, a smiling star, a little reindeer and the words "Merry Christmas" in neon bubble letters. Along the bottom, three benefit icons with labels: a lightbulb "CREATES, NOT SCROLLS", recycle arrows "ENDLESSLY REUSABLE", a plug "USB POWERED". Generous margins, crisp spelling, no other logos.
 ```
 
-### 8. What's in the box + gift
-```json
-{
-  "task": "flat lay",
-  "scene": "top-down flat lay on cream linen: the Glowling board laid flat and glowing, the stand, 8 fluorescent markers in a neat row, the USB cable coiled, a gift box with a navy ribbon and a small tag reading 'For Posy, love Grandma'",
-  "annotations": "thin navy leader lines with labels: '1 × LED board', '8 × neon markers', '1 × stand', '1 × USB cable'",
-  "text_top": "Everything in the box",
-  "negative": "items you don't ship, logos, misspelt words"
-}
+### 3 · Day & night collage
 ```
-Change the counts to match your supplier's actual box contents.
+Use the attached image as the exact product reference in every photo. Create a square collage layout. The left two-thirds holds four photorealistic photos with rounded corners and thin cream borders: (a) a large top photo of the glowing board on a bedroom desk at night with a neon drawing of planets and stars; (b) a small photo of a smiling 6-year-old girl drawing a neon rainbow on the board, her face lit by the glow; (c) a small photo of two siblings laughing while drawing together on the same board; (d) a wide bottom photo of a child asleep in bed with the board glowing softly on the bedside table, showing a moon and stars drawing. The right third is a solid navy (#1D2340) vertical panel with three round cream icons and white labels: a sparkle "SPARKS CREATIVITY / Drawing, letters & games", recycle arrows "WIPE & REUSE / A fresh page every time", a moon "NIGHT LIGHT TOO / A calm glow for bedtime". In the bottom-right corner, a small cream box with the text "Glowling" in a bold rounded font and underneath "Glow time, not screen time". Warm, cosy tones. No star ratings, no review quotes, no other logos.
+```
 
----
+### 4 · Four ways to use it
+```
+Use the attached image as the exact product reference in every tile. Create a square 2×2 grid of four photorealistic photos, each with a navy (#1D2340) label strip underneath containing a small glow-yellow line icon, a bold white label and a short cream sub-line. Top-left: a girl drawing a neon Christmas tree on the glowing board at a desk; label "CREATIVE DRAWING", sub-line "Neon art that glows". Top-right: a boy in pyjamas writing a short spelling list on the board on his bed; label "LETTERS & NOTES", sub-line "Practise words, leave messages". Bottom-left: a child tracing a printed outline of a friendly cartoon fox placed on the lit board; label "TRACING FUN", sub-line "Trace any picture". Bottom-right: a child asleep with the board glowing on the bedside table showing a moon and stars; label "NIGHT LIGHT", sub-line "A soft glow for bedtime". The fox must be an original character, not a known cartoon. Crisp spelling, no other logos.
+```
 
-## Gallery order
-1 Hero → 2 How it works → 6 vs the tablet → 4 Four uses → 3 Day & night collage → 5 Size & features → 7 Dinner-time → 8 What's in the box.
-Images 6 and 7 carry the screen-time angle from the ads, so they sit high in the order. That way the page matches the ad that sent people there.
+### 5 · Size & features
+```
+Use the attached image as the exact product reference. A photorealistic product photo of the glowing board on a wooden desk in a dim, warm room, a desk lamp switched off on the left, a small green plant behind, and the eight fluorescent markers fanned out in front. On the board: "Merry Christmas" in neon bubble letters with snowflakes, a Christmas tree and a snowman. Add a thin white dimension arrow running down the left side of the panel labelled "20 cm", and another along the bottom labelled "30 cm". On the right, a solid navy (#1D2340) vertical strip with four round cream icons and white labels: a lightbulb "GLOWING LED", a pen "WIPE & REUSE", a smiling child "HANDS-ON PLAY", a gift box "GIFT READY". Clean, premium, crisp spelling, no other logos. Square 1:1.
+```
+Change "20 cm" and "30 cm" to your board's real size.
+
+### 6 · Glow time vs screen time
+```
+Use the attached image as the exact product reference. Create a square split-screen comparison with a thin vertical divider. LEFT half, cool desaturated blue-grey tones: a child slumped on a sofa in a dark room staring blankly at a generic unbranded tablet, with the label "SCREEN TIME" at the top and three lines with small red crosses: "Autoplay", "Ads", "Endless scrolling". RIGHT half, warm glowing tones: the same child sitting up at a table, smiling, drawing a neon dinosaur on the glowing board, with the label "GLOW TIME" at the top and three lines with small green ticks: "Creating", "Calm glow", "No apps". Text in a bold rounded sans-serif. Right side uses cream, navy (#1D2340) and glow yellow (#FFD36E). No real app or tablet logos, crisp spelling.
+```
+
+### 7 · Dinner-time
+```
+Use the attached image as the exact product reference. A photorealistic lifestyle photo in a warm family kitchen in the early evening: a parent cooking at the stove in soft focus in the background, steam rising from a pot, and in the sharp foreground a 4-year-old sitting at the kitchen bench happily drawing a neon sun and flowers on the glowing board. Warm pendant lights, cosy and calm. In the top-left corner, the headline "Dinner's on. They're busy." in a bold navy (#1D2340) rounded sans-serif on a soft cream label. 35mm lens. No tablets, phones or logos, crisp spelling. Square 1:1.
+```
+
+### 8 · What's in the box (gift)
+```
+Use the attached image as the exact product reference. A top-down flat lay on cream linen: the board laid flat and softly glowing, its white stand, eight fluorescent markers in a neat row, a coiled white USB cable, and a gift box tied with a navy ribbon and a small tag reading "For Posy, love Grandma". Add thin navy leader lines with neat labels: "1 × LED board", "8 × neon markers", "1 × stand", "1 × USB cable". At the top, the headline "Everything in the box" in a bold navy rounded sans-serif. Soft natural daylight, clean and premium, crisp spelling, no other logos. Square 1:1.
+```
+Change the counts to match your supplier's real box contents.

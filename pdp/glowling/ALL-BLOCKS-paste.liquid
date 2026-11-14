@@ -1,0 +1,667 @@
+GLOWLING · ALL CUSTOM LIQUID BLOCKS (copy everything between the ===== lines for each block)
+
+==========================================================================================
+BLOCK 01 · 01-offer-box-above-title.liquid
+PASTE INTO: Product information → Custom Liquid block ABOVE the Title
+==========================================================================================
+{%- comment -%}
+  GLOWLING PDP · BLOCK 01 · Offer box (place ABOVE the product title)
+  Shows a different holiday cutoff per market, using the visitor's Shopify Markets country.
+  Fill in each [date] with your real last-order date for that market. Only claim a ship time you can meet.
+{%- endcomment -%}
+{%- assign gl_offer_icon = '🎄' -%}
+{%- assign gl_offer_sub = 'Ships in 1–2 business days, with tracking' -%}
+{%- case localization.country.iso_code -%}
+  {%- when 'US' -%}{%- assign gl_cutoff = '[Dec 15]' -%}
+  {%- when 'CA' -%}{%- assign gl_cutoff = '[Dec 12]' -%}
+  {%- when 'GB' -%}{%- assign gl_cutoff = '[15 December]' -%}
+  {%- when 'AU' -%}{%- assign gl_cutoff = '[18 December]' -%}
+  {%- else -%}{%- assign gl_cutoff = '' -%}
+{%- endcase -%}
+
+<div class="gl-offer">
+  {%- if gl_cutoff != blank -%}
+    <p class="gl-offer__headline">{{ gl_offer_icon }} Order by {{ gl_cutoff }} for holiday delivery</p>
+  {%- else -%}
+    <p class="gl-offer__headline">{{ gl_offer_icon }} The gift that glows this holiday season</p>
+  {%- endif -%}
+  <p class="gl-offer__sub">{{ gl_offer_sub }}</p>
+</div>
+
+<style>
+  .gl-offer{border:2px solid #1d2340;border-radius:10px;background:#fff8ec;padding:12px 16px;text-align:center;margin:0 0 14px}
+  .gl-offer__headline{margin:0;font-weight:800;font-size:17px;line-height:1.3;color:#1d2340}
+  .gl-offer__sub{margin:4px 0 0;font-size:13px;color:#4a4f66}
+  @media (min-width:750px){.gl-offer__headline{font-size:19px}}
+</style>
+
+==========================================================================================
+BLOCK 02 · 02-social-proof-under-title.liquid
+PASTE INTO: Product information → Custom Liquid block UNDER the Title / review stars
+==========================================================================================
+{%- comment -%}
+  GLOWLING PDP · BLOCK 02 · Social proof line
+  PASTE INTO: Product information → Custom Liquid block, directly UNDER the title / review stars.
+  When you have real numbers, fill gl_rating and gl_family_count. Until then it shows the generic line.
+{%- endcomment -%}
+{%- assign gl_rating = '' -%}{%- comment -%} e.g. '4.8' from your review app {%- endcomment -%}
+{%- assign gl_family_count = '' -%}{%- comment -%} e.g. '1,200' real orders {%- endcomment -%}
+
+<div class="gl-proof">
+  <div class="gl-proof__faces" aria-hidden="true">
+    <span style="background:#ffd36e">👧</span><span style="background:#9be7d8">👦</span><span style="background:#ffb3c7">👵</span><span style="background:#b9c2ff">👨</span>
+  </div>
+  <p class="gl-proof__text">
+    {%- if gl_family_count != blank -%}
+      <span class="gl-proof__stars" aria-hidden="true">★★★★★</span>
+      {%- if gl_rating != blank -%}<strong>{{ gl_rating }}/5</strong> · {% endif -%}
+      {{ gl_family_count }}+ families have swapped some screen time for glow time
+    {%- else -%}
+      <strong>Loved by families</strong> in the US, UK, Canada &amp; Australia
+    {%- endif -%}
+  </p>
+</div>
+
+<style>
+  .gl-proof{display:flex;align-items:center;gap:10px;margin:6px 0 12px}
+  .gl-proof__faces{display:flex;flex-shrink:0}
+  .gl-proof__faces span{width:28px;height:28px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:15px;margin-left:-8px}
+  .gl-proof__faces span:first-child{margin-left:0}
+  .gl-proof__text{margin:0;font-size:13px;line-height:1.4;color:#1d2340}
+  .gl-proof__stars{color:#f5a623;letter-spacing:1px;margin-right:4px}
+</style>
+
+==========================================================================================
+BLOCK 03 · 03-benefits-above-atc.liquid
+PASTE INTO: Product information → Custom Liquid block ABOVE quantity / Kaching / Buy buttons
+==========================================================================================
+{%- comment -%}
+  GLOWLING PDP · BLOCK 03 · Benefits (place ABOVE quantity / bundle picker / Add to cart)
+  Copy is written to the screen-time angle. Keep claims to what the product does; no health or development promises.
+{%- endcomment -%}
+
+<div class="gl-benefits">
+  <p class="gl-benefits__title">Why parents grab it before the iPad</p>
+  <ul class="gl-benefits__list">
+    <li>
+      <span class="gl-benefits__icon">✨</span>
+      <span><strong>It glows like a screen. It isn't one.</strong> Neon lines light up the panel. No app, no ads, no autoplay.</span>
+    </li>
+    <li>
+      <span class="gl-benefits__icon">🎨</span>
+      <span><strong>They make something instead of scrolling.</strong> Drawing, tracing, letters, games and little notes for the family.</span>
+    </li>
+    <li>
+      <span class="gl-benefits__icon">🧽</span>
+      <span><strong>Wipe it and start again.</strong> One swipe gives a fresh page, so there's no paper and nothing to throw away.</span>
+    </li>
+    <li>
+      <span class="gl-benefits__icon">🌙</span>
+      <span><strong>Doubles as a soft night light.</strong> A calm glow for the wind-down before bed.</span>
+    </li>
+    <li>
+      <span class="gl-benefits__icon">🔌</span>
+      <span><strong>USB powered.</strong> No batteries to buy or swap.</span>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .gl-benefits{background:#1d2340;color:#fff;border-radius:12px;padding:16px 16px 6px;margin:14px 0 16px;box-shadow:0 0 0 3px rgba(255,211,110,.25)}
+  .gl-benefits__title{margin:0 0 10px;font-weight:800;font-size:16px;color:#ffd36e}
+  .gl-benefits__list{list-style:none;margin:0;padding:0}
+  .gl-benefits__list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;margin:0 0 10px}
+  .gl-benefits__list strong{color:#fff}
+  .gl-benefits__icon{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:rgba(255,211,110,.15);display:flex;align-items:center;justify-content:center;font-size:14px}
+</style>
+
+==========================================================================================
+BLOCK 04 · 04-trust-and-payment-badges-below-atc.liquid
+PASTE INTO: Product information → Custom Liquid block directly BELOW Buy buttons
+==========================================================================================
+{%- comment -%}
+  GLOWLING PDP · BLOCK 04 · Trust row + payment badges
+  PASTE INTO: Product information → Custom Liquid block, directly BELOW the Buy buttons.
+  Payment icons load from jsDelivr (version-pinned). Remove any <li> for a method you don't offer.
+  The shipping line switches per market (Shopify Markets): put your real thresholds in each currency.
+{%- endcomment -%}
+{%- assign gl_guarantee_days = 30 -%}
+{%- assign gl_ship_default = 'Fast tracked shipping' -%}
+{%- case localization.country.iso_code -%}
+  {%- when 'US' -%}{%- assign gl_ship = 'Free US shipping over $50' -%}
+  {%- when 'CA' -%}{%- assign gl_ship = 'Free shipping in Canada over $70' -%}
+  {%- when 'GB' -%}{%- assign gl_ship = 'Free UK delivery over £40' -%}
+  {%- when 'AU' -%}{%- assign gl_ship = 'Free AU shipping over $75' -%}
+  {%- else -%}{%- assign gl_ship = '' -%}
+{%- endcase -%}
+{%- if gl_ship == blank -%}{%- assign gl_ship = gl_ship_default -%}{%- endif -%}
+
+<div class="gl-trust">
+  <ul class="gl-trust__row">
+    <li><span>🚚</span>{{ gl_ship }}</li>
+    <li><span>🛡️</span>{{ gl_guarantee_days }}-day money-back guarantee</li>
+    <li><span>🔒</span>Secure, encrypted checkout</li>
+  </ul>
+  <ul class="gl-pay" aria-label="Accepted payment methods">
+    <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="38" height="24" loading="lazy"></li>
+    <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="38" height="24" loading="lazy"></li>
+    <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="38" height="24" loading="lazy"></li>
+    <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/discover.svg" alt="Discover" width="38" height="24" loading="lazy"></li>
+    <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="38" height="24" loading="lazy"></li>
+    <li class="gl-pay__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="30" height="16" loading="lazy"></li>
+    <li class="gl-pay__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="30" height="16" loading="lazy"></li>
+    <li class="gl-pay__chip" style="background:#b2fce4"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/afterpay.svg" alt="Afterpay" width="30" height="16" loading="lazy"></li>
+    <li class="gl-pay__chip" style="background:#ffb3c7"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/klarna.svg" alt="Klarna" width="30" height="16" loading="lazy"></li>
+  </ul>
+</div>
+
+<style>
+  .gl-trust{margin:12px 0 4px}
+  .gl-trust__row{list-style:none;padding:0;margin:0 0 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .gl-trust__row li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;font-size:12px;line-height:1.3;color:#1d2340;background:#fff8ec;border-radius:8px;padding:8px 4px}
+  .gl-trust__row span{font-size:18px}
+  .gl-pay{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+  .gl-pay li{display:flex;align-items:center;justify-content:center;width:40px;height:26px}
+  .gl-pay__card img{width:40px;height:26px;display:block;border-radius:4px}
+  .gl-pay__chip{background:#fff;border:1px solid #d9d9d9;border-radius:4px}
+  .gl-pay__chip img{width:34px;height:20px;display:block;object-fit:contain}
+</style>
+
+==========================================================================================
+BLOCK 05 · 05-testimonial-under-atc.liquid
+PASTE INTO: Product information → Custom Liquid block UNDER block 04
+==========================================================================================
+{%- comment -%}
+  GLOWLING PDP · BLOCK 05 · Featured testimonial
+  PASTE INTO: Product information → Custom Liquid block, UNDER block 04.
+  PLACEHOLDER TESTIMONIAL: replace with a real customer review before running paid traffic.
+  Optional: paste a Shopify Files image URL into gl_review_photo.
+{%- endcomment -%}
+{%- assign gl_review_text = "I can finally get through a shower without the TV on. My 4-year-old drags the board to the bathroom doorway and draws me rockets until I'm done. It doesn't fix every afternoon, but it's the first thing I reach for now instead of the iPad." -%}
+{%- assign gl_review_name = 'Jess M.' -%}
+{%- assign gl_review_place = 'Ohio, USA' -%}
+{%- assign gl_review_photo = '' -%}
+
+<figure class="gl-quote">
+  {%- if gl_review_photo != blank -%}
+    <img class="gl-quote__photo" src="{{ gl_review_photo }}" alt="{{ gl_review_name }}" loading="lazy" width="56" height="56">
+  {%- else -%}
+    <span class="gl-quote__initial" aria-hidden="true">{{ gl_review_name | slice: 0 }}</span>
+  {%- endif -%}
+  <div>
+    <div class="gl-quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+    <blockquote class="gl-quote__text">“{{ gl_review_text }}”</blockquote>
+    <figcaption class="gl-quote__who"><strong>{{ gl_review_name }}</strong> · {{ gl_review_place }}</figcaption>
+  </div>
+</figure>
+
+<style>
+  .gl-quote{display:flex;gap:12px;align-items:flex-start;margin:14px 0;padding:14px;border:1px solid #e9e3d6;border-radius:12px;background:#fff}
+  .gl-quote__photo,.gl-quote__initial{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}
+  .gl-quote__initial{background:#1d2340;color:#ffd36e;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+  .gl-quote__stars{color:#f5a623;letter-spacing:1px;font-size:14px}
+  .gl-quote__text{margin:4px 0 8px;font-size:14px;line-height:1.5;color:#1d2340;font-style:italic;border:0;padding:0}
+  .gl-quote__who{font-size:12px;color:#4a4f66}
+</style>
+
+==========================================================================================
+BLOCK 06 · 06-below-the-fold-section.liquid
+PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under Product information
+==========================================================================================
+{%- comment -%}
+  GLOWLING PDP · BLOCK 06 · Full-width section below the product
+  PASTE INTO: Product page template → Add section → Custom Liquid (place it directly under "Product information").
+  Image slots: paste Shopify Files URLs into the gl_img_* lines (leave '' to hide that image).
+  PLACEHOLDER TESTIMONIALS in section 5: replace with real customer reviews before running paid traffic.
+{%- endcomment -%}
+{%- assign gl_guarantee_days = 30 -%}
+{%- assign gl_marker_count = '8' -%}
+{%- assign gl_board_size = '30 × 20 cm (12 × 8 in)' -%}
+{%- assign gl_age = '3+' -%}
+{%- assign gl_img_problem = '' -%}{%- comment -%} e.g. dinner-time photo (gallery image 7) {%- endcomment -%}
+{%- assign gl_img_steps = '' -%}{%- comment -%} e.g. how-it-works graphic (gallery image 2) {%- endcomment -%}
+{%- assign gl_img_box = '' -%}{%- comment -%} e.g. what's-in-the-box flat lay (gallery image 8) {%- endcomment -%}
+
+<div class="gl-sec">
+
+  <!-- 1. PROBLEM → SOLUTION -->
+  <section class="gl-sec__block gl-sec__block--dark">
+    <div class="gl-split">
+      <div>
+        <p class="gl-sec__eyebrow">For the part of the day the iPad usually wins</p>
+        <h2 class="gl-sec__h2">Dinner to cook. A shower to squeeze in. The tablet is right there.</h2>
+        <p class="gl-sec__p">Plenty of toys only last a few minutes once a tablet is in the room. Glowling lights up too, but here your child is the one making the picture, not watching one.</p>
+        <p class="gl-sec__p">It won't replace every screen, and we won't pretend it does. It gives you something to try first, and a bit of quiet before the screen comes out.</p>
+      </div>
+      {%- if gl_img_problem != blank -%}
+        <img class="gl-split__img" src="{{ gl_img_problem }}" alt="Child drawing on a glowing Glowling board while dinner is cooked" loading="lazy">
+      {%- endif -%}
+    </div>
+  </section>
+
+  <!-- 2. HOW IT WORKS -->
+  <section class="gl-sec__block">
+    <h2 class="gl-sec__h2 gl-center">How it works</h2>
+    {%- if gl_img_steps != blank -%}
+      <img class="gl-full-img" src="{{ gl_img_steps }}" alt="How Glowling works: draw, glow, wipe" loading="lazy">
+    {%- endif -%}
+    <ol class="gl-steps">
+      <li><span class="gl-steps__n">1</span><strong>Plug it in</strong><span>USB cable into any phone charger or power bank.</span></li>
+      <li><span class="gl-steps__n">2</span><strong>Draw in neon</strong><span>The fluorescent markers glow against the lit panel.</span></li>
+      <li><span class="gl-steps__n">3</span><strong>Wipe and repeat</strong><span>A soft damp cloth clears it for the next masterpiece.</span></li>
+    </ol>
+  </section>
+
+  <!-- 3. COMPARISON -->
+  <section class="gl-sec__block">
+    <h2 class="gl-sec__h2 gl-center">Glowling vs the usual options</h2>
+    <table class="gl-table">
+      <thead><tr><th></th><th class="gl-table__us">Glowling</th><th>Tablet</th><th>Paper &amp; crayons</th></tr></thead>
+      <tbody>
+        <tr><td>Lights up like a screen</td><td class="gl-table__us">✔</td><td>✔</td><td>✖</td></tr>
+        <tr><td>Your child creates, not consumes</td><td class="gl-table__us">✔</td><td>✖</td><td>✔</td></tr>
+        <tr><td>No apps, ads or autoplay</td><td class="gl-table__us">✔</td><td>✖</td><td>✔</td></tr>
+        <tr><td>Reusable, no paper waste</td><td class="gl-table__us">✔</td><td>✔</td><td>✖</td></tr>
+        <tr><td>Calm glow for bedtime</td><td class="gl-table__us">✔</td><td>✖</td><td>✖</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 4. WHAT'S IN THE BOX -->
+  <section class="gl-sec__block gl-sec__block--cream">
+    <h2 class="gl-sec__h2 gl-center">What's in the box</h2>
+    {%- if gl_img_box != blank -%}
+      <img class="gl-full-img" src="{{ gl_img_box }}" alt="Everything in the Glowling box" loading="lazy">
+    {%- endif -%}
+    <ul class="gl-box">
+      <li>1 × LED drawing board ({{ gl_board_size }})</li>
+      <li>{{ gl_marker_count }} × fluorescent erasable markers</li>
+      <li>1 × stand</li>
+      <li>1 × USB cable</li>
+      <li>Gift-ready packaging</li>
+    </ul>
+  </section>
+
+  <!-- 5. MORE REVIEWS: PLACEHOLDERS, replace with real reviews -->
+  <section class="gl-sec__block">
+    <h2 class="gl-sec__h2 gl-center">What families say</h2>
+    <div class="gl-reviews">
+      <figure class="gl-review">
+        <div class="gl-review__stars">★★★★★</div>
+        <blockquote>“I work from home and my 3-year-old used to get the TV for every call. Now she sits next to my desk drawing glowing fish for me. I still use the TV some days, but it isn't my first move anymore.”</blockquote>
+        <figcaption><strong>Priya S.</strong> · Toronto, Canada</figcaption>
+      </figure>
+      <figure class="gl-review">
+        <div class="gl-review__stars">★★★★★</div>
+        <blockquote>“Bought two for my grandkids so they'd have something special at my house. The little one asks to 'do the glow' before she even takes her coat off.”</blockquote>
+        <figcaption><strong>Margaret H.</strong> · Leeds, UK</figcaption>
+      </figure>
+      <figure class="gl-review">
+        <div class="gl-review__stars">★★★★★</div>
+        <blockquote>“We leave his last drawing up as a night light. Bedtime has gone from fighting over the tablet to picking which drawing stays on.”</blockquote>
+        <figcaption><strong>Daniel R.</strong> · Brisbane, Australia</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 6. GUARANTEE -->
+  <section class="gl-sec__block gl-guarantee">
+    <div class="gl-guarantee__seal">{{ gl_guarantee_days }}<span>DAY</span></div>
+    <div>
+      <h2 class="gl-sec__h2">Try it for {{ gl_guarantee_days }} days</h2>
+      <p class="gl-sec__p">If it doesn't earn a place in your evenings, email us within {{ gl_guarantee_days }} days and we'll refund you. No awkward questions.</p>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="gl-sec__block">
+    <h2 class="gl-sec__h2 gl-center">Questions parents ask</h2>
+    <details class="gl-faq"><summary>What age is it for?</summary><p>Recommended for ages {{ gl_age }}. Younger children should be supervised with the markers.</p></details>
+    <details class="gl-faq"><summary>Isn't a glowing board just another screen?</summary><p>No. There's no app, no internet and nothing to watch. The light is only there to make your child's own drawing glow, and it does nothing until they pick up a marker.</p></details>
+    <details class="gl-faq"><summary>Will the board scratch or smear?</summary><p>Use only the included markers and wipe with a soft damp cloth, not paper towel or anything abrasive. Let it dry before the next drawing and it stays clear.</p></details>
+    <details class="gl-faq"><summary>Do the markers wipe off easily?</summary><p>Yes. A soft damp cloth clears the board. Keep the caps on between drawings so the markers don't dry out.</p></details>
+    <details class="gl-faq"><summary>How is it powered?</summary><p>By the USB cable, from a phone charger, laptop or power bank. No batteries needed.</p></details>
+    <details class="gl-faq"><summary>Can it be used as a night light?</summary><p>Yes. Many families leave a drawing up and use the glow for the bedtime wind-down.</p></details>
+    <details class="gl-faq"><summary>How long does shipping take?</summary><p>We ship to the US, Canada, the UK and Australia. Delivery times for your country are shown at checkout, and you'll get a tracking link by email as soon as your order ships.</p></details>
+    <details class="gl-faq"><summary>What if my child doesn't like it?</summary><p>You're covered by our {{ gl_guarantee_days }}-day money-back guarantee.</p></details>
+  </section>
+</div>
+
+<style>
+  .gl-sec{max-width:1000px;margin:0 auto;padding:0 16px;color:#1d2340}
+  .gl-sec__block{margin:0 0 28px;padding:24px 4px}
+  .gl-sec__block--dark{background:#1d2340;color:#fff;border-radius:16px;padding:28px 20px}
+  .gl-sec__block--dark .gl-sec__h2{color:#fff}
+  .gl-sec__block--cream{background:#fff8ec;border-radius:16px;padding:24px 20px}
+  .gl-sec__eyebrow{margin:0 0 6px;color:#ffd36e;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  .gl-sec__h2{margin:0 0 12px;font-size:22px;line-height:1.25;font-weight:800;color:#1d2340}
+  .gl-sec__p{margin:0 0 10px;font-size:15px;line-height:1.6}
+  .gl-center{text-align:center}
+  .gl-split{display:grid;gap:18px;align-items:center}
+  .gl-split__img,.gl-full-img{width:100%;height:auto;border-radius:12px;display:block}
+  .gl-full-img{margin:0 0 16px}
+  .gl-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:12px}
+  .gl-steps li{background:#fff8ec;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+  .gl-steps__n{width:30px;height:30px;border-radius:50%;background:#1d2340;color:#ffd36e;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .gl-table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+  .gl-table th,.gl-table td{padding:10px 4px;border-bottom:1px solid #e9e3d6;text-align:center;word-wrap:break-word}
+  .gl-table th:first-child,.gl-table td:first-child{text-align:left;width:40%}
+  .gl-table th{font-size:12px}
+  .gl-table__us{background:#fff3cf;font-weight:800}
+  .gl-box{list-style:none;padding:0;margin:0 auto;max-width:420px}
+  .gl-box li{padding:8px 0 8px 28px;position:relative;font-size:15px;border-bottom:1px dashed #e0d6bf}
+  .gl-box li:before{content:'✔';position:absolute;left:4px;color:#1a8f5a;font-weight:800}
+  .gl-reviews{display:grid;grid-template-columns:1fr;gap:12px}
+  .gl-review{margin:0;padding:16px;border:1px solid #e9e3d6;border-radius:12px;background:#fff}
+  .gl-review__stars{color:#f5a623;letter-spacing:1px}
+  .gl-review blockquote{margin:6px 0 8px;padding:0;border:0;font-style:italic;font-size:14px;line-height:1.5}
+  .gl-review figcaption{font-size:12px;color:#4a4f66}
+  .gl-guarantee{display:flex;gap:18px;align-items:center;border:2px solid #1d2340;border-radius:16px;padding:20px}
+  .gl-guarantee__seal{flex-shrink:0;width:84px;height:84px;border-radius:50%;background:#ffd36e;color:#1d2340;font-weight:900;font-size:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+  .gl-guarantee__seal span{font-size:12px;letter-spacing:.1em}
+  .gl-faq{border-bottom:1px solid #e9e3d6;padding:12px 0}
+  .gl-faq summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;position:relative;padding-right:24px}
+  .gl-faq summary::-webkit-details-marker{display:none}
+  .gl-faq summary:after{content:'+';position:absolute;right:4px;top:-2px;font-size:20px}
+  .gl-faq[open] summary:after{content:'–'}
+  .gl-faq p{margin:8px 0 0;font-size:14px;line-height:1.55}
+  @media (min-width:750px){
+    .gl-sec__h2{font-size:28px}
+    .gl-steps,.gl-reviews{grid-template-columns:repeat(3,1fr)}
+    .gl-split{grid-template-columns:1.2fr 1fr}
+  }
+</style>
+
+==========================================================================================
+BLOCK 07 · 07-side-cart.liquid
+PASTE INTO: Footer section group → Add SECTION → Custom Liquid (site-wide side cart). Then Theme settings → Cart → Cart type → Page
+==========================================================================================
+{%- comment -%}
+  GLOWLING · BLOCK 07 · Side cart (slide-out cart drawer), works on every page
+  PASTE INTO: Theme editor → Footer (section group) → Add section → Custom Liquid → paste this.
+  THEN: Theme settings → Cart → Cart type → "Page" (so the theme's own drawer/popup doesn't open as well).
+  If you use Kaching Bundles: set its "after add to cart" action to "Do nothing / stay on page".
+
+  What it does:
+  - Catches every add-to-cart (theme forms, and apps that call /cart/add.js) and opens the drawer
+  - Header cart icon opens the drawer instead of the cart page
+  - Quantity +/−, remove, free-shipping progress bar per currency, optional one-click upsell
+  - Checkout button, guarantee line, payment icons
+{%- endcomment -%}
+{%- assign gl_cart_upsell_handle = '' -%}{%- comment -%} product handle to offer in the cart, e.g. 'glowling-marker-refill-pack' (leave '' to hide) {%- endcomment -%}
+{%- assign gl_cart_guarantee_days = 30 -%}
+
+<div id="gl-cart" class="gl-cart" aria-hidden="true">
+  <div class="gl-cart__overlay" data-gl-close></div>
+  <aside class="gl-cart__panel" role="dialog" aria-modal="true" aria-labelledby="gl-cart-title">
+    <header class="gl-cart__head">
+      <h2 id="gl-cart-title" class="gl-cart__title">Your cart <span data-gl-count></span></h2>
+      <button type="button" class="gl-cart__x" data-gl-close aria-label="Close cart">×</button>
+    </header>
+    <div class="gl-cart__ship" data-gl-ship hidden>
+      <p class="gl-cart__ship-msg" data-gl-ship-msg></p>
+      <div class="gl-cart__bar"><span data-gl-ship-bar></span></div>
+    </div>
+    <div class="gl-cart__body">
+      <p class="gl-cart__error" data-gl-error hidden></p>
+      <ul class="gl-cart__items" data-gl-items></ul>
+      <div class="gl-cart__empty" data-gl-empty hidden>
+        <p>Your cart is empty.</p>
+        <button type="button" class="gl-cart__btn gl-cart__btn--ghost" data-gl-close>Continue shopping</button>
+      </div>
+      <div class="gl-cart__upsell" data-gl-upsell hidden></div>
+    </div>
+    <footer class="gl-cart__foot" data-gl-foot hidden>
+      <div class="gl-cart__row"><span>Subtotal</span><strong data-gl-subtotal></strong></div>
+      <p class="gl-cart__note">Taxes and shipping calculated at checkout</p>
+      <a class="gl-cart__btn" data-gl-checkout href="#">Checkout securely</a>
+      <p class="gl-cart__guarantee">🛡️ {{ gl_cart_guarantee_days }}-day money-back guarantee</p>
+      <div class="gl-cart__pay">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="34" height="22" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="34" height="22" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="34" height="22" loading="lazy">
+        <img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="34" height="22" loading="lazy">
+        <span class="gl-cart__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="26" height="14" loading="lazy"></span>
+        <span class="gl-cart__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="26" height="14" loading="lazy"></span>
+      </div>
+    </footer>
+  </aside>
+</div>
+
+<style>
+  .gl-cart{position:fixed;inset:0;z-index:2147483000;visibility:hidden;pointer-events:none;font-family:inherit;color:#1d2340}
+  .gl-cart.is-open{visibility:visible;pointer-events:auto}
+  .gl-cart__overlay{position:absolute;inset:0;background:rgba(15,18,38,.55);opacity:0;transition:opacity .25s}
+  .gl-cart.is-open .gl-cart__overlay{opacity:1}
+  .gl-cart__panel{position:absolute;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .3s ease;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+  .gl-cart.is-open .gl-cart__panel{transform:translateX(0)}
+  .gl-cart__head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #eee}
+  .gl-cart__title{margin:0;font-size:18px;font-weight:800}
+  .gl-cart__x{background:none;border:0;font-size:30px;line-height:1;cursor:pointer;color:#1d2340;padding:0 4px}
+  .gl-cart__ship{padding:12px 18px;background:#fff8ec;border-bottom:1px solid #f1e8d4}
+  .gl-cart__ship-msg{margin:0 0 6px;font-size:13px;text-align:center}
+  .gl-cart__bar{height:8px;border-radius:99px;background:#efe6d2;overflow:hidden}
+  .gl-cart__bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffd36e,#ffb347);transition:width .4s}
+  .gl-cart__body{flex:1;overflow-y:auto;padding:8px 18px}
+  .gl-cart__error{background:#fde8e8;color:#9b1c1c;font-size:13px;padding:8px 10px;border-radius:8px}
+  .gl-cart__items{list-style:none;margin:0;padding:0}
+  .gl-cart__item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid #f0f0f0;align-items:start}
+  .gl-cart__item img{width:72px;height:72px;object-fit:cover;border-radius:8px;background:#f6f6f6}
+  .gl-cart__name{font-size:14px;font-weight:700;margin:0 0 2px;color:#1d2340;text-decoration:none;display:block}
+  .gl-cart__variant{font-size:12px;color:#666;margin:0 0 8px}
+  .gl-cart__qty{display:inline-flex;align-items:center;border:1px solid #ddd;border-radius:8px}
+  .gl-cart__qty button{width:30px;height:30px;background:none;border:0;font-size:16px;cursor:pointer;color:#1d2340}
+  .gl-cart__qty span{min-width:24px;text-align:center;font-size:14px}
+  .gl-cart__remove{display:block;margin-top:6px;background:none;border:0;padding:0;font-size:12px;color:#888;text-decoration:underline;cursor:pointer}
+  .gl-cart__price{font-size:14px;font-weight:700;text-align:right}
+  .gl-cart__compare{display:block;font-size:12px;color:#999;text-decoration:line-through;font-weight:400}
+  .gl-cart__empty{text-align:center;padding:40px 0;font-size:15px}
+  .gl-cart__upsell{margin:14px 0;padding:12px;border:1px dashed #e0d6bf;border-radius:12px;background:#fffdf7}
+  .gl-cart__upsell-label{margin:0 0 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#b07d00}
+  .gl-cart__upsell-row{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center}
+  .gl-cart__upsell-row img{width:56px;height:56px;object-fit:cover;border-radius:8px}
+  .gl-cart__upsell-row button{background:#1d2340;color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700;cursor:pointer}
+  .gl-cart__foot{padding:14px 18px 18px;border-top:1px solid #eee;background:#fff}
+  .gl-cart__row{display:flex;justify-content:space-between;font-size:16px;margin-bottom:4px}
+  .gl-cart__note{margin:0 0 12px;font-size:12px;color:#777}
+  .gl-cart__btn{display:block;width:100%;text-align:center;background:#ffd84d;color:#1d2340;font-weight:800;font-size:16px;padding:15px;border-radius:10px;border:0;text-decoration:none;cursor:pointer;box-sizing:border-box}
+  .gl-cart__btn--ghost{background:#fff;border:2px solid #1d2340;width:auto;display:inline-block;padding:10px 18px;font-size:14px}
+  .gl-cart__guarantee{margin:10px 0 8px;text-align:center;font-size:12px}
+  .gl-cart__pay{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
+  .gl-cart__pay img{width:34px;height:22px;border-radius:3px}
+  .gl-cart__chip{display:inline-flex;width:34px;height:22px;align-items:center;justify-content:center;border:1px solid #d9d9d9;border-radius:3px;background:#fff}
+  .gl-cart__chip img{width:30px;height:18px;object-fit:contain}
+  .gl-cart.is-busy .gl-cart__body,.gl-cart.is-busy .gl-cart__foot{opacity:.6;pointer-events:none}
+</style>
+
+<script>
+(function () {
+  if (window.__glCartInit) return;
+  window.__glCartInit = true;
+
+  var ROOT = ({{ routes.root_url | json }} || '/').replace(/\/?$/, '/');
+  var UPSELL = {{ gl_cart_upsell_handle | json }};
+  // Free-shipping thresholds in cents, by cart currency. Match block 04. Remove a line to hide the bar for that currency.
+  var FREE_SHIP = { USD: 5000, CAD: 7000, GBP: 4000, AUD: 7500 };
+
+  var nativeFetch = window.fetch.bind(window);
+  var root = document.getElementById('gl-cart');
+  if (!root) return;
+  document.body.appendChild(root);
+  var $ = function (sel) { return root.querySelector(sel); };
+  var els = {
+    items: $('[data-gl-items]'), empty: $('[data-gl-empty]'), foot: $('[data-gl-foot]'),
+    subtotal: $('[data-gl-subtotal]'), count: $('[data-gl-count]'), error: $('[data-gl-error]'),
+    ship: $('[data-gl-ship]'), shipMsg: $('[data-gl-ship-msg]'), shipBar: $('[data-gl-ship-bar]'),
+    upsell: $('[data-gl-upsell]'), checkout: $('[data-gl-checkout]')
+  };
+  els.checkout.setAttribute('href', ROOT + 'checkout');
+  var upsellProduct = null, upsellLoaded = false, lastFocus = null;
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); }
+  function money(cents, cur) {
+    try { return new Intl.NumberFormat(document.documentElement.lang || undefined, { style: 'currency', currency: cur }).format(cents / 100); }
+    catch (e) { return (cents / 100).toFixed(2) + ' ' + cur; }
+  }
+  function img(url, w) { if (!url) return ''; return url + (url.indexOf('?') > -1 ? '&' : '?') + 'width=' + w; }
+  function json(url, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }, opts.headers || {});
+    return nativeFetch(url, opts).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) {
+        if (!r.ok) { var e = new Error(d.description || d.message || 'Something went wrong'); e.data = d; throw e; }
+        return d;
+      });
+    });
+  }
+  function busy(on) { root.classList.toggle('is-busy', !!on); }
+  function showError(msg) { els.error.textContent = msg || ''; els.error.hidden = !msg; }
+
+  function open() {
+    if (root.classList.contains('is-open')) return;
+    lastFocus = document.activeElement;
+    root.classList.add('is-open');
+    root.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+    var x = root.querySelector('.gl-cart__x'); if (x) x.focus();
+  }
+  function close() {
+    root.classList.remove('is-open');
+    root.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function updateThemeCount(n) {
+    var sel = '#cart-icon-bubble .cart-count-bubble span[aria-hidden="true"], [data-cart-count], .cart-count, .cart-count-bubble__count, .header__cart-count';
+    document.querySelectorAll(sel).forEach(function (el) { if (!root.contains(el)) el.textContent = n; });
+  }
+
+  function renderShipping(cart) {
+    var goal = FREE_SHIP[cart.currency];
+    if (!goal || cart.item_count === 0) { els.ship.hidden = true; return; }
+    els.ship.hidden = false;
+    var left = goal - cart.total_price;
+    els.shipMsg.innerHTML = left > 0
+      ? 'You’re <strong>' + money(left, cart.currency) + '</strong> away from free shipping'
+      : '🎉 You’ve unlocked <strong>free shipping</strong>';
+    els.shipBar.style.width = Math.min(100, Math.round(cart.total_price / goal * 100)) + '%';
+  }
+
+  function renderUpsell(cart) {
+    if (!UPSELL || !upsellProduct) { els.upsell.hidden = true; return; }
+    var v = (upsellProduct.variants || []).filter(function (x) { return x.available; })[0];
+    var inCart = cart.items.some(function (i) { return i.product_id === upsellProduct.id; });
+    if (!v || inCart || cart.item_count === 0) { els.upsell.hidden = true; return; }
+    var pic = upsellProduct.featured_image ? img(upsellProduct.featured_image.indexOf('//') === 0 ? 'https:' + upsellProduct.featured_image : upsellProduct.featured_image, 120) : '';
+    els.upsell.innerHTML =
+      '<p class="gl-cart__upsell-label">Add to your order</p>' +
+      '<div class="gl-cart__upsell-row">' + (pic ? '<img src="' + esc(pic) + '" alt="">' : '<span></span>') +
+      '<div><strong style="font-size:14px">' + esc(upsellProduct.title) + '</strong><div style="font-size:13px">' + money(v.price, cart.currency) + '</div></div>' +
+      '<button type="button" data-gl-upsell-add="' + v.id + '">Add</button></div>';
+    els.upsell.hidden = false;
+  }
+
+  function render(cart) {
+    els.count.textContent = cart.item_count ? '(' + cart.item_count + ')' : '';
+    updateThemeCount(cart.item_count);
+    var empty = cart.item_count === 0;
+    els.empty.hidden = !empty;
+    els.foot.hidden = empty;
+    els.items.innerHTML = cart.items.map(function (it) {
+      var pic = it.featured_image && it.featured_image.url ? it.featured_image.url : it.image;
+      var variant = it.variant_title && it.variant_title !== 'Default Title' ? '<p class="gl-cart__variant">' + esc(it.variant_title) + '</p>' : '<p class="gl-cart__variant"></p>';
+      var compare = it.original_line_price > it.final_line_price ? '<span class="gl-cart__compare">' + money(it.original_line_price, cart.currency) + '</span>' : '';
+      return '<li class="gl-cart__item">' +
+        '<a href="' + esc(it.url) + '">' + (pic ? '<img src="' + esc(img(pic, 160)) + '" alt="' + esc(it.product_title) + '">' : '<img alt="">') + '</a>' +
+        '<div><a class="gl-cart__name" href="' + esc(it.url) + '">' + esc(it.product_title) + '</a>' + variant +
+        '<div class="gl-cart__qty"><button type="button" data-gl-qty="' + esc(it.key) + '" data-q="' + (it.quantity - 1) + '" aria-label="Decrease quantity">−</button>' +
+        '<span>' + it.quantity + '</span>' +
+        '<button type="button" data-gl-qty="' + esc(it.key) + '" data-q="' + (it.quantity + 1) + '" aria-label="Increase quantity">+</button></div>' +
+        '<button type="button" class="gl-cart__remove" data-gl-qty="' + esc(it.key) + '" data-q="0">Remove</button></div>' +
+        '<div class="gl-cart__price">' + compare + money(it.final_line_price, cart.currency) + '</div></li>';
+    }).join('');
+    els.subtotal.textContent = money(cart.total_price, cart.currency);
+    renderShipping(cart);
+    renderUpsell(cart);
+  }
+
+  function refresh() {
+    var jobs = [json(ROOT + 'cart.js')];
+    if (UPSELL && !upsellLoaded) {
+      upsellLoaded = true;
+      jobs.push(json(ROOT + 'products/' + encodeURIComponent(UPSELL) + '.js').then(function (p) { upsellProduct = p; }).catch(function () {}));
+    }
+    return Promise.all(jobs).then(function (r) { render(r[0]); return r[0]; });
+  }
+  function refreshAndOpen() { showError(''); return refresh().then(open); }
+
+  // 1) Theme add-to-cart forms (capture phase runs before the theme's own handler)
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!(form instanceof HTMLFormElement)) return;
+    var action = form.getAttribute('action') || '';
+    if (!/\/cart\/add(\.js)?(\?|$)/.test(action)) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    var btn = form.querySelector('[type="submit"], button[name="add"]');
+    if (btn) { btn.setAttribute('aria-disabled', 'true'); btn.disabled = true; }
+    showError('');
+    json(ROOT + 'cart/add.js', { method: 'POST', body: new FormData(form) })
+      .then(refreshAndOpen)
+      .catch(function (err) { refresh().then(function () { showError(err.message); open(); }); })
+      .finally(function () { if (btn) { btn.disabled = false; btn.removeAttribute('aria-disabled'); } });
+  }, true);
+
+  // 2) Apps / theme scripts that add via fetch or XHR
+  function isAdd(url) { return /\/cart\/add(\.js)?(\?|$)/.test(String(url || '')); }
+  window.fetch = function (input, init) {
+    var url = typeof input === 'string' ? input : (input && input.url);
+    return nativeFetch(input, init).then(function (res) {
+      if (isAdd(url) && res.ok) setTimeout(refreshAndOpen, 60);
+      return res;
+    });
+  };
+  var xOpen = XMLHttpRequest.prototype.open, xSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.open = function (m, url) { this.__glUrl = url; return xOpen.apply(this, arguments); };
+  XMLHttpRequest.prototype.send = function () {
+    var xhr = this;
+    if (isAdd(xhr.__glUrl)) xhr.addEventListener('load', function () { if (xhr.status >= 200 && xhr.status < 300) setTimeout(refreshAndOpen, 60); });
+    return xSend.apply(this, arguments);
+  };
+
+  // 3) Header cart icon opens the drawer
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || root.contains(a)) return;
+    var path;
+    try { path = new URL(a.href, location.href).pathname; } catch (_) { return; }
+    if (/\/cart\/?$/.test(path) && a.origin === location.origin) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      refreshAndOpen();
+    }
+  }, true);
+
+  // 4) Drawer controls
+  root.addEventListener('click', function (e) {
+    if (e.target.closest('[data-gl-close]')) { close(); return; }
+    var q = e.target.closest('[data-gl-qty]');
+    if (q) {
+      busy(true); showError('');
+      json(ROOT + 'cart/change.js', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: q.getAttribute('data-gl-qty'), quantity: Math.max(0, parseInt(q.getAttribute('data-q'), 10)) }) })
+        .then(render).catch(function (err) { showError(err.message); }).finally(function () { busy(false); });
+      return;
+    }
+    var u = e.target.closest('[data-gl-upsell-add]');
+    if (u) {
+      busy(true);
+      json(ROOT + 'cart/add.js', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items: [{ id: Number(u.getAttribute('data-gl-upsell-add')), quantity: 1 }] }) })
+        .then(refresh).catch(function (err) { showError(err.message); }).finally(function () { busy(false); });
+    }
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('is-open')) close(); });
+
+  window.GlowlingCart = { open: refreshAndOpen, close: close, refresh: refresh };
+})();
+</script>

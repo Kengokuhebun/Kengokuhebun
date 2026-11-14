@@ -1,33 +1,40 @@
 # Glowling PDP: custom liquid blocks
 
-The layout follows the competitor's product page (kidsaustralia.com, Shrine theme) block for block, with the changes you asked for: benefits above Add to cart, payment badges and a testimonial below it, more social proof, and a side cart. All copy is original. Do not reuse the competitor's text or photos.
+Layout follows the competitor's product page block for block, with: benefits above Add to cart, trust + payment badges and a testimonial below it, extra social proof, a below-the-fold sales section, and a working side cart. All copy is original.
 
-Paste each `.liquid` file into a **Custom Liquid** block. In the theme editor go to Products → Default product → Product information → Add block → Custom Liquid. Every block has its editable values at the top (`assign` lines). Fill every `[BRACKET]` before publishing.
+**Quickest route:** open `ALL-BLOCKS-paste.liquid`. Every block is there with a "PASTE INTO" line telling you where it goes. Or paste the individual files below.
 
-## Block order in "Product information"
+## Product information blocks (theme editor → Products → Default product)
 
-| # | Block | File | Competitor equivalent |
-|---|---|---|---|
-| 1 | Custom Liquid: offer box | `01-offer-box-above-title.liquid` | "EARLY BLACK FRIDAY: 50% OFF" box |
-| 2 | Title | theme block | same |
-| 3 | Judge.me review stars (app block) | app | same |
-| 4 | Custom Liquid: social proof line | `02-social-proof-under-title.liquid` | **new** (more social proof) |
-| 5 | Price | theme block | same |
-| 6 | Custom Liquid: benefits | `03-benefits-above-atc.liquid` | their 3 icon bullets, now clearer and above the ATC |
-| 7 | Variant picker / Kaching Bundles (app block) | app | same |
-| 8 | Quantity + Buy buttons | theme block | same |
-| 9 | Custom Liquid: trust row + payment badges | `04-trust-and-payment-badges-below-atc.liquid` | **new** |
-| 10 | Custom Liquid: featured testimonial | `05-testimonial-under-atc.liquid` | their "Olivia T." card, moved under the ATC |
-| 11 | Description (collapsible tab or text) | theme block | same |
+| # | Block | File |
+|---|---|---|
+| 1 | Custom Liquid: holiday offer box (date changes per market) | `01-offer-box-above-title.liquid` |
+| 2 | Title | theme |
+| 3 | Review stars (Judge.me app block) | app |
+| 4 | Custom Liquid: social proof line | `02-social-proof-under-title.liquid` |
+| 5 | Price | theme |
+| 6 | Custom Liquid: benefits | `03-benefits-above-atc.liquid` |
+| 7 | Variant picker / Kaching Bundles | app |
+| 8 | Quantity + Buy buttons | theme |
+| 9 | Custom Liquid: trust row + payment badges | `04-trust-and-payment-badges-below-atc.liquid` |
+| 10 | Custom Liquid: featured testimonial | `05-testimonial-under-atc.liquid` |
+| 11 | Description / collapsible tabs | theme |
 
-Under the main product section: **Add section → Custom Liquid** → paste `06-below-the-fold-section.liquid`. Then add the Judge.me review widget section, then Related products.
+Under Product information: **Add section → Custom Liquid** → `06-below-the-fold-section.liquid`. Then the review widget, then Related products.
 
-## Side cart
-Theme settings → Cart → set **Cart type** to **Drawer**. In Shrine and other Dawn-based themes the label may be "Cart drawer". Turn on the free-shipping progress bar and cart upsell if your theme version has them. If not, Kaching Bundles' cart features or an app like UpCart can add them.
+## Side cart (`07-side-cart.liquid`)
+1. Theme editor → **Footer** section group → **Add section → Custom Liquid** → paste. It then works on every page.
+2. Theme settings → **Cart → Cart type → Page**, so the theme's own drawer or popup doesn't open on top.
+3. Kaching Bundles: set its after-add action to **Do nothing / stay on page**.
+4. Optional upsell: create the add-on product (e.g. a marker refill pack) and put its handle in `gl_cart_upsell_handle`.
+5. Free-shipping thresholds are in the `FREE_SHIP` line (in cents, by currency). Keep them in step with block 04.
 
-## Before you go live
-- The page is market-neutral for testing in the US, Canada, the UK and Australia. Blocks 01 (holiday cutoff) and 04 (shipping line) switch automatically by the visitor's country through Shopify Markets, so fill in a real date and threshold for each market. Other countries get a generic line.
-- Reviews and counts must be real in every market: FTC fake-review rule (US), DMCC Act (UK), Competition Act (Canada), Australian Consumer Law (AU). The blocks hide or show placeholders until you fill them in.
-- Only give a holiday cutoff date you can meet with your real shipping times in that market.
-- Avoid countdown timers that reset. The competitor's "Offer ends 13.11.2026" was already in the past and still showing. Use a real deadline, such as the Christmas cutoff.
-- Check box contents, board size and marker count against your supplier's spec sheet.
+Tested against a mock Shopify cart API in Chromium. These all pass: theme form add, app fetch add, app XHR add, quantity +/−, remove, empty state, upsell add, header cart icon, ESC and overlay close, and the checkout link. No JS errors.
+
+## Placeholders to replace before running paid traffic
+- **Testimonials** in blocks 05 and 06 are placeholder copy. Swap in real customer reviews: fake reviews break FTC (US), DMCC (UK), Competition Act (CA) and ACL (AU) rules.
+- Block 02: real rating and order count, once you have them.
+- Block 01: real holiday cutoff date per market. Block 04 + side cart: real free-shipping thresholds.
+- Block 06: board size and marker count from your supplier; image URLs (`gl_img_problem`, `gl_img_steps`, `gl_img_box`) from Shopify Files.
+
+Payment icons load from jsDelivr (`payment-icons@1.2.1`, `simple-icons@13.21.0`, version-pinned). Delete any icon for a payment method you don't offer.
