@@ -1,0 +1,157 @@
+{%- comment -%}
+  GLOWLING PDP · BLOCK 03b · Bundle tiers + Add to cart (replaces Kaching, Quantity and Buy buttons)
+  PASTE INTO: Product information → Custom Liquid block directly UNDER block 03 (benefits).
+  THEN: remove (or hide) the theme's "Quantity selector" and "Buy buttons" blocks, and turn Kaching off for this product.
+
+  Tiers: Buy 1  |  Buy 2, Get 1 FREE (adds 3 boards). Every order gets the free tracing book.
+  REQUIRED, Shopify admin → Discounts → Create discount → "Buy X get Y" (Automatic):
+    Customer buys: minimum quantity 2 of this product · Customer gets: 1 of this product · At a discounted value: Free
+    Leave "maximum uses per order" blank. Without this discount, the 3rd board is charged.
+  FREE TRACING BOOK: create a product priced 0.00 (e.g. "Glow Tracing Book – Free Gift"), and put its handle below.
+    Leave '' if you just pack the book in the box instead.
+{%- endcomment -%}
+{%- assign gl_gift_handle = 'glow-tracing-book' -%}
+{%- assign gl_gift_name = 'FREE tracing book' -%}
+
+{%- assign gl_v = product.selected_or_first_available_variant -%}
+{%- assign gl_p1 = gl_v.price -%}
+{%- assign gl_p2 = gl_v.price | times: 2 -%}
+{%- assign gl_p3 = gl_v.price | times: 3 -%}
+{%- assign gl_each = gl_p2 | divided_by: 3 -%}
+{%- case localization.country.iso_code -%}
+  {%- when 'US' -%}{%- assign gl_free_ship = 5000 -%}
+  {%- when 'CA' -%}{%- assign gl_free_ship = 7000 -%}
+  {%- when 'GB' -%}{%- assign gl_free_ship = 4000 -%}
+  {%- when 'AU' -%}{%- assign gl_free_ship = 7500 -%}
+  {%- else -%}{%- assign gl_free_ship = 0 -%}
+{%- endcase -%}
+{%- assign gl_gift_id = '' -%}
+{%- if gl_gift_handle != blank -%}
+  {%- assign gl_gift = all_products[gl_gift_handle] -%}
+  {%- if gl_gift and gl_gift.selected_or_first_available_variant.available -%}
+    {%- assign gl_gift_id = gl_gift.selected_or_first_available_variant.id -%}
+  {%- endif -%}
+{%- endif -%}
+
+<div class="gl-tiers" data-gl-tiers data-variant="{{ gl_v.id }}" data-gift="{{ gl_gift_id }}">
+  <p class="gl-tiers__title"><span>Choose your bundle</span></p>
+
+  <label class="gl-tier" data-qty="1" data-total="{{ gl_p1 | money }}">
+    <input type="radio" name="gl-tier-{{ section.id }}" value="1">
+    <span class="gl-tier__radio" aria-hidden="true"></span>
+    <span class="gl-tier__main">
+      <span class="gl-tier__name">Buy 1</span>
+      <span class="gl-tier__sub">1 Glowling board</span>
+    </span>
+    <span class="gl-tier__price"><strong>{{ gl_p1 | money }}</strong></span>
+    <ul class="gl-tier__perks">
+      <li>🎁 {{ gl_gift_name }}</li>
+      {%- if gl_free_ship > 0 and gl_p1 >= gl_free_ship -%}<li>🚚 FREE shipping</li>{%- endif -%}
+    </ul>
+  </label>
+
+  <label class="gl-tier is-selected" data-qty="3" data-total="{{ gl_p2 | money }}">
+    <span class="gl-tier__badge">MOST POPULAR</span>
+    <input type="radio" name="gl-tier-{{ section.id }}" value="3" checked>
+    <span class="gl-tier__radio" aria-hidden="true"></span>
+    <span class="gl-tier__main">
+      <span class="gl-tier__name">Buy 2, Get 1 FREE</span>
+      <span class="gl-tier__sub">3 Glowling boards · {{ gl_each | money }} each</span>
+    </span>
+    <span class="gl-tier__price">
+      <strong>{{ gl_p2 | money }}</strong>
+      <s>{{ gl_p3 | money }}</s>
+      <em>Save {{ gl_p1 | money }}</em>
+    </span>
+    <ul class="gl-tier__perks">
+      <li>✨ 1 board FREE</li>
+      <li>🎁 {{ gl_gift_name }}</li>
+      {%- if gl_free_ship > 0 and gl_p2 >= gl_free_ship -%}<li>🚚 FREE shipping</li>{%- endif -%}
+    </ul>
+  </label>
+
+  {%- if gl_v.available -%}
+    <button type="button" class="gl-tiers__atc" data-gl-tiers-atc>Add to cart · <span data-gl-tiers-total>{{ gl_p2 | money }}</span></button>
+  {%- else -%}
+    <button type="button" class="gl-tiers__atc" disabled>Sold out</button>
+  {%- endif -%}
+  <p class="gl-tiers__error" data-gl-tiers-error hidden></p>
+</div>
+
+<style>
+  .gl-tiers{margin:4px 0 14px}
+  .gl-tiers__title{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:13px;font-weight:800;color:#1d2340;text-transform:uppercase;letter-spacing:.06em}
+  .gl-tiers__title:before,.gl-tiers__title:after{content:'';flex:1;height:1px;background:#e3dccb}
+  .gl-tier{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:4px 12px;align-items:center;padding:14px 14px 12px;margin:0 0 10px;border:2px solid #e3dccb;border-radius:12px;background:#fff;cursor:pointer;transition:border-color .15s,background .15s}
+  .gl-tier.is-selected{border-color:#1d2340;background:#fff8ec;box-shadow:0 0 0 3px rgba(255,211,110,.35)}
+  .gl-tier input{position:absolute;opacity:0;pointer-events:none}
+  .gl-tier__radio{width:20px;height:20px;border-radius:50%;border:2px solid #b9b2a2;box-sizing:border-box}
+  .gl-tier.is-selected .gl-tier__radio{border:6px solid #1d2340}
+  .gl-tier input:focus-visible + .gl-tier__radio{outline:2px solid #1d2340;outline-offset:2px}
+  .gl-tier__main{display:flex;flex-direction:column;line-height:1.25}
+  .gl-tier__name{font-weight:800;font-size:16px;color:#1d2340}
+  .gl-tier__sub{font-size:12px;color:#4a4f66}
+  .gl-tier__price{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}
+  .gl-tier__price strong{font-size:17px;color:#1d2340}
+  .gl-tier__price s{font-size:12px;color:#8a8a8a}
+  .gl-tier__price em{font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#1a8f5a;border-radius:4px;padding:2px 6px;margin-top:3px}
+  .gl-tier__perks{grid-column:2 / 4;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+  .gl-tier__perks li{font-size:12px;font-weight:600;color:#1d2340;background:#fff3cf;border-radius:99px;padding:3px 9px}
+  .gl-tier__badge{position:absolute;top:-10px;right:14px;background:#1d2340;color:#ffd36e;font-size:10px;font-weight:800;letter-spacing:.08em;padding:3px 8px;border-radius:99px}
+  .gl-tiers__atc{display:block;width:100%;margin-top:4px;padding:16px;border:0;border-radius:10px;background:#ffd84d;color:#1d2340;font-weight:800;font-size:17px;cursor:pointer}
+  .gl-tiers__atc[disabled]{opacity:.6;cursor:not-allowed}
+  .gl-tiers__error{margin:8px 0 0;font-size:13px;color:#9b1c1c}
+</style>
+
+<script>
+(function () {
+  var box = document.currentScript && document.currentScript.previousElementSibling && document.currentScript.previousElementSibling.previousElementSibling;
+  if (!box || !box.hasAttribute('data-gl-tiers')) box = document.querySelector('[data-gl-tiers]');
+  if (!box || box.__glReady) return;
+  box.__glReady = true;
+  var ROOT = ({{ routes.root_url | json }} || '/').replace(/\/?$/, '/');
+  var tiers = box.querySelectorAll('.gl-tier');
+  var atc = box.querySelector('[data-gl-tiers-atc]');
+  var totalEl = box.querySelector('[data-gl-tiers-total]');
+  var errEl = box.querySelector('[data-gl-tiers-error]');
+
+  function select(t) {
+    tiers.forEach(function (x) { x.classList.toggle('is-selected', x === t); });
+    t.querySelector('input').checked = true;
+    if (totalEl) totalEl.textContent = t.getAttribute('data-total');
+  }
+  tiers.forEach(function (t) {
+    t.addEventListener('click', function () { select(t); });
+    t.querySelector('input').addEventListener('change', function () { select(t); });
+  });
+
+  // Use the variant chosen in the theme's variant picker if there is one
+  function currentVariant() {
+    var f = document.querySelector('form[action*="/cart/add"] [name="id"]');
+    return Number((f && f.value) || box.getAttribute('data-variant'));
+  }
+
+  if (atc) atc.addEventListener('click', function () {
+    var sel = box.querySelector('.gl-tier.is-selected');
+    var qty = Number(sel.getAttribute('data-qty'));
+    var items = [{ id: currentVariant(), quantity: qty }];
+    var gift = box.getAttribute('data-gift');
+    if (gift) items.push({ id: Number(gift), quantity: 1 });
+    var label = atc.innerHTML;
+    atc.disabled = true; atc.textContent = 'Adding…'; errEl.hidden = true;
+    fetch(ROOT + 'cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ items: items })
+    }).then(function (r) {
+      return r.json().then(function (d) { if (!r.ok) throw new Error(d.description || d.message || 'Could not add to cart'); return d; });
+    }).then(function () {
+      if (window.GlowlingCart) window.GlowlingCart.open(); else window.location.href = ROOT + 'cart';
+    }).catch(function (e) {
+      errEl.textContent = e.message; errEl.hidden = false;
+    }).finally(function () {
+      atc.disabled = false; atc.innerHTML = label;
+    });
+  });
+})();
+</script>
