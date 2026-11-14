@@ -1,0 +1,30 @@
+{
+  "campaign": {
+    "id": "120252641461330104",
+    "name": "Glowling_R1_BF26_CBO",
+    "objective": "OUTCOME_SALES",
+    "status": "PAUSED",
+    "daily_budget_pence": 8000,
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "buying_type": "AUCTION"
+  },
+  "adsets": {
+    "A_Parents_28-44":     {"id":"120252641461490104","status":"PAUSED","age_min":28,"age_max":44,"countries":["US","GB","CA","AU"],"placements":{"facebook":["feed","story","facebook_reels"],"instagram":["stream","story","reels"]},"pixel_id":"1736160617626618","event":"PURCHASE","attribution":"7d_click_1d_view"},
+    "B_GiftBuyers_45-65+": {"id":"120252641461920104","status":"PAUSED","age_min":45,"age_max":65,"countries":["US","GB","CA","AU"],"placements":{"facebook":["feed","story","facebook_reels"],"instagram":["stream","story","reels"]},"pixel_id":"1736160617626618","event":"PURCHASE","attribution":"7d_click_1d_view"}
+  },
+  "page_id_intended": "1508787922308138",
+  "page_name_intended": "Amanda Miller",
+  "image_hashes": {
+    "S1_ledger":    "67075843c86bc7665b13225c937e28b9",
+    "S2_714am":     "c05a34c7f4aece1d05a131dfc543c08e",
+    "S3_standup":   "b6c1a6a04641dd98b431d210083fdabc",
+    "S4_moon":      "672b0e8be7febde68bab918ab9f1847d",
+    "S5_boxingday": "fe724b6ef6773afb7454fa3acae3f0bb"
+  },
+  "pixel_id": "1736160617626618",
+  "pixel_note": "Shared with Ninu account; create a Custom Conversion filtered to Glowling URLs before scaling",
+  "creatives": [],
+  "ads": [],
+  "blocked_at": "/adcreatives",
+  "blocker": "System User lacks Advertiser role on Page 1508787922308138 (Amanda Miller). Grant via Business Manager > Pages > Amanda Miller > People > add System User as Advertiser. Also add the Page to act_1598462168591762 under Connected Assets."
+}
