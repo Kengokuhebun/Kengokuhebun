@@ -1,0 +1,29 @@
+{%- comment -%}
+  GLOWLING PDP · BLOCK 04 · Trust row + payment badges (place directly BELOW Add to cart / Buy buttons)
+  Payment icons are pulled automatically from the payment methods enabled in your store.
+  Edit the guarantee and shipping lines to match your real policy.
+{%- endcomment -%}
+{%- assign gl_guarantee_days = 30 -%}
+{%- assign gl_free_ship_over = '$50' -%}
+
+<div class="gl-trust">
+  <ul class="gl-trust__row">
+    <li><span>🚚</span>Free AU shipping over {{ gl_free_ship_over }}</li>
+    <li><span>🛡️</span>{{ gl_guarantee_days }}-day money-back guarantee</li>
+    <li><span>🔒</span>Secure checkout</li>
+  </ul>
+  <ul class="gl-trust__pay" aria-label="Accepted payment methods">
+    {%- for type in shop.enabled_payment_types -%}
+      <li>{{ type | payment_type_svg_tag: class: 'gl-trust__pay-icon' }}</li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<style>
+  .gl-trust{margin:12px 0 4px}
+  .gl-trust__row{list-style:none;padding:0;margin:0 0 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .gl-trust__row li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;font-size:12px;line-height:1.3;color:#1d2340;background:#fff8ec;border-radius:8px;padding:8px 4px}
+  .gl-trust__row span{font-size:18px}
+  .gl-trust__pay{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+  .gl-trust__pay-icon{width:38px;height:24px;display:block}
+</style>

@@ -1,0 +1,28 @@
+{%- comment -%}
+  GLOWLING PDP · BLOCK 02 · Social proof line (place directly UNDER the title / review stars)
+  Use REAL numbers only (from your review app / order count). Leave gl_family_count blank to hide the block.
+{%- endcomment -%}
+{%- assign gl_rating = '4.9' -%}
+{%- assign gl_family_count = '' -%}{%- comment -%} e.g. '1,200' {%- endcomment -%}
+{%- assign gl_proof_suffix = 'Aussie families have swapped some screen time for glow time' -%}
+
+{%- if gl_family_count != blank -%}
+<div class="gl-proof">
+  <div class="gl-proof__faces" aria-hidden="true">
+    <span style="background:#ffd36e">👧</span><span style="background:#9be7d8">👦</span><span style="background:#ffb3c7">👵</span><span style="background:#b9c2ff">👨</span>
+  </div>
+  <p class="gl-proof__text">
+    <span class="gl-proof__stars" aria-label="{{ gl_rating }} out of 5 stars">★★★★★</span>
+    <strong>{{ gl_rating }}/5</strong> · {{ gl_family_count }}+ {{ gl_proof_suffix }}
+  </p>
+</div>
+{%- endif -%}
+
+<style>
+  .gl-proof{display:flex;align-items:center;gap:10px;margin:6px 0 12px}
+  .gl-proof__faces{display:flex;flex-shrink:0}
+  .gl-proof__faces span{width:28px;height:28px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:15px;margin-left:-8px}
+  .gl-proof__faces span:first-child{margin-left:0}
+  .gl-proof__text{margin:0;font-size:13px;line-height:1.4;color:#1d2340}
+  .gl-proof__stars{color:#f5a623;letter-spacing:1px;margin-right:2px}
+</style>
