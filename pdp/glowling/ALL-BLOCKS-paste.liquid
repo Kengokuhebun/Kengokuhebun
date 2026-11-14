@@ -118,7 +118,7 @@ PASTE INTO: Product information → Custom Liquid block ABOVE the bundle tiers
 
 ==========================================================================================
 BLOCK 03b · 03b-bundle-tiers-and-add-to-cart.liquid
-PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove the theme's Quantity + Buy buttons blocks and turn Kaching off for this product
+PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove the theme's Quantity + Buy buttons blocks
 ==========================================================================================
 {%- comment -%}
   GLOWLING PDP · BLOCK 03b · Bundle tiers + Add to cart (replaces Kaching, Quantity and Buy buttons)
@@ -155,10 +155,10 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove t
   {%- endif -%}
 {%- endif -%}
 
-<div class="gl-tiers" data-gl-tiers data-variant="{{ gl_v.id }}" data-gift="{{ gl_gift_id }}">
+<div class="gl-tiers" id="gl-tiers" data-gl-tiers data-variant="{{ gl_v.id }}" data-gift="{{ gl_gift_id }}">
   <p class="gl-tiers__title"><span>Choose your bundle</span></p>
 
-  <label class="gl-tier" data-qty="1" data-total="{{ gl_p1 | money }}">
+  <label class="gl-tier" data-qty="1" data-name="Buy 1" data-total="{{ gl_p1 | money }}">
     <input type="radio" name="gl-tier-{{ section.id }}" value="1">
     <span class="gl-tier__radio" aria-hidden="true"></span>
     <span class="gl-tier__main">
@@ -172,7 +172,7 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove t
     </ul>
   </label>
 
-  <label class="gl-tier is-selected" data-qty="3" data-total="{{ gl_p2 | money }}">
+  <label class="gl-tier is-selected" data-qty="3" data-name="Buy 2, Get 1 FREE" data-total="{{ gl_p2 | money }}">
     <span class="gl-tier__badge">MOST POPULAR</span>
     <input type="radio" name="gl-tier-{{ section.id }}" value="3" checked>
     <span class="gl-tier__radio" aria-hidden="true"></span>
@@ -200,6 +200,13 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove t
   <p class="gl-tiers__error" data-gl-tiers-error hidden></p>
 </div>
 
+{%- if gl_v.available -%}
+<div class="gl-sticky" data-gl-sticky aria-hidden="true">
+  <div class="gl-sticky__info"><strong data-gl-sticky-name>Buy 2, Get 1 FREE</strong><span><span data-gl-sticky-total>{{ gl_p2 | money }}</span> · 🎁 FREE tracing book</span></div>
+  <button type="button" class="gl-sticky__btn" data-gl-sticky-btn>Add to cart</button>
+</div>
+{%- endif -%}
+
 <style>
   .gl-tiers{margin:4px 0 14px}
   .gl-tiers__title{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:13px;font-weight:800;color:#1d2340;text-transform:uppercase;letter-spacing:.06em}
@@ -223,12 +230,17 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove t
   .gl-tiers__atc{display:block;width:100%;margin-top:4px;padding:16px;border:0;border-radius:10px;background:#ffd84d;color:#1d2340;font-weight:800;font-size:17px;cursor:pointer}
   .gl-tiers__atc[disabled]{opacity:.6;cursor:not-allowed}
   .gl-tiers__error{margin:8px 0 0;font-size:13px;color:#9b1c1c}
+  .gl-sticky{position:fixed;left:0;right:0;bottom:0;z-index:2147482000;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #e9e3d6;box-shadow:0 -6px 20px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .25s}
+  .gl-sticky.is-visible{transform:translateY(0)}
+  .gl-sticky__info{flex:1;display:flex;flex-direction:column;line-height:1.25;font-size:12px;color:#4a4f66;min-width:0}
+  .gl-sticky__info strong{font-size:14px;color:#1d2340}
+  .gl-sticky__btn{flex-shrink:0;padding:12px 18px;border:0;border-radius:10px;background:#ffd84d;color:#1d2340;font-weight:800;font-size:15px;cursor:pointer}
+  @media (min-width:990px){.gl-sticky{left:auto;right:24px;bottom:24px;width:420px;border:1px solid #e9e3d6;border-radius:14px}}
 </style>
 
 <script>
 (function () {
-  var box = document.currentScript && document.currentScript.previousElementSibling && document.currentScript.previousElementSibling.previousElementSibling;
-  if (!box || !box.hasAttribute('data-gl-tiers')) box = document.querySelector('[data-gl-tiers]');
+  var box = document.getElementById('gl-tiers');
   if (!box || box.__glReady) return;
   box.__glReady = true;
   var ROOT = ({{ routes.root_url | json }} || '/').replace(/\/?$/, '/');
@@ -241,6 +253,9 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove t
     tiers.forEach(function (x) { x.classList.toggle('is-selected', x === t); });
     t.querySelector('input').checked = true;
     if (totalEl) totalEl.textContent = t.getAttribute('data-total');
+    var sn = document.querySelector('[data-gl-sticky-name]'), st = document.querySelector('[data-gl-sticky-total]');
+    if (sn) sn.textContent = t.getAttribute('data-name');
+    if (st) st.textContent = t.getAttribute('data-total');
   }
   tiers.forEach(function (t) {
     t.addEventListener('click', function () { select(t); });
@@ -275,6 +290,19 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 03. Remove t
       atc.disabled = false; atc.innerHTML = label;
     });
   });
+
+  // Sticky add-to-cart bar: shows once the bundle box has scrolled out of view
+  var sticky = document.querySelector('[data-gl-sticky]');
+  if (sticky && atc && 'IntersectionObserver' in window) {
+    document.body.appendChild(sticky);
+    new IntersectionObserver(function (entries) {
+      var e = entries[0];
+      var past = !e.isIntersecting && e.boundingClientRect.top < 0;
+      sticky.classList.toggle('is-visible', past);
+      sticky.setAttribute('aria-hidden', past ? 'false' : 'true');
+    }).observe(box);
+    sticky.querySelector('[data-gl-sticky-btn]').addEventListener('click', function () { atc.click(); });
+  }
 })();
 </script>
 
@@ -366,21 +394,37 @@ PASTE INTO: Product information → Custom Liquid block UNDER block 04
 
 ==========================================================================================
 BLOCK 06 · 06-below-the-fold-section.liquid
-PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under Product information
+PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under Product information (image links already filled in)
 ==========================================================================================
 {%- comment -%}
   GLOWLING PDP · BLOCK 06 · Full-width section below the product
   PASTE INTO: Product page template → Add section → Custom Liquid (place it directly under "Product information").
-  Image slots: paste Shopify Files URLs into the gl_img_* lines (leave '' to hide that image).
+  IMAGE SLOTS: for each gl_img_* line paste EITHER the file's full link from Content → Files
+  (https://cdn.shopify.com/...) OR just its filename exactly as shown in Files (e.g. 'glowling-dinner.png').
+  Leave '' to hide that image. Numbers refer to the gallery prompts file.
   PLACEHOLDER TESTIMONIALS in section 5: replace with real customer reviews before running paid traffic.
 {%- endcomment -%}
 {%- assign gl_guarantee_days = 30 -%}
 {%- assign gl_marker_count = '8' -%}
 {%- assign gl_board_size = '30 × 20 cm (12 × 8 in)' -%}
 {%- assign gl_age = '3+' -%}
-{%- assign gl_img_problem = '' -%}{%- comment -%} e.g. dinner-time photo (gallery image 7) {%- endcomment -%}
-{%- assign gl_img_steps = '' -%}{%- comment -%} e.g. how-it-works graphic (gallery image 2) {%- endcomment -%}
-{%- assign gl_img_box = '' -%}{%- comment -%} e.g. what's-in-the-box flat lay (gallery image 8) {%- endcomment -%}
+{%- assign gl_img_problem = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Child_drawing_at_kitchen_bench_1c1377cb.jpg' -%}{%- comment -%} image 7 · dinner-time {%- endcomment -%}
+{%- assign gl_img_steps = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Creating_e-commerce_infographic___faa1c1dd.jpg' -%}{%- comment -%} image 2 · how it works {%- endcomment -%}
+{%- assign gl_img_uses = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Create_2x2_product_grid_photos_3eee15da.jpg' -%}{%- comment -%} image 4 · four ways to use it {%- endcomment -%}
+{%- assign gl_img_compare = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Split_screen_product_comparison___75c3f7d2.jpg' -%}{%- comment -%} image 6 · glow time vs screen time {%- endcomment -%}
+{%- assign gl_img_collage = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Create_product_collage_layout_46c12074.jpg' -%}{%- comment -%} image 3 · day & night collage {%- endcomment -%}
+{%- assign gl_img_box = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Product_contents_flat_lay_arrang__2d201ecf.jpg' -%}{%- comment -%} image 8 · what's in the box {%- endcomment -%}
+{%- assign gl_img_offer = 'https://cdn.shopify.com/s/files/1/1024/9479/8151/files/Promotional_graphic_for_drawing___9b5a4179.jpg' -%}{%- comment -%} image 9 · Buy 2, Get 1 FREE {%- endcomment -%}
+{%- assign gl_cta_text = 'Get Buy 2, Get 1 FREE' -%}
+
+{%- comment -%} Resolve each slot: full link used as-is, otherwise look the filename up in Content → Files {%- endcomment -%}
+{%- capture gl_src_problem -%}{%- if gl_img_problem contains '//' -%}{{ gl_img_problem }}{%- elsif gl_img_problem != blank and images[gl_img_problem] -%}{{ images[gl_img_problem] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
+{%- capture gl_src_steps -%}{%- if gl_img_steps contains '//' -%}{{ gl_img_steps }}{%- elsif gl_img_steps != blank and images[gl_img_steps] -%}{{ images[gl_img_steps] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
+{%- capture gl_src_uses -%}{%- if gl_img_uses contains '//' -%}{{ gl_img_uses }}{%- elsif gl_img_uses != blank and images[gl_img_uses] -%}{{ images[gl_img_uses] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
+{%- capture gl_src_compare -%}{%- if gl_img_compare contains '//' -%}{{ gl_img_compare }}{%- elsif gl_img_compare != blank and images[gl_img_compare] -%}{{ images[gl_img_compare] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
+{%- capture gl_src_collage -%}{%- if gl_img_collage contains '//' -%}{{ gl_img_collage }}{%- elsif gl_img_collage != blank and images[gl_img_collage] -%}{{ images[gl_img_collage] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
+{%- capture gl_src_box -%}{%- if gl_img_box contains '//' -%}{{ gl_img_box }}{%- elsif gl_img_box != blank and images[gl_img_box] -%}{{ images[gl_img_box] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
+{%- capture gl_src_offer -%}{%- if gl_img_offer contains '//' -%}{{ gl_img_offer }}{%- elsif gl_img_offer != blank and images[gl_img_offer] -%}{{ images[gl_img_offer] | image_url: width: 1400 }}{%- endif -%}{%- endcapture -%}
 
 <div class="gl-sec">
 
@@ -393,8 +437,8 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
         <p class="gl-sec__p">Plenty of toys only last a few minutes once a tablet is in the room. Glowling lights up too, but here your child is the one making the picture, not watching one.</p>
         <p class="gl-sec__p">It won't replace every screen, and we won't pretend it does. It gives you something to try first, and a bit of quiet before the screen comes out.</p>
       </div>
-      {%- if gl_img_problem != blank -%}
-        <img class="gl-split__img" src="{{ gl_img_problem }}" alt="Child drawing on a glowing Glowling board while dinner is cooked" loading="lazy">
+      {%- if gl_src_problem != blank -%}
+        <img class="gl-split__img" src="{{ gl_src_problem }}" alt="Child drawing on a glowing Glowling board while dinner is cooked" loading="lazy">
       {%- endif -%}
     </div>
   </section>
@@ -402,8 +446,8 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   <!-- 2. HOW IT WORKS -->
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">How it works</h2>
-    {%- if gl_img_steps != blank -%}
-      <img class="gl-full-img" src="{{ gl_img_steps }}" alt="How Glowling works: draw, glow, wipe" loading="lazy">
+    {%- if gl_src_steps != blank -%}
+      <img class="gl-full-img" src="{{ gl_src_steps }}" alt="How Glowling works: draw, glow, wipe" loading="lazy">
     {%- endif -%}
     <ol class="gl-steps">
       <li><span class="gl-steps__n">1</span><strong>Plug it in</strong><span>USB cable into any phone charger or power bank.</span></li>
@@ -412,9 +456,20 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
     </ol>
   </section>
 
+  <!-- 2b. FOUR WAYS TO USE IT -->
+  {%- if gl_src_uses != blank -%}
+  <section class="gl-sec__block">
+    <h2 class="gl-sec__h2 gl-center">Four ways to use it</h2>
+    <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_uses }}" alt="Four ways to use Glowling: drawing, letters and notes, tracing, night light" loading="lazy">
+  </section>
+  {%- endif -%}
+
   <!-- 3. COMPARISON -->
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">Glowling vs the usual options</h2>
+    {%- if gl_src_compare != blank -%}
+      <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_compare }}" alt="Glow time vs screen time" loading="lazy">
+    {%- endif -%}
     <table class="gl-table">
       <thead><tr><th></th><th class="gl-table__us">Glowling</th><th>Tablet</th><th>Paper &amp; crayons</th></tr></thead>
       <tbody>
@@ -430,8 +485,8 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   <!-- 4. WHAT'S IN THE BOX -->
   <section class="gl-sec__block gl-sec__block--cream">
     <h2 class="gl-sec__h2 gl-center">What's in the box</h2>
-    {%- if gl_img_box != blank -%}
-      <img class="gl-full-img" src="{{ gl_img_box }}" alt="Everything in the Glowling box" loading="lazy">
+    {%- if gl_src_box != blank -%}
+      <img class="gl-full-img" src="{{ gl_src_box }}" alt="Everything in the Glowling box" loading="lazy">
     {%- endif -%}
     <ul class="gl-box">
       <li>1 × LED drawing board ({{ gl_board_size }})</li>
@@ -442,6 +497,14 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
       <li><strong>FREE tracing book</strong> with every order</li>
     </ul>
   </section>
+
+  <!-- 4b. DAY & NIGHT -->
+  {%- if gl_src_collage != blank -%}
+  <section class="gl-sec__block">
+    <h2 class="gl-sec__h2 gl-center">From dinner time to bedtime</h2>
+    <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_collage }}" alt="Glowling during the day and as a night light" loading="lazy">
+  </section>
+  {%- endif -%}
 
   <!-- 5. MORE REVIEWS: PLACEHOLDERS, replace with real reviews -->
   <section class="gl-sec__block">
@@ -465,6 +528,15 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
     </div>
   </section>
 
+  <!-- 5b. OFFER + CTA -->
+  <section class="gl-sec__block gl-center">
+    {%- if gl_src_offer != blank -%}
+      <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_offer }}" alt="Buy 2, Get 1 FREE plus a free tracing book" loading="lazy">
+    {%- endif -%}
+    <a href="#gl-tiers" class="gl-cta" data-gl-scroll-tiers>{{ gl_cta_text }}</a>
+    <p class="gl-cta__note">🎁 FREE tracing book with every order</p>
+  </section>
+
   <!-- 6. GUARANTEE -->
   <section class="gl-sec__block gl-guarantee">
     <div class="gl-guarantee__seal">{{ gl_guarantee_days }}<span>DAY</span></div>
@@ -486,6 +558,9 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
     <details class="gl-faq"><summary>How long does shipping take?</summary><p>We ship to the US, Canada, the UK and Australia. Delivery times for your country are shown at checkout, and you'll get a tracking link by email as soon as your order ships.</p></details>
     <details class="gl-faq"><summary>What if my child doesn't like it?</summary><p>You're covered by our {{ gl_guarantee_days }}-day money-back guarantee.</p></details>
   </section>
+  <section class="gl-sec__block gl-center">
+    <a href="#gl-tiers" class="gl-cta" data-gl-scroll-tiers>{{ gl_cta_text }}</a>
+  </section>
 </div>
 
 <style>
@@ -501,6 +576,9 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   .gl-split{display:grid;gap:18px;align-items:center}
   .gl-split__img,.gl-full-img{width:100%;height:auto;border-radius:12px;display:block}
   .gl-full-img{margin:0 0 16px}
+  .gl-full-img--narrow{max-width:640px;margin:0 auto 16px}
+  .gl-cta{display:inline-block;width:100%;max-width:440px;box-sizing:border-box;padding:16px 20px;border-radius:10px;background:#ffd84d;color:#1d2340;font-weight:800;font-size:17px;text-decoration:none;text-align:center}
+  .gl-cta__note{margin:8px 0 0;font-size:13px;color:#4a4f66}
   .gl-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:12px}
   .gl-steps li{background:#fff8ec;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px;font-size:14px}
   .gl-steps__n{width:30px;height:30px;border-radius:50%;background:#1d2340;color:#ffd36e;font-weight:800;display:flex;align-items:center;justify-content:center}
@@ -532,6 +610,17 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
     .gl-split{grid-template-columns:1.2fr 1fr}
   }
 </style>
+
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-gl-scroll-tiers]');
+    if (!a) return;
+    var t = document.getElementById('gl-tiers') || document.querySelector('[data-gl-tiers]');
+    if (!t) return;
+    e.preventDefault();
+    t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
 
 ==========================================================================================
 BLOCK 07 · 07-side-cart.liquid
