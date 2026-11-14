@@ -19,35 +19,36 @@
 .gw-tr{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;flex:1}.gw-tr::-webkit-scrollbar{display:none}
 .gw-tr button{flex:0 0 62px;height:62px;border:2px solid transparent;border-radius:8px;overflow:hidden;background:var(--cream);cursor:pointer;padding:0}.gw-tr button.on{border-color:var(--ink)}.gw-tr img{width:100%;height:100%;object-fit:cover}
 .gw-arr{flex:0 0 36px;height:36px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:20px;cursor:pointer}
-.gw-proof{display:flex;align-items:center;gap:10px;margin:4px 0 8px;font-size:14px}
-.gw-faces{display:flex}.gw-faces span{width:26px;height:26px;border-radius:50%;border:2px solid #fff;margin-left:-7px;display:flex;align-items:center;justify-content:center;font-size:13px}.gw-faces span:first-child{margin-left:0}
+.gw-proof{display:flex;align-items:center;gap:8px;margin:2px 0 6px;font-size:13px}
+.gw-faces{display:flex;flex-shrink:0}.gw-faces img{width:26px;height:26px;border-radius:50%;border:2px solid #fff;margin-left:-8px;object-fit:cover;background:var(--cream)}.gw-faces img:first-child{margin-left:0}
 .gw-stars{color:#f5a623;letter-spacing:1px}
-.gw h1{font-size:30px;line-height:1.15;font-weight:900;margin:0 0 8px}@media(max-width:800px){.gw h1{font-size:25px}}
-.gw-pr{display:flex;align-items:center;gap:10px;margin:0 0 6px;flex-wrap:wrap}.gw-pr b{font-size:24px}.gw-pr s{color:#8a8a8a;font-size:16px}
-.gw-badge{background:#e23d2e;color:#fff;font-size:12px;font-weight:800;border-radius:6px;padding:4px 8px}
-.gw-sub{font-size:16px;color:var(--mut);margin:0 0 14px}
-.gw-offer{border:2px solid var(--ink);border-radius:12px;background:var(--cream);padding:10px 14px;text-align:center;margin:0 0 14px}.gw-offer p{font-weight:800;font-size:16px}.gw-offer small{display:block;font-size:13px;color:var(--mut);margin-top:2px}
-.gw-ben{background:var(--ink);color:#fff;border-radius:14px;padding:16px 16px 6px;margin:0 0 16px;box-shadow:0 0 0 3px rgba(255,211,110,.28)}
-.gw-ben h3{color:var(--glow);font-size:16px;margin:0 0 10px}
-.gw-ben li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:0 0 10px}.gw-ben li i{flex:0 0 26px;height:26px;border-radius:50%;background:rgba(255,211,110,.16);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:14px}
-.gw-tiers{display:grid;gap:10px;margin:0 0 12px}
-.gw-tier{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;background:#fff;text-align:left;width:100%;color:var(--ink)}
+.gw-i{width:16px;height:16px;flex-shrink:0;display:inline-block;vertical-align:-3px}
+.gw-i--lg{width:18px;height:18px}
+.gw h1{font-size:28px;line-height:1.15;font-weight:900;margin:0 0 6px}@media(max-width:800px){.gw h1{font-size:23px}}
+.gw-pr{display:flex;align-items:center;gap:10px;margin:0 0 10px;flex-wrap:wrap}.gw-pr b{font-size:24px}.gw-pr s{color:#8a8a8a;font-size:16px}
+.gw-badge{background:#e23d2e;color:#fff;font-size:11px;font-weight:800;border-radius:6px;padding:4px 8px;letter-spacing:.03em}
+.gw-offer{display:flex;align-items:center;gap:10px;border:2px solid var(--ink);border-radius:10px;background:var(--cream);padding:9px 12px;margin:0 0 12px;font-size:14px;line-height:1.3}.gw-offer .gw-i{color:var(--ink)}.gw-offer b{font-weight:800}.gw-offer small{display:block;color:var(--mut);font-size:12px;margin-top:1px}
+.gw-ben{background:var(--ink);color:#fff;border-radius:14px;padding:14px 16px 4px;margin:16px 0;box-shadow:0 0 0 3px rgba(255,211,110,.28)}
+.gw-ben h3{color:var(--glow);font-size:15px;margin:0 0 10px;letter-spacing:.01em}
+.gw-ben li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.4;margin:0 0 10px}.gw-ben li i{flex:0 0 28px;height:28px;border-radius:50%;background:rgba(255,211,110,.18);color:var(--glow);display:flex;align-items:center;justify-content:center;font-style:normal}.gw-ben li i .gw-i{width:15px;height:15px}
+.gw-tiers{display:grid;gap:9px;margin:0 0 10px}
+.gw-tier{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:11px 12px;cursor:pointer;background:#fff;text-align:left;width:100%;color:var(--ink)}
 .gw-tier.on{border-color:var(--ink);background:#fffaf0;box-shadow:0 0 0 3px rgba(255,211,110,.35)}
 .gw-tier .r{width:20px;height:20px;border-radius:50%;border:2px solid #b9b2a2}.gw-tier.on .r{border:6px solid var(--ink)}
-.gw-tier .n{display:block;font-weight:900;font-size:16px}.gw-tier .s{display:block;font-size:12px;color:var(--mut)}
-.gw-tier .p{text-align:right;line-height:1.2}.gw-tier .p b{display:block;font-size:17px}.gw-tier .p s{font-size:12px;color:#8a8a8a}
-.gw-tier .k{grid-column:2/4;display:flex;flex-wrap:wrap;gap:6px}.gw-tier .k span{font-size:12px;font-weight:700;background:#eaf7ef;color:var(--ok);border-radius:99px;padding:3px 9px}
-.gw-tier .t{position:absolute;top:-11px;right:14px;background:var(--ink);color:var(--glow);font-size:11px;font-weight:900;letter-spacing:.05em;border-radius:99px;padding:3px 10px}
-.gw-gift{display:flex;align-items:center;gap:12px;border:2px dashed #e8c76a;border-radius:12px;padding:10px 12px;margin:0 0 14px;background:#fffdf5}
-.gw-gift img{width:52px;height:52px;border-radius:8px;object-fit:cover}.gw-gift b{display:block;font-size:14px}.gw-gift small{font-size:12px;color:var(--mut)}.gw-gift em{margin-left:auto;font-style:normal;font-weight:900;color:var(--ok);font-size:13px}
-.gw-btn{display:block;width:100%;border:0;border-radius:12px;background:var(--btn);color:var(--ink);font-weight:900;font-size:18px;padding:17px 16px;cursor:pointer;box-shadow:0 4px 0 #d9b21f;text-align:center;text-decoration:none}.gw-btn:disabled{opacity:.6;cursor:default}
-.gw-err{display:none;color:#c0392b;font-size:13px;margin:8px 0 0;text-align:center}
-.gw-ship{text-align:center;font-size:14px;margin:12px 0 8px}
-.gw-pay{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:0 0 6px}.gw-pay span{width:46px;height:30px;border:1px solid var(--line);border-radius:5px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}.gw-pay img{width:100%;height:100%;object-fit:contain}.gw-pay .sm img{width:88%;height:88%}
-.gw-lock{text-align:center;font-size:13px;color:var(--mut)}
-.gw-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.gw-trust div{background:var(--cream);border-radius:10px;padding:10px 6px;text-align:center;font-size:12px;font-weight:700}.gw-trust div i{display:block;font-style:normal;font-size:20px}
+.gw-tier .n{display:block;font-weight:900;font-size:15px}.gw-tier .s{display:block;font-size:12px;color:var(--mut)}
+.gw-tier .p{text-align:right;line-height:1.2}.gw-tier .p b{display:block;font-size:16px}.gw-tier .p s{font-size:12px;color:#8a8a8a}
+.gw-tier .k{grid-column:2/4;display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}.gw-tier .k span{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;background:#eaf7ef;color:var(--ok);border-radius:99px;padding:3px 9px}.gw-tier .k span .gw-i{width:12px;height:12px}.gw-tier .k [hidden]{display:none!important}
+.gw-tier .t{position:absolute;top:-10px;right:14px;background:var(--ink);color:var(--glow);font-size:10.5px;font-weight:900;letter-spacing:.05em;border-radius:99px;padding:3px 10px}
+.gw-gift{display:flex;align-items:center;gap:10px;border:2px dashed #e8c76a;border-radius:10px;padding:8px 10px;margin:0 0 10px;background:#fffdf5}
+.gw-gift img{width:44px;height:44px;border-radius:8px;object-fit:cover}.gw-gift b{display:block;font-size:13.5px}.gw-gift small{font-size:11.5px;color:var(--mut)}.gw-gift em{margin-left:auto;font-style:normal;font-weight:900;color:var(--ok);font-size:12.5px}
+.gw-btn{display:block;width:100%;border:0;border-radius:12px;background:var(--btn);color:var(--ink);font-weight:900;font-size:17px;padding:15px 16px;cursor:pointer;box-shadow:0 4px 0 #d9b21f;text-align:center;text-decoration:none}.gw-btn:disabled{opacity:.6;cursor:default}
+.gw-err{display:none;color:#c0392b;font-size:13px;margin:6px 0 0;text-align:center}
+.gw-ship{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;margin:10px 0 8px;color:#3a3f58}
+.gw-pay{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:0 0 6px}.gw-pay span{width:42px;height:28px;border:1px solid var(--line);border-radius:5px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}.gw-pay img{width:100%;height:100%;object-fit:contain}.gw-pay .sm img{width:88%;height:88%}
+.gw-lock{display:flex;align-items:center;justify-content:center;gap:5px;font-size:12px;color:var(--mut);margin:0}
+.gw-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.gw-trust div{background:var(--cream);border-radius:10px;padding:10px 6px;text-align:center;font-size:12px;font-weight:700;color:var(--ink)}.gw-trust div .gw-i{color:var(--ink);width:22px;height:22px;display:block;margin:0 auto 4px}
 .gw-quote{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:12px;margin:0 0 16px}
-.gw-av{flex:0 0 46px;height:46px;border-radius:50%;background:var(--ink);color:var(--glow);font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center}
+.gw-av{flex:0 0 46px;width:46px;height:46px;border-radius:50%;object-fit:cover;background:var(--cream)}
 .gw-quote q{display:block;font-style:italic;font-size:14px;margin:4px 0 6px}.gw-quote small{font-size:12px;color:var(--mut)}
 .gw-acc details{border-bottom:1px solid var(--line);padding:14px 0}
 .gw-acc summary,.gw-faq summary{cursor:pointer;font-weight:800;font-size:15px;list-style:none;position:relative;padding-right:26px}
@@ -110,45 +111,51 @@
  </div>
 
  <div>
-  <div class="gw-proof"><div class="gw-faces" aria-hidden="true"><span style="background:#ffd36e">&#128103;</span><span style="background:#9be7d8">&#128102;</span><span style="background:#ffb3c7">&#128117;</span><span style="background:#b9c2ff">&#128104;</span></div><span><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>Trusted by families worldwide</b></span></div>
+  <div class="gw-proof"><div class="gw-faces" aria-hidden="true"><img src="https://randomuser.me/api/portraits/thumb/women/44.jpg" alt="" loading="lazy" width="26" height="26"><img src="https://randomuser.me/api/portraits/thumb/men/32.jpg" alt="" loading="lazy" width="26" height="26"><img src="https://randomuser.me/api/portraits/thumb/women/68.jpg" alt="" loading="lazy" width="26" height="26"><img src="https://randomuser.me/api/portraits/thumb/men/85.jpg" alt="" loading="lazy" width="26" height="26"></div><span><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>Trusted by families worldwide</b></span></div>
   <h1>Glowling LED Drawing Board</h1>
   <div class="gw-pr"><b data-p="1">&nbsp;</b><span class="gw-badge">BUY 2, GET 1 FREE</span></div>
-  <p class="gw-sub">A board that glows like a screen, where your child makes the picture instead of watching one.</p>
 
-  <div class="gw-offer"><p>&#127873; Buy 2, Get 1 FREE + a FREE tracing book</p><small id="gw-cut">Ships in 1&ndash;2 business days</small></div>
-
-  <div class="gw-ben"><h3>Why parents grab it before the iPad</h3><ul>
-   <li><i>&#10024;</i><span><b>It glows like a screen. It isn&rsquo;t one.</b> Neon lines light up the panel. No app, no ads, no autoplay.</span></li>
-   <li><i>&#127912;</i><span><b>They make something instead of scrolling.</b> Drawing, tracing, letters, games and little notes for the family.</span></li>
-   <li><i>&#129533;</i><span><b>Wipe it and start again.</b> One swipe gives a fresh page. No paper, nothing to throw away.</span></li>
-   <li><i>&#127769;</i><span><b>Doubles as a soft night light.</b> A calm glow for the wind-down before bed.</span></li>
-   <li><i>&#128268;</i><span><b>USB powered.</b> No batteries to buy or swap.</span></li>
-  </ul></div>
+  <div class="gw-offer">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i gw-i--lg"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+   <div><b>Buy 2, Get 1 FREE + a FREE tracing book</b><small id="gw-cut">Ships in 1&ndash;2 business days</small></div>
+  </div>
 
   <div class="gw-tiers" id="gw-tiers" role="radiogroup" aria-label="Choose your bundle">
-   <button type="button" class="gw-tier" data-q="1" role="radio" aria-checked="false"><span class="r"></span><span><span class="n">Buy 1</span><span class="s">1 Glowling board</span></span><span class="p"><b data-p="1">&nbsp;</b></span><span class="k"><span>&#127873; FREE tracing book</span><span data-fs="1" hidden>&#128666; FREE shipping</span></span></button>
-   <button type="button" class="gw-tier on" data-q="3" role="radio" aria-checked="true"><span class="t">MOST POPULAR</span><span class="r"></span><span><span class="n">Buy 2, Get 1 FREE</span><span class="s">3 Glowling boards &middot; <span data-p="e"></span> each</span></span><span class="p"><b data-p="2">&nbsp;</b><s data-p="3"></s></span><span class="k"><span>&#10024; 1 board FREE</span><span>&#127873; FREE tracing book</span><span data-fs="2" hidden>&#128666; FREE shipping</span></span></button>
+   <button type="button" class="gw-tier" data-q="1" role="radio" aria-checked="false"><span class="r"></span><span><span class="n">Buy 1</span><span class="s">1 Glowling board</span></span><span class="p"><b data-p="1">&nbsp;</b></span><span class="k"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>FREE tracing book</span><span data-fs="1" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>FREE shipping</span></span></button>
+   <button type="button" class="gw-tier on" data-q="3" role="radio" aria-checked="true"><span class="t">MOST POPULAR</span><span class="r"></span><span><span class="n">Buy 2, Get 1 FREE</span><span class="s">3 Glowling boards &middot; <span data-p="e"></span> each</span></span><span class="p"><b data-p="2">&nbsp;</b><s data-p="3"></s></span><span class="k"><span><svg viewBox="0 0 24 24" fill="currentColor" class="gw-i"><path d="M12 1l1.5 5.5L19 8l-5.5 1.5L12 15l-1.5-5.5L5 8l5.5-1.5z"/></svg>1 board FREE</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>FREE tracing book</span><span data-fs="2" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>FREE shipping</span></span></button>
   </div>
 
   <div class="gw-gift"><img data-s="Product_contents_flat_lay_arrang__2d201ecf.jpg" alt="Glow Tracing Book"><div><b>Glow Tracing Book</b><small>Added to your order automatically</small></div><em>FREE</em></div>
 
   <button class="gw-btn" type="button" id="gw-add">Add to cart</button>
   <p class="gw-err" id="gw-err"></p>
-  <p class="gw-ship" id="gw-ship">&#128666; Fast tracked shipping &middot; 30-day money-back guarantee</p>
+  <p class="gw-ship" id="gw-ship"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Fast tracked shipping &middot; 30-day money-back guarantee</span></p>
   <div class="gw-pay" aria-label="Accepted payment methods">
-   <span title="Visa"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="46" height="30" loading="lazy"></span>
-   <span title="Mastercard"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="46" height="30" loading="lazy"></span>
-   <span title="American Express"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="46" height="30" loading="lazy"></span>
-   <span title="PayPal"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="46" height="30" loading="lazy"></span>
-   <span class="sm" title="Apple Pay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="46" height="30" loading="lazy"></span>
-   <span class="sm" title="Google Pay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="46" height="30" loading="lazy"></span>
+   <span title="Visa"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="42" height="28" loading="lazy"></span>
+   <span title="Mastercard"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="42" height="28" loading="lazy"></span>
+   <span title="American Express"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="42" height="28" loading="lazy"></span>
+   <span title="PayPal"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="42" height="28" loading="lazy"></span>
+   <span class="sm" title="Apple Pay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="42" height="28" loading="lazy"></span>
+   <span class="sm" title="Google Pay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="42" height="28" loading="lazy"></span>
   </div>
-  <p class="gw-lock">&#128274; Secure checkout</p>
+  <p class="gw-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i" style="width:13px;height:13px"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Secure checkout</p>
 
-  <div class="gw-trust"><div><i>&#128666;</i>Tracked shipping</div><div><i>&#8617;&#65039;</i>30-day guarantee</div><div><i>&#128274;</i>Secure checkout</div></div>
+  <div class="gw-ben"><h3>Why parents grab it before the iPad</h3><ul>
+   <li><i><svg viewBox="0 0 24 24" fill="currentColor" class="gw-i"><path d="M12 1l1.5 5.5L19 8l-5.5 1.5L12 15l-1.5-5.5L5 8l5.5-1.5z"/></svg></i><span><b>It glows like a screen. It isn&rsquo;t one.</b> Neon lines light up the panel. No app, no ads, no autoplay.</span></li>
+   <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><circle cx="13.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/><circle cx="17.5" cy="10.5" r=".9" fill="currentColor" stroke="none"/><circle cx="8.5" cy="7.5" r=".9" fill="currentColor" stroke="none"/><circle cx="6.5" cy="12.5" r=".9" fill="currentColor" stroke="none"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.4 0 2.5-1.1 2.5-2.5 0-.6-.2-1.2-.6-1.7-.1-.1-.2-.2-.2-.3 0-.3.2-.5.5-.5H16c3.3 0 6-2.7 6-6 0-5-4.5-9-10-9z"/></svg></i><span><b>They make something instead of scrolling.</b> Drawing, tracing, letters, games and little notes for the family.</span></li>
+   <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><polyline points="23 4 23 10 17 10"/><path d="M20.5 15A9 9 0 118.3 5.6L23 10"/></svg></i><span><b>Wipe it and start again.</b> One swipe gives a fresh page. No paper, nothing to throw away.</span></li>
+   <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></i><span><b>Doubles as a soft night light.</b> A calm glow for the wind-down before bed.</span></li>
+   <li><i><svg viewBox="0 0 24 24" fill="currentColor" class="gw-i"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg></i><span><b>USB powered.</b> No batteries to buy or swap.</span></li>
+  </ul></div>
+
+  <div class="gw-trust">
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Tracked shipping</div>
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><polyline points="1 4 1 10 7 10"/><path d="M3.5 15a9 9 0 102.2-9.4L1 10"/></svg>30-day guarantee</div>
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gw-i"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Secure checkout</div>
+  </div>
 
   <!-- PLACEHOLDER testimonial: replace with a real customer review before running paid traffic -->
-  <div class="gw-quote"><span class="gw-av" aria-hidden="true">J</span><div><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>I can finally get through a shower without the TV on. My 4-year-old drags the board to the bathroom doorway and draws me rockets until I&rsquo;m done. It doesn&rsquo;t fix every afternoon, but it&rsquo;s the first thing I reach for now instead of the iPad.</q><small><b>Jess M.</b> &middot; Ohio, USA</small></div></div>
+  <div class="gw-quote"><img class="gw-av" src="https://randomuser.me/api/portraits/thumb/women/65.jpg" alt="Jess M." loading="lazy" width="46" height="46"><div><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>I can finally get through a shower without the TV on. My 4-year-old drags the board to the bathroom doorway and draws me rockets until I&rsquo;m done. It doesn&rsquo;t fix every afternoon, but it&rsquo;s the first thing I reach for now instead of the iPad.</q><small><b>Jess M.</b> &middot; Ohio, USA</small></div></div>
 
   <div class="gw-acc">
    <details open><summary>Description</summary><div class="c"><p><b>Glow time, not screen time.</b></p><p>Glowling is a clear acrylic board on a lit stand. Your child draws with neon markers and the lines glow against the panel. There&rsquo;s no app, no internet and nothing to watch. It only does something when they pick up a marker.</p></div></details>
@@ -208,7 +215,7 @@
 
 <section class="gw-s gw-ctaw">
  <img class="gw-im gw-nar" data-s="Promotional_graphic_for_drawing___9b5a4179.jpg" alt="Buy 2, Get 1 FREE plus a free tracing book" width="1024" height="1024">
- <a class="gw-btn" href="#gw-tiers" data-go>Claim Buy 2, Get 1 FREE</a><p>&#127873; FREE tracing book with every order</p>
+ <a class="gw-btn" href="#gw-tiers" data-go>Claim Buy 2, Get 1 FREE</a><p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="gw-i" style="vertical-align:-3px"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg> FREE tracing book with every order</p>
 </section>
 
 <section class="gw-s"><div class="gw-g"><div class="gw-seal">30<small>DAY</small></div><div><h2 class="gw-h2">Try it for 30 days</h2><p class="gw-p">If it doesn&rsquo;t earn a place in your evenings, email us within 30 days and we&rsquo;ll refund you. No awkward questions.</p></div></div></section>
@@ -227,7 +234,7 @@
 <section class="gw-s gw-ctaw"><a class="gw-btn" href="#gw-tiers" data-go>Claim Buy 2, Get 1 FREE</a></section>
 </div>
 
-<div class="gw-stk" id="gw-stk"><div><b id="gw-sn">Buy 2, Get 1 FREE</b><span id="gw-st"></span> &middot; &#127873; FREE tracing book</div><button class="gw-btn" type="button" id="gw-sa">Add to cart</button></div>
+<div class="gw-stk" id="gw-stk"><div><b id="gw-sn">Buy 2, Get 1 FREE</b><span id="gw-st"></span> &middot; <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="gw-i" style="vertical-align:-3px"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg> FREE tracing book</div><button class="gw-btn" type="button" id="gw-sa">Add to cart</button></div>
 
 <div class="gw-scrim" id="gw-scrim"></div>
 <aside class="gw-dr" id="gw-dr" aria-hidden="true" aria-label="Your cart">
@@ -253,6 +260,7 @@ var $=function(i){return document.getElementById(i)};
 var S=window.Shopify||{},R=(S.routes&&S.routes.root)||'/';if(R.slice(-1)!=='/')R+='/';
 var CUR=(S.currency&&S.currency.active)||'GBP',RATE=+(S.currency&&S.currency.rate)||1,unit=PRICE[CUR]||Math.round(2999*RATE),qty=3,pens=null;
 function M(c){try{return new Intl.NumberFormat(LOC[CUR]||undefined,{style:'currency',currency:CUR}).format(c/100)}catch(e){return (c/100).toFixed(2)+' '+CUR}}
+var ICN={gift:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="gw-i" style="vertical-align:-3px"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>',truck:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i" style="vertical-align:-3px"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>',cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i" style="vertical-align:-3px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',tada:'<svg viewBox="0 0 24 24" fill="currentColor" class="gw-i" style="vertical-align:-3px;color:#f5a623"><path d="M12 1l1.5 5.5L19 8l-5.5 1.5L12 15l-1.5-5.5L5 8l5.5-1.5z"/></svg>',trash:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2M19 6l-1 14H6L5 6"/></svg>'};
 document.querySelectorAll('.gw img[data-s]').forEach(function(i){i.src=P+i.dataset.s+'?width=1200';i.loading='lazy'});
 
 /* gallery */
@@ -268,8 +276,8 @@ $('gw-nx').onclick=function(){var i=Math.round(sc.scrollLeft/sc.clientWidth)+1;g
 function paint(){var f=FREE[CUR]||0,p1=unit,p2=unit*2;
  document.querySelectorAll('.gw [data-p]').forEach(function(e){var k=e.dataset.p;e.textContent=M(k==='1'?p1:k==='2'?p2:k==='3'?unit*3:Math.round(p2/3))});
  document.querySelectorAll('.gw [data-fs]').forEach(function(e){e.hidden=!(f&&(e.dataset.fs==='1'?p1:p2)>=f)});
- $('gw-ship').innerHTML=f?'&#128666; FREE tracked shipping on orders over '+M(f)+' &middot; 30-day money-back guarantee':'&#128666; Fast tracked shipping &middot; 30-day money-back guarantee';
- if(CUT[CUR])$('gw-cut').innerHTML='&#127876; Order by <b>'+CUT[CUR]+'</b> for holiday delivery &middot; Ships in 1&ndash;2 business days';
+ $('gw-ship').innerHTML=(f?ICN.truck+'<span>FREE tracked shipping on orders over '+M(f)+' &middot; 30-day money-back guarantee</span>':ICN.truck+'<span>Fast tracked shipping &middot; 30-day money-back guarantee</span>');
+ if(CUT[CUR])$('gw-cut').innerHTML=ICN.cal+' Order by <b>'+CUT[CUR]+'</b> for holiday delivery &middot; Ships in 1&ndash;2 business days';
  var on=document.querySelector('.gw-tier.on');$('gw-sn').textContent=on.querySelector('.n').textContent;$('gw-st').textContent=' '+M(qty===3?p2:p1);
  $('gw-add').textContent='Add to cart · '+M(qty===3?p2:p1);$('gw-sa').textContent='Add to cart'}
 document.querySelectorAll('.gw-tier').forEach(function(t){t.onclick=function(){document.querySelectorAll('.gw-tier').forEach(function(x){x.classList.toggle('on',x===t);x.setAttribute('aria-checked',x===t)});qty=+t.dataset.q;paint()}});
@@ -290,14 +298,14 @@ function img(u){if(!u)return '';u=typeof u==='string'?u:(u.url||'');return u.ind
 function render(c){if(c.currency&&c.currency!==CUR){CUR=c.currency;paint()}
  var n=c.item_count,f=FREE[CUR]||0,t=c.total_price;$('gw-cn').textContent=n;$('gw-cn').classList.toggle('on',n>0);
  $('gw-dt').textContent=n?'Your cart ('+n+')':'Your cart';$('gw-tot').textContent=M(t);$('gw-co').disabled=!n;
- if(f&&n){$('gw-fs').style.display='block';$('gw-fst').innerHTML=t>=f?'&#127881; You&rsquo;ve unlocked <b>FREE shipping</b>':'You&rsquo;re <b>'+M(f-t)+'</b> away from FREE shipping';$('gw-fsb').style.width=Math.min(100,t/f*100)+'%'}else $('gw-fs').style.display='none';
+ if(f&&n){$('gw-fs').style.display='block';$('gw-fst').innerHTML=t>=f?ICN.tada+' You&rsquo;ve unlocked <b>FREE shipping</b>':'You&rsquo;re <b>'+M(f-t)+'</b> away from FREE shipping';$('gw-fsb').style.width=Math.min(100,t/f*100)+'%'}else $('gw-fs').style.display='none';
  if(!n){$('gw-db').innerHTML='<p class="gw-emp">Your cart is empty.</p><button class="gw-btn" type="button" id="gw-ea">Add Buy 2, Get 1 FREE</button>';$('gw-ea').onclick=function(){qty=3;add()};return}
  var h='',hasPens=false;
  c.items.forEach(function(it,k){var gift=it.variant_id===ID.gift||it.id===ID.gift;if(it.variant_id===ID.pens||it.id===ID.pens)hasPens=true;
   var price=gift||it.final_line_price===0?'<span class="f">FREE</span>':(it.original_line_price>it.final_line_price?'<span><s>'+M(it.original_line_price)+'</s>'+M(it.final_line_price)+'</span>':'<span>'+M(it.final_line_price)+'</span>');
   var note=gift?'Free gift with your order':((it.line_level_discount_allocations||[]).map(function(d){return d.discount_application&&d.discount_application.title}).filter(Boolean).join(', ')||it.variant_title||'');
   h+='<div class="gw-li"><img src="'+img(it.image||it.featured_image)+'" alt=""><div class="m"><div class="n"><span>'+it.product_title+'</span>'+price+'</div><small>'+note+'</small>'+
-  (gift?'':'<div class="gw-q"><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity-1)+'" aria-label="Decrease">'+(it.quantity>1?'&minus;':'&#128465;')+'</button><span>'+it.quantity+'</span><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity+1)+'" aria-label="Increase">+</button></div>')+'</div></div>'});
+  (gift?'':'<div class="gw-q"><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity-1)+'" aria-label="Decrease">'+(it.quantity>1?'&minus;':ICN.trash)+'</button><span>'+it.quantity+'</span><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity+1)+'" aria-label="Increase">+</button></div>')+'</div></div>'});
  if(pens&&pens.ok&&!hasPens)h+='<div class="gw-up"><h6>Add extra neon markers?</h6><div class="r"><img src="'+img(pens.img)+'" alt=""><span class="x">'+pens.t+'</span><span>'+M(pens.p)+'</span><button type="button" id="gw-pn">Add</button></div></div>';
  $('gw-db').innerHTML=h;
  $('gw-db').querySelectorAll('.gw-q button').forEach(function(b){b.onclick=function(){post('cart/change.js',{line:+b.dataset.l,quantity:+b.dataset.q}).then(gift_)}});
