@@ -14,6 +14,19 @@ Created via the Admin API, all as **drafts** (nothing is live until you set them
 | Neon Marker Pen Pack | `neon-marker-pen-pack` | £5.99 (placeholder) | Side cart upsell (block 07). Needs a product photo |
 | Discount "Buy 2, Get 1 FREE" | automatic, Buy X get Y | — | Active, but only applies to the Glowling board, so nothing happens while the board is a draft |
 
+### Fixed prices per country (Shopify Markets, verified with contextual pricing)
+Markets: United Kingdom (GBP, store base) · United States (USD) · Canada (CAD, split out of the old "United States and Canada" market) · Australia (AUD). Each non-UK market has its own catalog + price list with fixed prices:
+
+| Product | UK | US | Canada | Australia |
+|---|---|---|---|---|
+| Glowling LED Drawing Board | £29.99 | $34.99 | C$44.99 | A$49.99 |
+| Buy 2, Get 1 FREE (3 boards) | £59.98 | $69.98 | C$89.98 | A$99.98 |
+| Neon Marker Pen Pack | £5.99 | $6.99 | C$8.99 | A$9.99 |
+| Glow Tracing Book (gift) | £0 | $0 | C$0 | A$0 |
+
+Free-shipping thresholds in blocks 03b/04/07 (£40 / $50 / C$70 / A$75) sit between the single and bundle price in every market. Make your shipping rates in Settings → Shipping match them.
+UK prices are set on the product itself. To change US/CA/AU prices: Settings → Markets → (market) → Products and pricing.
+
 To go live: set your real prices, add a pen pack photo, set all three products to **Active** on the Online Store channel, then paste the blocks into the Horizon product template.
 Horizon note: Custom Liquid is available both as a block inside the product information section and as a standalone section. If your Horizon version doesn't list it as a block, add the blocks as Custom Liquid sections directly under the product section, in the same order.
 
