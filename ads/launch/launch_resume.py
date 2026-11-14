@@ -13,9 +13,17 @@ copies=json.load(open('/home/user/Kengokuhebun/ads/launch/copies.json'))
 CAMP=log['campaign']['id']
 AS_A=log['adsets']['A_Parents_28-44']['id']
 AS_B=log['adsets']['B_GiftBuyers_45-65+']['id']
-HASH=log['image_hashes']
+# Real Nano Banana statics (replace the earlier placeholder hashes)
+HASH={
+    'S1_ledger':    'd86bd76ed94dcad887a68a5f1565fa45',
+    'S2_714am':     '0db5c8b8285928b38aafa374f44afc6f',
+    'S3_standup':   '0cc084546cf3c4066df024a0230f076b',
+    'S4_moon':      '19b796519af67776564c97ff901e887b',
+    'S5_grandkids': '45495fe6ebb64eb29c438e2708ca85c4',
+}
+log['image_hashes_real']=HASH
 
-STATIC_SLUGS={'S1':'ledger','S2':'714am','S3':'standup','S4':'moon','S5':'boxingday'}
+STATIC_SLUGS={'S1':'ledger','S2':'714am','S3':'standup','S4':'moon','S5':'grandkids'}
 COPY_SLUGS={'C1':'dinner','C2':'shower','C3':'wfh','C4':'bedtime','C5':'gift'}
 
 DOF=('adapt_to_placement','add_text_overlay','creative_stickers','description_automation',

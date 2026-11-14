@@ -3,28 +3,53 @@
     "id": "120252641461330104",
     "name": "Glowling_R1_BF26_CBO",
     "objective": "OUTCOME_SALES",
-    "status": "PAUSED",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
     "daily_budget_pence": 8000,
     "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
     "buying_type": "AUCTION"
   },
   "adsets": {
-    "A_Parents_28-44":     {"id":"120252641461490104","status":"PAUSED","age_min":28,"age_max":44,"countries":["US","GB","CA","AU"],"placements":{"facebook":["feed","story","facebook_reels"],"instagram":["stream","story","reels"]},"pixel_id":"1736160617626618","event":"PURCHASE","attribution":"7d_click_1d_view"},
-    "B_GiftBuyers_45-65+": {"id":"120252641461920104","status":"PAUSED","age_min":45,"age_max":65,"countries":["US","GB","CA","AU"],"placements":{"facebook":["feed","story","facebook_reels"],"instagram":["stream","story","reels"]},"pixel_id":"1736160617626618","event":"PURCHASE","attribution":"7d_click_1d_view"}
+    "A_Parents_28-44":     {"id":"120252641461490104","status":"ACTIVE","age_min":28,"age_max":44,"countries":["US","GB","CA","AU"],"placements":{"facebook":["feed","story","facebook_reels"],"instagram":["stream","story","reels"]},"pixel_id":"1736160617626618","event":"PURCHASE","attribution":"7d_click_1d_view","n_ads":20},
+    "B_GiftBuyers_45-65+": {"id":"120252641461920104","status":"ACTIVE","age_min":45,"age_max":65,"countries":["US","GB","CA","AU"],"placements":{"facebook":["feed","story","facebook_reels"],"instagram":["stream","story","reels"]},"pixel_id":"1736160617626618","event":"PURCHASE","attribution":"7d_click_1d_view","n_ads":5}
   },
-  "page_id_intended": "1508787922308138",
-  "page_name_intended": "Amanda Miller",
-  "image_hashes": {
-    "S1_ledger":    "67075843c86bc7665b13225c937e28b9",
-    "S2_714am":     "c05a34c7f4aece1d05a131dfc543c08e",
-    "S3_standup":   "b6c1a6a04641dd98b431d210083fdabc",
-    "S4_moon":      "672b0e8be7febde68bab918ab9f1847d",
-    "S5_boxingday": "fe724b6ef6773afb7454fa3acae3f0bb"
-  },
+  "page_id": "1508787922308138",
+  "page_name": "Amanda Miller",
   "pixel_id": "1736160617626618",
-  "pixel_note": "Shared with Ninu account; create a Custom Conversion filtered to Glowling URLs before scaling",
-  "creatives": [],
-  "ads": [],
-  "blocked_at": "/adcreatives",
-  "blocker": "System User lacks Advertiser role on Page 1508787922308138 (Amanda Miller). Grant via Business Manager > Pages > Amanda Miller > People > add System User as Advertiser. Also add the Page to act_1598462168591762 under Connected Assets."
+  "pixel_note": "Shared with Ninu account; add a Custom Conversion filtered to /products/glowling-led-drawing-board before scaling",
+  "landing_page": "https://x5a9bu-97.myshopify.com/products/glowling-led-drawing-board",
+  "image_hashes_real": {
+    "S1_ledger":    "d86bd76ed94dcad887a68a5f1565fa45",
+    "S2_714am":     "0db5c8b8285928b38aafa374f44afc6f",
+    "S3_standup":   "0cc084546cf3c4066df024a0230f076b",
+    "S4_moon":      "19b796519af67776564c97ff901e887b",
+    "S5_grandkids": "45495fe6ebb64eb29c438e2708ca85c4"
+  },
+  "ads": [
+    {"name":"Glowling_R1_BF26_C1-S1-dinner-ledger",      "copy":"C1","static":"S1","adset":"A","id":"120252642174250104","creative_id":"2115199929358758"},
+    {"name":"Glowling_R1_BF26_C1-S2-dinner-714am",       "copy":"C1","static":"S2","adset":"A","id":"120252642174580104","creative_id":"1522549286421228"},
+    {"name":"Glowling_R1_BF26_C1-S3-dinner-standup",     "copy":"C1","static":"S3","adset":"A","id":"120252642175390104","creative_id":"1662283501944898"},
+    {"name":"Glowling_R1_BF26_C1-S4-dinner-moon",        "copy":"C1","static":"S4","adset":"A","id":"120252642176610104","creative_id":"1078125438590425"},
+    {"name":"Glowling_R1_BF26_C1-S5-dinner-grandkids",   "copy":"C1","static":"S5","adset":"A","id":"120252642178120104","creative_id":"1822875325710814"},
+    {"name":"Glowling_R1_BF26_C2-S1-shower-ledger",      "copy":"C2","static":"S1","adset":"A","id":"120252642178890104","creative_id":"1170786195282705"},
+    {"name":"Glowling_R1_BF26_C2-S2-shower-714am",       "copy":"C2","static":"S2","adset":"A","id":"120252642179930104","creative_id":"1675808390602634"},
+    {"name":"Glowling_R1_BF26_C2-S3-shower-standup",     "copy":"C2","static":"S3","adset":"A","id":"120252642180790104","creative_id":"28766034233099151"},
+    {"name":"Glowling_R1_BF26_C2-S4-shower-moon",        "copy":"C2","static":"S4","adset":"A","id":"120252642181750104","creative_id":"1585451230002452"},
+    {"name":"Glowling_R1_BF26_C2-S5-shower-grandkids",   "copy":"C2","static":"S5","adset":"A","id":"120252642182880104","creative_id":"3902683613203194"},
+    {"name":"Glowling_R1_BF26_C3-S1-wfh-ledger",         "copy":"C3","static":"S1","adset":"A","id":"120252642183760104","creative_id":"1723880753081651"},
+    {"name":"Glowling_R1_BF26_C3-S2-wfh-714am",          "copy":"C3","static":"S2","adset":"A","id":"120252642184940104","creative_id":"1143322501397893"},
+    {"name":"Glowling_R1_BF26_C3-S3-wfh-standup",        "copy":"C3","static":"S3","adset":"A","id":"120252642185440104","creative_id":"2543166749548762"},
+    {"name":"Glowling_R1_BF26_C3-S4-wfh-moon",           "copy":"C3","static":"S4","adset":"A","id":"120252642186700104","creative_id":"2164373491103676"},
+    {"name":"Glowling_R1_BF26_C3-S5-wfh-grandkids",      "copy":"C3","static":"S5","adset":"A","id":"120252642187980104","creative_id":"1161633439929526"},
+    {"name":"Glowling_R1_BF26_C4-S1-bedtime-ledger",     "copy":"C4","static":"S1","adset":"A","id":"120252642188740104","creative_id":"1459783852777005"},
+    {"name":"Glowling_R1_BF26_C4-S2-bedtime-714am",      "copy":"C4","static":"S2","adset":"A","id":"120252642189950104","creative_id":"1190582083915543"},
+    {"name":"Glowling_R1_BF26_C4-S3-bedtime-standup",    "copy":"C4","static":"S3","adset":"A","id":"120252642191410104","creative_id":"2043269639697810"},
+    {"name":"Glowling_R1_BF26_C4-S4-bedtime-moon",       "copy":"C4","static":"S4","adset":"A","id":"120252642192540104","creative_id":"3310192072500471"},
+    {"name":"Glowling_R1_BF26_C4-S5-bedtime-grandkids",  "copy":"C4","static":"S5","adset":"A","id":"120252642194110104","creative_id":"1441275458193025"},
+    {"name":"Glowling_R1_BF26_C5-S1-gift-ledger",        "copy":"C5","static":"S1","adset":"B","id":"120252642195470104","creative_id":"1494403086125774"},
+    {"name":"Glowling_R1_BF26_C5-S2-gift-714am",         "copy":"C5","static":"S2","adset":"B","id":"120252642196610104","creative_id":"1684199913284886"},
+    {"name":"Glowling_R1_BF26_C5-S3-gift-standup",       "copy":"C5","static":"S3","adset":"B","id":"120252642197880104","creative_id":"1145648447916977"},
+    {"name":"Glowling_R1_BF26_C5-S4-gift-moon",          "copy":"C5","static":"S4","adset":"B","id":"120252642199300104","creative_id":"1120605960847652"},
+    {"name":"Glowling_R1_BF26_C5-S5-gift-grandkids",     "copy":"C5","static":"S5","adset":"B","id":"120252642201110104","creative_id":"2179499769607106"}
+  ]
 }
