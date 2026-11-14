@@ -1,13 +1,24 @@
 {%- comment -%}
   GLOWLING PDP · BLOCK 01 · Offer box (place ABOVE the product title)
-  Edit the three lines below. Only claim local shipping if stock is really in Australia.
+  Shows a different holiday cutoff per market, using the visitor's Shopify Markets country.
+  Fill in each [date] with your real last-order date for that market. Only claim a ship time you can meet.
 {%- endcomment -%}
-{%- assign gl_offer_headline = 'Order by 18 December for Christmas delivery' -%}
-{%- assign gl_offer_sub = 'Ships from our Australian warehouse in 1–2 business days' -%}
 {%- assign gl_offer_icon = '🎄' -%}
+{%- assign gl_offer_sub = 'Ships in 1–2 business days, with tracking' -%}
+{%- case localization.country.iso_code -%}
+  {%- when 'US' -%}{%- assign gl_cutoff = '[Dec 15]' -%}
+  {%- when 'CA' -%}{%- assign gl_cutoff = '[Dec 12]' -%}
+  {%- when 'GB' -%}{%- assign gl_cutoff = '[15 December]' -%}
+  {%- when 'AU' -%}{%- assign gl_cutoff = '[18 December]' -%}
+  {%- else -%}{%- assign gl_cutoff = '' -%}
+{%- endcase -%}
 
 <div class="gl-offer">
-  <p class="gl-offer__headline">{{ gl_offer_icon }} {{ gl_offer_headline }}</p>
+  {%- if gl_cutoff != blank -%}
+    <p class="gl-offer__headline">{{ gl_offer_icon }} Order by {{ gl_cutoff }} for holiday delivery</p>
+  {%- else -%}
+    <p class="gl-offer__headline">{{ gl_offer_icon }} The gift that glows this holiday season</p>
+  {%- endif -%}
   <p class="gl-offer__sub">{{ gl_offer_sub }}</p>
 </div>
 

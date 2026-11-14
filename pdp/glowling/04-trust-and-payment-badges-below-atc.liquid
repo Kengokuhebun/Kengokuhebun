@@ -1,14 +1,23 @@
 {%- comment -%}
   GLOWLING PDP · BLOCK 04 · Trust row + payment badges (place directly BELOW Add to cart / Buy buttons)
-  Payment icons are pulled automatically from the payment methods enabled in your store.
-  Edit the guarantee and shipping lines to match your real policy.
+  Payment icons are pulled automatically from the payment methods enabled for the visitor's market.
+  The shipping line changes per market (Shopify Markets). Set each one to your real shipping policy,
+  in that market's currency. Leave a market's line as '' to fall back to the default.
 {%- endcomment -%}
 {%- assign gl_guarantee_days = 30 -%}
-{%- assign gl_free_ship_over = '$50' -%}
+{%- assign gl_ship_default = 'Fast tracked shipping' -%}
+{%- case localization.country.iso_code -%}
+  {%- when 'US' -%}{%- assign gl_ship = 'Free US shipping over [$50]' -%}
+  {%- when 'CA' -%}{%- assign gl_ship = 'Free shipping in Canada over [$70]' -%}
+  {%- when 'GB' -%}{%- assign gl_ship = 'Free UK delivery over [£40]' -%}
+  {%- when 'AU' -%}{%- assign gl_ship = 'Free AU shipping over [$75]' -%}
+  {%- else -%}{%- assign gl_ship = '' -%}
+{%- endcase -%}
+{%- if gl_ship == blank -%}{%- assign gl_ship = gl_ship_default -%}{%- endif -%}
 
 <div class="gl-trust">
   <ul class="gl-trust__row">
-    <li><span>🚚</span>Free AU shipping over {{ gl_free_ship_over }}</li>
+    <li><span>🚚</span>{{ gl_ship }}</li>
     <li><span>🛡️</span>{{ gl_guarantee_days }}-day money-back guarantee</li>
     <li><span>🔒</span>Secure checkout</li>
   </ul>

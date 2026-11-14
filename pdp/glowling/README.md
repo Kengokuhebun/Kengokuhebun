@@ -26,7 +26,8 @@ Under the main product section: **Add section → Custom Liquid** → paste `06-
 Theme settings → Cart → set **Cart type** to **Drawer**. In Shrine and other Dawn-based themes the label may be "Cart drawer". Turn on the free-shipping progress bar and cart upsell if your theme version has them. If not, Kaching Bundles' cart features or an app like UpCart can add them.
 
 ## Before you go live
-- Reviews and counts must be real (Australian Consumer Law). The blocks hide or show placeholders until you fill them in.
-- Only say "ships from Australia" or give a Christmas cutoff date if your stock is local.
+- The page is market-neutral for testing in the US, Canada, the UK and Australia. Blocks 01 (holiday cutoff) and 04 (shipping line) switch automatically by the visitor's country through Shopify Markets, so fill in a real date and threshold for each market. Other countries get a generic line.
+- Reviews and counts must be real in every market: FTC fake-review rule (US), DMCC Act (UK), Competition Act (Canada), Australian Consumer Law (AU). The blocks hide or show placeholders until you fill them in.
+- Only give a holiday cutoff date you can meet with your real shipping times in that market.
 - Avoid countdown timers that reset. The competitor's "Offer ends 13.11.2026" was already in the past and still showing. Use a real deadline, such as the Christmas cutoff.
 - Check box contents, board size and marker count against your supplier's spec sheet.

@@ -37,7 +37,7 @@ Check it against the supplier photos (base shape, LED strip position, marker cou
 ```json
 {
   "task": "lifestyle hero product photo",
-  "scene": "a 5-year-old child in a knitted rust-coloured jumper sits at a warm wooden kids' desk in a cosy bedroom at dusk, focused and smiling slightly, drawing with a white fluorescent marker on the glowing Glowling LED board",
+  "scene": "a 5-year-old child in a rust-coloured knitted sweater sits at a warm wooden kids' desk in a cosy bedroom at dusk, focused and smiling slightly, drawing with a white fluorescent marker on the glowing Glowling LED board",
   "drawing_on_board": "a neon rocket ship with flames and five stars around it, lines glowing pink, orange, yellow and teal against the lit acrylic",
   "props": "wooden pencil cup holding the fluorescent markers on the left, a small stack of picture books and a soft teddy bear on the right, bookshelf softly out of focus behind",
   "lighting": "room lights dim and warm, the board's glow lighting the child's face from below and in front, golden hour light from a window edge",
@@ -61,7 +61,7 @@ Check it against the supplier photos (base shape, LED strip position, marker cou
     {"icon": "panel with light rays", "label": "2. GLOW", "sub": "Switch on and watch it light up"},
     {"icon": "hand wiping with cloth", "label": "3. WIPE & REPEAT", "sub": "A damp cloth clears it in seconds"}
   ],
-  "drawing_on_board": "an Australian summer Christmas scene: a glowing Christmas tree, a smiling sun in a Santa hat, a koala with a present, the words 'Merry Christmas' in neon bubble letters",
+  "drawing_on_board": "a holiday scene: a glowing Christmas tree, wrapped presents, a smiling star and a little reindeer, the words 'Merry Christmas' in neon bubble letters",
   "benefits": [
     {"icon": "lightbulb", "label": "CREATES, NOT SCROLLS"},
     {"icon": "recycle arrows", "label": "ENDLESSLY REUSABLE"},
@@ -164,7 +164,7 @@ Only keep "Off with no fight" if your customer reviews support it. Otherwise use
 ```json
 {
   "task": "flat lay",
-  "scene": "top-down flat lay on cream linen: the Glowling board laid flat and glowing, the stand, 8 fluorescent markers in a neat row, the USB cable coiled, a gift box with a navy ribbon and a small tag reading 'For Posy, from Nan & Pop'",
+  "scene": "top-down flat lay on cream linen: the Glowling board laid flat and glowing, the stand, 8 fluorescent markers in a neat row, the USB cable coiled, a gift box with a navy ribbon and a small tag reading 'For Posy, love Grandma'",
   "annotations": "thin navy leader lines with labels: '1 × LED board', '8 × neon markers', '1 × stand', '1 × USB cable'",
   "text_top": "Everything in the box",
   "negative": "items you don't ship, logos, misspelt words"
