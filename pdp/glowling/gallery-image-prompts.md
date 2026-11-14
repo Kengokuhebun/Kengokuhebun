@@ -53,6 +53,12 @@ Use the attached image as the exact product reference. A photorealistic lifestyl
 
 ### 8 · What's in the box (gift)
 ```
-Use the attached image as the exact product reference. A top-down flat lay on cream linen: the board laid flat and softly glowing, its white stand, eight fluorescent markers in a neat row, a coiled white USB cable, and a gift box tied with a navy ribbon and a small tag reading "For Posy, love Grandma". Add thin navy leader lines with neat labels: "1 × LED board", "8 × neon markers", "1 × stand", "1 × USB cable". At the top, the headline "Everything in the box" in a bold navy rounded sans-serif. Soft natural daylight, clean and premium, crisp spelling, no other logos. Square 1:1.
+Use the attached image as the exact product reference. A top-down flat lay on cream linen: the board laid flat and softly glowing, its white stand, eight fluorescent markers in a neat row, a coiled white USB cable, a slim spiral-bound tracing book with a cover showing simple outline drawings of a rocket, a star and a friendly original cartoon fox under the title "Glow Tracing Book", and a gift box tied with a navy ribbon and a small tag reading "For Posy, love Grandma". Add thin navy leader lines with neat labels: "1 × LED board", "8 × neon markers", "1 × stand", "1 × USB cable", and on the book a glow-yellow badge "FREE GIFT". At the top, the headline "Everything in the box" in a bold navy rounded sans-serif. Soft natural daylight, clean and premium, crisp spelling, no other logos. Square 1:1.
 ```
 Change the counts to match your supplier's real box contents.
+
+### 9 · Offer graphic (Buy 2, Get 1 Free)
+```
+Use the attached image as the exact product reference. A square promotional graphic on a deep navy (#1D2340) background with a soft warm glow. In the centre, three identical glowing LED drawing boards stand side by side on a wooden surface, each with a different neon drawing (a rocket, a rainbow, a dinosaur). The third board on the right has a glow-yellow (#FFD36E) ribbon badge reading "FREE". In front of the boards lies a spiral tracing book titled "Glow Tracing Book" with a small yellow tag "FREE GIFT". At the top, a bold rounded sans-serif headline in cream: "BUY 2, GET 1 FREE". Below the boards, a smaller cream line: "+ a free tracing book with every order". Premium, festive, crisp spelling, no other logos. Square 1:1.
+```
+Place it second in the gallery (straight after the hero) while the offer is running.

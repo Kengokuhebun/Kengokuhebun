@@ -31,6 +31,17 @@ Under Product information: **Add section → Custom Liquid** → `06-below-the-f
 
 Tested against a mock Shopify cart API in Chromium. These all pass: theme form add, app fetch add, app XHR add, quantity +/−, remove, empty state, upsell add, header cart icon, ESC and overlay close, and the checkout link. No JS errors.
 
+## Offer setup (Kaching Bundles)
+Offer: **Buy 1** / **Buy 2, Get 1 Free** + a **free tracing book** with every order + a **pen pack** upsell in the side cart.
+
+| Kaching tier | Quantity | Discount | Label | Badge |
+|---|---|---|---|---|
+| Buy 1 | 1 | none | "1 Glowling" | — |
+| Buy 2, Get 1 Free | 3 | 33.33% off (or "1 free item") | "Buy 2, Get 1 FREE" | "MOST POPULAR" (default selected) |
+
+- **Free tracing book:** create it as a product (price $0 or hidden), then add it as a Kaching **free gift** on both tiers. Or ship it in the box without a cart line. The offer box (block 01) and "What's in the box" (block 06) already say "FREE tracing book with every order".
+- **Pen pack upsell:** create a product with the handle `neon-marker-pen-pack` (or change `gl_cart_upsell_handle` in block 07). It shows in the side cart once the cart has items, and hides after it's added.
+
 ## Placeholders to replace before running paid traffic
 - **Testimonials** in blocks 05 and 06 are placeholder copy. Swap in real customer reviews: fake reviews break FTC (US), DMCC (UK), Competition Act (CA) and ACL (AU) rules.
 - Block 02: real rating and order count, once you have them.

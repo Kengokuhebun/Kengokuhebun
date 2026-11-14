@@ -1,10 +1,12 @@
 {%- comment -%}
-  GLOWLING PDP · BLOCK 01 · Offer box (place ABOVE the product title)
-  Shows a different holiday cutoff per market, using the visitor's Shopify Markets country.
-  Fill in each [date] with your real last-order date for that market. Only claim a ship time you can meet.
+  GLOWLING PDP · BLOCK 01 · Offer box
+  PASTE INTO: Product information → Custom Liquid block ABOVE the Title.
+  Line 1 = the offer. Line 2 = the holiday cutoff, which changes per market (Shopify Markets).
+  Fill each [date] with your real last-order date for that market. Only claim a ship time you can meet.
 {%- endcomment -%}
-{%- assign gl_offer_icon = '🎄' -%}
-{%- assign gl_offer_sub = 'Ships in 1–2 business days, with tracking' -%}
+{%- assign gl_offer_line = 'Buy 2, Get 1 FREE + a FREE tracing book' -%}
+{%- assign gl_offer_icon = '🎁' -%}
+{%- assign gl_ship_note = 'Ships in 1–2 business days' -%}
 {%- case localization.country.iso_code -%}
   {%- when 'US' -%}{%- assign gl_cutoff = '[Dec 15]' -%}
   {%- when 'CA' -%}{%- assign gl_cutoff = '[Dec 12]' -%}
@@ -14,12 +16,11 @@
 {%- endcase -%}
 
 <div class="gl-offer">
-  {%- if gl_cutoff != blank -%}
-    <p class="gl-offer__headline">{{ gl_offer_icon }} Order by {{ gl_cutoff }} for holiday delivery</p>
-  {%- else -%}
-    <p class="gl-offer__headline">{{ gl_offer_icon }} The gift that glows this holiday season</p>
-  {%- endif -%}
-  <p class="gl-offer__sub">{{ gl_offer_sub }}</p>
+  <p class="gl-offer__headline">{{ gl_offer_icon }} {{ gl_offer_line }}</p>
+  <p class="gl-offer__sub">
+    {%- if gl_cutoff != blank -%}🎄 Order by <strong>{{ gl_cutoff }}</strong> for holiday delivery · {% endif -%}
+    {{ gl_ship_note }}
+  </p>
 </div>
 
 <style>

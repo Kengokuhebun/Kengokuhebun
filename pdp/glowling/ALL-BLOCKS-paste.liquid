@@ -5,12 +5,14 @@ BLOCK 01 · 01-offer-box-above-title.liquid
 PASTE INTO: Product information → Custom Liquid block ABOVE the Title
 ==========================================================================================
 {%- comment -%}
-  GLOWLING PDP · BLOCK 01 · Offer box (place ABOVE the product title)
-  Shows a different holiday cutoff per market, using the visitor's Shopify Markets country.
-  Fill in each [date] with your real last-order date for that market. Only claim a ship time you can meet.
+  GLOWLING PDP · BLOCK 01 · Offer box
+  PASTE INTO: Product information → Custom Liquid block ABOVE the Title.
+  Line 1 = the offer. Line 2 = the holiday cutoff, which changes per market (Shopify Markets).
+  Fill each [date] with your real last-order date for that market. Only claim a ship time you can meet.
 {%- endcomment -%}
-{%- assign gl_offer_icon = '🎄' -%}
-{%- assign gl_offer_sub = 'Ships in 1–2 business days, with tracking' -%}
+{%- assign gl_offer_line = 'Buy 2, Get 1 FREE + a FREE tracing book' -%}
+{%- assign gl_offer_icon = '🎁' -%}
+{%- assign gl_ship_note = 'Ships in 1–2 business days' -%}
 {%- case localization.country.iso_code -%}
   {%- when 'US' -%}{%- assign gl_cutoff = '[Dec 15]' -%}
   {%- when 'CA' -%}{%- assign gl_cutoff = '[Dec 12]' -%}
@@ -20,12 +22,11 @@ PASTE INTO: Product information → Custom Liquid block ABOVE the Title
 {%- endcase -%}
 
 <div class="gl-offer">
-  {%- if gl_cutoff != blank -%}
-    <p class="gl-offer__headline">{{ gl_offer_icon }} Order by {{ gl_cutoff }} for holiday delivery</p>
-  {%- else -%}
-    <p class="gl-offer__headline">{{ gl_offer_icon }} The gift that glows this holiday season</p>
-  {%- endif -%}
-  <p class="gl-offer__sub">{{ gl_offer_sub }}</p>
+  <p class="gl-offer__headline">{{ gl_offer_icon }} {{ gl_offer_line }}</p>
+  <p class="gl-offer__sub">
+    {%- if gl_cutoff != blank -%}🎄 Order by <strong>{{ gl_cutoff }}</strong> for holiday delivery · {% endif -%}
+    {{ gl_ship_note }}
+  </p>
 </div>
 
 <style>
@@ -57,7 +58,7 @@ PASTE INTO: Product information → Custom Liquid block UNDER the Title / review
       {%- if gl_rating != blank -%}<strong>{{ gl_rating }}/5</strong> · {% endif -%}
       {{ gl_family_count }}+ families have swapped some screen time for glow time
     {%- else -%}
-      <strong>Loved by families</strong> in the US, UK, Canada &amp; Australia
+      <strong>Trusted by families worldwide</strong>
     {%- endif -%}
   </p>
 </div>
@@ -146,12 +147,9 @@ PASTE INTO: Product information → Custom Liquid block directly BELOW Buy butto
     <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="38" height="24" loading="lazy"></li>
     <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="38" height="24" loading="lazy"></li>
     <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="38" height="24" loading="lazy"></li>
-    <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/discover.svg" alt="Discover" width="38" height="24" loading="lazy"></li>
     <li class="gl-pay__card"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="38" height="24" loading="lazy"></li>
     <li class="gl-pay__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="30" height="16" loading="lazy"></li>
     <li class="gl-pay__chip"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="30" height="16" loading="lazy"></li>
-    <li class="gl-pay__chip" style="background:#b2fce4"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/afterpay.svg" alt="Afterpay" width="30" height="16" loading="lazy"></li>
-    <li class="gl-pay__chip" style="background:#ffb3c7"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/klarna.svg" alt="Klarna" width="30" height="16" loading="lazy"></li>
   </ul>
 </div>
 
@@ -279,6 +277,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
       <li>1 × stand</li>
       <li>1 × USB cable</li>
       <li>Gift-ready packaging</li>
+      <li><strong>FREE tracing book</strong> with every order</li>
     </ul>
   </section>
 
@@ -388,8 +387,9 @@ PASTE INTO: Footer section group → Add SECTION → Custom Liquid (site-wide si
   - Quantity +/−, remove, free-shipping progress bar per currency, optional one-click upsell
   - Checkout button, guarantee line, payment icons
 {%- endcomment -%}
-{%- assign gl_cart_upsell_handle = '' -%}{%- comment -%} product handle to offer in the cart, e.g. 'glowling-marker-refill-pack' (leave '' to hide) {%- endcomment -%}
 {%- assign gl_cart_guarantee_days = 30 -%}
+{%- comment -%} In-cart upsell: create a product "Neon Marker Pen Pack" with the handle below (or change the handle to yours). If it doesn't exist, the upsell simply stays hidden. {%- endcomment -%}
+{%- assign gl_cart_upsell_handle = 'neon-marker-pen-pack' -%}
 
 <div id="gl-cart" class="gl-cart" aria-hidden="true">
   <div class="gl-cart__overlay" data-gl-close></div>

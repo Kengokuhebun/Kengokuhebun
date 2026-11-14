@@ -10,8 +10,9 @@
   - Quantity +/−, remove, free-shipping progress bar per currency, optional one-click upsell
   - Checkout button, guarantee line, payment icons
 {%- endcomment -%}
-{%- assign gl_cart_upsell_handle = '' -%}{%- comment -%} product handle to offer in the cart, e.g. 'glowling-marker-refill-pack' (leave '' to hide) {%- endcomment -%}
 {%- assign gl_cart_guarantee_days = 30 -%}
+{%- comment -%} In-cart upsell: create a product "Neon Marker Pen Pack" with the handle below (or change the handle to yours). If it doesn't exist, the upsell simply stays hidden. {%- endcomment -%}
+{%- assign gl_cart_upsell_handle = 'neon-marker-pen-pack' -%}
 
 <div id="gl-cart" class="gl-cart" aria-hidden="true">
   <div class="gl-cart__overlay" data-gl-close></div>
