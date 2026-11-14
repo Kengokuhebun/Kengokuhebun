@@ -1,0 +1,328 @@
+<!-- Glowling PDP. Paste this whole file into ONE Custom Liquid SECTION on the Glowling product template. Pure HTML/CSS/JS, no Liquid. Prices load in each visitor's own currency. -->
+<div class="gw">
+<style>
+.gw{--ink:#1d2340;--glow:#ffd36e;--btn:#ffd84d;--cream:#fff8ec;--line:#ece4d3;--mut:#5a5f78;--ok:#1a8f5a;font-family:'Nunito','Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.45}
+.gw *{box-sizing:border-box;margin:0;padding:0}.gw img{display:block;max-width:100%;height:auto}.gw a{color:inherit}.gw button{font-family:inherit}
+.gw-bar{background:var(--ink);color:#fff;text-align:center;font-size:14px;padding:9px 16px}.gw-bar b{color:var(--glow)}
+.gw-hd{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.gw-logo{font-weight:900;font-size:22px;letter-spacing:.02em;text-decoration:none}.gw-logo span{color:#e8a700}
+.gw-cbtn{position:relative;width:42px;height:42px;border:0;background:none;cursor:pointer;color:var(--ink)}.gw-cbtn svg{width:26px;height:26px}
+.gw-cbtn i{position:absolute;top:2px;right:0;min-width:18px;height:18px;border-radius:9px;background:var(--btn);color:var(--ink);font-size:11px;font-style:normal;font-weight:800;display:none;align-items:center;justify-content:center;padding:0 4px}.gw-cbtn i.on{display:flex}
+.gw-w{max-width:1180px;margin:0 auto;padding:0 32px}@media(max-width:800px){.gw-w{padding:0 16px}}
+.gw-hero{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:56px;padding:20px 0 48px;align-items:start}@media(max-width:1000px){.gw-hero{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:0}}
+.gw-gal{position:sticky;top:16px}@media(max-width:1000px){.gw-gal{position:static;margin:0 -16px}}
+.gw-main{position:relative;background:var(--cream);border-radius:18px;overflow:hidden;aspect-ratio:1/1}@media(max-width:1000px){.gw-main{border-radius:0}}
+.gw-sc{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.gw-sc::-webkit-scrollbar{display:none}
+.gw-sc img{width:100%;height:100%;flex:0 0 100%;object-fit:cover;scroll-snap-align:center}
+.gw-pill{position:absolute;top:16px;left:16px;background:var(--glow);border-radius:99px;padding:6px 14px;font-size:13px;font-weight:800;z-index:2}
+.gw-th{display:flex;gap:10px;align-items:center;margin:14px 0 0}@media(max-width:1000px){.gw-th{padding:0 16px}}
+.gw-tr{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;flex:1}.gw-tr::-webkit-scrollbar{display:none}
+.gw-tr button{flex:0 0 62px;height:62px;border:2px solid transparent;border-radius:8px;overflow:hidden;background:var(--cream);cursor:pointer;padding:0}.gw-tr button.on{border-color:var(--ink)}.gw-tr img{width:100%;height:100%;object-fit:cover}
+.gw-arr{flex:0 0 36px;height:36px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:20px;cursor:pointer}
+.gw-proof{display:flex;align-items:center;gap:10px;margin:4px 0 8px;font-size:14px}
+.gw-faces{display:flex}.gw-faces span{width:26px;height:26px;border-radius:50%;border:2px solid #fff;margin-left:-7px;display:flex;align-items:center;justify-content:center;font-size:13px}.gw-faces span:first-child{margin-left:0}
+.gw-stars{color:#f5a623;letter-spacing:1px}
+.gw h1{font-size:30px;line-height:1.15;font-weight:900;margin:0 0 8px}@media(max-width:800px){.gw h1{font-size:25px}}
+.gw-pr{display:flex;align-items:center;gap:10px;margin:0 0 6px;flex-wrap:wrap}.gw-pr b{font-size:24px}.gw-pr s{color:#8a8a8a;font-size:16px}
+.gw-badge{background:#e23d2e;color:#fff;font-size:12px;font-weight:800;border-radius:6px;padding:4px 8px}
+.gw-sub{font-size:16px;color:var(--mut);margin:0 0 14px}
+.gw-offer{border:2px solid var(--ink);border-radius:12px;background:var(--cream);padding:10px 14px;text-align:center;margin:0 0 14px}.gw-offer p{font-weight:800;font-size:16px}.gw-offer small{display:block;font-size:13px;color:var(--mut);margin-top:2px}
+.gw-ben{background:var(--ink);color:#fff;border-radius:14px;padding:16px 16px 6px;margin:0 0 16px;box-shadow:0 0 0 3px rgba(255,211,110,.28)}
+.gw-ben h3{color:var(--glow);font-size:16px;margin:0 0 10px}
+.gw-ben li{list-style:none;display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:0 0 10px}.gw-ben li i{flex:0 0 26px;height:26px;border-radius:50%;background:rgba(255,211,110,.16);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:14px}
+.gw-tiers{display:grid;gap:10px;margin:0 0 12px}
+.gw-tier{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;background:#fff;text-align:left;width:100%;color:var(--ink)}
+.gw-tier.on{border-color:var(--ink);background:#fffaf0;box-shadow:0 0 0 3px rgba(255,211,110,.35)}
+.gw-tier .r{width:20px;height:20px;border-radius:50%;border:2px solid #b9b2a2}.gw-tier.on .r{border:6px solid var(--ink)}
+.gw-tier .n{display:block;font-weight:900;font-size:16px}.gw-tier .s{display:block;font-size:12px;color:var(--mut)}
+.gw-tier .p{text-align:right;line-height:1.2}.gw-tier .p b{display:block;font-size:17px}.gw-tier .p s{font-size:12px;color:#8a8a8a}
+.gw-tier .k{grid-column:2/4;display:flex;flex-wrap:wrap;gap:6px}.gw-tier .k span{font-size:12px;font-weight:700;background:#eaf7ef;color:var(--ok);border-radius:99px;padding:3px 9px}
+.gw-tier .t{position:absolute;top:-11px;right:14px;background:var(--ink);color:var(--glow);font-size:11px;font-weight:900;letter-spacing:.05em;border-radius:99px;padding:3px 10px}
+.gw-gift{display:flex;align-items:center;gap:12px;border:2px dashed #e8c76a;border-radius:12px;padding:10px 12px;margin:0 0 14px;background:#fffdf5}
+.gw-gift img{width:52px;height:52px;border-radius:8px;object-fit:cover}.gw-gift b{display:block;font-size:14px}.gw-gift small{font-size:12px;color:var(--mut)}.gw-gift em{margin-left:auto;font-style:normal;font-weight:900;color:var(--ok);font-size:13px}
+.gw-btn{display:block;width:100%;border:0;border-radius:12px;background:var(--btn);color:var(--ink);font-weight:900;font-size:18px;padding:17px 16px;cursor:pointer;box-shadow:0 4px 0 #d9b21f;text-align:center;text-decoration:none}.gw-btn:disabled{opacity:.6;cursor:default}
+.gw-err{display:none;color:#c0392b;font-size:13px;margin:8px 0 0;text-align:center}
+.gw-ship{text-align:center;font-size:14px;margin:12px 0 8px}
+.gw-pay{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:0 0 6px}.gw-pay span{width:46px;height:30px;border:1px solid var(--line);border-radius:5px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}.gw-pay img{width:100%;height:100%;object-fit:contain}.gw-pay .sm img{width:88%;height:88%}
+.gw-lock{text-align:center;font-size:13px;color:var(--mut)}
+.gw-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.gw-trust div{background:var(--cream);border-radius:10px;padding:10px 6px;text-align:center;font-size:12px;font-weight:700}.gw-trust div i{display:block;font-style:normal;font-size:20px}
+.gw-quote{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:12px;margin:0 0 16px}
+.gw-av{flex:0 0 46px;height:46px;border-radius:50%;background:var(--ink);color:var(--glow);font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center}
+.gw-quote q{display:block;font-style:italic;font-size:14px;margin:4px 0 6px}.gw-quote small{font-size:12px;color:var(--mut)}
+.gw-acc details{border-bottom:1px solid var(--line);padding:14px 0}
+.gw-acc summary,.gw-faq summary{cursor:pointer;font-weight:800;font-size:15px;list-style:none;position:relative;padding-right:26px}
+.gw-acc summary::-webkit-details-marker,.gw-faq summary::-webkit-details-marker{display:none}
+.gw-acc summary:after,.gw-faq summary:after{content:'+';position:absolute;right:4px;top:-3px;font-size:22px;font-weight:400}
+.gw-acc details[open] summary:after,.gw-faq details[open] summary:after{content:'\2013'}
+.gw-acc .c,.gw-faq p{padding-top:8px;font-size:14px;color:#3a3f58}.gw-acc .c p+p{margin-top:6px}
+.gw-mq{background:var(--glow);overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:900;font-size:14px;letter-spacing:.04em}
+.gw-mq div{display:inline-block;animation:gwmq 28s linear infinite}.gw-mq span{margin:0 22px}
+@keyframes gwmq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.gw-s{padding:44px 0}.gw-s+.gw-s{padding-top:8px}
+.gw-h2{font-size:28px;line-height:1.2;font-weight:900;margin:0 0 14px;text-align:center}@media(max-width:800px){.gw-h2{font-size:23px}}
+.gw-p{font-size:16px;margin:0 0 10px}
+.gw-dark{background:var(--ink);color:#fff;border-radius:20px;padding:30px 24px;display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:center}@media(max-width:800px){.gw-dark{grid-template-columns:1fr;padding:24px 18px}}
+.gw-dark .gw-h2{text-align:left;color:#fff}.gw-eb{color:var(--glow);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+.gw-im{width:100%;border-radius:14px;aspect-ratio:1/1;object-fit:cover}.gw-nar{max-width:620px;margin:0 auto 16px}
+.gw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}@media(max-width:800px){.gw-steps{grid-template-columns:1fr}}
+.gw-steps div{background:var(--cream);border-radius:14px;padding:16px;font-size:14px}.gw-steps i{width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--glow);font-style:normal;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 0 8px}.gw-steps b{display:block;font-size:16px}
+.gw-tbl{width:100%;max-width:720px;margin:0 auto;border-collapse:collapse;font-size:14px;table-layout:fixed}
+.gw-tbl th,.gw-tbl td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:center}.gw-tbl th:first-child,.gw-tbl td:first-child{text-align:left;width:42%}
+.gw-tbl .us{background:#fff3cf;font-weight:900}.gw-tbl .y{color:var(--ok);font-weight:900}.gw-tbl .x{color:#c0392b}
+.gw-cream{background:var(--cream);border-radius:20px;padding:28px 20px}
+.gw-box{list-style:none;max-width:440px;margin:0 auto}.gw-box li{padding:9px 0 9px 28px;position:relative;border-bottom:1px dashed #e0d6bf;font-size:15px}.gw-box li:before{content:'\2714';position:absolute;left:4px;color:var(--ok);font-weight:900}
+.gw-revs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:800px){.gw-revs{grid-template-columns:1fr}}
+.gw-rev{border:1px solid var(--line);border-radius:14px;padding:16px;font-size:14px}.gw-rev q{display:block;font-style:italic;margin:6px 0 8px}.gw-rev small{color:var(--mut)}
+.gw-ctaw{text-align:center}.gw-ctaw .gw-btn{max-width:440px;margin:0 auto}.gw-ctaw p{font-size:13px;color:var(--mut);margin-top:10px}
+.gw-g{display:flex;gap:18px;align-items:center;border:2px solid var(--ink);border-radius:18px;padding:20px;max-width:760px;margin:0 auto}
+.gw-seal{flex:0 0 86px;height:86px;border-radius:50%;background:var(--glow);font-weight:900;font-size:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}.gw-seal small{font-size:11px;letter-spacing:.1em}
+.gw-g .gw-h2{text-align:left;font-size:22px;margin-bottom:6px}
+.gw-faq{max-width:760px;margin:0 auto}.gw-faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.gw-stk{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(29,35,64,.12);padding:10px 16px;display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s}
+.gw-stk.on{transform:none}.gw-stk div{flex:1;font-size:13px;line-height:1.3}.gw-stk b{display:block;font-size:14px}.gw-stk .gw-btn{width:auto;flex:0 0 auto;font-size:15px;padding:12px 18px;box-shadow:none}
+.gw-scrim{position:fixed;inset:0;background:rgba(15,18,35,.5);opacity:0;visibility:hidden;transition:.25s;z-index:2147483646}.gw-scrim.on{opacity:1;visibility:visible}
+.gw-dr{position:fixed;top:0;right:0;height:100%;width:420px;max-width:92vw;background:#fff;z-index:2147483647;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .3s;box-shadow:-8px 0 30px rgba(0,0,0,.15)}.gw-dr.on{transform:none}
+.gw-dh{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line)}.gw-dh h5{font-size:18px;font-weight:900}
+.gw-dx{border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--ink)}
+.gw-fs{padding:12px 18px;background:var(--cream);font-size:13px;text-align:center}.gw-fs b{color:var(--ok)}
+.gw-fsb{height:8px;border-radius:9px;background:#e9e1cc;margin-top:8px;overflow:hidden}.gw-fsb i{display:block;height:100%;background:linear-gradient(90deg,#ffd36e,#f5a623);width:0;transition:width .4s}
+.gw-db{flex:1;overflow-y:auto;padding:6px 18px}
+.gw-li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.gw-li img{width:70px;height:70px;border-radius:10px;object-fit:cover;background:var(--cream)}
+.gw-li .m{flex:1;min-width:0}.gw-li .n{display:flex;justify-content:space-between;gap:8px;font-weight:800;font-size:14px}.gw-li .n s{color:#8a8a8a;font-weight:400;font-size:12px;margin-right:4px}
+.gw-li .f{color:var(--ok);font-weight:900}.gw-li small{display:block;font-size:12px;color:var(--mut);margin:2px 0 8px}
+.gw-q{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:8px}.gw-q button{width:30px;height:30px;border:0;background:none;cursor:pointer;font-size:16px;color:var(--ink)}.gw-q span{min-width:26px;text-align:center;font-size:14px;font-weight:700}
+.gw-up{margin:14px 0;border:2px dashed #e8c76a;border-radius:12px;padding:12px;background:#fffdf5}.gw-up h6{font-size:13px;font-weight:900;margin:0 0 8px}
+.gw-up .r{display:flex;align-items:center;gap:10px;font-size:13px}.gw-up img{width:52px;height:52px;border-radius:8px;object-fit:cover;background:var(--cream)}.gw-up .x{flex:1;font-weight:700}
+.gw-up button{border:0;border-radius:8px;background:var(--ink);color:#fff;font-weight:800;padding:8px 14px;cursor:pointer}
+.gw-emp{text-align:center;padding:40px 0 16px;color:var(--mut)}
+.gw-df{border-top:1px solid var(--line);padding:14px 18px 18px}.gw-tot{display:flex;justify-content:space-between;font-weight:900;font-size:17px;margin:0 0 4px}.gw-df small{display:block;font-size:12px;color:var(--mut);margin:0 0 12px}
+.gw-df .gw-pay{margin-top:10px}
+</style>
+
+<div class="gw-bar" id="gw-bar"><b>Buy 2, Get 1 FREE</b> + a FREE tracing book with every order</div>
+<header class="gw-hd"><a class="gw-logo" href="/">Glow<span>ling</span></a><button class="gw-cbtn" type="button" id="gw-cb" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h2.2l2.3 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/></svg><i id="gw-cn">0</i></button></header>
+
+<div class="gw-w">
+<section class="gw-hero">
+ <div class="gw-gal">
+  <div class="gw-main"><span class="gw-pill">Buy 2, Get 1 FREE</span><div class="gw-sc" id="gw-sc"></div></div>
+  <div class="gw-th"><div class="gw-tr" id="gw-tr"></div><button class="gw-arr" type="button" id="gw-nx" aria-label="Next image">&#8250;</button></div>
+ </div>
+
+ <div>
+  <div class="gw-proof"><div class="gw-faces" aria-hidden="true"><span style="background:#ffd36e">&#128103;</span><span style="background:#9be7d8">&#128102;</span><span style="background:#ffb3c7">&#128117;</span><span style="background:#b9c2ff">&#128104;</span></div><span><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>Trusted by families worldwide</b></span></div>
+  <h1>Glowling LED Drawing Board</h1>
+  <div class="gw-pr"><b data-p="1">&nbsp;</b><span class="gw-badge">BUY 2, GET 1 FREE</span></div>
+  <p class="gw-sub">A board that glows like a screen, where your child makes the picture instead of watching one.</p>
+
+  <div class="gw-offer"><p>&#127873; Buy 2, Get 1 FREE + a FREE tracing book</p><small id="gw-cut">Ships in 1&ndash;2 business days</small></div>
+
+  <div class="gw-ben"><h3>Why parents grab it before the iPad</h3><ul>
+   <li><i>&#10024;</i><span><b>It glows like a screen. It isn&rsquo;t one.</b> Neon lines light up the panel. No app, no ads, no autoplay.</span></li>
+   <li><i>&#127912;</i><span><b>They make something instead of scrolling.</b> Drawing, tracing, letters, games and little notes for the family.</span></li>
+   <li><i>&#129533;</i><span><b>Wipe it and start again.</b> One swipe gives a fresh page. No paper, nothing to throw away.</span></li>
+   <li><i>&#127769;</i><span><b>Doubles as a soft night light.</b> A calm glow for the wind-down before bed.</span></li>
+   <li><i>&#128268;</i><span><b>USB powered.</b> No batteries to buy or swap.</span></li>
+  </ul></div>
+
+  <div class="gw-tiers" id="gw-tiers" role="radiogroup" aria-label="Choose your bundle">
+   <button type="button" class="gw-tier" data-q="1" role="radio" aria-checked="false"><span class="r"></span><span><span class="n">Buy 1</span><span class="s">1 Glowling board</span></span><span class="p"><b data-p="1">&nbsp;</b></span><span class="k"><span>&#127873; FREE tracing book</span><span data-fs="1" hidden>&#128666; FREE shipping</span></span></button>
+   <button type="button" class="gw-tier on" data-q="3" role="radio" aria-checked="true"><span class="t">MOST POPULAR</span><span class="r"></span><span><span class="n">Buy 2, Get 1 FREE</span><span class="s">3 Glowling boards &middot; <span data-p="e"></span> each</span></span><span class="p"><b data-p="2">&nbsp;</b><s data-p="3"></s></span><span class="k"><span>&#10024; 1 board FREE</span><span>&#127873; FREE tracing book</span><span data-fs="2" hidden>&#128666; FREE shipping</span></span></button>
+  </div>
+
+  <div class="gw-gift"><img data-s="Product_contents_flat_lay_arrang__2d201ecf.jpg" alt="Glow Tracing Book"><div><b>Glow Tracing Book</b><small>Added to your order automatically</small></div><em>FREE</em></div>
+
+  <button class="gw-btn" type="button" id="gw-add">Add to cart</button>
+  <p class="gw-err" id="gw-err"></p>
+  <p class="gw-ship" id="gw-ship">&#128666; Fast tracked shipping &middot; 30-day money-back guarantee</p>
+  <div class="gw-pay" aria-label="Accepted payment methods">
+   <span title="Visa"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/visa.svg" alt="Visa" width="46" height="30" loading="lazy"></span>
+   <span title="Mastercard"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/mastercard.svg" alt="Mastercard" width="46" height="30" loading="lazy"></span>
+   <span title="American Express"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/amex.svg" alt="American Express" width="46" height="30" loading="lazy"></span>
+   <span title="PayPal"><img src="https://cdn.jsdelivr.net/npm/payment-icons@1.2.1/min/flat/paypal.svg" alt="PayPal" width="46" height="30" loading="lazy"></span>
+   <span class="sm" title="Apple Pay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/applepay.svg" alt="Apple Pay" width="46" height="30" loading="lazy"></span>
+   <span class="sm" title="Google Pay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlepay.svg" alt="Google Pay" width="46" height="30" loading="lazy"></span>
+  </div>
+  <p class="gw-lock">&#128274; Secure checkout</p>
+
+  <div class="gw-trust"><div><i>&#128666;</i>Tracked shipping</div><div><i>&#8617;&#65039;</i>30-day guarantee</div><div><i>&#128274;</i>Secure checkout</div></div>
+
+  <!-- PLACEHOLDER testimonial: replace with a real customer review before running paid traffic -->
+  <div class="gw-quote"><span class="gw-av" aria-hidden="true">J</span><div><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>I can finally get through a shower without the TV on. My 4-year-old drags the board to the bathroom doorway and draws me rockets until I&rsquo;m done. It doesn&rsquo;t fix every afternoon, but it&rsquo;s the first thing I reach for now instead of the iPad.</q><small><b>Jess M.</b> &middot; Ohio, USA</small></div></div>
+
+  <div class="gw-acc">
+   <details open><summary>Description</summary><div class="c"><p><b>Glow time, not screen time.</b></p><p>Glowling is a clear acrylic board on a lit stand. Your child draws with neon markers and the lines glow against the panel. There&rsquo;s no app, no internet and nothing to watch. It only does something when they pick up a marker.</p></div></details>
+   <details><summary>How to use</summary><div class="c"><p>1. Plug the USB cable into any phone charger or power bank.</p><p>2. Switch on and draw with the neon markers.</p><p>3. Wipe with a soft damp cloth and start again.</p></div></details>
+   <details><summary>What&rsquo;s in the box</summary><div class="c"><p>1 &times; LED drawing board, 8 &times; neon erasable markers, 1 &times; stand, 1 &times; USB cable, gift-ready packaging. Plus a FREE Glow Tracing Book with every order.</p></div></details>
+   <details><summary>Shipping &amp; returns</summary><div class="c"><p>We ship to the US, Canada, the UK and Australia with tracking. Delivery times for your country are shown at checkout.</p><p>Covered by our 30-day money-back guarantee.</p></div></details>
+  </div>
+ </div>
+</section>
+</div>
+
+<div class="gw-mq" aria-hidden="true"><div><span>GLOW TIME, NOT SCREEN TIME</span><span>&#10022;</span><span>NO APPS &middot; NO ADS &middot; NO AUTOPLAY</span><span>&#10022;</span><span>WIPE &amp; REDRAW</span><span>&#10022;</span><span>BUY 2, GET 1 FREE</span><span>&#10022;</span><span>GLOW TIME, NOT SCREEN TIME</span><span>&#10022;</span><span>NO APPS &middot; NO ADS &middot; NO AUTOPLAY</span><span>&#10022;</span><span>WIPE &amp; REDRAW</span><span>&#10022;</span><span>BUY 2, GET 1 FREE</span><span>&#10022;</span></div></div>
+
+<div class="gw-w">
+<section class="gw-s"><div class="gw-dark">
+ <div><p class="gw-eb">For the part of the day the iPad usually wins</p><h2 class="gw-h2">Dinner to cook. A shower to squeeze in. The tablet is right there.</h2>
+ <p class="gw-p">Plenty of toys only last a few minutes once a tablet is in the room. Glowling lights up too, but here your child is the one making the picture, not watching one.</p>
+ <p class="gw-p">It won&rsquo;t replace every screen, and we won&rsquo;t pretend it does. It gives you something to try first, and a bit of quiet before the screen comes out.</p></div>
+ <img class="gw-im" data-s="Child_drawing_at_kitchen_bench_1c1377cb.jpg" alt="Child drawing on a glowing Glowling board while dinner is cooked" width="1024" height="1024">
+</div></section>
+
+<section class="gw-s"><h2 class="gw-h2">How it works</h2>
+ <img class="gw-im gw-nar" data-s="Creating_e-commerce_infographic___faa1c1dd.jpg" alt="How Glowling works: draw, glow, wipe" width="1024" height="1024">
+ <div class="gw-steps"><div><i>1</i><b>Plug it in</b>USB cable into any phone charger or power bank.</div><div><i>2</i><b>Draw in neon</b>The fluorescent markers glow against the lit panel.</div><div><i>3</i><b>Wipe and repeat</b>A soft damp cloth clears it for the next masterpiece.</div></div>
+</section>
+
+<section class="gw-s"><h2 class="gw-h2">Four ways to use it</h2>
+ <img class="gw-im gw-nar" data-s="Create_2x2_product_grid_photos_3eee15da.jpg" alt="Drawing, letters and notes, tracing, night light" width="1024" height="1024">
+</section>
+
+<section class="gw-s"><h2 class="gw-h2">Glowling vs the usual options</h2>
+ <img class="gw-im gw-nar" data-s="Split_screen_product_comparison___75c3f7d2.jpg" alt="Glow time vs screen time" width="1024" height="1024">
+ <table class="gw-tbl"><thead><tr><th></th><th class="us">Glowling</th><th>Tablet</th><th>Paper &amp; crayons</th></tr></thead><tbody>
+  <tr><td>Lights up like a screen</td><td class="us y">&#10004;</td><td class="y">&#10004;</td><td class="x">&#10006;</td></tr>
+  <tr><td>Your child creates, not consumes</td><td class="us y">&#10004;</td><td class="x">&#10006;</td><td class="y">&#10004;</td></tr>
+  <tr><td>No apps, ads or autoplay</td><td class="us y">&#10004;</td><td class="x">&#10006;</td><td class="y">&#10004;</td></tr>
+  <tr><td>Reusable, no paper waste</td><td class="us y">&#10004;</td><td class="y">&#10004;</td><td class="x">&#10006;</td></tr>
+  <tr><td>Calm glow for bedtime</td><td class="us y">&#10004;</td><td class="x">&#10006;</td><td class="x">&#10006;</td></tr>
+ </tbody></table>
+</section>
+
+<section class="gw-s"><div class="gw-cream"><h2 class="gw-h2">What&rsquo;s in the box</h2>
+ <img class="gw-im gw-nar" data-s="Product_contents_flat_lay_arrang__2d201ecf.jpg" alt="Everything in the Glowling box" width="1024" height="1024">
+ <ul class="gw-box"><li>1 &times; LED drawing board</li><li>8 &times; neon erasable markers</li><li>1 &times; stand</li><li>1 &times; USB cable</li><li>Gift-ready packaging</li><li><b>FREE Glow Tracing Book</b> with every order</li></ul>
+</div></section>
+
+<section class="gw-s"><h2 class="gw-h2">From dinner time to bedtime</h2>
+ <img class="gw-im gw-nar" data-s="Create_product_collage_layout_46c12074.jpg" alt="Glowling during the day and as a night light" width="1024" height="1024">
+</section>
+
+<!-- PLACEHOLDER reviews: replace with real customer reviews before running paid traffic -->
+<section class="gw-s"><h2 class="gw-h2">What families say</h2><div class="gw-revs">
+ <div class="gw-rev"><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>I work from home and my 3-year-old used to get the TV for every call. Now she sits next to my desk drawing glowing fish for me. I still use the TV some days, but it isn&rsquo;t my first move anymore.</q><small><b>Priya S.</b> &middot; Toronto, Canada</small></div>
+ <div class="gw-rev"><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>Bought two for my grandkids so they&rsquo;d have something special at my house. The little one asks to &lsquo;do the glow&rsquo; before she even takes her coat off.</q><small><b>Margaret H.</b> &middot; Leeds, UK</small></div>
+ <div class="gw-rev"><span class="gw-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><q>We leave his last drawing up as a night light. Bedtime has gone from fighting over the tablet to picking which drawing stays on.</q><small><b>Daniel R.</b> &middot; Brisbane, Australia</small></div>
+</div></section>
+
+<section class="gw-s gw-ctaw">
+ <img class="gw-im gw-nar" data-s="Promotional_graphic_for_drawing___9b5a4179.jpg" alt="Buy 2, Get 1 FREE plus a free tracing book" width="1024" height="1024">
+ <a class="gw-btn" href="#gw-tiers" data-go>Claim Buy 2, Get 1 FREE</a><p>&#127873; FREE tracing book with every order</p>
+</section>
+
+<section class="gw-s"><div class="gw-g"><div class="gw-seal">30<small>DAY</small></div><div><h2 class="gw-h2">Try it for 30 days</h2><p class="gw-p">If it doesn&rsquo;t earn a place in your evenings, email us within 30 days and we&rsquo;ll refund you. No awkward questions.</p></div></div></section>
+
+<section class="gw-s"><h2 class="gw-h2">Questions parents ask</h2><div class="gw-faq">
+ <details><summary>What age is it for?</summary><p>Recommended for ages 3+. Younger children should be supervised with the markers.</p></details>
+ <details><summary>Isn&rsquo;t a glowing board just another screen?</summary><p>No. There&rsquo;s no app, no internet and nothing to watch. The light only makes your child&rsquo;s own drawing glow, and it does nothing until they pick up a marker.</p></details>
+ <details><summary>Will the board scratch or smear?</summary><p>Use only the included markers and wipe with a soft damp cloth, not paper towel or anything abrasive. Let it dry before the next drawing and it stays clear.</p></details>
+ <details><summary>Do the markers wipe off easily?</summary><p>Yes. A soft damp cloth clears the board. Keep the caps on between drawings so the markers don&rsquo;t dry out.</p></details>
+ <details><summary>How is it powered?</summary><p>By the USB cable, from a phone charger, laptop or power bank. No batteries needed.</p></details>
+ <details><summary>Can it be used as a night light?</summary><p>Yes. Many families leave a drawing up and use the glow for the bedtime wind-down.</p></details>
+ <details><summary>How long does shipping take?</summary><p>We ship to the US, Canada, the UK and Australia. Delivery times for your country are shown at checkout, and you&rsquo;ll get a tracking link by email as soon as your order ships.</p></details>
+ <details><summary>What if my child doesn&rsquo;t like it?</summary><p>You&rsquo;re covered by our 30-day money-back guarantee.</p></details>
+</div></section>
+
+<section class="gw-s gw-ctaw"><a class="gw-btn" href="#gw-tiers" data-go>Claim Buy 2, Get 1 FREE</a></section>
+</div>
+
+<div class="gw-stk" id="gw-stk"><div><b id="gw-sn">Buy 2, Get 1 FREE</b><span id="gw-st"></span> &middot; &#127873; FREE tracing book</div><button class="gw-btn" type="button" id="gw-sa">Add to cart</button></div>
+
+<div class="gw-scrim" id="gw-scrim"></div>
+<aside class="gw-dr" id="gw-dr" aria-hidden="true" aria-label="Your cart">
+ <div class="gw-dh"><h5 id="gw-dt">Your cart</h5><button class="gw-dx" type="button" id="gw-dx" aria-label="Close cart">&times;</button></div>
+ <div class="gw-fs" id="gw-fs"><span id="gw-fst"></span><div class="gw-fsb"><i id="gw-fsb"></i></div></div>
+ <div class="gw-db" id="gw-db"></div>
+ <div class="gw-df"><div class="gw-tot"><span>Subtotal</span><span id="gw-tot"></span></div><small>Taxes and shipping calculated at checkout</small><button class="gw-btn" type="button" id="gw-co">Checkout securely</button></div>
+</aside>
+
+<script>
+(function(){
+/* ===== SETTINGS ===== */
+var P='https://cdn.shopify.com/s/files/1/1024/9479/8151/files/';
+var H={board:'glowling-led-drawing-board',gift:'glow-tracing-book',pens:'neon-marker-pen-pack'};
+var ID={board:55862345564487,gift:55862347301191,pens:55862347333959};          /* fallback variant IDs */
+var PRICE={GBP:2999,USD:3499,CAD:4499,AUD:4999};                                  /* fallback, replaced by live prices */
+var FREE={GBP:4000,USD:5000,CAD:7000,AUD:7500};                                   /* free shipping threshold, in cents */
+var CUT={USD:'Dec 15',CAD:'Dec 12',GBP:'15 December',AUD:'18 December'};           /* last order date for holiday delivery */
+var LOC={USD:'en-US',CAD:'en-CA',GBP:'en-GB',AUD:'en-AU'};
+var G=['Boy_drawing_on_glowing_board_161c9065.jpg','Promotional_graphic_for_drawing___9b5a4179.jpg','Creating_e-commerce_infographic___faa1c1dd.jpg','Split_screen_product_comparison___75c3f7d2.jpg','Create_2x2_product_grid_photos_3eee15da.jpg','Create_product_collage_layout_46c12074.jpg','Glowing_board_product_photo_design_d92ae588.jpg','Child_drawing_at_kitchen_bench_1c1377cb.jpg','Product_contents_flat_lay_arrang__2d201ecf.jpg'];
+/* ==================== */
+var $=function(i){return document.getElementById(i)};
+var S=window.Shopify||{},R=(S.routes&&S.routes.root)||'/';if(R.slice(-1)!=='/')R+='/';
+var CUR=(S.currency&&S.currency.active)||'GBP',RATE=+(S.currency&&S.currency.rate)||1,unit=PRICE[CUR]||Math.round(2999*RATE),qty=3,pens=null;
+function M(c){try{return new Intl.NumberFormat(LOC[CUR]||undefined,{style:'currency',currency:CUR}).format(c/100)}catch(e){return (c/100).toFixed(2)+' '+CUR}}
+document.querySelectorAll('.gw img[data-s]').forEach(function(i){i.src=P+i.dataset.s+'?width=1200';i.loading='lazy'});
+
+/* gallery */
+var sc=$('gw-sc'),tr=$('gw-tr'),a='',b='';
+G.forEach(function(u,i){a+='<img src="'+P+u+'?width=1200" alt="Glowling LED Drawing Board image '+(i+1)+'"'+(i?' loading="lazy"':'')+' width="1024" height="1024">';b+='<button type="button" data-i="'+i+'"'+(i?'':' class="on"')+' aria-label="Image '+(i+1)+'"><img src="'+P+u+'?width=150" alt="" loading="lazy"></button>'});
+sc.innerHTML=a;tr.innerHTML=b;
+function go(i){sc.scrollTo({left:i*sc.clientWidth,behavior:'smooth'})}
+tr.addEventListener('click',function(e){var t=e.target.closest('button');if(t)go(+t.dataset.i)});
+sc.addEventListener('scroll',function(){var i=Math.round(sc.scrollLeft/sc.clientWidth);tr.querySelectorAll('button').forEach(function(x,j){x.classList.toggle('on',j===i);if(j===i&&x.scrollIntoView&&tr.scrollWidth>tr.clientWidth)tr.scrollLeft=x.offsetLeft-tr.clientWidth/2})});
+$('gw-nx').onclick=function(){var i=Math.round(sc.scrollLeft/sc.clientWidth)+1;go(i>=G.length?0:i)};
+
+/* prices + tiers */
+function paint(){var f=FREE[CUR]||0,p1=unit,p2=unit*2;
+ document.querySelectorAll('.gw [data-p]').forEach(function(e){var k=e.dataset.p;e.textContent=M(k==='1'?p1:k==='2'?p2:k==='3'?unit*3:Math.round(p2/3))});
+ document.querySelectorAll('.gw [data-fs]').forEach(function(e){e.hidden=!(f&&(e.dataset.fs==='1'?p1:p2)>=f)});
+ $('gw-ship').innerHTML=f?'&#128666; FREE tracked shipping on orders over '+M(f)+' &middot; 30-day money-back guarantee':'&#128666; Fast tracked shipping &middot; 30-day money-back guarantee';
+ if(CUT[CUR])$('gw-cut').innerHTML='&#127876; Order by <b>'+CUT[CUR]+'</b> for holiday delivery &middot; Ships in 1&ndash;2 business days';
+ var on=document.querySelector('.gw-tier.on');$('gw-sn').textContent=on.querySelector('.n').textContent;$('gw-st').textContent=' '+M(qty===3?p2:p1);
+ $('gw-add').textContent='Add to cart · '+M(qty===3?p2:p1);$('gw-sa').textContent='Add to cart'}
+document.querySelectorAll('.gw-tier').forEach(function(t){t.onclick=function(){document.querySelectorAll('.gw-tier').forEach(function(x){x.classList.toggle('on',x===t);x.setAttribute('aria-checked',x===t)});qty=+t.dataset.q;paint()}});
+function pj(h){return fetch(R+'products/'+h+'.js',{headers:{Accept:'application/json'}}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+pj(H.board).then(function(p){var v=p.variants.filter(function(x){return x.available})[0]||p.variants[0];ID.board=v.id;unit=v.price;paint()}).catch(function(){});
+pj(H.gift).then(function(p){ID.gift=p.variants[0].id}).catch(function(){});
+pj(H.pens).then(function(p){var v=p.variants[0];ID.pens=v.id;pens={t:p.title,p:v.price,img:p.featured_image||'',ok:v.available}}).catch(function(){});
+paint();
+
+/* cart drawer */
+var dr=$('gw-dr'),scr=$('gw-scrim');
+function open_(){dr.classList.add('on');scr.classList.add('on');dr.setAttribute('aria-hidden','false');load()}
+function close_(){dr.classList.remove('on');scr.classList.remove('on');dr.setAttribute('aria-hidden','true')}
+$('gw-cb').onclick=open_;$('gw-dx').onclick=close_;scr.onclick=close_;
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close_()});
+document.addEventListener('click',function(e){var l=e.target.closest&&e.target.closest('a[href]');if(!l||l.closest('.gw-dr'))return;var h=l.getAttribute('href').split('?')[0].split('#')[0];if(/\/cart\/?$/.test(h)){e.preventDefault();open_()}},true);
+function img(u){if(!u)return '';u=typeof u==='string'?u:(u.url||'');return u.indexOf('//')===0?'https:'+u:u}
+function render(c){if(c.currency&&c.currency!==CUR){CUR=c.currency;paint()}
+ var n=c.item_count,f=FREE[CUR]||0,t=c.total_price;$('gw-cn').textContent=n;$('gw-cn').classList.toggle('on',n>0);
+ $('gw-dt').textContent=n?'Your cart ('+n+')':'Your cart';$('gw-tot').textContent=M(t);$('gw-co').disabled=!n;
+ if(f&&n){$('gw-fs').style.display='block';$('gw-fst').innerHTML=t>=f?'&#127881; You&rsquo;ve unlocked <b>FREE shipping</b>':'You&rsquo;re <b>'+M(f-t)+'</b> away from FREE shipping';$('gw-fsb').style.width=Math.min(100,t/f*100)+'%'}else $('gw-fs').style.display='none';
+ if(!n){$('gw-db').innerHTML='<p class="gw-emp">Your cart is empty.</p><button class="gw-btn" type="button" id="gw-ea">Add Buy 2, Get 1 FREE</button>';$('gw-ea').onclick=function(){qty=3;add()};return}
+ var h='',hasPens=false;
+ c.items.forEach(function(it,k){var gift=it.variant_id===ID.gift||it.id===ID.gift;if(it.variant_id===ID.pens||it.id===ID.pens)hasPens=true;
+  var price=gift||it.final_line_price===0?'<span class="f">FREE</span>':(it.original_line_price>it.final_line_price?'<span><s>'+M(it.original_line_price)+'</s>'+M(it.final_line_price)+'</span>':'<span>'+M(it.final_line_price)+'</span>');
+  var note=gift?'Free gift with your order':((it.line_level_discount_allocations||[]).map(function(d){return d.discount_application&&d.discount_application.title}).filter(Boolean).join(', ')||it.variant_title||'');
+  h+='<div class="gw-li"><img src="'+img(it.image||it.featured_image)+'" alt=""><div class="m"><div class="n"><span>'+it.product_title+'</span>'+price+'</div><small>'+note+'</small>'+
+  (gift?'':'<div class="gw-q"><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity-1)+'" aria-label="Decrease">'+(it.quantity>1?'&minus;':'&#128465;')+'</button><span>'+it.quantity+'</span><button type="button" data-l="'+(k+1)+'" data-q="'+(it.quantity+1)+'" aria-label="Increase">+</button></div>')+'</div></div>'});
+ if(pens&&pens.ok&&!hasPens)h+='<div class="gw-up"><h6>Add extra neon markers?</h6><div class="r"><img src="'+img(pens.img)+'" alt=""><span class="x">'+pens.t+'</span><span>'+M(pens.p)+'</span><button type="button" id="gw-pn">Add</button></div></div>';
+ $('gw-db').innerHTML=h;
+ $('gw-db').querySelectorAll('.gw-q button').forEach(function(b){b.onclick=function(){post('cart/change.js',{line:+b.dataset.l,quantity:+b.dataset.q}).then(gift_)}});
+ if($('gw-pn'))$('gw-pn').onclick=function(){this.disabled=true;post('cart/add.js',{items:[{id:ID.pens,quantity:1}]})}}
+function load(){return fetch(R+'cart.js',{headers:{Accept:'application/json'}}).then(function(r){return r.json()}).then(function(c){render(c);return c}).catch(function(){})}
+function post(u,b){return fetch(R+u,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(b)}).then(function(r){if(!r.ok)throw 0;return load()})}
+/* remove the free book if no boards are left in the cart */
+function gift_(c){if(!c)return;var boards=0,gl=0;c.items.forEach(function(it,k){if(it.variant_id===ID.board)boards+=it.quantity;if(it.variant_id===ID.gift)gl=k+1});if(!boards&&gl)return post('cart/change.js',{line:gl,quantity:0})}
+$('gw-co').onclick=function(){location.href=R+'checkout'};
+
+/* add to cart */
+var btn=$('gw-add'),err=$('gw-err');
+function add(){btn.disabled=true;$('gw-sa').disabled=true;btn.textContent='Adding...';err.style.display='none';
+ fetch(R+'cart.js',{headers:{Accept:'application/json'}}).then(function(r){return r.json()}).catch(function(){return {items:[]}}).then(function(c){
+  var items=[{id:ID.board,quantity:qty}];if(ID.gift&&!c.items.some(function(i){return i.variant_id===ID.gift}))items.push({id:ID.gift,quantity:1});
+  return post('cart/add.js',{items:items})})
+ .then(function(){btn.disabled=false;$('gw-sa').disabled=false;paint();open_()})
+ .catch(function(){btn.disabled=false;$('gw-sa').disabled=false;paint();err.textContent='Something went wrong. Please try again.';err.style.display='block'})}
+btn.onclick=add;$('gw-sa').onclick=add;
+
+/* sticky bar + scroll links */
+var stk=$('gw-stk'),tk=0;function sk(){tk=0;stk.classList.toggle('on',btn.getBoundingClientRect().bottom<0)}
+window.addEventListener('scroll',function(){if(!tk)tk=requestAnimationFrame(sk)},{passive:true});sk();
+document.querySelectorAll('.gw [data-go]').forEach(function(l){l.onclick=function(e){e.preventDefault();$('gw-tiers').scrollIntoView({behavior:'smooth',block:'center'})}});
+load();
+})();
+</script>
+</div>

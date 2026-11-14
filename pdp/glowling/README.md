@@ -1,8 +1,24 @@
-# Glowling PDP: custom liquid blocks
+# Glowling PDP
 
-Layout follows the competitor's product page block for block, with: benefits above Add to cart, trust + payment badges and a testimonial below it, extra social proof, a below-the-fold sales section, and a working side cart. All copy is original.
+## Use this: `GLOWLING-PDP-one-section.html` (one paste, whole page)
+Built on the same structure as the working Ninu page: one Custom Liquid **section**, one root `<div class="gw">` with its own `<style>` and `<script>`, pure HTML/CSS/JS, no Liquid. 39 KB (under the 50 KB limit).
 
-**Quickest route:** open `ALL-BLOCKS-paste.liquid`. Every block is there with a "PASTE INTO" line telling you where it goes. Or paste the individual files below.
+It contains: announcement bar, header with its own cart button, swipe gallery (9 images from Files) with thumbnails, trust line, title, price, offer box with the holiday date for each country, benefits, Buy 1 / Buy 2 Get 1 FREE tiers, the free tracing book, Add to cart, shipping line, payment icons, trust row, testimonial, accordions, marquee, the full below-the-fold sales sections, a sticky add-to-cart bar, and its own side cart (free-shipping bar, quantity +/−, pen pack upsell, checkout).
+
+**Prices:** loaded from `/products/glowling-led-drawing-board.js`, which returns the visitor's own market price, so UK sees £29.99, US $34.99, Canada $44.99 and Australia $49.99 from the fixed prices in Markets. Free-shipping threshold and holiday date switch by currency. All settings are at the top of the `<script>` under `SETTINGS`.
+
+**Paste steps**
+1. Online Store → Themes → Customize → Products → **Default product** (or a new template assigned to the Glowling product only).
+2. Hide or remove the **Product information** section (and anything else on the template you don't want).
+3. **Add section → Custom Liquid** → paste the whole file → Save.
+4. Theme settings → **Cart → Cart type → Page**, so the theme's own drawer doesn't open on top. Theme links to `/cart` open the Glowling drawer instead.
+
+Tested in Chromium against a mock store in all four currencies: gallery, tier switch, Add to cart (3 boards + free book), automatic discount shown in the cart, free-shipping bar, upsell, quantity, removing the last board also removes the free book, ESC/overlay/close, theme cart link, sticky bar, CTA scroll, checkout, no horizontal scroll at 390 px, no JS errors.
+
+---
+
+## Older version: separate Custom Liquid blocks
+Layout follows the competitor's product page block for block. Use the one-section file above instead.
 
 ## Store status (Glowling, x5a9bu-97.myshopify.com · GBP · Horizon theme)
 Created via the Admin API, all as **drafts** (nothing is live until you set them to Active):
