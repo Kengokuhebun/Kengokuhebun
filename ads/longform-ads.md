@@ -72,7 +72,7 @@ Each copy below is the Meta "Primary Text." The Headline and Description under e
 ## C1. Dinner — Belly Band structure (priced failed-toys ledger, "that is the gift" close)
 
 **Headline:** The $35 thing that beat $847 of toys-I-tried-first.
-**Description:** Buy 2, Get 1 FREE this week. Direct from Glowling, not on Amazon.
+**Description:** Black Friday: Buy 2, Get 1 FREE. Direct from Glowling, not on Amazon. Ends Cyber Monday.
 **Hooks (A/B first lines):**
 1. I added up what I had spent trying to keep my boys off the iPad before dinner. $847 since January.
 2. I made the list on my phone at 5:51 pm on a Wednesday, while Noah cried for Bluey and Eli pulled at the oven handle.
@@ -140,14 +140,14 @@ I did my ledger on the phone that Wednesday night. $847.
 
 I bought three boards last week. $69.98. Free tracing book. Free shipping. I wiped the old ledger on my phone and started a new one. It has one line on it. "The glow board."
 
-If what I wrote at the top of this hurt a little, click below. The Buy 2, Get 1 Free is only on the brand's own site. It is only this week.
+If what I wrote at the top of this hurt a little, click below. The Buy 2, Get 1 Free is only on the brand's own site. The Black Friday deal ends Cyber Monday.
 
 ---
 
 ## C2. Shower — Noverly Nattokinase structure (mid-failure present-tense open)
 
 **Headline:** 7:14 am. The phone playing Duggee. And me in the dressing gown.
-**Description:** 30-day money-back guarantee, direct from Glowling. Buy 2, Get 1 Free this week.
+**Description:** Black Friday: Buy 2, Get 1 Free. Direct from Glowling. 30-day money-back guarantee. Ends Cyber Monday.
 **Hooks (A/B first lines):**
 1. Picture me, in my dressing gown, hair wet, sitting on the bathroom floor at 7:14 am, with Freya on the other side of the door crying "Mummy."
 2. I was in the shower for four minutes. The phone on the shelf was playing Hey Duggee because it is the only thing that buys me enough time to wash my hair.
@@ -197,14 +197,14 @@ Thirty-day money-back if it does not land in your house. Direct, from the compan
 
 The next morning I showered in peace. I did not even think about the panel until I came out and realised I had not heard her say "mummy" once.
 
-If you are googling "something that works that is not the iPad" at 11pm tonight, the answer is at the link below. The Buy 2, Get 1 Free is only on the brand's own site. The 30-day guarantee only works there. Not for long.
+If you are googling "something that works that is not the iPad" at 11pm tonight, the answer is at the link below. The Buy 2, Get 1 Free is only on the brand's own site. The 30-day guarantee only works there. Black Friday to Cyber Monday only.
 
 ---
 
 ## C3. WFH Call — AirVex structure (insider-turned-patient, reverse-instruction open, "it was not you" absolution)
 
 **Headline:** A preschool teacher's one honest answer for parents on video calls.
-**Description:** Not on Amazon. Only direct from Glowling. Buy 2, Get 1 Free this week.
+**Description:** Black Friday: Buy 2, Get 1 Free, direct from Glowling. Not on Amazon. Ends Cyber Monday.
 **Hooks (A/B first lines):**
 1. If you are a parent trying to get through a work call with a 3-year-old in the house, do not buy another "quiet activity kit."
 2. I taught 22 three-year-olds a day for nine years. I still used the iPad during Zoom calls at home. Here is why, and what finally stopped it.
@@ -268,14 +268,14 @@ Thirty days to call it. The brand refunds you. Because you bought from them.
 
 If you are parent trying to get through a work call with a kid in the house, do not buy another "quiet activity kit." Buy the one thing in your house that is loud enough to compete with the only thing in your house that has ever been loud enough. Her own picture, in neon, on a lit panel, for as long as the Zoom lasts.
 
-Direct from the brand. Not on Amazon. Buy 2, Get 1 Free this week.
+Direct from the brand. Not on Amazon. Buy 2, Get 1 Free this Black Friday, ends Cyber Monday.
 
 ---
 
 ## C4. Bedtime — Noverly Magnesium structure (secret-tease open, discovery, control-case sibling)
 
 **Headline:** I was going to write about the dinner-time thing. This was bigger.
-**Description:** The accidental night light. Direct from Glowling. Buy 2, Get 1 Free this week.
+**Description:** The accidental night light. Black Friday: Buy 2, Get 1 Free, direct from Glowling. Ends Cyber Monday.
 **Hooks (A/B first lines):**
 1. I was going to write about the dinner-time thing. Then day nine happened.
 2. I bought it for the kitchen window before dinner. The reason I am telling you is what happened on a Tuesday at 7:34 pm.
@@ -345,14 +345,14 @@ I was going to write about the dinner-time thing.
 
 I wrote about the bedtime thing because that is the thing nobody tells you.
 
-Here is the link. Buy 2, Get 1 Free this week, only on their own site.
+Here is the link. Buy 2, Get 1 Free this Black Friday, only on their own site, ending Cyber Monday.
 
 ---
 
 ## C5. Gift — GoodGrove structure (relationship-loss open, family excused not blamed, payoff returns the opening)
 
 **Headline:** The gift my grandchildren actually asked for on Boxing Day.
-**Description:** Buy 2, Get 1 Free + a free tracing book. Direct from Glowling. Never on Amazon.
+**Description:** Black Friday: Buy 2, Get 1 Free + a free tracing book. Direct from Glowling, never on Amazon. Ends Cyber Monday.
 **Hooks (A/B first lines):**
 1. The grandkids came for a long weekend. The 8-year-old opened the door, sat on the couch with his iPad, and was still there at 4pm.
 2. I have been a grandmother for eight years. The last three, I have been the lady who serves the sandwiches while the grandchildren watch screens in my living room.
@@ -428,4 +428,4 @@ The 8-year-old left on Sunday with the drawing of me in his bag. The 6-year-old 
 
 I am the grandma again. Not the sandwich lady.
 
-The link is below. The Buy 2, Get 1 Free is only on their own site. I know, because I checked.
+The link is below. The Buy 2, Get 1 Free is only on their own site, and only this Black Friday weekend through to Cyber Monday. I know, because I checked.

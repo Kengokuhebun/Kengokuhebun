@@ -100,13 +100,13 @@
 .gw-df .gw-pay{margin-top:10px}
 </style>
 
-<div class="gw-bar" id="gw-bar"><b>Buy 2, Get 1 FREE</b> + a FREE tracing book with every order</div>
+<div class="gw-bar" id="gw-bar"><b>Black Friday:</b> Buy 2, Get 1 FREE + a FREE tracing book &middot; Ends Cyber Monday</div>
 <header class="gw-hd"><a class="gw-logo" href="/">Glow<span>ling</span></a><button class="gw-cbtn" type="button" id="gw-cb" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h2.2l2.3 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/></svg><i id="gw-cn">0</i></button></header>
 
 <div class="gw-w">
 <section class="gw-hero">
  <div class="gw-gal">
-  <div class="gw-main"><span class="gw-pill">Buy 2, Get 1 FREE</span><div class="gw-sc" id="gw-sc"></div></div>
+  <div class="gw-main"><span class="gw-pill">Black Friday Sale</span><div class="gw-sc" id="gw-sc"></div></div>
   <div class="gw-th"><div class="gw-tr" id="gw-tr"></div><button class="gw-arr" type="button" id="gw-nx" aria-label="Next image">&#8250;</button></div>
  </div>
 
@@ -117,7 +117,7 @@
 
   <div class="gw-offer">
    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gw-i gw-i--lg"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-   <div><b>Buy 2, Get 1 FREE + a FREE tracing book</b><small id="gw-cut">Ships in 1&ndash;2 business days</small></div>
+   <div><b>Black Friday: Buy 2, Get 1 FREE + a FREE tracing book</b><small id="gw-cut">Ends Cyber Monday &middot; Ships in 1&ndash;2 business days</small></div>
   </div>
 
   <div class="gw-tiers" id="gw-tiers" role="radiogroup" aria-label="Choose your bundle">
@@ -277,7 +277,7 @@ function paint(){var f=FREE[CUR]||0,p1=unit,p2=unit*2;
  document.querySelectorAll('.gw [data-p]').forEach(function(e){var k=e.dataset.p;e.textContent=M(k==='1'?p1:k==='2'?p2:k==='3'?unit*3:Math.round(p2/3))});
  document.querySelectorAll('.gw [data-fs]').forEach(function(e){e.hidden=!(f&&(e.dataset.fs==='1'?p1:p2)>=f)});
  $('gw-ship').innerHTML=(f?ICN.truck+'<span>FREE tracked shipping on orders over '+M(f)+' &middot; 30-day money-back guarantee</span>':ICN.truck+'<span>Fast tracked shipping &middot; 30-day money-back guarantee</span>');
- if(CUT[CUR])$('gw-cut').innerHTML=ICN.cal+' Order by <b>'+CUT[CUR]+'</b> for holiday delivery &middot; Ships in 1&ndash;2 business days';
+ if(CUT[CUR])$('gw-cut').innerHTML='Ends Cyber Monday &middot; '+ICN.cal+' Order by <b>'+CUT[CUR]+'</b> for holiday delivery';
  var on=document.querySelector('.gw-tier.on');$('gw-sn').textContent=on.querySelector('.n').textContent;$('gw-st').textContent=' '+M(qty===3?p2:p1);
  $('gw-add').textContent='Add to cart · '+M(qty===3?p2:p1);$('gw-sa').textContent='Add to cart'}
 document.querySelectorAll('.gw-tier').forEach(function(t){t.onclick=function(){document.querySelectorAll('.gw-tier').forEach(function(x){x.classList.toggle('on',x===t);x.setAttribute('aria-checked',x===t)});qty=+t.dataset.q;paint()}});
