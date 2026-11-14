@@ -1,4 +1,8 @@
-GLOWLING · ALL CUSTOM LIQUID BLOCKS (copy everything between the ===== lines for each block)
+!!! DO NOT PASTE THIS WHOLE FILE INTO ONE BOX !!!
+It holds 8 separate blocks that go in 8 different places (and is over Shopify's 50 KB limit for one box).
+For each block, copy ONLY the code between its ===== header and the next ===== header
+(start at the {%- comment -%} line, never include the ===== lines or this text).
+Easier: use the separate files 01-...liquid to 07-...liquid, one per box.
 
 ==========================================================================================
 BLOCK 01 · 01-offer-box-above-title.liquid
@@ -438,7 +442,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
         <p class="gl-sec__p">It won't replace every screen, and we won't pretend it does. It gives you something to try first, and a bit of quiet before the screen comes out.</p>
       </div>
       {%- if gl_src_problem != blank -%}
-        <img class="gl-split__img" src="{{ gl_src_problem }}" alt="Child drawing on a glowing Glowling board while dinner is cooked" loading="lazy">
+        <img width="1024" height="1024" class="gl-split__img" src="{{ gl_src_problem }}" alt="Child drawing on a glowing Glowling board while dinner is cooked" loading="lazy">
       {%- endif -%}
     </div>
   </section>
@@ -447,7 +451,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">How it works</h2>
     {%- if gl_src_steps != blank -%}
-      <img class="gl-full-img" src="{{ gl_src_steps }}" alt="How Glowling works: draw, glow, wipe" loading="lazy">
+      <img width="1024" height="1024" class="gl-full-img" src="{{ gl_src_steps }}" alt="How Glowling works: draw, glow, wipe" loading="lazy">
     {%- endif -%}
     <ol class="gl-steps">
       <li><span class="gl-steps__n">1</span><strong>Plug it in</strong><span>USB cable into any phone charger or power bank.</span></li>
@@ -460,7 +464,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   {%- if gl_src_uses != blank -%}
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">Four ways to use it</h2>
-    <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_uses }}" alt="Four ways to use Glowling: drawing, letters and notes, tracing, night light" loading="lazy">
+    <img width="1024" height="1024" class="gl-full-img gl-full-img--narrow" src="{{ gl_src_uses }}" alt="Four ways to use Glowling: drawing, letters and notes, tracing, night light" loading="lazy">
   </section>
   {%- endif -%}
 
@@ -468,7 +472,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">Glowling vs the usual options</h2>
     {%- if gl_src_compare != blank -%}
-      <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_compare }}" alt="Glow time vs screen time" loading="lazy">
+      <img width="1024" height="1024" class="gl-full-img gl-full-img--narrow" src="{{ gl_src_compare }}" alt="Glow time vs screen time" loading="lazy">
     {%- endif -%}
     <table class="gl-table">
       <thead><tr><th></th><th class="gl-table__us">Glowling</th><th>Tablet</th><th>Paper &amp; crayons</th></tr></thead>
@@ -486,7 +490,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   <section class="gl-sec__block gl-sec__block--cream">
     <h2 class="gl-sec__h2 gl-center">What's in the box</h2>
     {%- if gl_src_box != blank -%}
-      <img class="gl-full-img" src="{{ gl_src_box }}" alt="Everything in the Glowling box" loading="lazy">
+      <img width="1024" height="1024" class="gl-full-img" src="{{ gl_src_box }}" alt="Everything in the Glowling box" loading="lazy">
     {%- endif -%}
     <ul class="gl-box">
       <li>1 × LED drawing board ({{ gl_board_size }})</li>
@@ -502,7 +506,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   {%- if gl_src_collage != blank -%}
   <section class="gl-sec__block">
     <h2 class="gl-sec__h2 gl-center">From dinner time to bedtime</h2>
-    <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_collage }}" alt="Glowling during the day and as a night light" loading="lazy">
+    <img width="1024" height="1024" class="gl-full-img gl-full-img--narrow" src="{{ gl_src_collage }}" alt="Glowling during the day and as a night light" loading="lazy">
   </section>
   {%- endif -%}
 
@@ -531,7 +535,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   <!-- 5b. OFFER + CTA -->
   <section class="gl-sec__block gl-center">
     {%- if gl_src_offer != blank -%}
-      <img class="gl-full-img gl-full-img--narrow" src="{{ gl_src_offer }}" alt="Buy 2, Get 1 FREE plus a free tracing book" loading="lazy">
+      <img width="1024" height="1024" class="gl-full-img gl-full-img--narrow" src="{{ gl_src_offer }}" alt="Buy 2, Get 1 FREE plus a free tracing book" loading="lazy">
     {%- endif -%}
     <a href="#gl-tiers" class="gl-cta" data-gl-scroll-tiers>{{ gl_cta_text }}</a>
     <p class="gl-cta__note">🎁 FREE tracing book with every order</p>
@@ -574,7 +578,7 @@ PASTE INTO: Product template → Add SECTION → Custom Liquid, directly under P
   .gl-sec__p{margin:0 0 10px;font-size:15px;line-height:1.6}
   .gl-center{text-align:center}
   .gl-split{display:grid;gap:18px;align-items:center}
-  .gl-split__img,.gl-full-img{width:100%;height:auto;border-radius:12px;display:block}
+  .gl-split__img,.gl-full-img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:12px;display:block}
   .gl-full-img{margin:0 0 16px}
   .gl-full-img--narrow{max-width:640px;margin:0 auto 16px}
   .gl-cta{display:inline-block;width:100%;max-width:440px;box-sizing:border-box;padding:16px 20px;border-radius:10px;background:#ffd84d;color:#1d2340;font-weight:800;font-size:17px;text-decoration:none;text-align:center}
