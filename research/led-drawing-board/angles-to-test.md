@@ -75,12 +75,15 @@ Why these five: two angles on the strongest avatar (A) at her two loudest moment
 
 Follow the Master Doc's desire test as laid out in `avatar-decision.md`, with these refinements.
 
-- **Campaign shape:** 1 campaign, 5 ad sets, ABO. One ad set per angle. $30 per day per ad set for the US only on day one to isolate the angle signal from country noise, then scale to US / CA / UK / AU by day two.
+- **Campaign shape:** 1 campaign, 5 ad sets, ABO. One ad set per angle. $30 per day per ad set from hour one, **all four countries at once (US + CA + UK + AU)**. Reasons: the hooks are country-agnostic, the PDP already serves local currency, US has the highest CPMs of the four so a US-only day one burns budget fastest, and splitting countries later creates two learning phases for no useful gain. A US-only day one would also risk killing an angle that works great in AU or UK before we saw the data.
 - **Creative per ad set:** 1 primary text (the angle), **3 hooks** (first-line variants from the bullets above), **5 images or 1 video + 4 images**. All link to the angle's recommended landing page (listicle or PDP).
 - **Objective:** Sales. Rely on Meta's attribution and Shopify's referrer plus UTMs.
-- **UTMs:** `?utm_source=meta&utm_medium=paid&utm_campaign=glowling_angle_test_nov26&utm_content=<angle-slug>`. Angle slugs: `dinner`, `shower`, `wfh-call`, `bedtime`, `gift`.
-- **Read window:** 72 hours per angle, then kill the bottom two on cost per LPV. Give the top two a further 4 days and scale to CBO with LLA 1% + broad.
+- **UTMs:** `?utm_source=meta&utm_medium=paid&utm_campaign=glowling_angle_test_nov26&utm_content=<angle-slug>&utm_term=<country>`. Angle slugs: `dinner`, `shower`, `wfh-call`, `bedtime`, `gift`.
+- **Read window:** 72 hours per angle, with the country breakdown turned on in Ads Manager from day one. Read in this order: angle performance (pooled across countries) → country performance per angle → kill bottom two angles on cost per LPV.
+- **Day 4–7 scale:** top two angles continue, but only in the countries where that angle hit its CPA target. If an angle only works in two of the four markets, scale into those two, not all four. Country × angle fit matters.
+- **CBO scale (day 8+):** one campaign per winning angle, LLA 1% + broad, in the countries that delivered.
 - **Primary metrics, in order:** CTR (outbound) → cost per LPV → ATC rate → CPA. Do not kill on CPA before 72 hours of stable delivery.
+- **Only split a country out mid-test if** a specific country tanks a hook that wins elsewhere (usually a word-choice landmine, e.g. "mum" vs "mom", "iPad" vs "tablet"). Fix the copy for that country; do not drop the country.
 
 ## What we do once an angle wins
 
