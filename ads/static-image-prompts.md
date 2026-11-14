@@ -1,6 +1,6 @@
 # Glowling — 5 native static image prompts (Nano Banana 2 / Pro)
 
-Built on the Nano Banana Pro prompting protocol (lighting first, camera and lens specified, avatar in frame, negative space for text overlay) and the Master Doc rule that **the images that perform best show the pain exaggerated at the worst possible state.** Three of the five below are pain-state images. Two are desire/payoff images, so the matrix has emotional range when we mismatch them against the 5 copies.
+Built on the Nano Banana Pro prompting protocol (lighting first, camera and lens specified, avatar in frame, negative space for text overlay) and the Master Doc rule that **the images that perform best show the pain exaggerated at the worst possible state.** Two of the five are pain-state images (S1 and S2), three are desire / payoff images (S3, S4, S5). The pain in the gift lane is carried by the C5 copy and does not need to be shown in the S5 image, where showing failed gifts with prices on them would trigger Meta's personal-attributes policy and Google Imagen's "misleading content" filter.
 
 ## Model + run settings for all five
 
@@ -90,24 +90,22 @@ Colour grade: warm amber and gentle yellow glow on the child's face, deep rich w
 
 ---
 
-## S5 — "Out on Boxing Day" (pain state → payoff, grandparent avatar)
+## S5 — "Still out on Boxing Day" (pure payoff, grandparent avatar)
 
-A grandmother's living room after the grandkids have gone home. The stack of expensive gifts that failed, with prices still on them, versus the child-drawn glow board left out on the little table by the window. Shame on one side of the frame, pride on the other.
+The grandmother's living room the morning after the grandchildren have left. She stands at the window with her tea, warmly looking at the small kids' table where their drawings are still on the glowing board. The "failed gifts" angle stays in the copy; the image carries only the payoff. No prices, no shame cues, no handwritten text inside the frame.
 
 ```
-A candid photograph of a 68-year-old grandmother standing at the threshold of her living room on a quiet Boxing Day morning, holding a cup of tea in both hands, looking at a small kids' table by the window where her grandchildren's drawings are still on the Glowling LED drawing board from the attached reference image. She is positioned on the left third of the frame; the glowing kids' table and the sad stack of previously-bought gifts fill the right two-thirds; clean negative space along the top of the frame reserved for headline text overlay.
+A warm candid photograph of a 68-year-old grandmother standing by a sunlit window in her living room on a quiet morning, holding a cup of tea in both hands, looking down with a soft proud smile at a small kids' table a few feet in front of her. On the kids' table sits the Glowling LED drawing board from the attached reference image, lit and standing upright on its white stand, with a child's warm neon drawing of a smiling sun, a small house and a rainbow glowing on the clear acrylic panel. She is positioned on the left half of the frame with the warmly lit window and the glowing kids' table on the right; clean negative space along the top of the frame reserved for headline text overlay.
 
-On the near side of the room, on an old wooden coffee table beside her: a sad honest stack of previously-bought "big" gifts, each with a visible small handwritten price tag still on it — a wooden art easel marked $142, a light-up globe marked $89, an electronic drum kit box marked $240, a paint-your-own ceramics kit marked $64. The gifts look untouched, dusty, abandoned. On the far side of the room, on a small kids' table against the warmly lit window: the Glowling board, lit, with a child's drawing of grandma in yellow and pink neon, with glasses and curly hair and the words "Nice Hair" written across the top in a child's hand. A small handmade "thank you grandma" note is leaning against the stand.
+The lighting is quiet soft morning daylight at approximately 5500K streaming gently through a sheer linen curtain on the right side of the frame, functioning as the primary directional light that wraps softly around the grandmother from camera right at shoulder height — the quality of a north-facing window on a bright autumn morning. A faint warm ambient light at 3200K from the open doorway behind her provides a gentle fill on the shadow side. No overhead lighting. No visible lights, no studio equipment.
 
-The lighting is quiet overcast morning light at approximately 5200K streaming softly through a sheer window curtain on the right side of the frame, acting as the primary soft directional light that lifts the kids' table and the board into a warm pool of attention. The left side of the room, where the stack of failed gifts sits, is in cooler ambient shadow at 4200K, with a cold neutral quality that drains the gifts of life. The colour-temperature contrast tells the whole story without a single word.
+The grandmother is wearing a soft cream knitted cardigan over a simple pale blouse, soft grey trousers, silver hair in a short practical cut, kind eyes, a small quiet proud smile at the corner of her mouth. Real natural features of a woman in her late sixties: honest wrinkles, warm trustworthy expression, not glamorous. The living room around her is a real lived-in home: a soft sofa with a woven throw, a bookshelf with picture frames of family out of focus in the background, a vase of cut flowers on a sideboard, a woven rug on wooden floor. On the kids' table beside the glowing board, two fluorescent markers lie casually where a child left them, and a small soft knitted rabbit sits beside them.
 
-The grandmother is wearing a soft cream knitted cardigan, soft grey trousers, silver hair in a short practical style, kind eyes with a quietly proud expression, the beginning of a small smile. Not stylised. Real natural features of a woman in her late sixties, warm and trustworthy. The living room around her is a real lived-in home: a soft old sofa with a woven blanket, a bookshelf with family photos in simple frames, a small vase of cut flowers on the sideboard.
+The Glowling board is reproduced with absolute fidelity to its exact shape, proportions, white stand and warm glow quality from the attached reference image. The neon drawing on the panel is clearly child-drawn, in warm yellow, soft pink and a gentle teal: a smiling sun, a small square house with a triangle roof, and a simple rainbow. No letters, no words, no text of any kind in the image.
 
-The Glowling board is reproduced with absolute fidelity to its exact shape, proportions, white stand and warm glow quality from the attached reference image. The child's drawing of the grandmother is clearly child-drawn, in neon yellow, pink and teal.
+Captured on a Sony A7R V with a 50mm f/1.4 lens at f/2.2, from a natural standing eye level roughly nine feet into the room, framed waist-up on the grandmother with the kids' table and glowing board sharp in the mid-ground. Shallow depth lets the far wall and bookshelf fall into soft warm bokeh.
 
-Captured on a Sony A7R V with a 35mm f/1.4 lens at f/2.5, from the grandmother's eye level roughly ten feet into the room, framed to include her figure, the coffee table of failed gifts, and the kids' table by the window in a single wide composition. Mid-depth focus so all three focal points read clearly.
-
-Colour grade: cool neutral shadows on the near-side stack of failed gifts, warm amber tones on the kids' table and the glowing board, a subtle but legible colour-temperature split between the two sides of the frame. The image should feel like an honest documentary portrait, not a staged lifestyle shot. No visible lights, no studio equipment, no brand logos, no text in the image beyond the child's handwriting on the board and the handwritten price tags.
+Colour grade: warm honey morning tones throughout, slightly lifted shadows, clean warm whites, a gentle premium palette that feels honest rather than styled. The image should read as a quiet documentary moment, not a staged lifestyle shot. No text in the image, no brand logos, no price tags, no receipts, no money, no signage of any kind.
 ```
 
 ---
@@ -121,7 +119,7 @@ Colour grade: cool neutral shadows on the near-side stack of failed gifts, warm 
 
 ## Why these five give the matrix its emotional range
 
-- Three pain states (S1, S2, S5) to hit the "worst possible outcome exaggerated" rule from the Master Doc.
-- Two desire / payoff states (S3, S4) so the mismatch grid still has rest for the eye between pain ads.
-- Two feature the **parent avatar** in the frame (S1, S2), one features the **WFH parent avatar** (S3), one focuses on the **child** as the symbol of the outcome (S4), one features the **grandparent avatar** (S5). Each of the five angles in `ads/longform-ads.md` has a native-fit visual AND four mismatch visuals that still make narrative sense.
-- The grandparent image (S5) does not just sell the gift angle; it carries a universal "money spent on failed gifts" idea that reads for parents too, which is why the matrix allows C5 (gift) copy against S1 (ledger) static without confusion.
+- Two pain states (S1, S2) to hit the "worst possible outcome exaggerated" rule from the Master Doc. S2 doubles the load by showing the pain and the quiet fix in the same frame through the doorway.
+- Three desire / payoff states (S3, S4, S5) so the mismatch grid has emotional rest. The payoffs are deliberately different in scale: S3 is a small adult win (one quiet Zoom call), S4 is a child-level win (a calm bedtime), S5 is a relationship win (a grandmother reconnected with her grandchildren).
+- The five frames carry four different avatars: the **parent avatar** (S1, S2), the **WFH parent avatar** (S3), the **child** as symbol of the outcome (S4), and the **grandparent avatar** (S5). Every angle in `ads/longform-ads.md` has a native-fit visual and four mismatch visuals that still make narrative sense.
+- The grandparent image (S5) is pure payoff, not shame. The pain of the "failed gifts" sits inside the C5 copy where words can handle it without Meta policy risk. In the image we only show what the gift angle promises: the grandmother getting back a little pride in her own living room.
