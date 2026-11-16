@@ -1,0 +1,22 @@
+{
+  "ts": "2026-11-16 12:22 UTC",
+  "ts_fn": "20261116-1222",
+  "campaign_today": {
+    "label": "today",
+    "spend": 0,
+    "impressions": 0,
+    "empty": true
+  },
+  "campaign_24h": {
+    "label": "last_3d",
+    "spend": 0,
+    "impressions": 0,
+    "empty": true
+  },
+  "ads": [],
+  "placements": [],
+  "countries": [],
+  "ages": [],
+  "flags": [],
+  "verdict": "Watch"
+}
