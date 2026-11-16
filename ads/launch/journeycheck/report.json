@@ -1,0 +1,174 @@
+{
+  "US": {
+    "steps": {
+      "pdpPrice": "$34.99",
+      "atcLabel": "Add to cart · $69.98",
+      "cutoff": "Ends Cyber Monday · Order by Dec 15 for holiday delivery",
+      "drawerLines": [
+        "Glow Tracing Book – Free Gift | FREE | Free gift with your order",
+        "Glowling LED Drawing Board | $69.98 | Buy 2, Get 1 FREE | − | 2 | +",
+        "Glowling LED Drawing Board | FREE | Buy 2, Get 1 FREE | 1 | +"
+      ],
+      "drawerSubtotal": "$69.98",
+      "freeShipMsg": "You’ve unlocked FREE shipping",
+      "cart": {
+        "currency": "USD",
+        "total": 6998,
+        "items": [
+          "1x Glow Tracing Book – Free Gift @0",
+          "2x Glowling LED Drawing Board @6998",
+          "1x Glowling LED Drawing Board @0"
+        ],
+        "discounts": []
+      },
+      "checkoutUrl": "https://x5a9bu-97.myshopify.com/checkouts/cn/hWNJDxGh17fq4S79J3eoWWTS/en-us",
+      "checkoutHasTotal": true,
+      "checkoutMentions": {
+        "freeShipping": false,
+        "noShippingAvail": false,
+        "discountLine": "BUY 2, GET 1 FREE2$69.98Quantity1Glowling LED"
+      },
+      "shippingSection": "Shipping methodChoose a shipping methodStandardWed, Nov 25–Wed, Dec 2FreePaymentAll transactions are secure and encrypted.Payment methodCredit cardPayPalCard numberAdditional payment methods: American Express, Discover, Diners Club, UnionPay, and Elo+5Expiration date (MM / Y",
+      "shippingNotAvailable": false,
+      "paymentVisible": true
+    },
+    "pixel": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "AddToCart",
+      "PageView",
+      "InitiateCheckout"
+    ],
+    "jsErrors": []
+  },
+  "GB": {
+    "steps": {
+      "pdpPrice": "£29.99",
+      "atcLabel": "Add to cart · £59.98",
+      "cutoff": "Ends Cyber Monday · Order by 15 December for holiday delivery",
+      "drawerLines": [
+        "Glow Tracing Book – Free Gift | FREE | Free gift with your order",
+        "Glowling LED Drawing Board | £59.98 | Buy 2, Get 1 FREE | − | 2 | +",
+        "Glowling LED Drawing Board | FREE | Buy 2, Get 1 FREE | 1 | +"
+      ],
+      "drawerSubtotal": "£59.98",
+      "freeShipMsg": "You’ve unlocked FREE shipping",
+      "cart": {
+        "currency": "GBP",
+        "total": 5998,
+        "items": [
+          "1x Glow Tracing Book – Free Gift @0",
+          "2x Glowling LED Drawing Board @5998",
+          "1x Glowling LED Drawing Board @0"
+        ],
+        "discounts": []
+      },
+      "checkoutUrl": "https://x5a9bu-97.myshopify.com/checkouts/cn/hWNJDxPWMah5wOfeX197R1Ry/en-gb",
+      "checkoutHasTotal": true,
+      "checkoutMentions": {
+        "freeShipping": false,
+        "noShippingAvail": false,
+        "discountLine": "BUY 2, GET 1 FREE2£59.98Quantity1Glowling LED"
+      },
+      "shippingSection": "Shipping methodChoose a shipping methodStandardWed, 25 Nov–Wed, 2 DecFreePaymentAll transactions are secure and encrypted.Credit card+5Card numberExpiration date (MM / YY)Security code3-digit security code usually found on the back of your card. American Express cards have a",
+      "shippingNotAvailable": false,
+      "paymentVisible": true
+    },
+    "pixel": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "AddToCart",
+      "PageView",
+      "InitiateCheckout"
+    ],
+    "jsErrors": []
+  },
+  "CA": {
+    "steps": {
+      "pdpPrice": "$44.99",
+      "atcLabel": "Add to cart · $89.98",
+      "cutoff": "Ends Cyber Monday · Order by Dec 12 for holiday delivery",
+      "drawerLines": [
+        "Glow Tracing Book – Free Gift | FREE | Free gift with your order",
+        "Glowling LED Drawing Board | $89.98 | Buy 2, Get 1 FREE | − | 2 | +",
+        "Glowling LED Drawing Board | FREE | Buy 2, Get 1 FREE | 1 | +"
+      ],
+      "drawerSubtotal": "$89.98",
+      "freeShipMsg": "You’ve unlocked FREE shipping",
+      "cart": {
+        "currency": "CAD",
+        "total": 8998,
+        "items": [
+          "1x Glow Tracing Book – Free Gift @0",
+          "2x Glowling LED Drawing Board @8998",
+          "1x Glowling LED Drawing Board @0"
+        ],
+        "discounts": []
+      },
+      "checkoutUrl": "https://x5a9bu-97.myshopify.com/checkouts/cn/hWNJDxSls9FiIP2XyydOcxyU/en-ca",
+      "checkoutHasTotal": true,
+      "checkoutMentions": {
+        "freeShipping": false,
+        "noShippingAvail": false,
+        "discountLine": "BUY 2, GET 1 FREE2$89.98Quantity1Glowling LED"
+      },
+      "shippingSection": "Shipping methodChoose a shipping methodStandardWed, Nov 25–Wed, Dec 2FreePaymentAll transactions are secure and encrypted.Payment methodCredit cardPayPalCard numberAdditional payment methods: American Express, Discover, Diners Club, UnionPay, and Elo+5Expiration date (MM / Y",
+      "shippingNotAvailable": false,
+      "paymentVisible": true
+    },
+    "pixel": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "AddToCart",
+      "PageView",
+      "InitiateCheckout"
+    ],
+    "jsErrors": []
+  },
+  "AU": {
+    "steps": {
+      "pdpPrice": "$49.99",
+      "atcLabel": "Add to cart · $99.98",
+      "cutoff": "Ends Cyber Monday · Order by 18 December for holiday delivery",
+      "drawerLines": [
+        "Glow Tracing Book – Free Gift | FREE | Free gift with your order",
+        "Glowling LED Drawing Board | $99.98 | Buy 2, Get 1 FREE | − | 2 | +",
+        "Glowling LED Drawing Board | FREE | Buy 2, Get 1 FREE | 1 | +"
+      ],
+      "drawerSubtotal": "$99.98",
+      "freeShipMsg": "You’ve unlocked FREE shipping",
+      "cart": {
+        "currency": "AUD",
+        "total": 9998,
+        "items": [
+          "1x Glow Tracing Book – Free Gift @0",
+          "2x Glowling LED Drawing Board @9998",
+          "1x Glowling LED Drawing Board @0"
+        ],
+        "discounts": []
+      },
+      "checkoutUrl": "https://x5a9bu-97.myshopify.com/checkouts/cn/hWNJDxW5U4pneaY1xn6btyMc/en-au",
+      "checkoutHasTotal": true,
+      "checkoutMentions": {
+        "freeShipping": false,
+        "noShippingAvail": false,
+        "discountLine": "BUY 2, GET 1 FREE2$99.98Quantity1Glowling LED"
+      },
+      "shippingSection": "Shipping methodChoose a shipping methodStandardWed, 25 Nov–Wed, 2 DecFreePaymentAll transactions are secure and encrypted.Payment methodCredit cardPayPalCard numberAdditional payment methods: American Express, Discover, Diners Club, UnionPay, and Elo+5Expiration date (MM / Y",
+      "shippingNotAvailable": false,
+      "paymentVisible": true
+    },
+    "pixel": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "AddToCart",
+      "PageView",
+      "InitiateCheckout"
+    ],
+    "jsErrors": []
+  }
+}
