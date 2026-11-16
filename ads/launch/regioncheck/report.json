@@ -1,0 +1,119 @@
+{
+  "US": {
+    "price": 3499,
+    "available": true,
+    "pdpPixelFires": [
+      {
+        "event": "PageView",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=PageView&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DUS&rl=&if=false&ts=1794813"
+      },
+      {
+        "event": "ViewContent",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=ViewContent&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DUS&rl=&if=false&ts=1794"
+      }
+    ],
+    "atcStatus": 200,
+    "atcBody": "{\"items\":[{\"id\":55862345564487,\"properties\":{},\"quantity\":1,\"variant_id\":55862345564487,\"key\":\"55862345564487:e1afee79b9c184d1bb40f3c77210e96d\",\"title\":\"Glowling LED Drawing Board\"",
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://x5a9bu-97.myshopify.com/cart?country=US\", ",
+    "allPixelFires": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "PageView"
+    ]
+  },
+  "GB": {
+    "price": 2999,
+    "available": true,
+    "pdpPixelFires": [
+      {
+        "event": "PageView",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=PageView&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DGB&rl=&if=false&ts=1794813"
+      },
+      {
+        "event": "ViewContent",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=ViewContent&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DGB&rl=&if=false&ts=1794"
+      }
+    ],
+    "atcStatus": 200,
+    "atcBody": "{\"items\":[{\"id\":55862345564487,\"properties\":{},\"quantity\":1,\"variant_id\":55862345564487,\"key\":\"55862345564487:e1afee79b9c184d1bb40f3c77210e96d\",\"title\":\"Glowling LED Drawing Board\"",
+    "cart": {
+      "currency": "GBP",
+      "total": 2999,
+      "items": 1
+    },
+    "checkoutPixelFires": [
+      "PageView",
+      "InitiateCheckout"
+    ],
+    "allPixelFires": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "PageView",
+      "PageView",
+      "InitiateCheckout"
+    ]
+  },
+  "CA": {
+    "price": 4499,
+    "available": true,
+    "pdpPixelFires": [
+      {
+        "event": "PageView",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=PageView&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DCA&rl=&if=false&ts=1794813"
+      },
+      {
+        "event": "ViewContent",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=ViewContent&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DCA&rl=&if=false&ts=1794"
+      }
+    ],
+    "atcStatus": 200,
+    "atcBody": "{\"items\":[{\"id\":55862345564487,\"properties\":{},\"quantity\":1,\"variant_id\":55862345564487,\"key\":\"55862345564487:e1afee79b9c184d1bb40f3c77210e96d\",\"title\":\"Glowling LED Drawing Board\"",
+    "cart": {
+      "currency": "CAD",
+      "total": 4499,
+      "items": 1
+    },
+    "checkoutPixelFires": [
+      "PageView",
+      "InitiateCheckout"
+    ],
+    "allPixelFires": [
+      "PageView",
+      "ViewContent",
+      "AddToCart",
+      "PageView",
+      "PageView",
+      "InitiateCheckout"
+    ]
+  },
+  "AU": {
+    "price": 4999,
+    "available": false,
+    "pdpPixelFires": [
+      {
+        "event": "PageView",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=PageView&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DAU&rl=&if=false&ts=1794813"
+      },
+      {
+        "event": "ViewContent",
+        "id": "1736160617626618",
+        "url": "https://www.facebook.com/tr/?id=1736160617626618&ev=ViewContent&dl=https%3A%2F%2Fx5a9bu-97.myshopify.com%2Fproducts%2Fglowling-led-drawing-board%3Fcountry%3DAU&rl=&if=false&ts=1794"
+      }
+    ],
+    "atcStatus": 422,
+    "atcBody": "{\"status\":422,\"message\":\"The product 'Glowling LED Drawing Board' is already sold out.\",\"description\":\"The product 'Glowling LED Drawing Board' is already sold out.\"}",
+    "allPixelFires": [
+      "PageView",
+      "ViewContent"
+    ]
+  }
+}
