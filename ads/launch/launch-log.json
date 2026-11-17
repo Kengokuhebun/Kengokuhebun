@@ -10,33 +10,26 @@
     "buying_type": "AUCTION"
   },
   "adsets": {
-    "ALL_28-65_Broad": {
-      "id": "120252662597440104",
+    "P_Parents_28-44": {
+      "id": "120252679147450104",
       "status": "ACTIVE",
       "age_min": 28,
+      "age_max": 44,
+      "min_spend": "none (Meta rejected any minimum)",
+      "n_ads": 20
+    },
+    "G_GiftBuyers_45-65+": {
+      "id": "120252679147800104",
+      "status": "ACTIVE",
+      "age_min": 45,
       "age_max": 65,
-      "countries": [
-        "US",
-        "GB",
-        "CA",
-        "AU"
-      ],
-      "placements": {
-        "facebook": [
-          "feed",
-          "story",
-          "facebook_reels"
-        ],
-        "instagram": [
-          "stream",
-          "story",
-          "reels"
-        ]
-      },
-      "pixel_id": "1736160617626618",
-      "event": "PURCHASE",
-      "attribution": "7d_click_1d_view",
-      "n_ads": 25
+      "daily_spend_cap_gbp": 35.0,
+      "n_ads": 5
+    },
+    "OLD_All_28-65_Broad": {
+      "id": "120252662597440104",
+      "status": "PAUSED",
+      "note": "paused, not deleted; 25 original ads inside"
     }
   },
   "page_id": "1508787922308138",
@@ -53,209 +46,235 @@
   },
   "ads": [
     {
-      "name": "Glowling_R1_BF26_C1-S1-dinner-ledger",
-      "copy": "C1",
-      "static": "S1",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664463130104",
-      "creative_id": "2115199929358758"
-    },
-    {
-      "name": "Glowling_R1_BF26_C1-S2-dinner-714am",
-      "copy": "C1",
-      "static": "S2",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664464610104",
-      "creative_id": "1522549286421228"
-    },
-    {
-      "name": "Glowling_R1_BF26_C1-S3-dinner-standup",
-      "copy": "C1",
-      "static": "S3",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664466310104",
-      "creative_id": "1662283501944898"
-    },
-    {
-      "name": "Glowling_R1_BF26_C1-S4-dinner-moon",
-      "copy": "C1",
-      "static": "S4",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664467090104",
-      "creative_id": "1078125438590425"
-    },
-    {
-      "name": "Glowling_R1_BF26_C1-S5-dinner-grandkids",
-      "copy": "C1",
-      "static": "S5",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664467850104",
-      "creative_id": "1822875325710814"
-    },
-    {
-      "name": "Glowling_R1_BF26_C2-S1-shower-ledger",
-      "copy": "C2",
-      "static": "S1",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664468510104",
-      "creative_id": "1170786195282705"
-    },
-    {
-      "name": "Glowling_R1_BF26_C2-S2-shower-714am",
-      "copy": "C2",
-      "static": "S2",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664468760104",
-      "creative_id": "1675808390602634"
-    },
-    {
-      "name": "Glowling_R1_BF26_C2-S3-shower-standup",
-      "copy": "C2",
-      "static": "S3",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664469340104",
-      "creative_id": "28766034233099151"
-    },
-    {
-      "name": "Glowling_R1_BF26_C2-S4-shower-moon",
-      "copy": "C2",
-      "static": "S4",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664469880104",
-      "creative_id": "1585451230002452"
-    },
-    {
-      "name": "Glowling_R1_BF26_C2-S5-shower-grandkids",
-      "copy": "C2",
-      "static": "S5",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664470130104",
-      "creative_id": "3902683613203194"
-    },
-    {
-      "name": "Glowling_R1_BF26_C3-S1-wfh-ledger",
-      "copy": "C3",
-      "static": "S1",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664470520104",
-      "creative_id": "1723880753081651"
-    },
-    {
-      "name": "Glowling_R1_BF26_C3-S2-wfh-714am",
-      "copy": "C3",
-      "static": "S2",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664471310104",
-      "creative_id": "1143322501397893"
-    },
-    {
-      "name": "Glowling_R1_BF26_C3-S3-wfh-standup",
-      "copy": "C3",
-      "static": "S3",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664471630104",
-      "creative_id": "2543166749548762"
-    },
-    {
-      "name": "Glowling_R1_BF26_C3-S4-wfh-moon",
-      "copy": "C3",
-      "static": "S4",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664472020104",
-      "creative_id": "2164373491103676"
-    },
-    {
-      "name": "Glowling_R1_BF26_C3-S5-wfh-grandkids",
-      "copy": "C3",
-      "static": "S5",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664472170104",
-      "creative_id": "1161633439929526"
-    },
-    {
-      "name": "Glowling_R1_BF26_C4-S1-bedtime-ledger",
-      "copy": "C4",
-      "static": "S1",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664472630104",
-      "creative_id": "1459783852777005"
-    },
-    {
-      "name": "Glowling_R1_BF26_C4-S2-bedtime-714am",
-      "copy": "C4",
-      "static": "S2",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664472850104",
-      "creative_id": "1190582083915543"
-    },
-    {
-      "name": "Glowling_R1_BF26_C4-S3-bedtime-standup",
+      "name": "Glowling_R1_BF26_C4-S3-bedtime-standup_v2",
       "copy": "C4",
       "static": "S3",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664473060104",
-      "creative_id": "2043269639697810"
+      "adset": "P",
+      "id": "120252679153950104",
+      "creative_id": "2043269639697810",
+      "old_ad_id": "120252664473060104"
     },
     {
-      "name": "Glowling_R1_BF26_C4-S4-bedtime-moon",
+      "name": "Glowling_R1_BF26_C4-S4-bedtime-moon_v2",
       "copy": "C4",
       "static": "S4",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664473440104",
-      "creative_id": "3310192072500471"
+      "adset": "P",
+      "id": "120252679154100104",
+      "creative_id": "3310192072500471",
+      "old_ad_id": "120252664473440104"
     },
     {
-      "name": "Glowling_R1_BF26_C4-S5-bedtime-grandkids",
+      "name": "Glowling_R1_BF26_C4-S5-bedtime-grandkids_v2",
       "copy": "C4",
       "static": "S5",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664473830104",
-      "creative_id": "1441275458193025"
+      "adset": "P",
+      "id": "120252679154670104",
+      "creative_id": "1441275458193025",
+      "old_ad_id": "120252664473830104"
     },
     {
-      "name": "Glowling_R1_BF26_C5-S1-gift-ledger",
+      "name": "Glowling_R1_BF26_C2-S5-shower-grandkids_v2",
+      "copy": "C2",
+      "static": "S5",
+      "adset": "P",
+      "id": "120252679151760104",
+      "creative_id": "3902683613203194",
+      "old_ad_id": "120252664470130104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S3-dinner-standup_v2",
+      "copy": "C1",
+      "static": "S3",
+      "adset": "P",
+      "id": "120252679149090104",
+      "creative_id": "1662283501944898",
+      "old_ad_id": "120252664466310104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S1-dinner-ledger_v2",
+      "copy": "C1",
+      "static": "S1",
+      "adset": "P",
+      "id": "120252679148550104",
+      "creative_id": "2115199929358758",
+      "old_ad_id": "120252664463130104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S2-dinner-714am_v2",
+      "copy": "C1",
+      "static": "S2",
+      "adset": "P",
+      "id": "120252679148950104",
+      "creative_id": "1522549286421228",
+      "old_ad_id": "120252664464610104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S1-shower-ledger_v2",
+      "copy": "C2",
+      "static": "S1",
+      "adset": "P",
+      "id": "120252679150250104",
+      "creative_id": "1170786195282705",
+      "old_ad_id": "120252664468510104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C4-S1-bedtime-ledger_v2",
+      "copy": "C4",
+      "static": "S1",
+      "adset": "P",
+      "id": "120252679153580104",
+      "creative_id": "1459783852777005",
+      "old_ad_id": "120252664472630104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S5-wfh-grandkids_v2",
+      "copy": "C3",
+      "static": "S5",
+      "adset": "P",
+      "id": "120252679152820104",
+      "creative_id": "1161633439929526",
+      "old_ad_id": "120252664472170104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C4-S2-bedtime-714am_v2",
+      "copy": "C4",
+      "static": "S2",
+      "adset": "P",
+      "id": "120252679153780104",
+      "creative_id": "1190582083915543",
+      "old_ad_id": "120252664472850104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S3-wfh-standup_v2",
+      "copy": "C3",
+      "static": "S3",
+      "adset": "P",
+      "id": "120252679152440104",
+      "creative_id": "2543166749548762",
+      "old_ad_id": "120252664471630104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S4-wfh-moon_v2",
+      "copy": "C3",
+      "static": "S4",
+      "adset": "P",
+      "id": "120252679152550104",
+      "creative_id": "2164373491103676",
+      "old_ad_id": "120252664472020104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S2-wfh-714am_v2",
+      "copy": "C3",
+      "static": "S2",
+      "adset": "P",
+      "id": "120252679152270104",
+      "creative_id": "1143322501397893",
+      "old_ad_id": "120252664471310104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S1-wfh-ledger_v2",
+      "copy": "C3",
+      "static": "S1",
+      "adset": "P",
+      "id": "120252679151880104",
+      "creative_id": "1723880753081651",
+      "old_ad_id": "120252664470520104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S4-shower-moon_v2",
+      "copy": "C2",
+      "static": "S4",
+      "adset": "P",
+      "id": "120252679151370104",
+      "creative_id": "1585451230002452",
+      "old_ad_id": "120252664469880104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S4-dinner-moon_v2",
+      "copy": "C1",
+      "static": "S4",
+      "adset": "P",
+      "id": "120252679149160104",
+      "creative_id": "1078125438590425",
+      "old_ad_id": "120252664467090104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S3-shower-standup_v2",
+      "copy": "C2",
+      "static": "S3",
+      "adset": "P",
+      "id": "120252679151250104",
+      "creative_id": "28766034233099151",
+      "old_ad_id": "120252664469340104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S2-shower-714am_v2",
+      "copy": "C2",
+      "static": "S2",
+      "adset": "P",
+      "id": "120252679150620104",
+      "creative_id": "1675808390602634",
+      "old_ad_id": "120252664468760104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S5-dinner-grandkids_v2",
+      "copy": "C1",
+      "static": "S5",
+      "adset": "P",
+      "id": "120252679149560104",
+      "creative_id": "1822875325710814",
+      "old_ad_id": "120252664467850104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C5-S4-gift-moon_v2",
+      "copy": "C5",
+      "static": "S4",
+      "adset": "G",
+      "id": "120252679155700104",
+      "creative_id": "1120605960847652",
+      "old_ad_id": "120252664474720104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C5-S1-gift-ledger_v2",
       "copy": "C5",
       "static": "S1",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664474110104",
-      "creative_id": "1494403086125774"
+      "adset": "G",
+      "id": "120252679154930104",
+      "creative_id": "1494403086125774",
+      "old_ad_id": "120252664474110104"
     },
     {
-      "name": "Glowling_R1_BF26_C5-S2-gift-714am",
+      "name": "Glowling_R1_BF26_C5-S2-gift-714am_v2",
       "copy": "C5",
       "static": "S2",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664474310104",
-      "creative_id": "1684199913284886"
+      "adset": "G",
+      "id": "120252679155430104",
+      "creative_id": "1684199913284886",
+      "old_ad_id": "120252664474310104"
     },
     {
-      "name": "Glowling_R1_BF26_C5-S3-gift-standup",
-      "copy": "C5",
-      "static": "S3",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664474430104",
-      "creative_id": "1145648447916977"
-    },
-    {
-      "name": "Glowling_R1_BF26_C5-S4-gift-moon",
-      "copy": "C5",
-      "static": "S4",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664474720104",
-      "creative_id": "1120605960847652"
-    },
-    {
-      "name": "Glowling_R1_BF26_C5-S5-gift-grandkids",
+      "name": "Glowling_R1_BF26_C5-S5-gift-grandkids_v2",
       "copy": "C5",
       "static": "S5",
-      "adset": "ALL_28-65_Broad",
-      "id": "120252664475190104",
-      "creative_id": "2179499769607106"
+      "adset": "G",
+      "id": "120252679155910104",
+      "creative_id": "2179499769607106",
+      "old_ad_id": "120252664475190104"
+    },
+    {
+      "name": "Glowling_R1_BF26_C5-S3-gift-standup_v2",
+      "copy": "C5",
+      "static": "S3",
+      "adset": "G",
+      "id": "120252679155580104",
+      "creative_id": "1145648447916977",
+      "old_ad_id": "120252664474430104"
     }
   ],
   "prior_adset_a_id": "120252641461490104",
   "prior_adset_b_id": "120252641461920104",
   "prior_adset_a_status": "DELETED",
   "prior_adset_b_status": "DELETED",
-  "collapsed_at": "2026-11-16T07:51:55Z"
+  "collapsed_at": "2026-11-16T07:51:55Z",
+  "split_at": "2026-11-17T07:24:12Z"
 }
