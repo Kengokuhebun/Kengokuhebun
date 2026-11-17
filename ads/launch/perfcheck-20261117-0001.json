@@ -1,0 +1,33 @@
+{
+  "ts": "2026-11-17 00:01 UTC",
+  "ts_fn": "20261117-0001",
+  "campaign_today": {
+    "label": "today",
+    "spend": 0,
+    "impressions": 0,
+    "empty": true
+  },
+  "campaign_24h": {
+    "label": "last_3d",
+    "spend": 80.55,
+    "impressions": 5514,
+    "cpm": 14.60827,
+    "clicks": 86,
+    "cpc": 0.936628,
+    "lpv": 38,
+    "atc": 0,
+    "ic": 0,
+    "purchase": 0,
+    "revenue": 0,
+    "cost_per_lpv": 2.119736842105263,
+    "cost_per_atc": null,
+    "cost_per_purchase": null,
+    "roas": 0.0
+  },
+  "ads": [],
+  "placements": [],
+  "countries": [],
+  "ages": [],
+  "flags": [],
+  "verdict": "Watch"
+}
