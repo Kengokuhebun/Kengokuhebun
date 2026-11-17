@@ -114,6 +114,8 @@ class Researcher:
             saved["hop"] = hop
             saved["unexpanded_stubs"] = stats["unexpanded_stubs"]
             fetched.append(saved)
+            log.info("[%d/%d] %s: %d comments (%d%%), hop %d: %s", len(fetched), max_threads, pid,
+                     saved["comments"], round(saved["coverage"] * 100), hop, saved["title"][:70])
             if hop < max_hops:
                 await self._expand(sid, pid, hop, terms, follow_same_link)
         remaining = self.store.one(
@@ -164,10 +166,11 @@ class Researcher:
                     raws += await fn(post["url"])
                 except (SourceError, NotImplementedError):
                     pass
-        try:
-            raws += await self.source.crossposts(pid)
-        except (SourceError, NotImplementedError):
-            pass
+        if post["num_crossposts"]:  # only ask when Reddit says crossposts exist (saves a slow search)
+            try:
+                raws += await self.source.crossposts(pid)
+            except (SourceError, NotImplementedError):
+                pass
         for raw in raws:
             rid = self.store.upsert_post_meta(raw, self.source.name)
             if rid and rid != pid:

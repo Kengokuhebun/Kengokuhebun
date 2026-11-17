@@ -26,7 +26,7 @@ TIME_RANGES = {"hour": 3600, "day": 86400, "week": 7 * 86400, "month": 31 * 8640
 class ArcticShiftSource(Source):
     name = "arctic"
 
-    def __init__(self, min_interval: float = 1.5, scan_pages: int = 15, client: httpx.AsyncClient | None = None):
+    def __init__(self, min_interval: float = 1.5, scan_pages: int = 25, client: httpx.AsyncClient | None = None):
         self.limiter = RateLimiter(min_interval)
         self.scan_pages = scan_pages
         self._client = client
@@ -119,7 +119,8 @@ class ArcticShiftSource(Source):
     async def _scan(self, subreddit: str, query: str, after: int | None, limit: int) -> list[dict]:
         """Page backwards through a subreddit and keep posts whose title/body contain every query word."""
         want = set(tokens(query))
-        hits, before = [], None
+        # Skip the last 2 days: the archive hasn't updated their comment counts yet (they read 0-1).
+        hits, before = [], int(time.time()) - 2 * 86400
         for _ in range(self.scan_pages):
             params = {"subreddit": subreddit, "limit": 100, "sort": "desc",
                       "fields": "id,title,selftext,num_comments,score,created_utc,author,subreddit,url,link_flair_text"}
@@ -127,7 +128,11 @@ class ArcticShiftSource(Source):
                 params["before"] = before
             if after:
                 params["after"] = after
-            page = await self._get("posts/search", params) or []
+            try:
+                page = await self._get("posts/search", params, attempts=3) or []
+            except SourceError as exc:
+                log.info("Stopping r/%s scan early (%s); keeping %d hits", subreddit, exc, len(hits))
+                break
             if not page:
                 break
             for p in page:
@@ -137,6 +142,7 @@ class ArcticShiftSource(Source):
             before = min(int(p["created_utc"]) for p in page)
             if len(hits) >= limit:
                 break
+        hits.sort(key=lambda p: (p.get("num_comments") or 0), reverse=True)
         return hits[:limit]
 
     async def listing(self, subreddit: str, sort: str = "top", time_range: str = "year", limit: int = 100) -> list[dict]:
@@ -164,10 +170,10 @@ class ArcticShiftSource(Source):
         return out
 
     async def posts_with_url(self, url: str) -> list[dict]:
-        return await self._get("posts/search", {"url": url, "url_exact": "true", "limit": 100}, attempts=2) or []
+        return await self._get("posts/search", {"url": url, "url_exact": "true", "limit": 100}, attempts=1) or []
 
     async def crossposts(self, post_id: str) -> list[dict]:
-        return await self._get("posts/search", {"crosspost_parent_id": f"t3_{post_id}", "limit": 100}, attempts=2) or []
+        return await self._get("posts/search", {"crosspost_parent_id": f"t3_{post_id}", "limit": 100}, attempts=1) or []
 
     async def find_subreddits(self, query: str, limit: int = 15) -> list[dict]:
         prefix = query.strip().lower().replace(" ", "").removeprefix("r/")

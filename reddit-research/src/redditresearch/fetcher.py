@@ -13,7 +13,7 @@ from .sources.base import Source, SourceError
 from .tree import assign_paths, flatten
 
 log = logging.getLogger(__name__)
-POST_ID_RE = re.compile(r"(?:comments/|redd\.it/|^)([a-z0-9]{4,10})(?:[/?#]|$)", re.IGNORECASE)
+POST_ID_RE = re.compile(r"(?:comments/|redd\.it/|^)([a-z0-9]{4,16})(?:[/?#]|$)", re.IGNORECASE)
 
 
 def parse_post_id(url_or_id: str) -> str:

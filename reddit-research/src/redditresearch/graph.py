@@ -39,7 +39,9 @@ def _docs(store: Store, ids: list[str]) -> dict[str, Counter]:
 def _tfidf(docs: dict[str, Counter], keep: int = 60) -> tuple[dict[str, dict[str, float]], dict[str, float]]:
     n = len(docs)
     df = Counter(t for c in docs.values() for t in c)
-    idf = {t: math.log((n + 1) / (d + 0.5)) for t, d in df.items() if d <= max(2, 0.5 * n)}
+    # Keep topic words unless nearly every thread has them: inside a focused study the shared vocabulary
+    # (minoxidil vs rosemary vs biotin) is exactly what separates sub-topics.
+    idf = {t: math.log((n + 1) / (d + 0.5)) for t, d in df.items() if d <= max(2, 0.85 * n)}
     vecs = {}
     for pid, counts in docs.items():
         w = {t: (1 + math.log(c)) * idf[t] for t, c in counts.items() if t in idf}
@@ -49,7 +51,8 @@ def _tfidf(docs: dict[str, Counter], keep: int = 60) -> tuple[dict[str, dict[str
     return vecs, idf
 
 
-def _similar_pairs(vecs: dict[str, dict[str, float]], k: int = 5, threshold: float = 0.2) -> dict[tuple, float]:
+def _similar_pairs(vecs: dict[str, dict[str, float]], k: int = 3, threshold: float = 0.04) -> dict[tuple, float]:
+    """k-nearest-neighbour similarity graph: each thread links to its k most similar threads."""
     postings: dict[str, list[tuple[str, float]]] = defaultdict(list)
     for pid, v in vecs.items():
         for t, w in v.items():
@@ -128,8 +131,10 @@ def build(store: Store, study_id: int) -> dict:
 
     docs = _docs(store, ids)
     vecs, idf = _tfidf(docs)
-    for (a, b), s in _similar_pairs(vecs).items():
-        add(a, b, "similar", s, f"cosine {s}")
+    sims = _similar_pairs(vecs)
+    top = max(sims.values(), default=1.0) or 1.0
+    for (a, b), s in sims.items():
+        add(a, b, "similar", 0.8 * s / top, f"cosine {s}")  # scaled so the closest pair in the study = 0.8
 
     authors = defaultdict(set)
     for r in store.q(f"SELECT post_id, author FROM comments WHERE post_id IN ({marks})", ids):

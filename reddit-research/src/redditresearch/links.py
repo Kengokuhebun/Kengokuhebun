@@ -6,11 +6,11 @@ import re
 from urllib.parse import urlparse
 
 REDDIT_THREAD_RE = re.compile(
-    r"(?:https?://)?(?:(?:www|old|new|np|m|i)\.)?reddit\.com/(?:r/[A-Za-z0-9_]+/)?comments/([a-z0-9]{4,10})"
-    r"(?:/[^/\s)\]>]*/?([a-z0-9]{4,10})?)?",
+    r"(?:https?://)?(?:(?:www|old|new|np|m|i)\.)?reddit\.com/(?:r/[A-Za-z0-9_]+/)?comments/([a-z0-9]{4,16})"
+    r"(?:/[^/\s)\]>]*/?([a-z0-9]{4,16})?)?",
     re.IGNORECASE,
 )
-REDD_IT_RE = re.compile(r"(?:https?://)?redd\.it/([a-z0-9]{4,10})", re.IGNORECASE)
+REDD_IT_RE = re.compile(r"(?:https?://)?redd\.it/([a-z0-9]{4,16})", re.IGNORECASE)
 URL_RE = re.compile(r"https?://[^\s)\]>\"'<]+", re.IGNORECASE)
 ASIN_RE = re.compile(r"/(?:dp|gp/product|gp/aw/d|product)/([A-Z0-9]{10})(?:[/?]|$)", re.IGNORECASE)
 

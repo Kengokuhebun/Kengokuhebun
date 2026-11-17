@@ -31,7 +31,7 @@ def tokens(text: str | None) -> list[str]:
         tok = tok.replace("'", "")
         if tok.endswith("s") and len(tok) > 4 and not tok.endswith("ss"):
             tok = tok[:-1]  # crude plural folding: "oils" ~ "oil"
-        if len(tok) > 1 and tok not in STOPWORDS:
+        if len(tok) > 1 and tok not in STOPWORDS and not tok.replace("-", "").isdigit():
             out.append(tok)
     return out
 

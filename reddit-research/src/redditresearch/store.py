@@ -17,7 +17,7 @@ PRAGMA journal_mode=WAL;
 CREATE TABLE IF NOT EXISTS posts(
   id TEXT PRIMARY KEY, subreddit TEXT, title TEXT, selftext TEXT, author TEXT, score INTEGER,
   upvote_ratio REAL, num_comments INTEGER, created_utc INTEGER, url TEXT, domain TEXT, permalink TEXT,
-  flair TEXT, over_18 INTEGER, crosspost_parent TEXT, fetched_comments INTEGER DEFAULT 0,
+  flair TEXT, over_18 INTEGER, crosspost_parent TEXT, num_crossposts INTEGER DEFAULT 0, fetched_comments INTEGER DEFAULT 0,
   coverage REAL, source TEXT, fetched_at INTEGER, meta_only INTEGER DEFAULT 1
 );
 CREATE TABLE IF NOT EXISTS comments(
@@ -68,6 +68,17 @@ class Store:
         # Portable log(): SQLite's own math functions aren't compiled into every Python build.
         self.db.create_function("rr_log", 1, lambda x: math.log(x) if x and x > 0 else 0.0, deterministic=True)
         self.db.executescript(SCHEMA)
+        self._migrate()
+
+    def _migrate(self) -> None:
+        """Add columns introduced after a database was first created."""
+        added = {"posts": {"num_crossposts": "INTEGER DEFAULT 0"}}
+        for table, cols in added.items():
+            have = {r["name"] for r in self.db.execute(f"PRAGMA table_info({table})")}
+            for col, decl in cols.items():
+                if col not in have:
+                    self.db.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
+        self.db.commit()
 
     def close(self) -> None:
         self.db.close()
@@ -88,11 +99,11 @@ class Store:
         if existing is None:
             self.db.execute(
                 "INSERT INTO posts(id,subreddit,title,selftext,author,score,upvote_ratio,num_comments,created_utc,"
-                "url,domain,permalink,flair,over_18,crosspost_parent,source,fetched_at,meta_only) "
-                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)",
+                "url,domain,permalink,flair,over_18,crosspost_parent,num_crossposts,source,fetched_at,meta_only) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)",
                 (p["id"], p["subreddit"], p["title"], p["selftext"], p["author"], p["score"], p["upvote_ratio"],
                  p["num_comments"], p["created_utc"], p["url"], p["domain"], p["permalink"], p["flair"],
-                 p["over_18"], p["crosspost_parent"], source, int(time.time())),
+                 p["over_18"], p["crosspost_parent"], p["num_crossposts"], source, int(time.time())),
             )
             self._index_post(p)
         elif existing["meta_only"]:
@@ -112,11 +123,12 @@ class Store:
         self.db.execute("DELETE FROM posts WHERE id=?", (p["id"],))
         self.db.execute(
             "INSERT INTO posts(id,subreddit,title,selftext,author,score,upvote_ratio,num_comments,created_utc,url,"
-            "domain,permalink,flair,over_18,crosspost_parent,fetched_comments,coverage,source,fetched_at,meta_only) "
-            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)",
+            "domain,permalink,flair,over_18,crosspost_parent,num_crossposts,fetched_comments,coverage,source,fetched_at,"
+            "meta_only) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)",
             (p["id"], p["subreddit"], p["title"], p["selftext"], p["author"], p["score"], p["upvote_ratio"],
              max(p["num_comments"], len(alive)), p["created_utc"], p["url"], p["domain"], p["permalink"], p["flair"],
-             p["over_18"], p["crosspost_parent"], len(alive), min(coverage, 1.0), source, int(time.time())),
+             p["over_18"], p["crosspost_parent"], p["num_crossposts"], len(alive), min(coverage, 1.0), source,
+             int(time.time())),
         )
         self.db.execute("DELETE FROM comments WHERE post_id=?", (p["id"],))
         self.db.execute("DELETE FROM comments_fts WHERE post_id=?", (p["id"],))
@@ -284,6 +296,7 @@ def normalize_post(raw: dict) -> dict:
         "flair": d.get("link_flair_text") or "",
         "over_18": 1 if d.get("over_18") else 0,
         "crosspost_parent": strip_prefix(crosspost),
+        "num_crossposts": _int(d.get("num_crossposts")),
     }
 
 
