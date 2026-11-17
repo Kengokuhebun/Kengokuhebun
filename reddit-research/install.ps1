@@ -15,14 +15,6 @@ uv tool install --force --python 3.12 "$here"
 uv tool update-shell | Out-Null
 $env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
 
-$chrome = @("$env:ProgramFiles\Google\Chrome\Application\chrome.exe",
-            "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe",
-            "$env:LOCALAPPDATA\Google\Chrome\Application\chrome.exe") | Where-Object { Test-Path $_ }
-if (-not $chrome) {
-    Write-Host "Google Chrome not found; downloading a private Chromium for the tool..."
-    rr setup-browser
-    rr set browser_channel chromium
-}
 
 if (Get-Command claude -ErrorAction SilentlyContinue) {
     Write-Host "Registering the MCP server with Claude Code (all projects)..."

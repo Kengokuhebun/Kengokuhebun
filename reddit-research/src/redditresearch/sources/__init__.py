@@ -20,7 +20,7 @@ def build_source(settings: dict | None = None) -> Source:
         from .reddit_browser import RedditBrowserSource
     except ImportError:
         return arctic
-    reddit = RedditBrowserSource(profile, headless=settings["headless"], channel=settings["browser_channel"],
+    reddit = RedditBrowserSource(profile, headless=settings["headless"], browser_path=settings.get("browser_path", ""),
                                  min_interval=settings["reddit_min_interval"])
     return reddit if choice == "reddit" else FallbackSource(reddit, arctic)
 

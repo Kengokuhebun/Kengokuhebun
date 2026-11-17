@@ -13,7 +13,7 @@ DEFAULTS = {
     "reddit_min_interval": 1.5,  # seconds between Reddit requests (~40/min, well under limits)
     "arctic_min_interval": 1.5,
     "headless": True,
-    "browser_channel": "chrome",  # use your installed Chrome; falls back to Playwright's Chromium
+    "browser_path": "",  # empty = auto-detect Chrome, then Edge, then Brave/Chromium
 }
 
 

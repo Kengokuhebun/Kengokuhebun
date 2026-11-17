@@ -21,19 +21,26 @@ def _print(obj) -> None:
 
 
 async def cmd_login(args) -> None:
-    from .sources.reddit_browser import RedditBrowserSource
+    import shutil
+
+    from .sources.reddit_browser import RedditBrowserSource, find_browser
 
     s = config.load_settings()
-    src = RedditBrowserSource(config.profile_dir(), headless=False, channel=s["browser_channel"])
-    print("A browser window is opening on the Reddit login page.")
-    print("Log in normally (any method works). This window closes by itself once you're signed in.")
+    if args.fresh and config.profile_dir().exists():
+        shutil.rmtree(config.profile_dir(), ignore_errors=True)
+        print("Cleared the old browser profile.")
+    src = RedditBrowserSource(config.profile_dir(), headless=False, browser_path=s.get("browser_path", ""))
+    print(f"Opening {find_browser(s.get('browser_path', '')) or 'a browser'} on Reddit's login page.")
+    print("1. Log in normally (Google/Apple/email all work).")
+    print("2. When you can see your Reddit home feed, CLOSE that browser window.")
+    print("(It's a separate, private browser profile, so your normal Chrome is untouched.)")
     ok = await src.login(timeout_s=args.timeout)
     if ok:
         print(f"Logged in. Your session is stored only on this computer: {config.profile_dir()}")
         if s["source"] == "arctic":
             config.save_setting("source", "auto")
     else:
-        print("Didn't see a login within the time limit. Run `rr login` again when ready.")
+        print("Not logged in yet. Run `rr login` again, finish logging in, then close the window.")
 
 
 async def cmd_doctor(args) -> None:
@@ -58,7 +65,10 @@ async def cmd_doctor(args) -> None:
         from .sources.reddit_browser import RedditBrowserSource
 
         s = config.load_settings()
-        src = RedditBrowserSource(config.profile_dir(), headless=True, channel=s["browser_channel"])
+        from .sources.reddit_browser import find_browser
+
+        print(f"Browser: {find_browser(s.get('browser_path', '')) or 'none found (run rr setup-browser)'}")
+        src = RedditBrowserSource(config.profile_dir(), headless=True, browser_path=s.get("browser_path", ""))
         try:
             print(f"Reddit login: {'yes' if await src.logged_in() else 'NO (run rr login)'}")
             data = await src.get_json("/r/beyondthebump/top.json", {"t": "week", "limit": 1})
@@ -144,9 +154,10 @@ def parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     s = sub.add_parser("login", help="sign this tool's browser profile into Reddit (one time)")
-    s.add_argument("--timeout", type=int, default=600)
+    s.add_argument("--timeout", type=int, default=900)
+    s.add_argument("--fresh", action="store_true", help="delete the tool's old browser profile first")
     sub.add_parser("doctor", help="check that everything works")
-    sub.add_parser("setup-browser", help="download a browser for Playwright (only if Chrome isn't installed)")
+    sub.add_parser("setup-browser", help="download Chromium (only if no Chrome/Edge/Brave is installed)")
     s = sub.add_parser("set", help="change a setting, e.g. `rr set source arctic`")
     s.add_argument("key", choices=sorted(config.DEFAULTS))
     s.add_argument("value")

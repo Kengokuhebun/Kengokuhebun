@@ -14,10 +14,9 @@ uv tool install --force --python 3.12 "$here"
 uv tool update-shell >/dev/null || true
 export PATH="$HOME/.local/bin:$PATH"
 
-if ! { [ -d "/Applications/Google Chrome.app" ] || command -v google-chrome >/dev/null 2>&1; }; then
-  echo "Google Chrome not found; downloading a private Chromium for the tool..."
+if ! { [ -d "/Applications/Google Chrome.app" ] || [ -d "/Applications/Microsoft Edge.app" ] || command -v google-chrome >/dev/null 2>&1 || command -v chromium >/dev/null 2>&1; }; then
+  echo "No Chrome/Edge found; downloading Chromium for the tool..."
   rr setup-browser
-  rr set browser_channel chromium
 fi
 
 if command -v claude >/dev/null 2>&1; then

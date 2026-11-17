@@ -1,10 +1,14 @@
 """Reddit itself, read through a real browser profile on YOUR computer.
 
 Why a browser: since May 2026 Reddit refuses logged-out `.json` requests from scripts, and new API apps
-need weeks of manual approval. A real Chrome profile that you've logged into once is treated like you
+need weeks of manual approval. A real Chrome/Edge profile that you've logged into once is treated like you
 browsing: it's the same technique the redditcommentscraper.com extension uses (it calls reddit.com
-`.json` endpoints from inside your browser). Requests run inside a reddit.com tab with your cookies,
-spaced out politely (default 1.5 s apart).
+`.json` endpoints from inside your browser).
+
+How it stays a *normal* browser: we start your installed Chrome (or Edge) ourselves, with a private
+profile folder and no automation flags, then attach to it over Chrome's DevTools port only to run fetch()
+inside a reddit.com tab. Automation-launched browsers (Playwright/Selenium defaults) get captcha'd by
+Reddit's login page, so `rr login` doesn't automate anything at all: you log in by hand and close the window.
 """
 
 from __future__ import annotations
@@ -12,6 +16,11 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
+import shutil
+import subprocess
+import sys
+import time
 from pathlib import Path
 from urllib.parse import quote, urlencode
 
@@ -30,33 +39,71 @@ async (url) => {
 """
 
 
+def find_browser(preferred: str = "") -> str | None:
+    """Path to an installed Chromium-family browser: Chrome first, then Edge (on every Windows PC), Chromium."""
+    if preferred and Path(preferred).exists():
+        return preferred
+    env = os.environ.get
+    candidates = []
+    if sys.platform.startswith("win"):
+        for base in (env("ProgramFiles"), env("ProgramFiles(x86)"), env("LOCALAPPDATA")):
+            if base:
+                candidates += [Path(base) / "Google/Chrome/Application/chrome.exe",
+                               Path(base) / "Microsoft/Edge/Application/msedge.exe",
+                               Path(base) / "BraveSoftware/Brave-Browser/Application/brave.exe"]
+    elif sys.platform == "darwin":
+        candidates += [Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+                       Path("/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"),
+                       Path("/Applications/Chromium.app/Contents/MacOS/Chromium"),
+                       Path("/Applications/Brave Browser.app/Contents/MacOS/Brave Browser")]
+    for c in candidates:
+        if c.exists():
+            return str(c)
+    for name in ("google-chrome", "google-chrome-stable", "chromium", "chromium-browser", "microsoft-edge"):
+        found = shutil.which(name)
+        if found:
+            return found
+    return None
+
+
+async def _playwright_chromium() -> str | None:
+    try:
+        from playwright.async_api import async_playwright
+
+        async with async_playwright() as pw:
+            path = pw.chromium.executable_path
+        return path if path and Path(path).exists() else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
 class RedditBrowserSource(Source):
     name = "reddit"
 
-    def __init__(self, profile_dir: Path, headless: bool = True, channel: str = "chrome", min_interval: float = 1.5):
+    def __init__(self, profile_dir: Path, headless: bool = True, browser_path: str = "", min_interval: float = 1.5,
+                 origin: str = ORIGIN):
         self.profile_dir = Path(profile_dir)
         self.headless = headless
-        self.channel = channel
+        self.browser_path = browser_path
+        self.origin = origin
         self.limiter = RateLimiter(min_interval)
-        self._pw = self._ctx = self._page = None
+        self._pw = self._browser = self._ctx = self._page = None
+        self._proc: subprocess.Popen | None = None
         self._start_lock = asyncio.Lock()
 
     # ------------------------------------------------------------------ browser lifecycle
-    async def _launch(self, headless: bool, user_agent: str | None = None):
-        from playwright.async_api import async_playwright
+    async def _exe(self) -> str:
+        exe = find_browser(self.browser_path) or await _playwright_chromium()
+        if not exe:
+            raise SourceError("No Chrome, Edge or Chromium found. Install Google Chrome, or run `rr setup-browser`.")
+        return exe
 
-        if self._pw is None:
-            self._pw = await async_playwright().start()
-        kwargs = dict(headless=headless, viewport={"width": 1280, "height": 900},
-                      args=["--disable-blink-features=AutomationControlled"])
-        if user_agent:
-            kwargs["user_agent"] = user_agent
+    def _spawn(self, exe: str, extra: list[str]) -> subprocess.Popen:
         self.profile_dir.mkdir(parents=True, exist_ok=True)
-        try:
-            return await self._pw.chromium.launch_persistent_context(str(self.profile_dir), channel=self.channel, **kwargs)
-        except Exception as exc:  # Chrome not installed -> Playwright's bundled Chromium
-            log.info("Couldn't launch %s (%s); using bundled Chromium", self.channel, exc)
-            return await self._pw.chromium.launch_persistent_context(str(self.profile_dir), **kwargs)
+        args = [exe, f"--user-data-dir={self.profile_dir}", "--no-first-run", "--no-default-browser-check",
+                *os.environ.get("RR_BROWSER_ARGS", "").split(), *extra]  # RR_BROWSER_ARGS: for containers/CI only
+        flags = subprocess.CREATE_NO_WINDOW if sys.platform.startswith("win") else 0
+        return subprocess.Popen(args, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, creationflags=flags)
 
     async def start(self) -> None:
         async with self._start_lock:
@@ -65,58 +112,93 @@ class RedditBrowserSource(Source):
             try:
                 await self._open()
             except SourceError:
+                await self.close()
                 raise
             except Exception as exc:
                 await self.close()
-                raise SourceError(
-                    f"Couldn't start the browser ({exc}). Run `rr doctor` to check the setup."
-                ) from exc
+                raise SourceError(f"Couldn't start the browser ({exc}). Run `rr doctor` to check the setup.") from exc
 
     async def _open(self) -> None:
-        self._ctx = await self._launch(self.headless)
+        from playwright.async_api import async_playwright
+
+        exe = await self._exe()
+        port_file = self.profile_dir / "DevToolsActivePort"
+        port_file.unlink(missing_ok=True)
+        extra = ["--remote-debugging-port=0", "about:blank"]
+        if self.headless:
+            # Headless Chrome reports navigator.webdriver=true; this switch restores the normal value.
+            extra = ["--headless=new", "--window-size=1280,900", "--disable-blink-features=AutomationControlled", *extra]
+        self._proc = self._spawn(exe, extra)
+        deadline = time.monotonic() + 30
+        port = None
+        while time.monotonic() < deadline:
+            if self._proc.poll() is not None:
+                raise SourceError(
+                    "The browser closed immediately. Is a reddit-research browser window still open? Close it "
+                    "and try again."
+                )
+            try:
+                port = int(port_file.read_text().splitlines()[0])
+                break
+            except (FileNotFoundError, ValueError, IndexError):
+                await asyncio.sleep(0.25)
+        if not port:
+            raise SourceError("The browser didn't start in time.")
+        self._pw = await async_playwright().start()
+        self._browser = await self._pw.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
+        self._ctx = self._browser.contexts[0] if self._browser.contexts else await self._browser.new_context()
         page = self._ctx.pages[0] if self._ctx.pages else await self._ctx.new_page()
         ua = await page.evaluate("navigator.userAgent")
-        if "HeadlessChrome" in ua:  # headless announces itself; present as normal Chrome instead
-            await self._ctx.close()
-            self._ctx = await self._launch(self.headless, ua.replace("HeadlessChrome", "Chrome"))
-            page = self._ctx.pages[0] if self._ctx.pages else await self._ctx.new_page()
-        await page.goto(ORIGIN + "/", wait_until="domcontentloaded", timeout=60_000)
+        if "HeadlessChrome" in ua:  # headless announces itself in the user agent; present as normal Chrome
+            cdp = await self._ctx.new_cdp_session(page)
+            await cdp.send("Network.setUserAgentOverride", {"userAgent": ua.replace("HeadlessChrome", "Chrome")})
+        await page.goto(self.origin + "/", wait_until="domcontentloaded", timeout=60_000)
         self._page = page
 
     async def close(self) -> None:
-        if self._ctx is not None:
-            await self._ctx.close()
+        if self._browser is not None:
+            try:  # graceful close so Chrome writes cookies to disk
+                cdp = await self._browser.new_browser_cdp_session()
+                await cdp.send("Browser.close")
+            except Exception:  # noqa: BLE001
+                pass
         if self._pw is not None:
-            await self._pw.stop()
-        self._pw = self._ctx = self._page = None
+            try:
+                await self._pw.stop()
+            except Exception:  # noqa: BLE001
+                pass
+        if self._proc is not None:
+            try:
+                await asyncio.to_thread(self._proc.wait, 10)
+            except subprocess.TimeoutExpired:
+                self._proc.terminate()
+        self._pw = self._browser = self._ctx = self._page = self._proc = None
 
     async def logged_in(self) -> bool:
         await self.start()
-        cookies = await self._ctx.cookies(ORIGIN)
+        cookies = await self._ctx.cookies(self.origin)
         return any(c["name"] == "reddit_session" for c in cookies)
 
-    async def login(self, timeout_s: int = 600) -> bool:
-        """Open a visible window on the Reddit login page and wait until you've signed in."""
+    async def login(self, timeout_s: int = 900) -> bool:
+        """Open a normal browser window on Reddit's login page. You log in, then close the window."""
         await self.close()
-        self.headless = False
-        self._ctx = await self._launch(headless=False)
-        page = self._ctx.pages[0] if self._ctx.pages else await self._ctx.new_page()
-        await page.goto(ORIGIN + "/login/", wait_until="domcontentloaded", timeout=60_000)
-        for _ in range(timeout_s // 2):
-            cookies = await self._ctx.cookies(ORIGIN)
-            if any(c["name"] == "reddit_session" for c in cookies):
-                await asyncio.sleep(2)  # let the session settle
-                await self.close()
-                return True
-            await asyncio.sleep(2)
-        await self.close()
-        return False
+        exe = await self._exe()
+        proc = self._spawn(exe, [self.origin + "/login/"])
+        try:
+            await asyncio.to_thread(proc.wait, timeout_s)
+        except subprocess.TimeoutExpired:
+            proc.terminate()
+        self.headless = True
+        try:
+            return await self.logged_in()
+        finally:
+            await self.close()
 
     # ------------------------------------------------------------------ requests
     async def get_json(self, path: str, params: dict | None = None, attempts: int = 4):
         await self.start()
         query = {"raw_json": 1, **(params or {})}
-        url = f"{ORIGIN}{path}?{urlencode(query, doseq=True, quote_via=quote)}"
+        url = f"{self.origin}{path}?{urlencode(query, doseq=True, quote_via=quote)}"
         last = ""
         for attempt in range(1, attempts + 1):
             await self.limiter.wait()

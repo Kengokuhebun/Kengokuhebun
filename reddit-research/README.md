@@ -20,7 +20,7 @@ logged-out scripts. Reading through your own logged-in browser avoids both.
 
 ## Install on your PC (about 5 minutes)
 
-You need: **Google Chrome** (recommended; otherwise the installer downloads Chromium), **git**, and
+You need: **Chrome or Edge** (every Windows PC has Edge), **git**, and
 **Claude Code** (`npm install -g @anthropic-ai/claude-code`) or Claude Desktop.
 
 **Windows** (PowerShell):
@@ -46,11 +46,13 @@ The installer:
 Then:
 
 ```bash
-rr login     # a Chrome window opens on Reddit's login page; sign in, and it closes by itself
+rr login     # a normal browser window opens on Reddit's login page: log in, then CLOSE the window
 rr doctor    # checks the archive, your login, and a live Reddit request
 ```
 
-Your Reddit session stays on your computer, in `~/.reddit-research/browser-profile`. Requests are spaced 1.5 s apart
+The login window is a plain, separate browser profile with no automation attached, so Reddit sees a normal
+login and your everyday Chrome is untouched. If Reddit ever shows "whoa there, pardner", wait 10 minutes and run
+`rr login --fresh`. Your Reddit session stays on your computer, in `~/.reddit-research/browser-profile`. Requests are spaced 1.5 s apart
 (about 40 a minute). To be extra careful, log in with a secondary Reddit account.
 
 ### Claude Desktop instead of Claude Code
@@ -99,6 +101,7 @@ rr set source auto        # default: your browser if logged in, archive as fallb
 rr set source arctic      # archive only (no login, slower search, data ~36h behind for scores)
 rr set reddit_min_interval 2.5   # slow down further
 rr set headless false     # watch the browser work
+rr set browser_path "C:\Program Files\Google\Chrome\Application\chrome.exe"   # pick a specific browser
 ```
 
 ---
