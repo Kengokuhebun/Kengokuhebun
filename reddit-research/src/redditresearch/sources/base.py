@@ -11,6 +11,14 @@ class BlockedError(SourceError):
     """The source refused us (403 / login required)."""
 
 
+class PartialResult(SourceError):
+    """Got some of what was asked; `missing` lists ids another source could still fill."""
+
+    def __init__(self, message: str, things: list, missing: list[str]):
+        super().__init__(message)
+        self.things, self.missing = things, missing
+
+
 class Source:
     name = "base"
 
@@ -78,6 +86,13 @@ class FallbackSource(Source):
         async def call(*args, **kwargs):
             try:
                 return await primary_fn(*args, **kwargs)
+            except PartialResult as exc:  # keep what the primary found, ask the secondary for the rest
+                await self.secondary.start()
+                try:
+                    rest = await secondary_fn(args[0], exc.missing)
+                except (SourceError, NotImplementedError):
+                    rest = []
+                return exc.things + rest
             except (SourceError, NotImplementedError) as exc:
                 note = f"{self.primary.name}.{item} failed ({exc}); used {self.secondary.name}"
                 if note not in self.notes:

@@ -146,3 +146,20 @@ def test_fallback_source_routes_around_failures():
     fb = FallbackSource(Broken(), FakeReddit())
     post, children = run(fb.thread("aaa111"))
     assert post["id"] == "aaa111" and fb.notes
+
+
+def test_fallback_fills_only_missing_comments():
+    from redditresearch.sources.base import PartialResult
+
+    class Partial(FakeReddit):
+        name = "partial"
+
+        async def more_children(self, post_id, ids):
+            got = [self.more[i] for i in ids if i == "c4"]
+            raise PartialResult("some hidden", got, [i for i in ids if i != "c4"])
+
+    archive = FakeReddit()
+    fb = FallbackSource(Partial(), archive)
+    things = run(fb.more_children("aaa111", ["c4", "c5"]))
+    assert sorted(t["data"]["id"] for t in things) == ["c4", "c5"]
+    assert ("more", "aaa111", ("c5",)) in archive.calls  # archive asked only for what was missing

@@ -25,7 +25,7 @@ from pathlib import Path
 from urllib.parse import quote, urlencode
 
 from ..util import RateLimiter
-from .base import BlockedError, SourceError, Source
+from .base import BlockedError, PartialResult, SourceError, Source
 
 log = logging.getLogger(__name__)
 ORIGIN = "https://www.reddit.com"
@@ -90,8 +90,10 @@ class RedditBrowserSource(Source):
         self._pw = self._browser = self._ctx = self._page = None
         self._proc: subprocess.Popen | None = None
         self._start_lock = asyncio.Lock()
-        self._more_mode: str | None = None  # which 'load more comments' method Reddit accepted
+        self._api_more: bool | None = None  # does Reddit accept /api/morechildren for this session?
+        self._api_mode: str | None = None
         self._modhash: str | None = None
+        self._resorted: dict[str, dict[str, dict]] = {}  # post id -> {comment id: thing} from re-sorted loads
 
     # ------------------------------------------------------------------ browser lifecycle
     async def _exe(self) -> str:
@@ -242,43 +244,79 @@ class RedditBrowserSource(Source):
         return post, data[1]["data"]["children"]
 
     async def more_children(self, post_id: str, ids: list[str]) -> list:
-        """Expand 'load more comments'. Reddit sometimes refuses /api/morechildren for cookie sessions, so try
-        (1) with the account's modhash header, (2) without cookies, the way the reference extension calls it,
-        (3) for small batches, each comment's own permalink. Whatever works is remembered for the session.
-        If all fail, SourceError lets the caller fall back to the archive."""
-        modes = [self._more_mode] if self._more_mode else ["modhash", "omit", "permalink"]
-        for mode in modes:
-            if mode == "permalink" and len(ids) > 25:
-                continue
-            try:
-                out = await self._more(mode, post_id, ids)
-            except BlockedError as exc:
-                log.info("load-more via %s refused: %s", mode, exc)
-                continue
-            self._more_mode = mode
-            return out
-        if self._more_mode:  # the remembered method stopped working: rediscover next time
-            self._more_mode = None
-            return await self.more_children(post_id, ids)
-        raise SourceError("Reddit refused 'load more comments' every way we tried")
+        """Expand 'load more comments'.
 
-    async def _more(self, mode: str, post_id: str, ids: list[str]) -> list:
-        if mode == "permalink":
-            out, seen = [], set()
-            for cid in ids:
-                if cid in seen:
+        1. /api/morechildren (with the account modhash, then without cookies, the way the reference extension
+           calls it). Some sessions get 403 here; once both are refused we stop asking.
+        2. Otherwise use the thread endpoint, which always works: re-load the thread sorted by new and old (each
+           returns a different 500 comments with their replies), then fetch remaining comments by permalink.
+        3. Anything still missing is raised as PartialResult so the archive can fill it.
+        """
+        if self._api_more is not False:
+            for mode in ([self._api_mode] if self._api_mode else ["modhash", "omit"]):
+                try:
+                    out = await self._api_morechildren(mode, post_id, ids)
+                    self._api_more, self._api_mode = True, mode
+                    return out
+                except BlockedError:
                     continue
+            if self._api_more is None:
+                log.info("Reddit blocks 'load more comments' for this session; using re-sorted thread loads instead")
+            self._api_more = False
+
+        pool = await self._resorted_pool(post_id)
+        found, seen, missing = [], set(), []
+        for cid in ids:
+            if cid in seen:
+                continue
+            thing = pool.get(cid)
+            if thing is None:
+                missing.append(cid)
+                continue
+            found.append(thing)
+            seen |= _ids_in(thing)
+        missing = [m for m in missing if m not in seen]
+        budget, unresolved = 40, []
+        while missing and budget:
+            cid = missing.pop(0)
+            if cid in seen:
+                continue
+            budget -= 1
+            try:
                 data = await self.get_json(f"/comments/{post_id}/_/{cid}.json", {"limit": 500, "sort": "top"})
-                kids = data[1]["data"]["children"]
-                stack = list(kids)
-                while stack:  # note every id we got so descendants aren't fetched twice
+            except SourceError:
+                unresolved.append(cid)
+                continue
+            for k in data[1]["data"]["children"]:
+                found.append(k)
+                seen |= _ids_in(k)
+            missing = [m for m in missing if m not in seen]
+        missing = [m for m in unresolved + missing if m not in seen]
+        if missing:
+            raise PartialResult(f"{len(missing)} comments still hidden", found, missing)
+        return found
+
+    async def _resorted_pool(self, post_id: str) -> dict[str, dict]:
+        if post_id not in self._resorted:
+            pool: dict[str, dict] = {}
+            for sort in ("new", "old", "controversial"):
+                try:
+                    data = await self.get_json(f"/comments/{post_id}.json", {"limit": 500, "sort": sort})
+                except SourceError:
+                    continue
+                stack = list(data[1]["data"]["children"])
+                while stack:
                     k = stack.pop()
-                    seen.add((k.get("data") or {}).get("id"))
-                    rep = (k.get("data") or {}).get("replies")
+                    d = k.get("data") or {}
+                    if k.get("kind") == "t1" and d.get("id"):
+                        pool.setdefault(d["id"], k)
+                    rep = d.get("replies")
                     if isinstance(rep, dict):
                         stack += rep["data"]["children"]
-                out += kids
-            return out
+            self._resorted = {post_id: pool}  # keep only the current thread in memory
+        return self._resorted[post_id]
+
+    async def _api_morechildren(self, mode: str, post_id: str, ids: list[str]) -> list:
         headers, credentials = {}, "include"
         if mode == "modhash":
             if self._modhash is None:
@@ -348,3 +386,17 @@ class RedditBrowserSource(Source):
         data = await self.get_json("/subreddits/search.json", {"q": query, "limit": limit})
         return [{"name": c["data"].get("display_name"), "subscribers": c["data"].get("subscribers"),
                  "description": c["data"].get("public_description") or ""} for c in data["data"]["children"]]
+
+
+def _ids_in(thing: dict) -> set[str]:
+    """Every comment id inside a thing (itself plus all nested replies)."""
+    out, stack = set(), [thing]
+    while stack:
+        k = stack.pop()
+        d = k.get("data") or {}
+        if d.get("id"):
+            out.add(d["id"])
+        rep = d.get("replies")
+        if isinstance(rep, dict):
+            stack += rep["data"]["children"]
+    return out

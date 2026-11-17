@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from .. import config
 from .arctic import ArcticShiftSource
-from .base import BlockedError, FallbackSource, Source, SourceError
+from .base import BlockedError, FallbackSource, PartialResult, Source, SourceError
 
 
 def build_source(settings: dict | None = None) -> Source:
