@@ -18,7 +18,9 @@ PLAN = {
  'B_christmas': ['kling_kitchen', 'draw_white', 'kling_boy', 'night_glow', 'draw_white'],
  'C_lastcall':  ['draw_white', 'night_glow'],
 }
-clips = [c for c in PLAN[name] if os.path.exists(f'{CL}/{c}.mp4')]
+base = [c for c in PLAN[name] if os.path.exists(f'{CL}/{c}.mp4')]
+import math
+_vo = None
 
 def sh(cmd):
     r = subprocess.run(cmd, shell=True, capture_output=True, text=True)
@@ -31,7 +33,9 @@ vo = f'{AU}/{name}_{voice}.mp3'
 vo_len = dur(vo)
 END = 3.2                       # end card seconds
 body_len = vo_len + 0.4         # body runs slightly past VO, then end card
-seg = body_len / len(clips)
+n = max(len(base), math.ceil(body_len / 5.0))
+clips = [base[i % len(base)] for i in range(n)]
+seg = body_len / n
 
 # 1) each body segment: square/16:9 clip centred over its own blurred, enlarged copy; muted; trimmed/slowed to fit
 parts = []
@@ -43,7 +47,7 @@ for i, c in enumerate(clips):
     f = min(f, 1.7)
     sh(f'ffmpeg -nostdin -loglevel error -y -i "{CL}/{c}.mp4" -an -t {seg} '
        f'-filter_complex "[0:v]split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:5,eq=brightness=-0.08[bg];'
-       f'[b]{"crop=iw:ih*0.80:0:ih*0.20," if c == "kling_kitchen" else ""}setpts={f}*PTS,scale={W}:-2:flags=lanczos[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2-80,fps=30,format=yuv420p[v]" '
+       f'[b]{"crop=iw:ih*0.80:0:ih*0.20," if c == "kling_kitchen" else ""}setpts={f}*PTS,tpad=stop_mode=clone:stop_duration=10,scale={W}:-2:flags=lanczos[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2-80,fps=30,format=yuv420p[v]" '
        f'-map "[v]" -t {seg} -c:v libx264 -preset fast -crf 20 "{p}"')
     parts.append(p)
 
@@ -53,11 +57,11 @@ def ft(s): return ImageFont.truetype(FONT, s)
 def center(y, text, size, fill):
     f = ft(size); w = d.textlength(text, font=f); d.text(((W - w) / 2, y), text, font=f, fill=fill)
 center(300, 'BLACK FRIDAY', 120, GLOW)
-center(470, 'BUY 2', 230, (255, 255, 255)); center(720, 'GET 1 FREE', 190, GLOW)
+center(470, 'BUY 2', 230, (255, 255, 255)); center(730, 'GET 1 FREE', 140, GLOW)
 center(980, '+ FREE Glow Tracing Book', 64, (255, 255, 255))
 center(1070, '+ FREE shipping', 64, (255, 255, 255))
 d.rounded_rectangle((90, 1250, W - 90, 1420), radius=40, fill=GLOW)
-center(1288, 'ENDS CYBER MONDAY', 78, NAVY)
+center(1295, 'ENDS CYBER MONDAY', 62, NAVY)
 d.rounded_rectangle((230, 1520, W - 230, 1680), radius=80, fill=(255, 255, 255))
 center(1563, 'SHOP NOW', 84, NAVY)
 center(1760, 'Only on our website', 46, (200, 205, 225))
