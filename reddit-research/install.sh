@@ -32,5 +32,6 @@ else
 fi
 
 echo
+echo "IMPORTANT: open a new terminal first (or run: export PATH=\"\$HOME/.local/bin:\$PATH\")"
 echo "Next: sign the tool's browser into Reddit (one time):  rr login"
 echo "Then check everything:                                rr doctor"

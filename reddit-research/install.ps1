@@ -37,5 +37,8 @@ if (Get-Command claude -ErrorAction SilentlyContinue) {
 }
 
 Write-Host ""
+Write-Host "IMPORTANT: open a NEW PowerShell window first (this one doesn't know the rr command yet),"
+Write-Host "or paste this here:  `$env:Path = `"`$env:USERPROFILE\.local\bin;`$env:Path`""
+Write-Host ""
 Write-Host "Next: sign the tool's browser into Reddit (one time):  rr login"
 Write-Host "Then check everything:                                rr doctor"
