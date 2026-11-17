@@ -55,7 +55,7 @@ def pill(path, text, size, fg, bg, pad=34):
     d.rounded_rectangle((0, 0, w, size + pad), radius=28, fill=bg); d.text((pad, pad // 2 - 4), text, font=f, fill=fg); im.save(path)
 pill(f'{TMP}/top.png', 'The gift they will never forget', 54, (255, 255, 255), (29, 35, 64, 215))
 pill(f'{TMP}/offer1.png', 'BLACK FRIDAY: BUY 2, GET 1 FREE', 52, (29, 35, 64), (255, 211, 110, 245))
-pill(f'{TMP}/offer2.png', '+ FREE TRACING BOOK · ENDS CYBER MONDAY', 42, (255, 255, 255), (214, 40, 57, 245))
+pill(f'{TMP}/offer2.png', 'FREE TRACING BOOK · ENDS CYBER MONDAY', 34, (255, 255, 255), (214, 40, 57, 245))
 
 # captions from whisper on the final voice track
 sh(f'/root/.local/bin/whisper {vo} --model small.en --word_timestamps True --output_format json --output_dir {TMP} --language en')
@@ -69,6 +69,8 @@ def t(x): return f'{int(x // 3600)}:{int(x % 3600 // 60):02d}:{x % 60:05.2f}'
 i = 0
 while i < len(words):
     ch = words[i:i + 3]; i += 3
+    FIX = {'lead': 'led', 'lid': 'led'}
+    for w in ch: w['word'] = FIX.get(w['word'].strip().lower().strip('.,!'), w['word'])
     txt = ' '.join(('{\\c&H6ED3FF&}' + w['word'].strip().upper() + '{\\c&HFFFFFF&}') if w['word'].strip().lower().strip('.,!') in HI else w['word'].strip().upper() for w in ch)
     ass.append(f'Dialogue: 0,{t(ch[0]["start"])},{t(ch[-1]["end"] + 0.05)},Default,,0,0,0,,{txt}')
 open(f'{TMP}/{name}.ass', 'w').write('\n'.join(ass))
@@ -90,7 +92,7 @@ sh(f'ffmpeg -nostdin -loglevel error -y -loop 1 -i {TMP}/end.png -t {END} -vf "f
 
 # compose body: top caption, offer banner, burned captions, voice
 sh(f'ffmpeg -nostdin -loglevel error -y -i {TMP}/{name}_cut.mp4 -i {vo} -i {TMP}/top.png -i {TMP}/offer1.png -i {TMP}/offer2.png '
-   f'-filter_complex "[0:v][2:v]overlay=(W-w)/2:120[a];[a][3:v]overlay=(W-w)/2:H-h-640:enable=\'gte(t,{t_off})\'[b];[b][4:v]overlay=(W-w)/2:H-h-540:enable=\'gte(t,{t_off + 0.3})\'[c];[c]ass={TMP}/{name}.ass[v]" '
+   f'-filter_complex "[0:v][2:v]overlay=(W-w)/2:120[a];[a][3:v]overlay=(W-w)/2:H-h-800:enable=\'gte(t,{t_off})\'[b];[b][4:v]overlay=(W-w)/2:H-h-705:enable=\'gte(t,{t_off + 0.3})\'[c];[c]ass={TMP}/{name}.ass[v]" '
    f'-map "[v]" -map 1:a -c:v libx264 -preset fast -crf 19 -c:a aac -b:a 192k -af "apad" -t {body} {TMP}/{name}_body.mp4')
 sh(f'ffmpeg -nostdin -loglevel error -y -i {TMP}/{name}_end.mp4 -f lavfi -i anullsrc=r=44100:cl=stereo -t {END} -c:v copy -c:a aac {TMP}/{name}_end_a.mp4')
 final = f'{OUT}/{name}.mp4'
