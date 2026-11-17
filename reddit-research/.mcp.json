@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "reddit-research": {
+      "command": "rr",
+      "args": ["serve"]
+    }
+  }
+}
