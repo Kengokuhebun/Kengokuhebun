@@ -23,7 +23,7 @@ Reserve (not in this round): Discovery-first, opening on the friend's text (para
 ## Design (proposed, not built)
 - New campaign `Glowling_R1_BF26_HOOK_TEST`, ad-set budgets, Canada only (US-dollar copy fits; no consent banner; cheapest CPM), ages 28-65+, same settings as the main campaign. One ad set per cell, so budgets stay equal.
 - £6/day per cell = £24/day, 3 days = about £72.
-- Judge on: hook rate where available for statics is not applicable; use link CTR, CPC, cost per landing page view. Flag-only: CTR under 0.7% after 1,500 impressions in a cell. Nothing paused automatically.
+- Judge on: link CTR, CPC and cost per landing page view (hook rate does not apply to static images). Flag-only: CTR under 0.7% after 1,500 impressions in a cell. Nothing paused automatically.
 - Funding: current pace is about £70/day (CBO £40 + UK up to £30). Lifetime spend is about £300 against the £400 ladder step.
 
 ## Listicle
