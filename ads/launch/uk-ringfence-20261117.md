@@ -17,3 +17,8 @@ Added two more ads to the UK ad set (existing creatives reused, same UTMs, ACTIV
 - `UK_C1-S1-dinner-ledger` (Meta credited the Nov 17 purchase to this ad)
 - `UK_C2-S4-shower-moon_v2` (Shopify UTMs show order #1001 came from this ad)
 UK ad set budget unchanged at £30/day, now 5 ads.
+
+## Update 2026-11-18 (image fix)
+The "ledger" static (1024x1024) has a flat beige band covering the right ~29% of the frame (generation artifact, scene ends at x~735). Fixed version: `ads/launch/fixed-creatives/C1-S1-dinner-ledger_fix.jpg` (crop to the scene, 4:5, 1080x1350). Uploaded to Meta (image_hash b24ce6874defdfabf2bf95f5ded7d350), new creative 990270260312745 with identical copy/CTA/UTMs.
+- New ad `UK_C1-S1-dinner-ledger_fix` (120252701728730104) added to the UK ad set, ACTIVE; the earlier `UK_C1-S1-dinner-ledger` (120252701622330104, flawed image) paused.
+- Scan result: the same flawed image is used by every "S1-ledger" ad (dinner, shower, wfh, bedtime, gift), including `UK_C5-S1-gift-ledger`, `UK_C2-S1-shower-ledger` and, in the CBO, the *_v2 ledger ads (gift-ledger_v2 is the top spender). Not yet changed; awaiting user decision.
