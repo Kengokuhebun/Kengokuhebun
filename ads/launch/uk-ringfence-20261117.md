@@ -11,3 +11,9 @@ Changed: GB removed from ad sets P (120252679147450104) and G (12025267914780010
 
 Judge UK by Shopify orders with UTMs only (utm_campaign=Glowling_R1_BF26_UK_ABO).
 Stop rule (flag-only): £60 UK spend with 0 orders -> flag for pause; 1 order -> continue to £120 before deciding.
+
+## Update 2026-11-18
+Added two more ads to the UK ad set (existing creatives reused, same UTMs, ACTIVE, in Meta review):
+- `UK_C1-S1-dinner-ledger` (Meta credited the Nov 17 purchase to this ad)
+- `UK_C2-S4-shower-moon_v2` (Shopify UTMs show order #1001 came from this ad)
+UK ad set budget unchanged at £30/day, now 5 ads.
