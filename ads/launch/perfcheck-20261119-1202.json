@@ -1,0 +1,284 @@
+{
+  "ts": "2026-11-19 12:02 UTC",
+  "ts_fn": "20261119-1202",
+  "campaign_today": {
+    "label": "today",
+    "spend": 19.76,
+    "impressions": 1371,
+    "cpm": 14.412837,
+    "clicks": 5,
+    "cpc": 3.952,
+    "lpv": 6,
+    "atc": 0,
+    "ic": 0,
+    "purchase": 0,
+    "revenue": 0,
+    "cost_per_lpv": 3.2933333333333334,
+    "cost_per_atc": null,
+    "cost_per_purchase": null,
+    "roas": 0.0
+  },
+  "campaign_24h": {
+    "label": "last_3d",
+    "spend": 260.8,
+    "impressions": 17820,
+    "cpm": 14.635241,
+    "clicks": 252,
+    "cpc": 1.034921,
+    "lpv": 182,
+    "atc": 2,
+    "ic": 1,
+    "purchase": 1,
+    "revenue": 29.99,
+    "cost_per_lpv": 1.432967032967033,
+    "cost_per_atc": 130.4,
+    "cost_per_purchase": 260.8,
+    "roas": 0.11499233128834355
+  },
+  "ads": [
+    {
+      "name": "Glowling_R1_BF26_C5-S1-gift-ledger_v2",
+      "spend": 7.17,
+      "impressions": 663,
+      "clicks": 4,
+      "cpc": 1.7925,
+      "lpv": 4,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": 1.7925
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S1-wfh-ledger_v2",
+      "spend": 6.04,
+      "impressions": 379,
+      "clicks": 1,
+      "cpc": 6.04,
+      "lpv": 2,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": 3.02
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S1-dinner-ledger_v2",
+      "spend": 5.12,
+      "impressions": 249,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C1-S2-dinner-714am_v2",
+      "spend": 0.02,
+      "impressions": 1,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S1-shower-ledger_v2",
+      "spend": 0.11,
+      "impressions": 5,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S2-shower-714am_v2",
+      "spend": 0.62,
+      "impressions": 19,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C2-S5-shower-grandkids_v2",
+      "spend": 0.0,
+      "impressions": 1,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C3-S3-wfh-standup_v2",
+      "spend": 0.0,
+      "impressions": 1,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C4-S1-bedtime-ledger_v2",
+      "spend": 0.0,
+      "impressions": 1,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C4-S2-bedtime-714am_v2",
+      "spend": 0.06,
+      "impressions": 3,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C5-S2-gift-714am_v2",
+      "spend": 0.36,
+      "impressions": 31,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C5-S4-gift-moon_v2",
+      "spend": 0.17,
+      "impressions": 13,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    },
+    {
+      "name": "Glowling_R1_BF26_C5-S5-gift-grandkids_v2",
+      "spend": 0.09,
+      "impressions": 5,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": null
+    }
+  ],
+  "placements": [
+    {
+      "platform": "facebook",
+      "position": "facebook_reels",
+      "spend": 0.100662,
+      "cpc": 0.0,
+      "atc": 0,
+      "lpv": 0
+    },
+    {
+      "platform": "facebook",
+      "position": "feed",
+      "spend": 19.659338,
+      "cpc": 3.931868,
+      "atc": 0,
+      "lpv": 6
+    }
+  ],
+  "countries": [
+    {
+      "c": "AU",
+      "spend": 2.999735,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "purchase": 0
+    },
+    {
+      "c": "CA",
+      "spend": 13.317616,
+      "cpc": 2.663523,
+      "lpv": 6,
+      "atc": 0,
+      "purchase": 0
+    },
+    {
+      "c": "US",
+      "spend": 3.442649,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "purchase": 0
+    }
+  ],
+  "ages": [
+    {
+      "age": "25-34",
+      "spend": 4.36,
+      "cpc": 0.0,
+      "lpv": 1,
+      "atc": 0,
+      "purchase": 0
+    },
+    {
+      "age": "35-44",
+      "spend": 7.61,
+      "cpc": 7.61,
+      "lpv": 1,
+      "atc": 0,
+      "purchase": 0
+    },
+    {
+      "age": "45-54",
+      "spend": 0.39,
+      "cpc": 0.0,
+      "lpv": 0,
+      "atc": 0,
+      "purchase": 0
+    },
+    {
+      "age": "55-64",
+      "spend": 1.5,
+      "cpc": 0.75,
+      "lpv": 2,
+      "atc": 0,
+      "purchase": 0
+    },
+    {
+      "age": "65+",
+      "spend": 5.9,
+      "cpc": 2.95,
+      "lpv": 2,
+      "atc": 0,
+      "purchase": 0
+    }
+  ],
+  "flags": [],
+  "verdict": "Keep running"
+}
