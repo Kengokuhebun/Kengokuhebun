@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-19 12:02 UTC",
-  "ts_fn": "20261119-1202",
+  "ts": "2026-11-19 15:02 UTC",
+  "ts_fn": "20261119-1502",
   "campaign_today": {
     "label": "today",
-    "spend": 19.76,
-    "impressions": 1371,
-    "cpm": 14.412837,
+    "spend": 21.54,
+    "impressions": 1466,
+    "cpm": 14.693042,
     "clicks": 5,
-    "cpc": 3.952,
+    "cpc": 4.308,
     "lpv": 6,
     "atc": 0,
     "ic": 0,
     "purchase": 0,
     "revenue": 0,
-    "cost_per_lpv": 3.2933333333333334,
+    "cost_per_lpv": 3.59,
     "cost_per_atc": null,
     "cost_per_purchase": null,
     "roas": 0.0
@@ -38,32 +38,32 @@
   "ads": [
     {
       "name": "Glowling_R1_BF26_C5-S1-gift-ledger_v2",
-      "spend": 7.17,
-      "impressions": 663,
+      "spend": 7.84,
+      "impressions": 744,
       "clicks": 4,
-      "cpc": 1.7925,
+      "cpc": 1.96,
       "lpv": 4,
       "atc": 0,
       "ic": 0,
       "purchase": 0,
-      "cost_per_lpv": 1.7925
+      "cost_per_lpv": 1.96
     },
     {
       "name": "Glowling_R1_BF26_C3-S1-wfh-ledger_v2",
-      "spend": 6.04,
-      "impressions": 379,
+      "spend": 6.14,
+      "impressions": 386,
       "clicks": 1,
-      "cpc": 6.04,
+      "cpc": 6.14,
       "lpv": 2,
       "atc": 0,
       "ic": 0,
       "purchase": 0,
-      "cost_per_lpv": 3.02
+      "cost_per_lpv": 3.07
     },
     {
       "name": "Glowling_R1_BF26_C1-S1-dinner-ledger_v2",
-      "spend": 5.12,
-      "impressions": 249,
+      "spend": 5.14,
+      "impressions": 250,
       "clicks": 0,
       "cpc": 0.0,
       "lpv": 0,
@@ -135,7 +135,7 @@
     {
       "name": "Glowling_R1_BF26_C4-S1-bedtime-ledger_v2",
       "spend": 0.0,
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "cpc": 0.0,
       "lpv": 0,
@@ -159,7 +159,7 @@
     {
       "name": "Glowling_R1_BF26_C5-S2-gift-714am_v2",
       "spend": 0.36,
-      "impressions": 31,
+      "impressions": 32,
       "clicks": 0,
       "cpc": 0.0,
       "lpv": 0,
@@ -170,8 +170,8 @@
     },
     {
       "name": "Glowling_R1_BF26_C5-S4-gift-moon_v2",
-      "spend": 0.17,
-      "impressions": 13,
+      "spend": 0.19,
+      "impressions": 15,
       "clicks": 0,
       "cpc": 0.0,
       "lpv": 0,
@@ -182,8 +182,8 @@
     },
     {
       "name": "Glowling_R1_BF26_C5-S5-gift-grandkids_v2",
-      "spend": 0.09,
-      "impressions": 5,
+      "spend": 1.06,
+      "impressions": 7,
       "clicks": 0,
       "cpc": 0.0,
       "lpv": 0,
@@ -197,7 +197,7 @@
     {
       "platform": "facebook",
       "position": "facebook_reels",
-      "spend": 0.100662,
+      "spend": 0.1,
       "cpc": 0.0,
       "atc": 0,
       "lpv": 0
@@ -205,8 +205,8 @@
     {
       "platform": "facebook",
       "position": "feed",
-      "spend": 19.659338,
-      "cpc": 3.931868,
+      "spend": 21.44,
+      "cpc": 4.288,
       "atc": 0,
       "lpv": 6
     }
@@ -214,7 +214,7 @@
   "countries": [
     {
       "c": "AU",
-      "spend": 2.999735,
+      "spend": 4.08,
       "cpc": 0.0,
       "lpv": 0,
       "atc": 0,
@@ -222,15 +222,15 @@
     },
     {
       "c": "CA",
-      "spend": 13.317616,
-      "cpc": 2.663523,
+      "spend": 13.97,
+      "cpc": 2.794,
       "lpv": 6,
       "atc": 0,
       "purchase": 0
     },
     {
       "c": "US",
-      "spend": 3.442649,
+      "spend": 3.49,
       "cpc": 0.0,
       "lpv": 0,
       "atc": 0,
@@ -240,7 +240,7 @@
   "ages": [
     {
       "age": "25-34",
-      "spend": 4.36,
+      "spend": 4.43,
       "cpc": 0.0,
       "lpv": 1,
       "atc": 0,
@@ -248,8 +248,8 @@
     },
     {
       "age": "35-44",
-      "spend": 7.61,
-      "cpc": 7.61,
+      "spend": 7.66,
+      "cpc": 7.66,
       "lpv": 1,
       "atc": 0,
       "purchase": 0
@@ -264,16 +264,16 @@
     },
     {
       "age": "55-64",
-      "spend": 1.5,
-      "cpc": 0.75,
+      "spend": 1.67,
+      "cpc": 0.835,
       "lpv": 2,
       "atc": 0,
       "purchase": 0
     },
     {
       "age": "65+",
-      "spend": 5.9,
-      "cpc": 2.95,
+      "spend": 7.39,
+      "cpc": 3.695,
       "lpv": 2,
       "atc": 0,
       "purchase": 0
