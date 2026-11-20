@@ -1,19 +1,30 @@
 {
-  "ts": "2026-11-20 00:01 UTC",
-  "ts_fn": "20261120-0001",
+  "ts": "2026-11-20 03:02 UTC",
+  "ts_fn": "20261120-0302",
   "campaign_today": {
     "label": "today",
-    "spend": 0,
+    "spend": 0.0,
     "impressions": 0,
-    "empty": true
+    "cpm": 0.0,
+    "clicks": 0,
+    "cpc": 0.0,
+    "lpv": 1,
+    "atc": 0,
+    "ic": 0,
+    "purchase": 0,
+    "revenue": 0,
+    "cost_per_lpv": 0.0,
+    "cost_per_atc": null,
+    "cost_per_purchase": null,
+    "roas": 0
   },
   "campaign_24h": {
     "label": "last_3d",
     "spend": 191.67,
     "impressions": 13477,
     "cpm": 14.222008,
-    "clicks": 167,
-    "cpc": 1.147725,
+    "clicks": 168,
+    "cpc": 1.140893,
     "lpv": 137,
     "atc": 2,
     "ic": 1,
@@ -24,10 +35,50 @@
     "cost_per_purchase": 191.67,
     "roas": 0.156466844054886
   },
-  "ads": [],
-  "placements": [],
-  "countries": [],
-  "ages": [],
+  "ads": [
+    {
+      "name": "Glowling_R1_BF26_C5-S1-gift-ledger_v2",
+      "spend": 0.0,
+      "impressions": 0,
+      "clicks": 0,
+      "cpc": 0.0,
+      "lpv": 1,
+      "atc": 0,
+      "ic": 0,
+      "purchase": 0,
+      "cost_per_lpv": 0.0
+    }
+  ],
+  "placements": [
+    {
+      "platform": "facebook",
+      "position": "feed",
+      "spend": 0.0,
+      "cpc": 0.0,
+      "atc": 0,
+      "lpv": 1
+    }
+  ],
+  "countries": [
+    {
+      "c": "CA",
+      "spend": 0.0,
+      "cpc": 0.0,
+      "lpv": 1,
+      "atc": 0,
+      "purchase": 0
+    }
+  ],
+  "ages": [
+    {
+      "age": "65+",
+      "spend": 0.0,
+      "cpc": 0.0,
+      "lpv": 1,
+      "atc": 0,
+      "purchase": 0
+    }
+  ],
   "flags": [],
   "verdict": "Watch"
 }
