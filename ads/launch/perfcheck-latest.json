@@ -1,6 +1,6 @@
 {
-  "ts": "2026-11-20 09:02 UTC",
-  "ts_fn": "20261120-0902",
+  "ts": "2026-11-20 12:02 UTC",
+  "ts_fn": "20261120-1202",
   "campaign_today": {
     "label": "today",
     "spend": 0.0,
@@ -21,8 +21,8 @@
   "campaign_24h": {
     "label": "last_3d",
     "spend": 191.67,
-    "impressions": 13477,
-    "cpm": 14.222008,
+    "impressions": 13478,
+    "cpm": 14.220953,
     "clicks": 168,
     "cpc": 1.140893,
     "lpv": 137,
