@@ -97,7 +97,40 @@ Copy: the hook from the ad that got the purchase, trimmed for size. The full sto
 
 (Primary text for every cell is the existing dinner-ledger copy with the matching paragraph 1; headline, button, link and tags as before.)
 
-## Ad set structure to discuss at build time
-- Ad set 1: the 8 recreated ads. Meta cannot set a minimum spend per ad, only per ad set, so a guaranteed floor per ad needs one ad set per ad (8 ad sets at about £5/day each = £40/day), or fewer ads per ad set.
-- Ad set 2: the 4 gradient post cells.
-- Currency: the copy uses "$"; the UK ad still shows dollars.
+## Ad set structure (confirmed 2026-11-23: CBO, one combined campaign, £60/day)
+User dropped the ABO/minimum-spend-per-ad approach in favour of CBO ("let the Meta algorithm pick the winner"), and chose one combined campaign over per-market campaigns.
+
+- **Campaign**: `Glowling_R2_BF26_RitualSwipe_CBO`, objective OUTCOME_SALES, CBO daily budget £60, bid strategy LOWEST_COST_WITHOUT_CAP, status PAUSED (same template as the existing `Glowling_R1_BF26_CBO` campaign).
+- **Markets**: CA, US, AU, NZ combined in one geo list (not split by market — Meta's delivery breakdown gives per-country reporting without needing separate ad sets). UK dropped from this test; NZ added once the NZ market/shipping was confirmed working (`ads/launch/nz-market-setup-20261121.md`).
+- **Targeting**: age 28-65+, no interest targeting, FB+IG feed/story/reels, mobile+desktop — copied from the existing `Glowling_R1_BF26_CBO` ad sets.
+- **Ad set 1 "Swipe8"**: the 8 recreated ads below, budget allocated by CBO (no fixed floor).
+- **Ad set 2 "Gradient4"**: the 4 gradient text-post cells, budget allocated by CBO.
+- **Conversion**: pixel 1736160617626618, custom_event_type PURCHASE, optimization OFFSITE_CONVERSIONS, billing IMPRESSIONS, attribution 7-day click / 1-day view.
+- **Link**: `https://x5a9bu-97.myshopify.com/products/glowling-led-drawing-board` with UTMs `utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{placement}}` on every ad.
+- Currency: the copy uses "$"; the PDP auto-detects buyer currency, so one creative set serves all 4 markets without separate market variants.
+
+### Primary text, headline, description per ad (draft — short-form for the 8 swipe ads; full dinner-ledger longform reused for the 4 gradient cells)
+
+**Swipe8 ad set** (all CTA: Shop Now):
+
+| Ad name | Primary text | Headline | Description |
+|---|---|---|---|
+| RS_01_selfie | My 5-year-old asks for this by name. Plug it in, hand him the markers — that's the whole setup. | The toy that doesn't go in the garage | Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday. |
+| RS_02_bin | We cleared out the easel, the sand kit, the tablet. This is what's left on the kitchen bench every night. | We cleared out everything else | Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday. |
+| RS_03_offerposter | 3 boards. Pay for 2. Free shipping and a free tracing book, too. | 3 boards. Pay for 2. | Free shipping + free tracing book. Ends Cyber Monday. |
+| RS_04_reframe | Everyone's talking about screen time. Nobody mentions what to swap it for. A board that glows when they draw, and does nothing when they don't. | What to swap screen time for | Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday. |
+| RS_05_checklist | What the Glow Board actually does: every line glows, wipes clean and draws again, no app or ads, plugs into any phone charger. | What the Glow Board actually does | Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday. |
+| RS_06_5pmipad | The 5pm iPad isn't bad parenting. It's the hour nothing else can compete with — except this. Lights up on the kitchen bench, one plug, no app, wipes clean and goes again. | The 5pm iPad isn't bad parenting | Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday. |
+| RS_07_by5pm | By 5pm, the toy box stops keeping up. Another kit, another week in the garage. This one's still out every day: every line glows, wipes clean, no app, no screen. | By 5pm, the toy box stops keeping up | Buy 2, Get 1 FREE + free tracing book. |
+| RS_08_hourglass | Ends Cyber Monday. Buy 2, Get 1 Free + a free tracing book, while the offer lasts. | Ends Cyber Monday | Buy 2, Get 1 FREE + free tracing book. |
+
+**Gradient4 ad set**: full dinner-ledger copy (same body text, headline "The $35 thing that beat $847 of toys-I-tried-first.", description "Black Friday: Buy 2, Get 1 FREE. Direct from Glowling, not on Amazon. Ends Cyber Monday.", link and CTA as the existing `Glowling_R1_BF26_UK_HT_*` ads), with only paragraph 1 swapped to match each image's hook (same A/H1/H2/H3 hooks as the UK hook test, in `ads/hook-test-dinner-ledger.md`):
+
+| Ad name | Image | Paragraph 1 (= image hook, full sentence case) |
+|---|---|---|
+| RS_G_A_control | G-A_control.jpg | I added up what I had spent trying to keep my boys off the iPad before dinner. $847 since January. I made the list on my phone at 5:51 pm on a Wednesday, while Noah cried for Bluey and Eli pulled at the oven handle. |
+| RS_G_H1_number | G-H1_number.jpg | $847 since January. That is what I added up at 5:51 pm on a Wednesday, trying to keep my boys off the iPad before dinner, while Noah cried for Bluey and Eli pulled at the oven handle. |
+| RS_G_H2_item | G-H2_item.jpg | A $142 easel. Used three times. In the garage. It was one line on the list I made at 5:51 pm on a Wednesday, while Noah cried for Bluey and Eli pulled at the oven handle. The list came to $847. |
+| RS_G_H3_result | G-H3_result.jpg | I cooked for twenty-two minutes last Tuesday and the iPad never came out. Before that, $847 since January and nothing lasted. I made the list at 5:51 pm on a Wednesday, while Noah cried for Bluey and Eli pulled at the oven handle. |
+
+Status: drafted for read-back, nothing created in Meta yet. Once approved, build campaign + both ad sets + all 12 ads as PAUSED, then report back before activating.
