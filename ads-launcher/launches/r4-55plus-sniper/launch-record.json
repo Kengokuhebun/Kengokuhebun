@@ -52,7 +52,7 @@
   },
   "attribution_spec": "7-day click, 1-day view"
  },
- "status": "ACTIVE - went live 2026-11-25, ads in Meta review (effective_status IN_PROCESS) at activation time",
+ "status": "HookA and HookB paused 2026-11-25 same day; HookC left running alone with the full ad set budget. Reason: HookB had burned ~90% of first-hour spend (GBP53.61) while being the LEAST efficient of the three (CPM GBP309.88, CTR 4.62%, CPC GBP6.70) with zero Add-to-Cart - breached the GBP21.54 ATC checkpoint and was a few pence from the GBP53.85 hard stop. Confirmed via pixel event stats that AddToCart tracking is working (fired during earlier pixel setup/testing), so the zero-ATC read is real, not a tracking gap. Meta's quality_ranking/engagement_rate_ranking/conversion_rate_ranking were UNKNOWN on all 3 ads at decision time (impressions 34-177, well under the ~500 needed to populate), so there was no Meta-assessed quality signal yet - the decision was made on CPM/CTR/CPC efficiency plus the ATC-checkpoint breach, not on which ad Meta had allocated the most early spend to (which was HookB, the one being paused). HookC had the best CPM (GBP57.81), best CTR (9.38%), cheapest CPC (GBP0.62) of the three on very early, low-volume data.",
  "pixel_change": "This is the first Ninu launch on the new dedicated Ninu Pixel (1141109111620668), replacing the previously shared pixel (1736160617626618) used by another brand.",
  "test_design_notes": [
   "Single ad set (ABO), one angle (delivery/habit-friction, the only proven angle in account history), 3 hook variants only - hook is the single test variable per 3:2:2/one-variable-per-round rule.",
