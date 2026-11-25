@@ -52,7 +52,7 @@
   },
   "attribution_spec": "7-day click, 1-day view"
  },
- "status": "ALL PAUSED - drafted per operator protocol, awaiting explicit go-ahead to activate",
+ "status": "ACTIVE - went live 2026-11-25, ads in Meta review (effective_status IN_PROCESS) at activation time",
  "pixel_change": "This is the first Ninu launch on the new dedicated Ninu Pixel (1141109111620668), replacing the previously shared pixel (1736160617626618) used by another brand.",
  "test_design_notes": [
   "Single ad set (ABO), one angle (delivery/habit-friction, the only proven angle in account history), 3 hook variants only - hook is the single test variable per 3:2:2/one-variable-per-round rule.",
