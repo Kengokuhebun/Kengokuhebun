@@ -1,0 +1,64 @@
+{
+ "ads": [
+  {
+   "name": "HookA_Validation",
+   "creativeId": "1141903565473854",
+   "adId": "120251519175980342",
+   "videoId": "1685666136561995",
+   "thumbnailImageHash": "8999c7863f15b907595993e73b4b797d",
+   "headline": "One hand. Two minutes. Oil on the scalp, not the towel.",
+   "primaryText": "Scalp oil shouldn't feel like one more thing you keep failing at."
+  },
+  {
+   "name": "HookB_WorkaroundStack",
+   "creativeId": "1184111800740249",
+   "adId": "120251519176370342",
+   "videoId": "2355090748575748",
+   "thumbnailImageHash": "1424345001bf01d64e960dee06099c33",
+   "headline": "One hand. Two minutes. Oil on the scalp, not the towel.",
+   "primaryText": "Cotton balls. Toothbrushes. A makeup brush in a shower cap. There's a better way."
+  },
+  {
+   "name": "HookC_BehaviorChange",
+   "creativeId": "1498968012162353",
+   "adId": "120251519176420342",
+   "videoId": "1620546335930051",
+   "thumbnailImageHash": "8fc5dc8dd4a540c4a2e0654e72ff4e41",
+   "headline": "One hand. Two minutes. Oil on the scalp, not the towel.",
+   "primaryText": "What actually changed when I started doing my scalp routine every night."
+  }
+ ],
+ "campaign": {
+  "id": "120251519155580342",
+  "name": "R4_Ninu_55Plus_Sniper",
+  "objective": "OUTCOME_SALES",
+  "budgetType": "ABO"
+ },
+ "adset": {
+  "id": "120251519159430342",
+  "name": "55Plus_Sniper_3Hooks - US W55-65plus Feed - 2026-11-25",
+  "daily_budget_gbp": 45,
+  "bid": "lowest cost (no cap)",
+  "optimization_goal": "OFFSITE_CONVERSIONS",
+  "promoted_object": {"pixel_id": "1141109111620668", "pixel_name": "Ninu Pixel (new, dedicated)", "custom_event_type": "PURCHASE"},
+  "targeting": {
+   "age_min": 55,
+   "age_max": 65,
+   "age_note": "65 means 65-and-over per Meta's age bucket convention",
+   "genders": "women only",
+   "geo": "US",
+   "placements": "Facebook + Instagram Feed only (stream); Reels, Stories, Audience Network excluded",
+   "advantage_audience": "off (hard limits)"
+  },
+  "attribution_spec": "7-day click, 1-day view"
+ },
+ "status": "ALL PAUSED - drafted per operator protocol, awaiting explicit go-ahead to activate",
+ "pixel_change": "This is the first Ninu launch on the new dedicated Ninu Pixel (1141109111620668), replacing the previously shared pixel (1736160617626618) used by another brand.",
+ "test_design_notes": [
+  "Single ad set (ABO), one angle (delivery/habit-friction, the only proven angle in account history), 3 hook variants only - hook is the single test variable per 3:2:2/one-variable-per-round rule.",
+  "All 3 videos share the identical lip-synced body take; only the opening hook differs between them.",
+  "Each video includes real product-in-use footage (pdp/gift-assets/ninu-in-use-720p-lite.mp4) cut in during the mechanism beat, plus a 'Dramatisation' on-screen label since the presenter is an AI avatar, not a real customer.",
+  "Kill checkpoints per ninu-kill-criteria.md section 3, read per-ad: GBP10.77 (0 link clicks) / GBP21.54 (0 ATC) / GBP32.31 (0 IC) / GBP53.85 (0 purchases, hard stop).",
+  "Two pre-existing ad sets in this account (Hook3_GiftTest_OldPDP_vs_Gifts, Hook3_PageTest_Current_vs_OldPDP) were found set to ACTIVE status with all their ads individually PAUSED - no real spend occurring, but flagged as an account-hygiene item worth cleaning up (pause the ad sets themselves)."
+ ]
+}
