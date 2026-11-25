@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Raw per-clip lip-sync renders: redundant with the stitched files in final/,
+# regenerable from the committed presenter image + voice tracks.
+ugc-video/r-55plus-sniper/clips/
