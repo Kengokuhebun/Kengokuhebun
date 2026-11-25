@@ -9,8 +9,8 @@ This is the original audit (unchanged where nothing new was learned) with every 
 | **Brand / account** | Glowling LED Drawing Board · Meta act_1598462168591762 ("Velmir Ad account") · Shopify x5a9bu-97.myshopify.com |
 | **Window** | Full test run, R1: 2026-11-15 to 2026-11-20 (paused). **R2 (Ritual Swipe CBO): launched 2026-11-23, [v2 UPDATE] now re-verified live — 2 days of real delivery data pulled directly from the Meta API and Shopify orders, as of 2026-11-25** |
 | **Sample** | 17 ads reviewed in copy/structure detail in v1, now with live performance numbers for all 12 R2 ads · ~29 further R1 ads referenced by name/id only, not individually read · **2 completed purchases observed total (1 in R1, 1 new in R2)** |
-| **Score** | **v1: 33.0/100.** [v2 UPDATE] Recomputed below — moves to **36.5/100** (see §2) |
-| **Confidence** | v1: ~55% OBSERVED (indicative). [v2 UPDATE] **~68% OBSERVED** — the two largest open items (testimonial authenticity, R2 live performance) are now directly confirmed, not inferred or dated |
+| **Score** | **v1: 33.0/100.** [v2] 36.5/100. **[v3, with real unit economics §9] 43.5/100** |
+| **Confidence** | v1: ~55% OBSERVED (indicative). v2: ~68%. **[v3] ~75% OBSERVED** — testimonial authenticity, R2 live performance, and unit economics (the three biggest open items in v1) are now all directly confirmed or computed, not inferred, dated, or unknown |
 | **Band** | 4 — Foundations missing (unchanged — fixing one finding and getting one data pull does not change the band) |
 | **Flags** | **SCALE HOLD** (economics — still unresolved) · ~~COMPLIANCE REVIEW (fabricated testimonials)~~ **[v2 UPDATE: FIXED this session, see Finding 1]** · measurement integrity concerns (shared pixel — still unresolved; UK consent gap; attribution — partially resolved, see Finding 3) |
 | **Evidence tags** | [OBSERVED] seen directly, cited · [INFERRED] pattern across observed items, capped at 70% of a line's points · [UNVERIFIED] asserted or unconfirmed, not scored |
@@ -139,9 +139,49 @@ Action plan: unchanged from v1 — hold to day 7 before reading for a verdict; d
 
 Confidence rose from ~55% to ~68% because the two largest open items in v1 (testimonial authenticity, R2 live performance) are now directly confirmed rather than inferred or dated. It has not moved further because the two gating issues — unit economics and pixel/measurement isolation — are both still completely unaddressed, and the live site still shows the fabricated content until the repo fix is pasted into Shopify. Treat 36.5/100 as directional, same as v1's 33.0, until those are fixed.
 
-## 8. What needs a decision from you now
+## 9. Unit economics — filled in 2026-11-25 (supplier cost sheet supplied by user)
+
+This closes the single largest gap in v1 (Gate 1, lines A1/A2). Source: supplier cost+shipping sheet (product + YunExpress/WANB shipping, landed cost in USD, by destination and quantity), for the board, the 8-Color Marker Set, and the Tracing and Coloring Book — screenshots supplied 2026-11-25.
+
+**Note on the marker set**: the sheet names it the "8-Color Marker Set" — this independently confirms the site's "8 fluorescent markers" claim (an open question flagged in earlier sessions over generated images showing 10 markers). The physical kit is 8 colors; the discrepancy was in AI-generated marketing images, not the claim itself. Closed, no action needed.
+
+### Two real orders, computed exactly (no estimation — Shopify's own line items used)
+
+| Order | Market | Items | Revenue | Landed cost (USD, converted at the order's own implied FX) | Gross margin after ~2.9%+$0.30 gateway fee | Ad spend attributed | Actual ROAS | Breakeven ROAS | Actual CPA vs. breakeven-affordable CPA |
+|---|---|---|---|---|---|---|---|---|---|
+| #1001 | UK | 1 board (no pen pack) | £29.99 | board $7.20 + book $2.50 = $9.70 → £7.28 | £22.72 → **75.7%** margin, BE ROAS **1.32** | £444 (R1 lifetime) | **0.068** | 1.32 | Actual CPA £444 vs. max-affordable £22.72 — **~19.5x over** |
+| #1002 | US | 1 board + 1 Neon Marker Pen Pack | £32.01 (≈$41.98 implied) | board $10.30 + book $3.30 + pen pack $5.20 = $18.80 → £14.34 | £16.52 → **51.6%** margin, BE ROAS **1.94** | £134.67 (R2, 2 days) | **0.238** | 1.94 | Actual CPA £134.67 vs. max-affordable £16.52 — **~8.2x over** |
+
+Both real orders are profitable at the unit-economics level (55-76% gross margin) — the problem is entirely on the paid-acquisition side: CPA needs to fall by roughly 8-20x to reach breakeven, not improve at the margins. R2 is directionally better than R1 (8x over vs 19.5x over) but still nowhere close.
+
+### Forward-looking margin table, all 5 markets, both order types
+
+Landed costs are read directly off the supplier sheet (board cost+shipping at the quantity needed, plus the tracing-book add-on, which ships free with every order per the PDP copy). FX used: GBP derived from order #1002 itself (≈0.7625 GBP/USD); CAD/AUD/NZD from a web lookup dated ~3 weeks before this audit (not live — flagged) at roughly 1 USD = 1.397 CAD = 1.435 AUD = 1.776 NZD. **NZ is not on the supplier's shipping sheet at all** — the "other country" row was used as a stand-in; this needs confirming with the supplier directly, since NZ shipping was only set up 2026-11-21 and its real landed cost could differ meaningfully from this estimate.
+
+| Market | Single board: margin % / BE ROAS | Buy 2 Get 1 FREE bundle: margin % / BE ROAS |
+|---|---|---|
+| UK | 71.7% / **1.39** | 72.9% / **1.37** |
+| US | 57.4% / **1.74** | 56.8% / **1.76** |
+| CA | 61.4% / **1.63** | 63.6% / **1.57** |
+| AU | 52.0% / **1.92** | 63.7% / **1.57** |
+| NZ (unconfirmed cost) | 34.1% / **2.93** | 37.0% / **2.70** |
+
+Everywhere except the unconfirmed NZ figure, breakeven sits around ROAS 1.4-1.9 — i.e., genuinely achievable territory for a healthy paid-social funnel, not a structurally broken offer. The margin itself is not the SCALE HOLD reason; **the actual ROAS being achieved (0.07-0.24) is 7-20x short of these breakevens**, which is a targeting/creative/funnel-efficiency problem, not a pricing problem. NZ's margin is meaningfully thinner than the other four markets on this estimate and should not be scaled until the supplier confirms the real NZ shipping cost.
+
+What this excludes, so it's still a floor estimate: returns/refunds, chargebacks, customs/duties beyond what the supplier sheet already bundles, and customer-service time. Real-world required ROAS is likely somewhat higher than the figures above, not lower.
+
+### Scorecard update
+
+| Cat | Line | Max | v1 | v2 | v3 (this update) | Reason |
+|---|---|---|---|---|---|---|
+| A | A1 Unit economics known / margin gate | 6 | 0 | 0 | **4** | Real landed cost + margin % now computed for 4 of 5 markets directly from supplier data; NZ still unconfirmed, and returns/CS costs aren't in the model — capped short of full marks |
+| A | A2 Target ROAS / profit-based reading | 4 | 0 | 0 | **3** | Breakeven ROAS now computed per market/order-type and directly compared against actual ROAS on both real orders — the account can now say, with numbers, exactly how far off it is |
+
+**New total: 43.5/100** (was 36.5 in v2, 33.0 in v1). Still well short of a passing account — the gap between actual and breakeven ROAS is the whole story now, not an unknown.
+
+## 8. What needs a decision from you now [v3: item 2 substantially answered]
 
 1. **Paste the testimonial fix into the live Shopify theme.** The repo commit does not change what customers see — the fabricated badge and quotes are still live right now.
-2. **Unit economics**: COGS, pick-and-pack, shipping-to-seller and gateway fee, per market. Nothing else in this audit can be judged against a real breakeven without this.
+2. ~~Unit economics~~ **[Answered §9]** — margins and breakeven ROAS are now known for UK/US/CA/AU. Still open: confirm NZ's real shipping cost with the supplier (currently an unconfirmed estimate), and get real gateway-fee/returns-rate numbers from the payment processor to tighten the floor estimate further.
 3. **Pixel fix**: approve adding the Custom Conversion filtered to the Glowling product page (a one-time Meta setup change, not a campaign/spend change — flagging since the standing rule is to confirm before changing anything in Meta).
 4. Everything else from v1 (roadmap file, Learnings Document discipline, holding the R2 read to day 7) still stands.
