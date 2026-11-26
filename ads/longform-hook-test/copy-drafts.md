@@ -28,7 +28,7 @@ Magnet tiles, $89. He built one tower. It fell. It never came back out of the bo
 
 Melissa & Doug easel, $142. Used three times. It lives in the garage.
 
-Target water table, $118. Outdoors only. Good from October to March, and it was August.
+Target water table, $118. Outdoors only, which it is not from October to March.
 
 Pop-it fidget, free. One afternoon.
 
@@ -90,7 +90,7 @@ It is already getting dark outside. The kitchen smells like the onions I never g
 
 So I do what I do when I am about to lose. I start counting.
 
-The Melissa & Doug easel is in the garage. $142. Noah used it three times. The kinetic sand kit is in the hall cupboard. $38. Fifteen minutes on day one, eight on day two. The magnet tiles were $89. He built one tower, it fell, and the box has not been opened since. The Target water table is $118. It is outdoors only, good from October to March, and it is August.
+The Melissa & Doug easel is in the garage. $142. Noah used it three times. The kinetic sand kit is in the hall cupboard. $38. Fifteen minutes on day one, eight on day two. The magnet tiles were $89. He built one tower, it fell, and the box has not been opened since. The Target water table is $118. It is outdoors only, which it is not from October to March.
 
 Eli leans back on the handle. The oven door creaks.
 
@@ -148,7 +148,7 @@ Magnet tiles, $89. One tower. It fell. It never came back.
 
 Melissa & Doug easel, $142. Used three times. It is in the garage.
 
-Target water table, $118. Outdoors only, good from October to March. It was August.
+Target water table, $118. Outdoors only, which it is not from October to March.
 
 Educational tablet, $179. That is a tablet.
 
@@ -202,7 +202,7 @@ Magnet tiles, $89. One tower. It fell. It never came back.
 
 Melissa & Doug easel, $142. Used three times. It lives in the garage.
 
-Target water table, $118. Outdoors only, good from October to March. It was August.
+Target water table, $118. Outdoors only, which it is not from October to March.
 
 Educational tablet, $179. That is a tablet.
 
