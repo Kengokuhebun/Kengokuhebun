@@ -101,7 +101,9 @@ V1 and RS_01 are the same ad running in parallel, each consuming ~£109 of the s
 - V1 total purchase conversion value: £154.68 from £108.97 spend = **1.42 ROAS**
 - RS_01 comparison (from same window): 2 purchases, similar ROAS range
 
-ROAS is below the target (breakeven ~1.82, target ~2.82). This is expected at this spend level — the algorithm is still learning. The question is whether ROAS improves as CPM continues to fall and the audience refines.
+CORRECTION (2026-11-27): an earlier version of this line quoted breakeven ~1.82 / target ~2.82. Those were the Origins doc's worked-example numbers, not Glowling's. Real breakevens from the supplier cost sheet (audit v2 section 9): UK 1.37-1.39, CA 1.57-1.63, US 1.74-1.76, AU 1.57-1.92, NZ unconfirmed (2.70-2.93).
+
+At 1.42 ROAS V1 is roughly at breakeven for UK/CA and below it for US. The question is whether ROAS improves as CPM continues to fall and the audience refines.
 
 ## Summary (one line)
 
