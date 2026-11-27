@@ -2,6 +2,8 @@
 
 Applying the same "Dissect the Winner" discipline used on RS_01: beat-by-beat, ranked drivers, every claim tagged PROVEN or HYPOTHESIS, never present a guess as a finding.
 
+> **CORRECTION (2026-11-27, same day):** this teardown originally stated V1 uses the same image as RS_01. That is wrong. RS_01 is the square selfie with two white text pills (`ads/ritual-swipe/final/ad1_selfie_final.jpg`). V1 (`ads/native-reexpression/final/V1_selfie-sticky.jpg`, hash 135ee33f...) is a different photo: same woman and kitchen, laughing, holding the lit board, with a stack of 3 sealed boxes and a yellow handwritten sticky note reading "BUY 2 GET 1 FREE", no pills. Copy, headline and description are identical; the image AND the ad set differ. Statements below saying "same image", "same creative, half the CPM" or "image doubly proven across two ad sets" are superseded: the CPM gap cannot be attributed to ad-set structure alone, and V1's image (native, offer shown in the scene) is a separate proven image from RS_01's.
+
 ## The fixed facts (controlled across this comparison)
 
 V1_selfie-sticky sits in the Snipe3 ad set alongside V2_plugin-sticky and V3_handoff-notext. All three share: same targeting, same audience pool, same landing page, same offer, same CTA (SHOP_NOW), same pixel, same primary text, same headline, same description. **The only declared variable is the image.** Anything that differs between V1's performance and its siblings' has to be the image itself — format, framing, composition, or on-image text.

@@ -1,34 +1,18 @@
-# BFCM native statics test: image prompts (2026-11-27)
+# BFCM bottom-funnel statics (2026-11-27), built on the V1 winner image
 
-Declared single variable: image concept. Everything else locked to RS_01/V1: primary text, headline, description, SHOP_NOW, destination, targeting. Every image carries a visible, real-looking offer cue (teardown driver #1; fixes the N1 confound where the offer pill was removed along with the overlay).
+Base image: `ads/native-reexpression/final/V1_selfie-sticky.jpg` (V1_selfie-sticky: same woman and kitchen, laughing, lit board in hand, stack of 3 sealed boxes, yellow handwritten sticky "BUY 2 GET 1 FREE"). Winner DNA: real adult, kitchen, glowing board, offer visualised by the 3-box stack, handwritten offer in the scene, native look, no overlay pills.
 
-Locked copy (all 4):
-- Primary text: My 5-year-old asks for this by name. Plug it in, hand him the markers — that's the whole setup.
-- Headline: The toy that doesn't go in the garage
-- Description: Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday.
+Locked (all 4): primary text, headline, description, SHOP_NOW, destination, targeting. Primary text: My 5-year-old asks for this by name. Plug it in, hand him the markers — that's the whole setup. Headline: The toy that doesn't go in the garage. Description: Buy 2, Get 1 FREE + free tracing book. Ends Cyber Monday.
 
-Model: Nano Banana Pro, 4:5 (1080x1350), 2K. image_input = avatar reference + real Glowling board photo.
+Single variable per ad (one edit to the V1 image each). Model: Nano Banana Pro, image_input = the V1 image, 4:5, 2K.
 
-## Shared style block (append to every prompt)
-"Authentic vertical phone photo, 4:5, real iPhone look, natural handheld framing, slightly off-center, real indoor light, visible grain, slightly messy real room, no studio polish, no logos, no watermark."
+Edit instruction for all: "Use the attached photo as the exact base. Keep the woman, her expression, the kitchen, the lit board with the CREATE drawing, the stack of three boxes, the camera angle, the lighting and the framing identical. Change only the following:"
 
-## BF1_selfie-note (closest to the V1 winner, plus a Black Friday cue)
-"[avatar: early-to-mid 40s woman, shoulder-length light-brown hair, natural skin texture, no heavy makeup, casual dark top] in a warm cluttered family kitchen with wooden cabinets and window light, caught mid-laugh, taking a front-camera selfie while holding a clear acrylic LED drawing board on a white stand up toward the camera, the board's edge glowing softly with a simple neon drawing, markers scattered on the counter behind her. A yellow sticky note is stuck on the corner of the board with handwritten marker text: BLACK FRIDAY - BUY 2 GET 1 FREE."
+- BF1_black-friday: the yellow sticky note text becomes three lines of black marker handwriting: BLACK FRIDAY (smaller, top) / BUY 2 GET 1 FREE. Move the note up slightly so all the text is fully visible.
+- BF2_free-book: the sticky note text becomes: BUY 2 GET 1 FREE / + FREE TRACING BOOK (second line smaller). All text fully visible.
+- BF3_deadline: the sticky note text becomes: ENDS CYBER MONDAY (smaller, top) / BUY 2 GET 1 FREE. All text fully visible.
+- BF4_child: the sticky note stays exactly as is. Add a 5-year-old boy standing beside her at the counter holding a neon marker and grinning at the camera.
 
-## BF2_candid-counter
-"A young child on a step stool at a kitchen counter at early evening, absorbed in drawing on a clear acrylic LED board with a glowing neon line, a parent out of focus at the stove in the background, warm kitchen light, slight motion blur at the edges, unposed. A paper napkin on the counter beside the board has handwritten text: BUY 2 GET 1 FREE."
+Notes: if the sticky text comes out garbled, regenerate; fallback is for me to composite a new note in code. Meta: set the AI-content label at upload if required. Upload names: BF1_black-friday, BF2_free-book, BF3_deadline, BF4_child.
 
-## BF3_three-boards (makes the offer tangible)
-"Overhead angle on a kitchen table: three clear acrylic LED drawing boards on white stands lined up side by side, the first two glowing with neon drawings, the third with a small handwritten paper tag taped to it reading FREE, a few neon markers and a half-drunk coffee mug nearby, a child's hand reaching in from the edge of frame. A sticky note on the table reads: BUY 2 GET 1 FREE."
-
-## BF4_pile-vs-one (the garage fear, same emotional driver as the ledger copy)
-"Kitchen counter still life: on the left a messy pile of abandoned toys carried in from the garage (a small easel, a magnet tile box, a sand kit tub, a folded kids tent), on the right a clear acrylic LED drawing board standing glowing with a bright neon drawing. A hand holds a yellow sticky note over the board with handwritten text: BLACK FRIDAY - BUY 2 GET 1 FREE. Warm window light, slightly cluttered."
-
-## Notes for generation
-- AI image text is unreliable. If the handwritten text comes out garbled, regenerate with a blank sticky note or napkin and add the exact words in an editor.
-- Keep the offer wording exactly as above. Do not add "Ends Cyber Monday" to the image: it is already in the description.
-- Meta: set the AI-content label at upload if required.
-- Upload names: BF1_selfie-note, BF2_candid-counter, BF3_three-boards, BF4_pile-vs-one.
-
-## Launch plan (after sign-off)
-New ABO campaign, ~£25/day, one ad set with these 4 ads, run to end of Cyber Monday. CBO untouched.
+Launch plan (after sign-off): new ABO campaign about £25/day, one ad set, these 4 ads, to end of Cyber Monday. CBO untouched.
