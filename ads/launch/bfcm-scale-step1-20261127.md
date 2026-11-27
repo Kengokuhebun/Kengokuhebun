@@ -14,3 +14,7 @@ V1 3 purchases / £108.97 (ROAS 1.42), RS_01 2 purchases / £108.47. L1 6 ATC, 1
 - Check once per evening. No new tests this weekend. Do not scale NZ.
 - Still open: testimonial fix not live on theme; marker-pack post-purchase upsell not installed.
 - Day-7 read still scheduled for 3 Dec (trig_019Ay1aagbsQePBjjazwWPbG).
+
+## BFCM statics campaign (built PAUSED, 2026-11-27)
+Campaign Glowling_R3_BFCM_Statics_ABO (ids in ads/bfcm-statics/build-ids.json). ABO ad set, £25/day, ends 2026-12-01 05:00 UTC, US/CA/AU (NZ excluded: landed cost unconfirmed), ages 28-65, same placements as Snipe3, purchase optimisation on pixel 1736160617626618.
+Ads (copy, headline, description locked to the winner): BF_img1_sticky-banner (4:5), BF_img2_black-neon (4:5, designed graphic, hypothesis), BF_vid3_V1remake (V1 swipe remake with offer + Ends Cyber Monday pills from 1.5s).
